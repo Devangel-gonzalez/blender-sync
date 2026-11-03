@@ -161,20 +161,26 @@ def can_publish(node, username: str, check_common: bool, host_peer: bool) -> boo
 
 @persistent
 def on_scene_update(scene):
-    """Forward blender depsgraph update to replication
-    """
+    """Forward blender depsgraph update to replication"""
+    
+    # ==========================================
+    # BLOQUEO SELECTIVO DURANTE ARRASTRE INTERACTIVO
+    # ==========================================
+    # Solo bloquear TODO si hay un arrastre interactivo real detectado
+    dragging = live_sync.interactive_transform_active() is not None
+    streaming = live_sync.is_streaming()
+    
+    if dragging:
+        return
+    # ==========================================
+    
+    
     if session and session.state == STATE_ACTIVE:
         blender_depsgraph = bpy.context.view_layer.depsgraph
         dependency_updates = [u for u in blender_depsgraph.updates]
         incoming_updates = shared_data.session.applied_updates
 
-        # Diagnostic: what Blender actually reports. Moving a keyframe in the
-        # Dope Sheet edits the Action, and it is not a given that this reaches
-        # depsgraph.updates at all. If it does not, no commit is even attempted
-        # and viewers never see the edit - which is the reported symptom, and
-        # the Action-delta path was already proven fine by the test suite.
-        # Throttled to one line per second: this handler fires on every
-        # evaluated change.
+        # Diagnostic: what Blender actually reports
         global _last_batch_log_ms
         now_ms = utils.current_milli_time()
         if dependency_updates and now_ms - _last_batch_log_ms >= 1000:
@@ -185,11 +191,7 @@ def on_scene_update(scene):
                     for u in dependency_updates
                 })))
 
-        # Updates we caused ourselves by applying remote data are marked in
-        # applied_updates. Consume those markers and remember the ids so the echo
-        # can be skipped individually: bailing out on the whole batch also threw
-        # away the user's own edits riding along in the same depsgraph update,
-        # which is what stopped armed live-sync nodes from pushing.
+        # Updates we caused ourselves by applying remote data
         distant_uuids = set()
         local_uuids = set()
         for update in dependency_updates:
@@ -202,13 +204,7 @@ def on_scene_update(scene):
             else:
                 local_uuids.add(update_uuid)
 
-        # Diagnostic: an Action reaching the batch is not enough - it still has
-        # to survive the uuid lookup, the echo filter, the graph lookup and the
-        # ownership test before a commit is even attempted. Report which gate
-        # rejects it, because a keyframe edit that never reaches the viewer
-        # leaves no other trace. Actions only enter the batch on a real edit, so
-        # this stays quiet, and it runs before the short-circuit below so a
-        # purely remote batch is still explained.
+        # Diagnostic for Actions
         for update in dependency_updates:
             if not isinstance(update.id, bpy.types.Action):
                 continue
@@ -240,54 +236,69 @@ def on_scene_update(scene):
         if distant_uuids:
             logging.debug(f"Ignoring distant update of {sorted(distant_uuids)}")
             if not local_uuids:
-                # Purely remote batch: keep the original short-circuit so an
-                # incoming apply cannot echo back through the tail below.
                 return
 
-        # Resolved once per batch, not per update.
+        # Resolved once per batch
         host_peer = live_sync.is_host()
 
-        # NOTE: maybe we don't need to check each update but only the first
+        # Main processing loop
         for update in reversed(dependency_updates):
             update_uuid = getattr(update.id.original, 'uuid', None)
             if update_uuid:
                 if update_uuid in distant_uuids:
                     continue
+    
                 node = session.repository.graph.get(update_uuid)
+                if not node:
+                    continue
+                    
                 check_common = session.repository.rdp.get_implementation(update.id).bl_check_common
 
                 if can_publish(node, session.repository.username,
                                check_common, host_peer):
                     logging.debug(f"Evaluate {update.id.name}")
-                    # A node armed for live sync pushes on every detected
-                    # change, not only when it sits in the UP state. Ownership
-                    # is still enforced above: live sync does not grant rights.
+                    
                     is_live = shared_data.session.live_sync_nodes.get(node.uuid, False)
 
-                    # README 7.8: no porcelain during an interactive transform.
-                    # The pose streamer carries the in-progress edit over the
-                    # direct channel; confirming it produces its own depsgraph
-                    # update, which this handler then publishes normally.
-                    #
-                    # Ask the streamer rather than scanning wm.operators here:
-                    # that stack keeps finished operators, so a drag that ended
-                    # minutes ago would look in progress and block every push
-                    # from this armed node for the rest of the session.
+                    # ==========================================
+                    # FILTRO SELECTIVO POR TIPO DE DATABLOCK
+                    # ==========================================
+                    original_obj = update.id.original
+
+                    if streaming:
+                        # Durante streaming activo:
+                        # - BLOQUEAR commits de Armaduras y Objects (rendimiento)
+                        # - PERMITIR commits de Actions (keyframes)
+                        obj_type = getattr(original_obj, 'type', None)
+                        is_action = isinstance(original_obj, bpy.types.Action)
+                        is_armature = obj_type == 'ARMATURE' or isinstance(original_obj, bpy.types.Armature)
+                        is_object = isinstance(original_obj, bpy.types.Object)
+
+                        if is_armature or is_object:
+                            # No commitear armaduras ni objetos durante streaming
+                            logging.debug(
+                                f"Live Sync: skipping commit for "
+                                f"{'armature' if is_armature else 'object'} "
+                                f"'{getattr(original_obj, 'name', '?')}' "
+                                f"while streaming")
+                            continue
+
+                        if not is_action:
+                            # Para otros tipos, usar el filtro original
+                            if is_live and live_sync.pose_stream_active():
+                                continue
+                    # ==========================================
+
                     if is_live and live_sync.pose_stream_active():
                         continue
 
+                    # El filtro de pose_stream_active() ya está al inicio del handler
+                    # No necesitamos verificarlo de nuevo aquí
                     if is_live or node.state == UP:
                         try:
                             state_before = node.state
                             porcelain.commit(session.repository, node.uuid)
                             if node.state != state_before:
-                                # commit only moves the state when it found a
-                                # real diff, so this is one line per genuine
-                                # edit and none while idle. A keyframe inserted
-                                # with K that never reaches the viewer shows up
-                                # here as the absence of a line, which is what
-                                # separates "never committed" from "committed
-                                # but lost on the way".
                                 logging.info(
                                     f"Live Sync: committed "
                                     f"{(node.data or {}).get('type_id')} "

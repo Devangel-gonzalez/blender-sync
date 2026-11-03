@@ -48,6 +48,7 @@ import mathutils
 from replication.constants import STATE_ACTIVE
 from replication.interface import session
 
+
 from . import shared_data
 
 CHANNEL = "live_sync"
@@ -501,6 +502,8 @@ class HostPoseStreamer:
             if self.state == IDLE:
                 self._begin(broadcaster)
             else:
+                # NUEVO: Verificar si la selección cambió
+                self._update_selection(broadcaster)
                 # A viewer that joins mid-selection missed the single "start",
                 # so re-send at once rather than letting it wait out the
                 # heartbeat - otherwise the overlay shows up to a second late
@@ -628,6 +631,88 @@ class HostPoseStreamer:
         # Push the first visual pose straight away so the viewer is not left
         # waiting a full update interval.
         self._update(broadcaster, force=True)
+
+    def _update_selection(self, broadcaster):
+        """Update the tracked bones when selection changes."""
+        current_bones = bpy.context.selected_pose_bones or (
+            [bpy.context.active_pose_bone] if bpy.context.active_pose_bone else []
+        )
+        current_bone_names = {bone.name for bone in current_bones}
+        tracked_bone_names = set(self._bones.keys())
+
+        # Si la selección no cambió, no hacer nada
+        if current_bone_names == tracked_bone_names:
+            return
+
+        # Encontrar huesos nuevos y removidos
+        added_bones = current_bone_names - tracked_bone_names
+        removed_bones = tracked_bone_names - current_bone_names
+
+        # Enviar señal "end" para huesos removidos
+        for bone_name in removed_bones:
+            record = self._bones[bone_name]
+            armature = self.armature
+
+            is_cancelled = True
+            if armature is not None:
+                bone = armature.pose.bones.get(bone_name)
+                if bone is not None:
+                    is_cancelled = matrices_equal(
+                        bone.matrix_basis, record["original"]
+                    )
+
+            broadcaster.broadcast({
+                "channel": CHANNEL,
+                "action": "end",
+                "armature_uuid": self.armature_uuid,
+                "bone_name": bone_name,
+                "frame": self.frame,
+                "is_cancelled": is_cancelled,
+            })
+
+            del self._bones[bone_name]
+
+        # Agregar huesos nuevos
+        if added_bones:
+            armature = self._active_armature()
+            if armature is None:
+                return
+
+            try:
+                depsgraph = bpy.context.evaluated_depsgraph_get()
+                evaluated = armature.evaluated_get(depsgraph)
+            except (ReferenceError, RuntimeError):
+                return
+
+            for bone_name in added_bones:
+                bone = armature.pose.bones.get(bone_name)
+                evaluated_bone = evaluated.pose.bones.get(bone_name)
+
+                if bone is None or evaluated_bone is None:
+                    continue
+                
+                self._bones[bone_name] = {
+                    "original": bone.matrix_basis.copy(),
+                    "sent": None,
+                }
+
+                # Enviar señal "start" para el nuevo hueso
+                broadcaster.broadcast({
+                    "channel": CHANNEL,
+                    "action": "start",
+                    "armature_uuid": self.armature_uuid,
+                    "bone_name": bone_name,
+                    "frame": self.frame,
+                })
+
+                logging.info(
+                    f"Live Sync: added bone '{bone_name}' to stream "
+                    f"({broadcaster.client_count} viewer(s) connected)"
+                )
+
+
+
+
 
     def _update(self, broadcaster, force=False, heartbeat=False):
         now = time.monotonic()
@@ -1055,19 +1140,26 @@ class ClientPoseApplier:
         if edit is None:
             return
 
-        # Both outcomes clear the overlay now. On a confirm the repository
-        # push lands right after and overwrites the frame with the committed
-        # data; restoring here first is what keeps that apply from being
-        # reverted by our own undo bookkeeping.
-        #
-        # Keeping the overlay on a confirm instead (message["is_cancelled"] is
-        # False) looks like the fix for "the temporary keyframe disappears",
-        # but it is not: when the push never lands the viewer is left holding a
-        # phantom keyframe forever, and the next overlay backs that phantom up
-        # as its original value, so the pose drifts on every drag. The real
-        # fault is the push being skipped, not the restore.
         self.state = RESOLVING
-        self._restore(edit)
+
+        # NUEVO: Solo restaurar si la transformación fue cancelada
+        # Si fue confirmada (is_cancelled=False), el keyframe temporal debe
+        # mantenerse hasta que el commit/push real llegue por porcelain
+        is_cancelled = message.get("is_cancelled", True)
+
+        if is_cancelled:
+            # Transformación cancelada: restaurar valores originales
+            self._restore(edit)
+        else:
+            # Transformación confirmada: NO restaurar
+            # El commit/push por porcelain reemplazará el keyframe temporal
+            # Limpiamos los backups para liberar memoria
+            edit.created_curves.clear()
+            edit.backups.clear()
+            logging.debug(
+                f"Live Sync: keeping keyframe for '{edit.bone_name}' "
+                f"(transform confirmed, waiting for porcelain push)"
+            )
 
         if not self._edits:
             self.state = IDLE
@@ -1504,6 +1596,8 @@ class LiveSyncEngine:
         except (KeyError, AttributeError):
             return None
 
+    
+
     # -- teardown --------------------------------------------------------- #
 
     def shutdown(self):
@@ -1522,6 +1616,14 @@ class LiveSyncEngine:
 
 
 engine = LiveSyncEngine()
+
+def is_streaming() -> bool:
+        """True while the streamer is actively streaming bones (state == INTERACTING).
+
+        This is more reliable than pose_stream_active() because it doesn't depend
+        on detecting the modal operator in wm.operators, which is unreliable.
+        """
+        return engine.streamer.state == INTERACTING
 
 
 def tick():
