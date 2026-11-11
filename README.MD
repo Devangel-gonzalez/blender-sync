@@ -15,7 +15,7 @@
 - ReadTheDocs: https://multi-user.readthedocs.io/
 - Autor original: Swann Martinez (Slumber)
 - Estado del addon: En desarrollo activo. El propio repositorio indica: "Under development, use it at your own risks. Currently tested on Windows platform."
-- Arquitectura: Cliente/Servidor con replicación orientada a datos (data-oriented replication). Usa ZeroMQ (ZMQ) para comunicación de red. El sistema de sincronización se basa en un repositorio local con operaciones tipo Git (commit, push, apply, lock, unlock, rm) a través de una capa de abstracción llamada porcelain.
+- Arquitectura: Cliente/Servidor con replicación orientada a datos (data-oriented replication). Usa TCP (sockets estándar de Python) para comunicación de red. El sistema de sincronización se basa en un repositorio local con operaciones tipo Git (commit, push, apply, lock, unlock, rm) a través de una capa de abstracción llamada porcelain.
 - Permisos requeridos: El addon solicita permiso de Red (Network) para sincronizar la escena.
 
 #### 1.2 Objetivo de la Modificación
