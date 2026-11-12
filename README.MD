@@ -1,8 +1,11 @@
-# Documento de Especificación Técnica
+# Technical Design Document (TDD): Sistema de Live Sync
+Documento de Diseño Técnico y Arquitectura
 
 ## Modificación del Addon "Multi-User" para Blender
 
 ## Sistema de Live Sync para Animación con Visor en Bucle
+
+## True Level: Reviewer 
 
 ### 1. INFORMACIÓN GENERAL DEL PROYECTO
 
@@ -68,7 +71,7 @@ En el addon vanilla, el sistema de permisos funciona mediante propiedad y bloque
 
 #### 3.2 NO SILENCIAR EL HUESO
 
-- El hueso que el Host está editando NO debe ser silenciado. No se debe usar fcurve.mute = True sobre las curvas F del hueso editado.
+- El hueso (o los huesos) que el Host está transformando NO debe ser silenciado. No se debe usar fcurve.mute = True sobre las curvas F del hueso editado.
 - El hueso que el Host está editando NO debe ser congelado ni desconectado de la animación.
 - El hueso debe continuar animándose normalmente dentro del bucle del Cliente.
 - La edición del Host se manifiesta como un keyframe temporal insertado o sobrepuesto en el frame específico donde el Host está trabajando.
@@ -77,7 +80,7 @@ En el addon vanilla, el sistema de permisos funciona mediante propiedad y bloque
 
 - NO se debe crear una Acción vacía temporal ni intercambiar Acciones (animation_data.action).
 - NO se debe reemplazar la Acción original del Cliente por otra Acción.
-- NO se debe desconectar la Acción original del armazón durante la edición interactiva.
+- NO se debe desconectar la Acción original del Armature durante la edición interactiva.
 - Los keyframes temporales se insertan o sobreescriben dentro de la Acción existente del Cliente.
 
 #### 3.4 NO CREAR KEYFRAMES MASIVOS
@@ -93,13 +96,13 @@ En el addon vanilla, el sistema de permisos funciona mediante propiedad y bloque
 - Los valores originales de los keyframes afectados se guardan en memoria antes de cualquier sobreescritura.
 - Si el Host cancela la edición, los valores originales se restauran completamente, devolviendo la animación a su estado previo a la edición interactiva.
 - Si el Host confirma la edición, el commit/push real del repositorio actualiza los datos de la animación. Los datos temporales son reemplazados por los datos confirmados.
-- Ninguna modificación temporal debe sobrevivir a la cancelación de la edición ni convertirse en permanente fuera del flujo de commit/push del repositorio.
+- Ninguna modificación temporal debe sobrevivir a la cancelación de la edición ni convertirse en permanente fuera del flujo de commit/push del repositorio (A no ser que el modo `Phantom Keyframe Mode` diga lo contrario).
 
 #### 3.6 RENDIMIENTO
 
 - NO usar bone.keyframe_insert() estándar de Blender. Es demasiado lento para operaciones en tiempo real porque recalcula tangentes, actualiza el depsgraph y dispara handlers internos.
 - SÍ usar fcurve.keyframe_points.insert(frame, value, options={'FAST'}) para inserción rápida de keyframes.
-- El stream de datos de transformación en vivo debe usar un canal ZMQ directo, evitando pasar por porcelain.commit() y porcelain.push() que son operaciones pesadas de repositorio y generan historial de commits.
+- El stream de datos de transformación en vivo debe usar un canal TCP directo, evitando pasar por porcelain.commit() y porcelain.push() que son operaciones pesadas de repositorio y generan historial de commits.
 
 #### 3.7 THREADING
 
@@ -123,9 +126,9 @@ Esto envía manualmente ese data block específico al servidor. Es una operació
 
 #### 4.2 Cómo funciona el depsgraph y el handler actual
 
-Blender tiene un sistema llamado Dependency Graph (Depsgraph). Es un registro interno que rastrea todas las relaciones entre los datos de la escena. Cada vez que algo cambia en la escena (mueves un objeto, cambias un material, editas una malla, modificas un hueso, etc.), el depsgraph registra ese cambio y dispara una señal llamada depsgraph_update_post.
+Blender tiene un sistema llamado Dependency Graph (Depsgraph). Es un registro interno que rastrea todas las relaciones entre los datos de la escena. Cada vez que algo cambia en la escena (mueves un objeto, cambias un material, editas una malla, modificas un hueso, etc.), el depsgraph registra ese cambio y dispara una señal llamada `depsgraph_update_post`.
 
-El addon Multi-User ya tiene un handler que escucha esta señal. Está en el archivo handlers.py y se llama on_scene_update:
+El addon Multi-User ya tiene un handler que escucha esta señal. Está en el archivo `handlers.py` y se llama `on_scene_update`:
 
 ```python
 @persistent
@@ -202,17 +205,17 @@ Se añade un Toggle Global en la interfaz del addon.
 
 #### 4.6 Estructura de Datos para el Estado de Live Sync
 
-Se necesita un diccionario almacenado en la sesión compartida (shared_data.session) que rastree qué nodos tienen live sync activo:
+El estado se inicializa como un diccionario vacío en SessionData. Contiene únicamente los UUID de los nodos activados; las claves desactivadas se eliminan. Si un UUID no está presente, su estado se considera desactivado.
 
 ```python
-# Inicialización (en shared_data.session)
-shared_data.session.live_sync_nodes = {}
-
-# Ejemplo de estado con nodos activos
+# Ejemplo de estado con dos nodos activos
 shared_data.session.live_sync_nodes = {
     "uuid-del-nodo-1": True,
-    "uuid-del-nodo-2": False,
+    "uuid-del-nodo-2": True,
 }
+
+# Comprobación: un nodo ausente se considera desactivado
+is_live = shared_data.session.live_sync_nodes.get("uuid-del-nodo-3", False)
 ```
 
 #### 4.7 Lógica del Handler Modificado (on_scene_update)
@@ -220,22 +223,21 @@ shared_data.session.live_sync_nodes = {
 Dentro del handler on_scene_update en handlers.py, se debe añadir una condición adicional:
 
 ```python
-if node:
+if node and can_publish(node, session.repository.username, check_common, host_peer):
     is_live = shared_data.session.live_sync_nodes.get(node.uuid, False)
 
-    if is_live:
-        # Este nodo tiene live sync activo.
-        # Forzar commit/push sin importar otras condiciones de ownership.
+    # Rechazar commits de objeto/armadura durante pose-stream activo
+    if live_sync.pose_stream_active() and is_live:
+        continue
+
+    # El “live sync” armado no reemplaza el control de publicación,
+    # pero sí hace que el nodo se considere de alta prioridad:
+    if is_live or node.state == UP:
         try:
             porcelain.commit(session.repository, node.uuid)
             porcelain.push(session.repository, 'origin', node.uuid)
         except Exception as e:
             logging.error(f"Live Sync Push Error: {e}")
-    elif node.owner == session.repository.username or check_common:
-        # Comportamiento vanilla normal
-        if node.state == UP:
-            porcelain.commit(session.repository, node.uuid)
-            porcelain.push(session.repository, 'origin', node.uuid)
 ```
 
 #### 4.8 Lógica de la Interfaz (draw_property en ui.py)
@@ -278,9 +280,9 @@ En Blender vanilla, cuando estás en Modo Pose y presionas R (rotar), G (mover) 
 - Por lo tanto, el addon Multi-User no detecta el cambio y no hace commit/push.
 - El Cliente no ve la transformación hasta que el Host confirma.
 
-#### 5.2 La Solución: Stream ZMQ Directo + Keyframe Temporal en el Frame del Host
+#### 5.2 La Solución: Stream TCP Directo + Keyframe Temporal en el Frame del Host
 
-Se implementa un canal de comunicación paralelo al sistema de repositorio (porcelain) del addon. Este canal envía datos de transformación en tiempo real directamente por ZMQ, sin pasar por el sistema de commits.
+Se implementa un canal de comunicación paralelo al sistema de repositorio (porcelain) del addon. Este canal envía datos de transformación en tiempo real directamente por TCP, sin pasar por el sistema de commits.
 
 En el Cliente, la transformación recibida se manifiesta como un keyframe temporal insertado o sobrepuesto en el frame específico donde el Host está trabajando. El resto de la animación del Cliente sigue reproduciéndose normalmente. El hueso editado sigue animándose en todos los demás frames; solo en el frame específico del Host se muestra la pose editada.
 
@@ -290,8 +292,8 @@ En el Cliente, la transformación recibida se manifiesta como un keyframe tempor
 
 1. El Host entra en Modo Pose y selecciona un hueso.
 2. El Host presiona R, G o S para iniciar una transformación interactiva.
-3. Se detecta el inicio de la transformación. Se envía por ZMQ una señal "start" con:
-   - UUID del armazón
+3. Se detecta el inicio de la transformación. Se envía por TCP una señal "start" con:
+   - UUID del Armature
    - Nombre del hueso
    - Frame actual del Host (current_frame)
 
@@ -300,8 +302,8 @@ En el Cliente, la transformación recibida se manifiesta como un keyframe tempor
 4. Mientras el Host mueve/rota/escala el hueso (sin confirmar aún):
 
 - Se lee la pose visual usando evaluated_get(depsgraph) para obtener la matriz real del hueso tal como se ve en pantalla durante la transformación interactiva. (Ver Sección 5.9 para detalles técnicos.)
-- Se envía por el canal ZMQ directo una señal "update" con:
-  - UUID del armazón
+- Se envía por el canal TPC directo una señal "update" con:
+  - UUID del Armature
   - Nombre del hueso
   - Frame actual del Host (current_frame)
   - Matriz de transformación (matrix_basis)
@@ -389,8 +391,8 @@ La animación del Cliente sí se modifica temporalmente durante la edición inte
 - Si el Host cancela, en el Caso A se restaura el valor guardado. En el Caso B se elimina el keyframe insertado.
 - Si el Host confirma, el commit/push del repositorio trae los datos definitivos que reemplazan cualquier estado temporal.
 
-#### 5.7 Formato del Mensaje ZMQ (Canal Live Sync)
-
+#### 5.7 Formato del Mensaje TCP (Canal Live Sync)  
+Formato de ilustrativo, puede cambiar en la implementación:
 ```json
 {
   "channel": "live_sync",
@@ -446,10 +448,10 @@ matrix = evaluated_bone.matrix_basis
 
 | Archivo                                     | Modificación                                                                                                                                                                              |
 | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `libs/replication/live_sync.py`             | (NUEVO) Motor principal del Live Sync. Maneja el stream ZMQ, la inserción/actualización/restauración de keyframes temporales, el guardado de valores originales, y la máquina de estados. |
+| `libs/replication/live_sync.py`             | (NUEVO) Motor principal del Live Sync. Maneja el stream TCP, la inserción/actualización/restauración de keyframes temporales, el guardado de valores originales, y la máquina de estados. |
 | `operators.py`                              | Crear operador modal o wrapper para detectar el inicio/fin de transformaciones interactivas (R, G, S).                                                                                    |
 | `handlers.py`                               | Posiblemente añadir un handler para detectar el estado del modal de transformación.                                                                                                       |
-| `libs/replication/session.py` o equivalente | Inyectar la escucha del canal "live_sync" en el socket ZMQ existente.                                                                                                                     |
+| `libs/replication/session.py` o equivalente | Inyectar la escucha del canal "live_sync" en el socket TCP existente.                                                                                                                     |
 
 ### 6. INTERACCIÓN ENTRE FUNCIONALIDAD 1 Y FUNCIONALIDAD 2
 
@@ -464,21 +466,21 @@ Las dos funcionalidades operan de forma complementaria pero en fases distintas d
 - El Host presiona `R`, `G` o `S` sobre un hueso en Modo Pose.
 - `depsgraph_update_post` NO se dispara. Blender aún no ha escrito en `bpy.data`.
 - Funcionalidad 1: Inactiva. El depsgraph no detecta ningún cambio. Los toggles de Live Sync no tienen efecto en esta fase.
-- Funcionalidad 2: Activa. Detecta el inicio de la transformación y envía la señal "start" por el canal ZMQ directo.
+- Funcionalidad 2: Activa. Detecta el inicio de la transformación y envía la señal "start" por el canal TCP directo.
 
 **Fase 2: Transformación en curso (antes de confirmar)**
 
 - El Host está rotando/moviendo/escalando el hueso. El cambio es solo visual.
 - `depsgraph_update_post` NO se dispara.
 - **Funcionalidad 1**: Inactiva. No hay cambios en `bpy.data` que detectar. Los toggles de Live Sync no tienen efecto en esta fase.
-- **Funcionalidad 2**: Activa. Lee `evaluated_get(depsgraph)` y envía señales `"update"` con la matriz visual del hueso por el canal ZMQ directo. El Cliente actualiza el keyframe temporal.
+- **Funcionalidad 2**: Activa. Lee `evaluated_get(depsgraph)` y envía señales `"update"` con la matriz visual del hueso por el canal TCP directo. El Cliente actualiza el keyframe temporal.
 
 **Fase 3a: Confirmación (click izquierdo o Enter)**
 
 - El Host confirma la transformación. Blender escribe el cambio en `bpy.data`.
 - `depsgraph_update_post` SE DISPARA.
-- **Funcionalidad 2**: Envía la señal `"end"` con `is_cancelled = False` por el canal ZMQ directo. El Cliente limpia el keyframe temporal.
-- **Funcionalidad 1**: El depsgraph detecta el cambio. Si el toggle de Live Sync está activo para el armazón o el data block afectado, se ejecuta `porcelain.commit()` y `porcelain.push()` automáticamente. Si el toggle NO está activo, el cambio queda pendiente de commit manual.
+- **Funcionalidad 2**: Envía la señal `"end"` con `is_cancelled = False` por el canal TCP directo. El Cliente limpia el keyframe temporal (Si no interfiere `Phantom Keyframe Mode`).
+- **Funcionalidad 1**: El depsgraph detecta el cambio. Si el toggle de Live Sync está activo para la armadura o el data block afectado, se ejecuta `porcelain.commit()` y `porcelain.push()` automáticamente. Si el toggle NO está activo, el cambio queda pendiente de commit manual.
 - **Coordinación**: La señal `"end"` de la Funcionalidad 2 y el commit/push de la Funcionalidad 1 ocurren en paralelo. Ver Sección 6.3 para detalles.
 
 **Fase 3b: Cancelación (click derecho o ESC)**
@@ -486,7 +488,7 @@ Las dos funcionalidades operan de forma complementaria pero en fases distintas d
 - El Host cancela la transformación. Blender NO escribe nada en `bpy.data`.
 - `depsgraph_update_post` NO se dispara.
 - **Funcionalidad 1**: Inactiva. No hay cambios en `bpy.data` que detectar. No se ejecuta commit/push.
-- **Funcionalidad 2**: Envía la señal `"end"` con `is_cancelled = True` por el canal ZMQ directo. El Cliente restaura los valores originales del keyframe y elimina el keyframe temporal.
+- **Funcionalidad 2**: Envía la señal `"end"` con `is_cancelled = True` por el canal TCP directo. El Cliente restaura los valores originales del keyframe y elimina el keyframe temporal.
 
 #### 6.3 Tabla Resumen de Actividad por Fase
 
@@ -501,13 +503,13 @@ Las dos funcionalidades operan de forma complementaria pero en fases distintas d
 
 En la fase de confirmación (Fase 3a), ambas funcionalidades actúan brevemente al mismo tiempo. Es importante que no haya conflicto entre ellas:
 
-1. La Funcionalidad 2 envía la señal `"end"` por el canal ZMQ directo. Esto le dice al Cliente que la edición interactiva terminó y que debe limpiar el keyframe temporal.
+1. La Funcionalidad 2 envía la señal `"end"` por el canal TCP directo. Esto le dice al Cliente que la edición interactiva terminó y que debe limpiar el keyframe temporal.
 2. La Funcionalidad 1 ejecuta `porcelain.commit()` y `porcelain.push()` (si el toggle está activo). Esto envía los datos confirmados por el canal del repositorio.
 3. El Cliente debe procesar primero la señal `"end"` (limpiar el keyframe temporal) y luego aplicar los datos del repositorio (recibir la animación confirmada). Si el orden se invierte, el Cliente podría mostrar brevemente datos inconsistentes.
 
 #### 6.5 Posible Vacío de Datos si el Toggle NO está Activo
 
-Si el Host confirma la transformación pero el toggle de Live Sync NO está activo para el armazón o data block afectado:
+Si el Host confirma la transformación pero el toggle de Live Sync NO está activo para el Armature o data block afectado:
 
 - La Funcionalidad 2 envía la señal `"end"` y el Cliente limpia el keyframe temporal.
 - La Funcionalidad 1 NO hace commit/push automático (porque el toggle no está activo).
@@ -515,24 +517,24 @@ Si el Host confirma la transformación pero el toggle de Live Sync NO está acti
 - El Cliente ve que el keyframe temporal desaparece pero no recibe los datos confirmados hasta que el Host haga el commit manualmente.
 - Esto puede causar un breve "vacío visual" donde el Cliente muestra la pose original del frame en lugar de la pose editada.
 
-**Recomendación**: Para el flujo de trabajo de animación en tiempo real, se recomienda tener el toggle de Live Sync activo para el armazón y los data blocks relevantes. Esto asegura que la confirmación se propague inmediatamente al Cliente sin vacío de datos.
+**Recomendación**: Para el flujo de trabajo de animación en tiempo real, se recomienda tener el toggle de Live Sync activo para el Armature y los data blocks relevantes. Esto asegura que la confirmación se propague inmediatamente al Cliente sin vacío de datos.
 
 ### 7. LO QUE ESTRICTAMENTE NO SE DEBE IMPLEMENTAR
 
-1. NO pausar el timeline del Cliente. El Cliente siempre reproduce su propio timeline, normalmente en bucle. No ejecutar `is_animation_playing = False` ni `frame_set()` en el Cliente como parte del flujo de Live Sync.
+1. NO pausar el timeline del Cliente. El Cliente siempre controla la reproducción de su propio timeline, normalmente en bucle. No ejecutar `is_animation_playing = False` ni `frame_set()` en el Cliente como parte del flujo de Live Sync.
 2. NO silenciar (`mute`) las Curvas F del hueso editado. No usar `fcurve.mute = True`. El hueso debe seguir animándose.
 3. NO congelar ni desconectar el hueso editado de la animación del Cliente.
 4. NO usar Action Swapping. No crear Acciones vacías temporales. No intercambiar `animation_data.action`. No reemplazar la Acción original del Cliente.
 5. NO crear keyframes en cada frame del bucle del Cliente. Solo se manipula UN keyframe temporal por hueso editado, ubicado en el frame específico del Host.
 6. NO usar `bone.keyframe_insert()` estándar. Usar `fcurve.keyframe_points.insert()` con `options={'FAST'}`.
 7. NO usar hilos de Python (`threading`) para acceder a datos de `bpy.data`. Usar `bpy.app.timers` o handlers nativos de Blender.
-8. NO hacer commit/push por `porcelain` durante la transformación interactiva (antes de confirmar). Usar el canal ZMQ directo para las actualizaciones en vivo.
-9. NO dejar keyframes temporales huérfanos. Toda modificación temporal debe ser limpiada ya sea por confirmación (commit/push real) o por cancelación (restauración de valores originales).
+8. NO hacer commit/push por `porcelain` durante la transformación interactiva (antes de confirmar). Usar el canal TCP directo para las actualizaciones en vivo.
+9. NO dejar keyframes temporales huérfanos. Toda modificación temporal debe ser limpiada ya sea por confirmación (commit/push real) o por cancelación (restauración de valores originales) (Sí `Phantom Keyframe Mode` está desactivado).
 
 ### 8. CONSIDERACIONES DE RENDIMIENTO
 
 1. **Inserción de keyframes**: Usar siempre `options={'FAST'}` para evitar recálculo de tangentes y actualizaciones pesadas del depsgraph. Esto hace la inserción casi instantánea.
-2. **Frecuencia de actualización**: El stream ZMQ debe enviar actualizaciones a una frecuencia razonable (30-60 FPS). No saturar la red ni el socket ZMQ.
+2. **Frecuencia de actualización**: El stream TCP debe enviar actualizaciones a una frecuencia razonable (30-60 FPS). No saturar la red ni el socket TCP.
 3. **Filtrado de data blocks para el Toggle Global de Live Sync**: Cuando se hace commit/push constante, NO enviar data blocks pesados como `mesh`, `image`, `volume` en cada cambio. Priorizar data blocks ligeros y relevantes para animación (aunque en realidad el toggle es el quele permite al usuario elegir):
 
 | Data Block                       | Peso         | ¿Conviene Live Sync? |
@@ -547,8 +549,8 @@ Si el Host confirma la transformación pero el toggle de Live Sync NO está acti
 | `image` (texturas)               | Muy pesado   | ❌ No                |
 | `volume`                         | Muy pesado   | ❌ No                |
 
-4. **Canal ZMQ directo**: Las transformaciones interactivas deben ir por un canal separado que no pase por el sistema de repositorio (`porcelain`). Esto evita generar commits basura en el historial del repositorio y no bloquea la interfaz del Host.
-5. **Un solo keyframe por hueso editado**: En el Cliente, solo se mantiene UN keyframe temporal por hueso en edición. Se actualiza su valor, no se recrea el keyframe en cada update.
+4. **Canal TCP directo**: Las transformaciones interactivas deben ir por un canal separado que no pase por el sistema de repositorio (`porcelain`). Esto evita generar commits basura en el historial del repositorio y no bloquea la interfaz del Host.
+5. **Un solo keyframe temporal por cada hueso transformado**: En el Cliente, solo se mantiene UN keyframe temporal por hueso en edición. Se actualiza su valor, no se recrea el keyframe en cada update.
 6. **Limpieza de memoria**: Los valores originales guardados para restauración deben liberarse inmediatamente después de que la edición se confirma o se cancela. No acumular datos en memoria.
 
 ### 9. EDGE CASES Y CASOS LÍMITE A CONSIDERAR
@@ -557,13 +559,13 @@ Si el Host confirma la transformación pero el toggle de Live Sync NO está acti
 2. **Host confirma la transformación (click izquierdo / Enter)**: El commit/push real por `porcelain` actualiza la animación. El keyframe temporal del Cliente debe limpiarse y ser reemplazado por los datos reales confirmados del repositorio.
 3. **Host cambia de frame mientras edita**: Si el Host se mueve a otro frame durante la edición interactiva, el keyframe temporal en el Cliente debe moverse al nuevo frame. Se debe eliminar el keyframe del frame anterior y crear/actualizar uno en el nuevo frame. Los valores originales del frame anterior deben restaurarse.
 4. **Múltiples huesos editados simultáneamente**: Aunque en la práctica Blender solo permite una transformación interactiva a la vez, el sistema debe ser robusto y capaz de manejar múltiples keyframes temporales si fuera necesario.
-5. **Cliente sin animación (sin Acción asignada)**: Si el Cliente no tiene una Acción asignada al armazón, el sistema debe manejar esto gracefully. Puede simplemente aplicar la matriz directamente al hueso sin necesidad de keyframes, o crear una Acción para alojar el keyframe.
+5. **Cliente sin animación (sin Acción asignada)**: Si el Cliente no tiene una Acción asignada al Armature, el sistema debe manejar esto gracefully. Puede simplemente aplicar la matriz directamente al hueso sin necesidad de keyframes, o crear una Acción para alojar el keyframe.
 6. **Host edita un frame donde no existe keyframe previo**: Esto es un comportamiento esperado y normal manejado por los casos anteriores.
 7. **Host edita un frame donde SÍ existe keyframe previo**: El Cliente debe guardar el valor original del keyframe existente antes de sobrescribirlo con el valor temporal. Al cancelar, restaura el valor original. Al confirmar, el commit/push real reemplaza el dato.
 8. **Desconexión del Cliente durante una edición**: Si el Cliente se desconecta mientras el Host está editando, no debe haber errores en el Host. Al reconectarse, el Cliente debe recibir el estado actual completo del repositorio y no debe tener keyframes temporales huérfanos. En caso extremo, el cliente simplemente se debe crear otra copia del .blend original y reconectarse.
 9. **Desconexión del Host durante una edición**: Si el Host se desconecta mientras está editando, el Cliente debe detectar la pérdida de conexión, limpiar cualquier keyframe temporal pendiente, y restaurar los valores originales. En caso extremo, el cliente simplemente se debe crear otra copia del .blend original y reconectarse.
 10. **Host edita un hueso que no existe en el Cliente**: Si por alguna razón el hueso editado no existe en la escena del Cliente (error de sincronización), el sistema debe ignorar las señales de update gracefully sin crashear. El usuario tendra que volver a copiar el .blend original y reconectarse.
-11. **Toggle de Live Sync NO activo al confirmar**: Si el Host confirma la transformación pero el toggle de Live Sync no está activo para el data block afectado, el Cliente limpia el keyframe temporal pero no recibe los datos confirmados hasta que el Host haga commit manual. Esto puede causar un breve vacío visual. (Ver Sección 6.5.)..
+11. **Toggle de Live Sync NO activo al confirmar**: Si el Host confirma la transformación pero el toggle de Live Sync no está activo para el data block afectado, el Cliente limpia el keyframe temporal pero no recibe los datos confirmados hasta que el Host haga commit manual. Esto puede causar un breve vacío visual. (Ver Sección 6.5.).
 
 ### 10. ESTRUCTURA DE ARCHIVOS DEL ADDON (Referencia)
 
@@ -583,21 +585,20 @@ multi_user/
 │                            #   - on_scene_update: depsgraph_update_post handler
 │                            #   - update_client_frame: frame_change_pre handler
 │                            #   - sanitize_deps_graph, resolve_deps_graph
+├── live_sync.py             # [NUEVO] Motor de Live Sync para Modo Pose (usando TCP)
 ├── presence.py              # Presencia de usuarios online
-├── libs/
-│   └── replication/
-│       ├── interface.py     # Interfaz de sesión
-│       ├── session.py       # Lógica de sesión y conexión
-│       ├── porcelain.py     # Operaciones de repositorio
-│       │                    #   - commit(), push(), apply(), lock(), unlock(), rm(), add()
-│       ├── rdp.py           # Replication Data Protocol
-│       └── live_sync.py     # [NUEVO] Motor de Live Sync para Modo Pose
+├── replication/             # Lógica de replicación y repositorio
+│   ├── interface.py         # Interfaz de sesión
+│   ├── session.py           # Lógica de sesión y conexión (Socket TCP)
+│   ├── porcelain.py         # Operaciones de repositorio
+│   │                        #   - commit(), push(), apply(), lock(), unlock(), rm(), add()
+│   └── rdp.py               # Replication Data Protocol
 └── icons/                   # Iconos personalizados del addon
 ```
 
 ### 11. DEPENDENCIAS Y HERRAMIENTAS DEL ADDON ORIGINAL
 
-- **ZeroMQ (ZMQ)**: Librería de mensajería usada para toda la comunicación de red entre Host y Cliente. El addon requiere permisos de red para funcionar.
+- **TCP (Sockets estándar)**: Protocolo de red usado para toda la comunicación entre Host y Cliente. El addon requiere permisos de red para funcionar.
 - **Porcelain**: Capa de abstracción sobre el sistema de replicación. Provee operaciones tipo Git: `commit`, `push`, `apply`, `lock`, `unlock`, `rm`, `add`, `purge_orphan_nodes`.
 - **Depsgraph**: Blender Dependency Graph. Usado para detectar cambios en la escena mediante el handler `depsgraph_update_post`.
 - **Blender Python API (bpy)**: Acceso a datos de la escena, operadores, handlers, keyframes, F-Curves, depsgraph evaluado, etc.
@@ -609,13 +610,13 @@ multi_user/
 Se modifica el addon Multi-User de Blender para añadir dos funcionalidades principales que operan de forma complementaria:
 
 **Funcionalidad 1: Toggle Global de Live Sync**  
-Convierte los botones individuales de commit/push en toggles que activan/desactivan la sincronización constante por data block. Controlado por un toggle global maestro. Funciona mediante el handler `depsgraph_update_post` y solo detecta cambios confirmados (escritos en `bpy.data`). Es completamente ciega a las transformaciones interactivas en curso (`R`, `G`, `S` antes de confirmar).
+Convierte los botones individuales de commit/push en toggles que activan/desactivan la sincronización constante por data block. Controlado por un toggle global maestro. Funciona mediante el handler `depsgraph_update_post` y solo detecta cambios confirmados (escritos en `bpy.data`). Es completamente ciega a las transformaciones interactivas en curso (`R`, `G`, `S` antes de confirmar).  
 
 **Funcionalidad 2: Live Sync de Modo Pose**  
-Permite que las transformaciones interactivas de huesos (`R`, `G`, `S` antes de confirmar) se vean en tiempo real en el Cliente. Usa `evaluated_get(depsgraph)` para leer la pose visual y un canal ZMQ directo para enviarla. En el Cliente, la pose se manifiesta como un keyframe temporal insertado o sobrepuesto en el frame específico donde el Host está editando. La animación del Cliente es modificada temporalmente pero de forma completamente reversible: los valores originales se guardan antes de la sobreescritura y se restauran si el Host cancela. El hueso NO se silencia, NO se congela, y el timeline del Cliente NO se pausa.
+Permite que las transformaciones interactivas de huesos (`R`, `G`, `S` antes de confirmar) se vean en tiempo real en el Cliente. Usa `evaluated_get(depsgraph)` para leer la pose visual y un canal TCP directo para enviarla. En el Cliente, la pose se manifiesta como un keyframe temporal insertado o sobrepuesto en el frame específico donde el Host está editando. La animación del Cliente es modificada temporalmente pero de forma completamente reversible: los valores originales se guardan antes de la sobreescritura y se restauran si el Host cancela. El hueso NO se silencia, NO se congela, y el timeline del Cliente NO se pausa.  
 
 **Coordinación entre ambas:**  
-Durante la fase interactiva (antes de confirmar), solo la Funcionalidad 2 está activa. En el momento de la confirmación, la Funcionalidad 2 envía la señal de fin y la Funcionalidad 1 toma el relevo para hacer el commit/push de los datos confirmados. En caso de cancelación, solo la Funcionalidad 2 actúa para restaurar el estado original.
+Durante la fase interactiva (antes de confirmar), solo la Funcionalidad 2 está activa. En el momento de la confirmación, la Funcionalidad 2 envía la señal de fin y la Funcionalidad 1 toma el relevo para hacer el commit/push de los datos confirmados. En caso de cancelación, solo la Funcionalidad 2 actúa para restaurar el estado original.  
 
 **La regla de oro:**  
 El Cliente es un visor en bucle que nunca se detiene (solo el usuario puede manipular manualmente el timeline). El Host es un editor libre. La edición del Host se integra visualmente en el bucle del Cliente mediante un keyframe temporal en el frame específico de edición. La animación del Cliente se modifica temporalmente pero siempre de forma reversible.
