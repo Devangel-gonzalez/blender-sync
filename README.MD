@@ -1,11 +1,12 @@
 # Technical Design Document (TDD): Sistema de Live Sync
+
 Documento de Diseño Técnico y Arquitectura
 
 ## Modificación del Addon "Multi-User" para Blender
 
 ## Sistema de Live Sync para Animación con Visor en Bucle
 
-## True Level: Reviewer 
+## True Level: Reviewer
 
 ### 1. INFORMACIÓN GENERAL DEL PROYECTO
 
@@ -391,8 +392,10 @@ La animación del Cliente sí se modifica temporalmente durante la edición inte
 - Si el Host cancela, en el Caso A se restaura el valor guardado. En el Caso B se elimina el keyframe insertado.
 - Si el Host confirma, el commit/push del repositorio trae los datos definitivos que reemplazan cualquier estado temporal.
 
-#### 5.7 Formato del Mensaje TCP (Canal Live Sync)  
+#### 5.7 Formato del Mensaje TCP (Canal Live Sync)
+
 Formato de ilustrativo, puede cambiar en la implementación:
+
 ```json
 {
   "channel": "live_sync",
@@ -442,7 +445,7 @@ matrix = evaluated_bone.matrix_basis
 
 - `evaluated_get(depsgraph)` devuelve una copia temporal y evaluada del objeto/hueso, tal como se ve en pantalla en ese momento.
 - Esto incluye transformaciones interactivas no confirmadas, modificadores aplicados visualmente, y cualquier otro cambio que sea visible en el viewport pero que aún no se haya escrito en `bpy.data`.
-- **Importante**: `porcelain.commit()` lee de `bpy.data` (los datos originales), no del depsgraph evaluado. Por eso las transformaciones interactivas deben ir por el canal ZMQ directo y no por `porcelain`.
+- **Importante**: `porcelain.commit()` lee de `bpy.data` (los datos originales), no del depsgraph evaluado. Por eso las transformaciones interactivas deben ir por el canal TCP directo y no por `porcelain`.
 
 #### 5.10 Archivos a Crear/Modificar para esta Funcionalidad
 
@@ -610,13 +613,13 @@ multi_user/
 Se modifica el addon Multi-User de Blender para añadir dos funcionalidades principales que operan de forma complementaria:
 
 **Funcionalidad 1: Toggle Global de Live Sync**  
-Convierte los botones individuales de commit/push en toggles que activan/desactivan la sincronización constante por data block. Controlado por un toggle global maestro. Funciona mediante el handler `depsgraph_update_post` y solo detecta cambios confirmados (escritos en `bpy.data`). Es completamente ciega a las transformaciones interactivas en curso (`R`, `G`, `S` antes de confirmar).  
+Convierte los botones individuales de commit/push en toggles que activan/desactivan la sincronización constante por data block. Controlado por un toggle global maestro. Funciona mediante el handler `depsgraph_update_post` y solo detecta cambios confirmados (escritos en `bpy.data`). Es completamente ciega a las transformaciones interactivas en curso (`R`, `G`, `S` antes de confirmar).
 
 **Funcionalidad 2: Live Sync de Modo Pose**  
-Permite que las transformaciones interactivas de huesos (`R`, `G`, `S` antes de confirmar) se vean en tiempo real en el Cliente. Usa `evaluated_get(depsgraph)` para leer la pose visual y un canal TCP directo para enviarla. En el Cliente, la pose se manifiesta como un keyframe temporal insertado o sobrepuesto en el frame específico donde el Host está editando. La animación del Cliente es modificada temporalmente pero de forma completamente reversible: los valores originales se guardan antes de la sobreescritura y se restauran si el Host cancela. El hueso NO se silencia, NO se congela, y el timeline del Cliente NO se pausa.  
+Permite que las transformaciones interactivas de huesos (`R`, `G`, `S` antes de confirmar) se vean en tiempo real en el Cliente. Usa `evaluated_get(depsgraph)` para leer la pose visual y un canal TCP directo para enviarla. En el Cliente, la pose se manifiesta como un keyframe temporal insertado o sobrepuesto en el frame específico donde el Host está editando. La animación del Cliente es modificada temporalmente pero de forma completamente reversible: los valores originales se guardan antes de la sobreescritura y se restauran si el Host cancela. El hueso NO se silencia, NO se congela, y el timeline del Cliente NO se pausa.
 
 **Coordinación entre ambas:**  
-Durante la fase interactiva (antes de confirmar), solo la Funcionalidad 2 está activa. En el momento de la confirmación, la Funcionalidad 2 envía la señal de fin y la Funcionalidad 1 toma el relevo para hacer el commit/push de los datos confirmados. En caso de cancelación, solo la Funcionalidad 2 actúa para restaurar el estado original.  
+Durante la fase interactiva (antes de confirmar), solo la Funcionalidad 2 está activa. En el momento de la confirmación, la Funcionalidad 2 envía la señal de fin y la Funcionalidad 1 toma el relevo para hacer el commit/push de los datos confirmados. En caso de cancelación, solo la Funcionalidad 2 actúa para restaurar el estado original.
 
 **La regla de oro:**  
 El Cliente es un visor en bucle que nunca se detiene (solo el usuario puede manipular manualmente el timeline). El Host es un editor libre. La edición del Host se integra visualmente en el bucle del Cliente mediante un keyframe temporal en el frame específico de edición. La animación del Cliente se modifica temporalmente pero siempre de forma reversible.

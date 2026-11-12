@@ -61,7 +61,7 @@ Varios usuarios pueden tener el mismo objeto seleccionado a la vez.
 
 Cuando el pseudocódigo contradice la prosa o las restricciones, mandan la prosa y
 las restricciones. El spec se escribió contra un layout ZMQ / `libs/replication/`
-que ya no existe; seguirlo literal produce código que no corre.
+que ya no existe; seguirlo literal produce código que no corre. Se usa TCP
 
 ### 1.5 Un keyframe temporal por hueso editado
 
@@ -76,11 +76,11 @@ Verificadas por sondeo directo en **4.5.2 LTS y 5.2.2 LTS** (idénticas en ambas
 
 ### 2.1 Rotación
 
-| Hecho | Consecuencia |
-|---|---|
+| Hecho                                                                            | Consecuencia                                                                                                                                                                               |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `PoseBone.rotation_quaternion` es el nombre real. **`rotation_quat` no existe.** | Un `data_path` de F-Curve es una ruta Python real: keyear `pose.bones["X"].rotation_quat` crea curvas que **nada evalúa**. Así la rotación en quaternion nunca sincronizaba y en Euler sí. |
-| `matrix_basis` no representa más de una vuelta completa | `Matrix.decompose()` normaliza euler a [-180, 180]. Host 270° → viewer -90°. Misma pose visible, valor almacenado distinto, reproducción incorrecta. |
-| 270° y 630° producen la **misma** matriz | Detectar movimiento comparando matrices pierde vueltas completas. Comparar el payload de canales, no la matriz. |
+| `matrix_basis` no representa más de una vuelta completa                          | `Matrix.decompose()` normaliza euler a [-180, 180]. Host 270° → viewer -90°. Misma pose visible, valor almacenado distinto, reproducción incorrecta.                                       |
+| 270° y 630° producen la **misma** matriz                                         | Detectar movimiento comparando matrices pierde vueltas completas. Comparar el payload de canales, no la matriz.                                                                            |
 
 Por eso la rotación viaja como **canales crudos** (`location`, `rotation_mode`,
 `rotation`, `scale`), nunca como matriz descompuesta. `matrix_basis` se sigue
@@ -91,18 +91,18 @@ vueltas**. Solo es lossless cuando ambos peers tienen el mismo `rotation_mode`.
 
 ### 2.2 Detección de operadores en ejecución
 
-| Hecho | Consecuencia |
-|---|---|
-| `wm.operators` es un **histórico acumulativo** | Una sesión real llegó a ~45 entradas, incluidas 20 invocaciones terminadas de `SessionToggleLiveSync`. Escanear todo el stack reporta como activo un drag que terminó hace minutos. |
-| Solo `operators[-1]` puede estar corriendo | Y aun así persiste tras terminar. Por eso hace falta combinarlo con **movimiento real** más un timeout (`_motion_stalled()`). |
-| `type(op).__name__` devuelve `'Operator'` para todo operador C | Inútil para identificar. La identidad fiable es `op.bl_rna.identifier` (`TRANSFORM_OT_trackball`); `bl_idname` da la forma punteada. |
-| La tecla R puede correr `TRANSFORM_OT_trackball` | No `transform.rotate`. Depende del método de rotación del keymap. Cualquier lista de nombres debe incluirlo. |
+| Hecho                                                          | Consecuencia                                                                                                                                                                        |
+| -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `wm.operators` es un **histórico acumulativo**                 | Una sesión real llegó a ~45 entradas, incluidas 20 invocaciones terminadas de `SessionToggleLiveSync`. Escanear todo el stack reporta como activo un drag que terminó hace minutos. |
+| Solo `operators[-1]` puede estar corriendo                     | Y aun así persiste tras terminar. Por eso hace falta combinarlo con **movimiento real** más un timeout (`_motion_stalled()`).                                                       |
+| `type(op).__name__` devuelve `'Operator'` para todo operador C | Inútil para identificar. La identidad fiable es `op.bl_rna.identifier` (`TRANSFORM_OT_trackball`); `bl_idname` da la forma punteada.                                                |
+| La tecla R puede correr `TRANSFORM_OT_trackball`               | No `transform.rotate`. Depende del método de rotación del keymap. Cualquier lista de nombres debe incluirlo.                                                                        |
 
 ### 2.3 No hay forma barata de saber qué canales editó el usuario
 
 Probado y descartado, ambos:
 
-- **Snapshot de `_begin`**: se toma al *seleccionar*. Si el Host selecciona en el
+- **Snapshot de `_begin`**: se toma al _seleccionar_. Si el Host selecciona en el
   frame 40 y scrollea a 50, la pose difiere legítimamente sin edición → reportaría
   edición falsa.
 - **Pose evaluada vs. `bpy.data`**: durante un transform modal Blender escribe
@@ -118,13 +118,13 @@ en ejecución. No está implementado; no intentarlo por comparación de poses.
 
 ### 2.4 Actions y slots en Blender 5
 
-| Hecho | Consecuencia |
-|---|---|
-| Asignar `animation_data.action` **no** pobla `action_slot` | `action_slot` puede ser `None` legítimamente con action puesto. Leer `.identifier` sin guardar lanzaba `AttributeError`, escapaba de `SessionListenTimer.execute()` y mataba la sesión. |
-| `Action.fcurves` fue **removido** en 5.x | Las curvas viven en channelbags por slot vía `bpy_extras.anim_utils`. `bl_types/bl_action.py` ya bifurca por `bpy.app.version >= (5,0,0)`. |
-| `action_get_channelbag_for_slot` devuelve `None` | Si el slot no tiene channelbag. Leer `.fcurves` sobre `None` tumba la sesión igual que arriba. |
-| `slots.new(target_id_type, name_display)` **genera un identifier nuevo** | El `identifier` nunca sobrevive un round trip. Emparejar slots por `(target_id_type, name_display)`. |
-| `Action.id_root` no existe en 5.2 | `dump()` no lo emite y `load()` lo guarda con `.get()`, así que es inerte. |
+| Hecho                                                                    | Consecuencia                                                                                                                                                                            |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Asignar `animation_data.action` **no** pobla `action_slot`               | `action_slot` puede ser `None` legítimamente con action puesto. Leer `.identifier` sin guardar lanzaba `AttributeError`, escapaba de `SessionListenTimer.execute()` y mataba la sesión. |
+| `Action.fcurves` fue **removido** en 5.x                                 | Las curvas viven en channelbags por slot vía `bpy_extras.anim_utils`. `bl_types/bl_action.py` ya bifurca por `bpy.app.version >= (5,0,0)`.                                              |
+| `action_get_channelbag_for_slot` devuelve `None`                         | Si el slot no tiene channelbag. Leer `.fcurves` sobre `None` tumba la sesión igual que arriba.                                                                                          |
+| `slots.new(target_id_type, name_display)` **genera un identifier nuevo** | El `identifier` nunca sobrevive un round trip. Emparejar slots por `(target_id_type, name_display)`.                                                                                    |
+| `Action.id_root` no existe en 5.2                                        | `dump()` no lo emite y `load()` lo guarda con `.get()`, así que es inerte.                                                                                                              |
 
 ### 2.5 Colecciones y wrappers
 
@@ -146,11 +146,11 @@ en ejecución. No está implementado; no intentarlo por comparación de poses.
 
 Estados: `ADDED=0, COMMITED=1, PUSHED=2, FETCHED=3, UP=4, MODIFIED=5, ERROR=6`.
 
-| Función | Gate | Efecto |
-|---|---|---|
-| `commit` | `state in [ADDED, UP]` | Si no, loguea `Commit skipped: data in a wrong state` y retorna. **El warning no nombra el estado.** |
-| `commit` | además requiere diff real | Solo pasa a `COMMITED` si `delta.diff` no es vacío. |
-| `push` | `state == COMMITED` salvo `force=True` | Es lo **único** que devuelve un nodo a `UP`. |
+| Función  | Gate                                   | Efecto                                                                                               |
+| -------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `commit` | `state in [ADDED, UP]`                 | Si no, loguea `Commit skipped: data in a wrong state` y retorna. **El warning no nombra el estado.** |
+| `commit` | además requiere diff real              | Solo pasa a `COMMITED` si `delta.diff` no es vacío.                                                  |
+| `push`   | `state == COMMITED` salvo `force=True` | Es lo **único** que devuelve un nodo a `UP`.                                                         |
 
 **Un nodo en `COMMITED` NO está varado**: `push` lo acepta tal cual. Solo los
 estados fuera de `ADDED`/`UP`/`COMMITED` necesitan `force`.
@@ -287,6 +287,7 @@ Las curvas inventadas no se filtran al archivo: `_restore` quita las de
 `edit.created_curves`, y un apply de porcelain poda las que el dump no trae (4.3).
 
 > **Tres errores cometidos al intentar restringirlo:**
+>
 > 1. Saltear canales sin curva existente. Rompió el caso legítimo de arriba; lo cazó
 >    el test.
 > 2. Saltear canales "sin cambio" comparando contra `bone.location` /
@@ -365,12 +366,12 @@ llega directo al batch del depsgraph, el commit ocurre en el **loop principal** 
 
 ### 5.1 Las cuatro regresiones que introduje por teorizar
 
-| # | Cambio | Por qué estaba mal |
-|---|---|---|
-| 1 | `_follow_frame()` asignaba `scene.frame_current` en el Cliente | Violaba la regla de oro §1.1. Además **enmascaró** el bug del viewer tardío. |
-| 2 | `force=True` incondicional en `push_animation_dependencies` | Push completo en cada update ⇒ el viewer reconstruía el Action y perdía su overlay en cada frame scrolleado. |
-| 3 | `_values_equal` contra `bone.location`/`rotation_euler`/`scale` | Base equivocada: valores en el frame del viewer, no en el frame del Host donde escribe el overlay. |
-| 4 | `edited` comparando pose evaluada vs `bpy.data` | Durante un transform modal Blender escribe en `bpy.data`, así que dio vacío siempre y el overlay dejó de keyear por completo. |
+| #   | Cambio                                                          | Por qué estaba mal                                                                                                            |
+| --- | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| 1   | `_follow_frame()` asignaba `scene.frame_current` en el Cliente  | Violaba la regla de oro §1.1. Además **enmascaró** el bug del viewer tardío.                                                  |
+| 2   | `force=True` incondicional en `push_animation_dependencies`     | Push completo en cada update ⇒ el viewer reconstruía el Action y perdía su overlay en cada frame scrolleado.                  |
+| 3   | `_values_equal` contra `bone.location`/`rotation_euler`/`scale` | Base equivocada: valores en el frame del viewer, no en el frame del Host donde escribe el overlay.                            |
+| 4   | `edited` comparando pose evaluada vs `bpy.data`                 | Durante un transform modal Blender escribe en `bpy.data`, así que dio vacío siempre y el overlay dejó de keyear por completo. |
 
 Regla derivada: **leer los logs antes de cambiar código.** Prácticamente todo lo que
 se resolvió en esta sesión se resolvió con evidencia, no con razonamiento.
@@ -745,7 +746,7 @@ que no resolvía nada.
    que dispara en cada apply mientras haya overlay activo. Debería comparar contra el
    conteo de keyframes **del payload**.
 4. **`presence.py`** lanza `Post view widget exception: StructRNA of type Object has
-   been removed` cuando un widget sostiene referencias a objetos ya destruidos.
+been removed` cuando un widget sostiene referencias a objetos ya destruidos.
    Debería validarlas por sí solo.
 5. **La rama 4.x de `BlAction.load`** no tiene podado de curvas y arrastra el quirk
    de iterar `data["fcurves"]` una vez por slot. **Aceptado y sin prioridad**: la

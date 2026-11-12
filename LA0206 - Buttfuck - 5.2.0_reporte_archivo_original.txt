@@ -1,0 +1,1451 @@
+
+==============================================================================
+  1. INFORMACIÓN GENERAL DEL ARCHIVO
+==============================================================================
+Archivo         : C:\Users\israe\Documents\Blender\Proyectos\L\5.2.2\LA0206 - Buttfuck - 5.2.0.blend
+Tamaño en disco : 130.60 MB
+Blender         : 5.2.0 LTS
+Generado        : 2026-11-12 07:45:19
+Escenas: 1 | Objetos: 206 | Mallas: 189 | Actions: 13
+
+Archivo original
+
+==============================================================================
+  2. ESCENAS
+==============================================================================
+
+------------------------------------------------------------------------------
+  ESCENA: Scene (users: 1)
+------------------------------------------------------------------------------
+Frames: 368-794 | actual: 573 | fps: 30/1.0
+Render: CYCLES | 1920x1080 @ 100% | salida: /tmp\
+Cámara: Camara con modificaciones | Mundo: World
+View layers: ViewLayer
+Objetos en escena: 206 | polígonos (sin modificadores): 32928
+Markers: Pull out@802, Back@410, F_444@444, F_472@472, F_507@507, F_534@534, F_552@552, F_569@569, F_743@743, 1@812, Pull out@802, F_368@393, F_399@378, F_847@823, F_894@894, F_949@950, Entrada 1@162, F_314@314, F_579@579, F_975@975, F_980@980, F_980_Copia@1005, Inicio@525, Anticipacion@515, Inicio@41, Expresion@50, Entrada 0@161, Checkpoint@300, Cierra sus ojos@185, 1@675, 2@700, 1.5@653
+!! Error al procesar escena Scene: TypeError: object of type 'NoneType' has no len()
+
+==============================================================================
+  3. OBJETOS (DETALLE COMPLETO)
+==============================================================================
+[O] 20240804_185842 | tipo: MESH | data: 20240804_185842 | cols: Luces
+    parent: - | loc: (-0.431, -0.157, 2.508) | rot: (1.571, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=True | hide_viewport=False | users: 1
+    mesh: verts=4 polys=1 uvs=['MapaUV']
+    materiales: 20240804_185842
+[O] Camara con modificaciones | tipo: CAMERA | data: Camera.002 | cols: Escena
+    parent: - | loc: (-1.002, 2.114, 1.264) | rot: (1.571, 0.000, -2.694) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    cámara: lens=50.0mm sensor=36.0 clip=0.10000000149011612-100.0 | DOF: False focus=- fstop=5.799999713897705
+    constraint: Apuntar (bloqueado) [LOCKED_TRACK] target=JawsHorseCock_Armature influence=0.02500000037252903
+    constraint: Apuntar (bloqueado).002 [LOCKED_TRACK] target=JawsHorseCock_Armature influence=0.02500000037252903
+    constraint: Apuntar (bloqueado).003 [LOCKED_TRACK] target=rig influence=0.02500000037252903
+    constraint: Apuntar (bloqueado).001 [LOCKED_TRACK] target=rig influence=0.02500000037252903
+    anim: action='Camara con modificacionesAction' fcurves=6 keys=6 rango=(90.0, 90.0)
+[O] Camera.001 | tipo: CAMERA | data: Camera.001 | cols: Escena
+    parent: - | loc: (-0.840, 1.619, 1.345) | rot: (1.571, 0.000, -2.694) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    cámara: lens=50.0mm sensor=36.0 clip=0.10000000149011612-100.0 | DOF: False focus=- fstop=5.799999713897705
+[O] Cum | tipo: MESH | data: Plano.004 | cols: Escena
+    parent: - | loc: (0.000, 0.568, 1.088) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    mesh: verts=1182 polys=1176 uvs=[]
+    shape keys: Base, Clave 1, Clave 2, Clave 3, Clave 4, Clave 5, Clave 6, Clave 7, Clave 8
+    mod: Subdivisión [SUBSURF] viewport=False render=True levels=1/1
+    mod: Construir [BUILD] viewport=True render=True
+    materiales: Cum
+    anim: action='slimeAction' fcurves=1 keys=2 rango=(847.0, 894.0)
+[O] Eyebrows | tipo: MESH | data: mesh_25.004 | cols: Lillia
+    parent: rig (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (1.276, -3.091, 0.007) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    mesh: verts=32 polys=31 uvs=['uv_1', 'uv_2', 'uv_3', 'uv_4', 'uv_5', 'uv_6', 'uv_7']
+    mod: Mirror [MIRROR] viewport=True render=True
+    mod: Armature [ARMATURE] viewport=True render=True target=rig
+    mod: Subdivision [SUBSURF] viewport=False render=True levels=1/1
+    materiales: mat_16
+[O] Eyebrows Low | tipo: MESH | data: mesh_25.006 | cols: Lillia Low
+    parent: rig (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (1.276, -3.091, 0.007) | esc: (1.000, 1.000, 1.000)
+    hide_render=True | hide_viewport=False | users: 1
+    mesh: verts=5 polys=6 uvs=['uv_1', 'uv_2', 'uv_3', 'uv_4', 'uv_5', 'uv_6', 'uv_7']
+    mod: Mirror [MIRROR] viewport=True render=True
+    mod: Armature [ARMATURE] viewport=True render=True target=rig
+    materiales: mat_16
+[O] Eyelashes | tipo: MESH | data: mesh_25.003 | cols: Lillia
+    parent: rig (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (1.276, -3.091, 0.007) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    mesh: verts=286 polys=314 uvs=['uv_1', 'uv_2', 'uv_3', 'uv_4', 'uv_5', 'uv_6', 'uv_7']
+    mod: Mirror [MIRROR] viewport=True render=True
+    mod: Armature [ARMATURE] viewport=True render=True target=rig
+    mod: Subdivision [SUBSURF] viewport=False render=True levels=1/1
+    materiales: mat_16
+[O] Eyelashes Low | tipo: MESH | data: mesh_25.005 | cols: Lillia Low
+    parent: rig (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (1.276, -3.091, 0.007) | esc: (1.000, 1.000, 1.000)
+    hide_render=True | hide_viewport=False | users: 1
+    mesh: verts=55 polys=101 uvs=['uv_1', 'uv_2', 'uv_3', 'uv_4', 'uv_5', 'uv_6', 'uv_7']
+    mod: Mirror [MIRROR] viewport=True render=True
+    mod: Armature [ARMATURE] viewport=True render=True target=rig
+    materiales: mat_16
+[O] Eyes  | tipo: MESH | data: geometry-2.003 | cols: Lillia
+    parent: rig (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    mesh: verts=348 polys=344 uvs=['Base Female']
+    shape keys: Basis, Shape, Pupil, Iris, Cat Iris, Key 5
+    mod: Mirror [MIRROR] viewport=True render=True
+    mod: SkinBinding [ARMATURE] viewport=True render=True target=rig
+    mod: Subsurf [SUBSURF] viewport=False render=True levels=1/1
+    materiales: Eyes.001, Eyeballs Reflection
+[O] Eyes Low | tipo: MESH | data: geometry-2.001 | cols: Lillia Low
+    parent: rig (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=True | hide_viewport=False | users: 1
+    mesh: verts=92 polys=99 uvs=['Base Female']
+    mod: Mirror [MIRROR] viewport=True render=True
+    mod: SkinBinding [ARMATURE] viewport=True render=True target=rig
+    materiales: Eyes.001, Eyeballs Reflection
+[O] Fondo | tipo: MESH | data: ignacio-ramirez-5 | cols: Escena
+    parent: - | loc: (1.448, -3.066, 1.326) | rot: (1.571, 0.000, -2.694) | esc: (2.901, 2.901, 2.901)
+    hide_render=False | hide_viewport=False | users: 1
+    mesh: verts=26 polys=12 uvs=['MapaUV']
+    mod: Subdivisión [SUBSURF] viewport=True render=True levels=1/1
+    materiales: ignacio-ramirez-5
+[O] Fondo.001 | tipo: MESH | data: ignacio-ramirez-5.001 | cols: Escena
+    parent: - | loc: (1.017, -2.169, 0.137) | rot: (-6.324, -0.000, -2.694) | esc: (2.901, 2.901, 2.901)
+    hide_render=False | hide_viewport=False | users: 1
+    mesh: verts=26 polys=12 uvs=['MapaUV']
+    mod: Subdivisión [SUBSURF] viewport=True render=True levels=1/1
+    materiales: ignacio-ramirez-5
+[O] Hair | tipo: MESH | data: mesh_23 | cols: Lillia
+    parent: rig (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (1.276, -3.091, 0.007) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    mesh: verts=5239 polys=5236 uvs=['uv_1', 'uv_2', 'uv_3', 'uv_4', 'uv_5', 'uv_6']
+    mod: Armature [ARMATURE] viewport=True render=True target=rig
+    mod: Subdivision [SUBSURF] viewport=False render=True levels=2/2
+    materiales: mat_13, mat_16
+[O] Hair Low | tipo: MESH | data: mesh_23.001 | cols: Lillia Low
+    parent: rig (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (1.276, -3.091, 0.007) | esc: (1.000, 1.000, 1.000)
+    hide_render=True | hide_viewport=False | users: 1
+    mesh: verts=877 polys=1203 uvs=['uv_1', 'uv_2', 'uv_3', 'uv_4', 'uv_5', 'uv_6']
+    mod: Armature [ARMATURE] viewport=True render=True target=rig
+    materiales: mat_13, mat_16
+[O] Horse_Cock_Jaws | tipo: MESH | data: HorsecockMesh | cols: Horse
+    parent: JawsHorseCock_Armature (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    mesh: verts=3669 polys=3691 uvs=['UVMap_Combined']
+    shape keys: Basis, Balls_Bigger, Balls_Smaller, Balls_Shape_1, Balls_Shape_2, Balls_Shape_3, Balls_Shape_Spherical, Balls_GapRemover, Balls_Sag, Balls_Lift_L, Balls_Lift_R, Balls_Retract, Balls_Empty, Baslls_Cumming_HHHNNNNNGH, Sheath_Push&Pull, Cockring_Indent, Medial_Ring_FW&BW, Shaft_Retract_Inside, Shaft_Longer, Shaft_Thick&Thin, Shaft_Push&Pull, Shaft_Stroke_FW&BW, Shaft_Cumming_1, Shaft_Cumming_2, Shaft_Cumming_3, Shaft_Tip_Flare_1, Shaft_Tip_Flare_2, Shaft_Tip_Flare_3, Shaft_Tip_Size, Shaft_Tip_Push, Shaft_Angry_Veins, Urethra_Forward, Urethra_Pulse, HorseFit
+    mod: Armature [ARMATURE] viewport=True render=True target=JawsHorseCock_Armature
+    materiales: HorseCockMat
+[O] Horse_Cock_Jaws Low | tipo: MESH | data: HorsecockMesh.001 | cols: Lillia Low
+    parent: JawsHorseCock_Armature (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=True | hide_viewport=False | users: 1
+    mesh: verts=216 polys=408 uvs=['UVMap_Combined']
+    mod: Armature [ARMATURE] viewport=True render=True target=JawsHorseCock_Armature
+    mod: SurfaceDeform_Cock [SURFACE_DEFORM] viewport=False render=False
+    mod: Cloth_Balls [CLOTH] viewport=False render=False
+    materiales: HorseCockMat
+[O] Horse_Cock_Physcage | tipo: MESH | data: PhyscageMesh | cols: Horse
+    parent: Horse_Cock_Jaws (OBJECT) | loc: (0.000, -0.444, 0.010) | rot: (0.000, 0.000, 0.000) | esc: (0.051, 0.051, 0.051)
+    hide_render=False | hide_viewport=False | users: 1
+    mesh: verts=48 polys=46 uvs=['UVMap']
+    mod: Armature [ARMATURE] viewport=False render=True target=JawsHorseCock_Armature
+    mod: Cloth [CLOTH] viewport=False render=False
+[O] Imagen de publicación de Patreon-4 | tipo: MESH | data: Imagen de publicación de Patreon-4 | cols: Luces
+    parent: - | loc: (0.424, -0.453, 2.446) | rot: (1.571, 0.000, 3.142) | esc: (1.000, 1.000, 1.000)
+    hide_render=True | hide_viewport=False | users: 1
+    mesh: verts=4 polys=1 uvs=['MapaUV']
+    materiales: Imagen de publicación de Patreon-4
+[O] JawsHorseCock_Armature | tipo: ARMATURE | data: rig.001 | cols: Horse
+    parent: - | loc: (0.000, 0.000, 0.000) | rot: (0.000, -0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    armadura: huesos=86
+    anim: action='JawsHorseCock_ArmatureAction' fcurves=21 keys=575 rango=(90.0, 940.0)
+[O] Lilia | tipo: MESH | data: mesh_27.004 | cols: Lillia
+    parent: rig (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 9
+    mesh: verts=9760 polys=10315 uvs=['uv_1', 'uv_2', 'uv_3', 'uv_4', 'uv_5', 'uv_6', 'uv_7']
+    shape keys: Base, FixV, Anus, Push HARD, In, Push Out, Push, Annie Edit, Annie Press, Annie In, Annie InX, Annie InX 269, Annie Push Out, Annie Prolapse, Frame 321, Frame 323, Frame 392, Frame 421, Frame 804, Respiro, Face, O, Parpado
+    mod: Armature [ARMATURE] viewport=True render=True target=rig
+    mod: Subdivisión [SUBSURF] viewport=False render=True levels=2/2
+    materiales: Lillia
+[O] Lilia Low | tipo: MESH | data: mesh_27.012 | cols: Lillia Low
+    parent: rig (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=True | hide_viewport=False | users: 1
+    mesh: verts=1914 polys=3292 uvs=['uv_1', 'uv_2', 'uv_3', 'uv_4', 'uv_5', 'uv_6', 'uv_7']
+    mod: Armature [ARMATURE] viewport=True render=True target=rig
+    materiales: Lillia.001
+[O] POV | tipo: CAMERA | data: Camera.003 | cols: Escena
+    parent: - | loc: (0.000, 0.008, 0.172) | rot: (1.579, 0.000, -3.142) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    cámara: lens=24.0mm sensor=36.0 clip=0.10000000149011612-100.0 | DOF: False focus=- fstop=5.799999713897705
+    constraint: Apuntar (bloqueado) [LOCKED_TRACK] target=JawsHorseCock_Armature influence=0.02500000037252903
+    constraint: Apuntar (bloqueado).002 [LOCKED_TRACK] target=JawsHorseCock_Armature influence=0.02500000037252903
+    constraint: Apuntar (bloqueado).003 [LOCKED_TRACK] target=rig influence=0.02500000037252903
+    constraint: Apuntar (bloqueado).001 [LOCKED_TRACK] target=rig influence=0.02500000037252903
+    constraint: Copiar posición [COPY_LOCATION] target=JawsHorseCock_Armature influence=1.0
+[O] Piso | tipo: MESH | data: Plano | cols: Escena
+    parent: - | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, -2.694) | esc: (11.141, 11.141, 11.141)
+    hide_render=True | hide_viewport=False | users: 1
+    mesh: verts=4 polys=1 uvs=['MapaUV']
+    materiales: Suelo
+[O] Punto | tipo: LIGHT | data: Punto | cols: Luces
+    parent: - | loc: (-0.242, -0.461, 1.479) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    luz: POINT energy=100.0 color=(0.0, 0.06, 1.0)
+[O] Teeth | tipo: MESH | data: mesh_25.002 | cols: Lillia
+    parent: rig (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (1.276, -3.091, 0.007) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    mesh: verts=225 polys=186 uvs=['uv_1', 'uv_2', 'uv_3', 'uv_4', 'uv_5', 'uv_6', 'uv_7']
+    mod: Mirror [MIRROR] viewport=True render=True
+    mod: Armature [ARMATURE] viewport=True render=True target=rig
+    mod: Subdivision [SUBSURF] viewport=False render=True levels=1/1
+    materiales: mat_16
+[O] Teeth Low | tipo: MESH | data: mesh_25.007 | cols: Lillia Low
+    parent: rig (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (1.276, -3.091, 0.007) | esc: (1.000, 1.000, 1.000)
+    hide_render=True | hide_viewport=False | users: 1
+    mesh: verts=107 polys=150 uvs=['uv_1', 'uv_2', 'uv_3', 'uv_4', 'uv_5', 'uv_6', 'uv_7']
+    mod: Mirror [MIRROR] viewport=True render=True
+    mod: Armature [ARMATURE] viewport=True render=True target=rig
+    materiales: mat_16
+[O] WGT-JawsHorseCock_Armature_AdjustBackLower | tipo: MESH | data: WGT-JawsHorseCock_Armature_AdjustBackLower | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (-0.000, 0.006, -0.042) | rot: (-3.142, 0.000, 0.000) | esc: (0.044, 0.044, 0.044)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_AdjustBackMiddle | tipo: MESH | data: WGT-JawsHorseCock_Armature_AdjustBackMiddle | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (-0.000, 0.006, 0.020) | rot: (-3.142, 0.000, 0.000) | esc: (0.044, 0.044, 0.044)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_AdjustBackTop | tipo: MESH | data: WGT-JawsHorseCock_Armature_AdjustBackTop | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (-0.000, -0.003, 0.084) | rot: (-3.142, 0.000, 0.000) | esc: (0.044, 0.044, 0.044)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_AdjustFrontTop | tipo: MESH | data: WGT-JawsHorseCock_Armature_AdjustFrontTop | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (-0.000, -0.124, 0.050) | rot: (3.142, 0.000, -0.000) | esc: (0.044, 0.044, 0.044)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_AdjustMiddle.L | tipo: MESH | data: WGT-JawsHorseCock_Armature_AdjustMiddle | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.061, -0.003, 0.019) | rot: (3.142, -0.000, 0.000) | esc: (0.044, 0.044, 0.044)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_AdjustMiddle.R | tipo: MESH | data: WGT-JawsHorseCock_Armature_AdjustMiddle | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (-0.061, -0.003, 0.019) | rot: (0.000, 0.000, 0.000) | esc: (-0.044, -0.044, -0.044)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_AdjustUpper.L | tipo: MESH | data: WGT-JawsHorseCock_Armature_AdjustUpper | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.044, -0.003, 0.059) | rot: (3.142, -0.000, 0.000) | esc: (0.044, 0.044, 0.044)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_AdjustUpper.R | tipo: MESH | data: WGT-JawsHorseCock_Armature_AdjustUpper | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (-0.044, -0.003, 0.059) | rot: (0.000, 0.000, 0.000) | esc: (-0.044, -0.044, -0.044)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Penis_Main | tipo: MESH | data: WGT-JawsHorseCock_Armature_Penis_Main | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, 0.000, 0.000) | rot: (0.000, -0.000, 3.142) | esc: (0.080, 0.080, 0.080)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=32 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Ring | tipo: MESH | data: WGT-JawsHorseCock_Armature_Ring | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (-0.001, -0.245, 0.009) | rot: (-3.142, 0.000, -0.000) | esc: (0.143, 0.143, 0.143)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=32 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Shaft_01 | tipo: MESH | data: WGT-JawsHorseCock_Armature_Shaft_01 | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.217, -0.000) | rot: (-0.000, 0.000, -3.142) | esc: (0.076, 0.076, 0.076)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=32 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Shaft_02 | tipo: MESH | data: WGT-JawsHorseCock_Armature_Shaft_02 | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.294, -0.000) | rot: (-0.000, 0.000, -3.142) | esc: (0.076, 0.076, 0.076)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=32 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Shaft_03 | tipo: MESH | data: WGT-JawsHorseCock_Armature_Shaft_03 | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.370, -0.000) | rot: (-0.000, 0.000, -3.142) | esc: (0.072, 0.072, 0.072)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=32 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Shaft_04 | tipo: MESH | data: WGT-JawsHorseCock_Armature_Shaft_04 | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.442, -0.000) | rot: (-0.000, 0.000, -3.142) | esc: (0.069, 0.069, 0.069)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=32 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Shaft_05 | tipo: MESH | data: WGT-JawsHorseCock_Armature_Shaft_05 | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.511, -0.000) | rot: (-0.000, 0.000, -3.142) | esc: (0.067, 0.067, 0.067)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=32 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Shaft_06 | tipo: MESH | data: WGT-JawsHorseCock_Armature_Shaft_06 | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.578, -0.000) | rot: (-0.000, 0.000, -3.142) | esc: (0.080, 0.080, 0.080)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=32 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Shaft_07 | tipo: MESH | data: WGT-JawsHorseCock_Armature_Shaft_07 | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.657, -0.000) | rot: (-0.000, 0.000, -3.142) | esc: (0.041, 0.041, 0.041)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=32 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Shaft_end | tipo: MESH | data: WGT-JawsHorseCock_Armature_Shaft_end | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.699, -0.000) | rot: (-0.000, 0.000, 3.142) | esc: (0.076, 0.076, 0.076)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Shaft_end-twist | tipo: MESH | data: WGT-JawsHorseCock_Armature_Shaft_end-twist | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.657, -0.000) | rot: (-0.000, 0.000, -3.142) | esc: (0.041, 0.041, 0.041)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Shaft_end01 | tipo: MESH | data: WGT-JawsHorseCock_Armature_Shaft_end01 | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.699, -0.000) | rot: (-0.000, 0.000, 3.142) | esc: (0.062, 0.062, 0.062)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Shaft_master | tipo: MESH | data: WGT-JawsHorseCock_Armature_Shaft_master | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.217, -0.000) | rot: (-0.000, 0.000, -3.142) | esc: (0.103, 0.103, 0.103)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Shaft_mid01 | tipo: MESH | data: WGT-JawsHorseCock_Armature_Shaft_mid01 | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.458, -0.000) | rot: (-0.000, 0.000, 3.142) | esc: (0.076, 0.076, 0.076)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Shaft_start | tipo: MESH | data: WGT-JawsHorseCock_Armature_Shaft_start | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.217, -0.000) | rot: (-0.000, 0.000, -3.142) | esc: (0.076, 0.076, 0.076)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Shaft_start01 | tipo: MESH | data: WGT-JawsHorseCock_Armature_Shaft_start01 | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.217, -0.000) | rot: (-0.000, 0.000, 3.142) | esc: (0.062, 0.062, 0.062)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Sheath | tipo: MESH | data: WGT-JawsHorseCock_Armature_Sheath | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, -0.080, 0.000) | rot: (-0.000, 0.000, -3.142) | esc: (0.137, 0.137, 0.137)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=32 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Testicle.L | tipo: MESH | data: WGT-JawsHorseCock_Armature_Testicle | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.030, -0.048, -0.077) | rot: (-1.585, -0.285, 0.004) | esc: (0.168, 0.168, 0.168)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=34 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Testicle.R | tipo: MESH | data: WGT-JawsHorseCock_Armature_Testicle | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (-0.030, -0.048, -0.077) | rot: (1.557, 0.285, -0.004) | esc: (-0.168, -0.168, -0.168)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=34 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_Testicles_Root | tipo: MESH | data: WGT-JawsHorseCock_Armature_Testicles_Root | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (-0.000, -0.048, -0.051) | rot: (-1.586, 0.000, 0.000) | esc: (0.091, 0.091, 0.091)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=32 polys=0 uvs=[]
+[O] WGT-JawsHorseCock_Armature_root | tipo: MESH | data: WGT-JawsHorseCock_Armature_root | cols: WGTS_JawsHorseCock_Armature
+    parent: - | loc: (0.000, 0.000, 0.000) | rot: (0.000, -0.000, 0.000) | esc: (0.233, 0.233, 0.233)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] _MCH-Shaft_spline | tipo: CURVE | data: JawsHorseCock_Armature-MCH-Shaft_spline | cols: Horse
+    parent: JawsHorseCock_Armature (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=True | hide_viewport=True | users: 1
+    mod: Shaft_start [HOOK] viewport=True render=True
+    mod: Shaft_start01 [HOOK] viewport=True render=True
+    mod: Shaft_mid01 [HOOK] viewport=True render=True
+    mod: Shaft_end01 [HOOK] viewport=True render=True
+    mod: Shaft_end [HOOK] viewport=True render=True
+[O] char_grp | tipo: EMPTY | data: - | cols: Lillia
+    parent: - | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=True | hide_viewport=True | users: 1
+[O] cs_arrow | tipo: MESH | data: cs_arrow.008 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (1.025, -0.044, 0.037) | rot: (0.000, -0.000, 0.000) | esc: (0.283, 0.283, 0.283)
+    hide_render=False | hide_viewport=True | users: 5
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_arrow_02 | tipo: MESH | data: cs_arrow_02 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (1.328, -0.044, 0.037) | rot: (0.000, -0.000, 0.000) | esc: (0.283, 0.283, 0.283)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_arrow_03 | tipo: MESH | data: cs_arrow_03 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (1.228, -0.044, 0.037) | rot: (0.000, -0.000, 0.000) | esc: (0.283, 0.283, 0.283)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_arrow_cross | tipo: MESH | data: cs_arrow_cross.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (2.082, -0.044, 0.037) | rot: (0.000, -0.000, 0.000) | esc: (0.283, 0.283, 0.283)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=44 polys=0 uvs=[]
+[O] cs_arrow_cross_solid | tipo: MESH | data: cs_arrow_cross_solid.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.203, -0.044, -1.334) | rot: (1.571, -0.000, 0.000) | esc: (0.084, 0.084, 0.084)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=98 polys=88 uvs=[]
+[O] cs_arrow_twist | tipo: MESH | data: cs_arrow_twist.002 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (5.246, -0.046, 0.308) | rot: (0.000, -0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=True | users: 3
+    mesh: verts=24 polys=0 uvs=[]
+[O] cs_base_finger | tipo: MESH | data: cs_base_finger.007 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-2.670, -0.053, -0.157) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 9
+    mesh: verts=32 polys=0 uvs=[]
+[O] cs_base_finger_end | tipo: MESH | data: cs_base_finger_end.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-2.890, -0.053, -0.157) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 3
+    mesh: verts=32 polys=0 uvs=[]
+[O] cs_box | tipo: MESH | data: cs_box.005 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-2.347, -0.053, -0.160) | rot: (0.000, -0.000, 0.000) | esc: (0.702, 0.702, 0.702)
+    hide_render=False | hide_viewport=True | users: 10
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_box_head | tipo: MESH | data: cs_box_head | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-3.901, -0.381, 0.810) | rot: (1.571, -0.000, -0.000) | esc: (0.074, 0.074, 0.074)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_c_eye | tipo: MESH | data: cs_c_eye.003 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.785, -0.053, 0.174) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 3
+    mesh: verts=48 polys=0 uvs=[]
+[O] cs_c_eye_offset | tipo: MESH | data: cs_c_eye_offset.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.617, -0.053, 0.174) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 3
+    mesh: verts=40 polys=0 uvs=[]
+[O] cs_c_eyelid_micro | tipo: MESH | data: cs_c_eyelid_micro.016 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.961, -0.053, 0.174) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 17
+    mesh: verts=48 polys=0 uvs=[]
+[O] cs_cheek_inflate | tipo: MESH | data: cs_cheek_inflate.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.531, -0.053, 0.117) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 3
+    mesh: verts=32 polys=0 uvs=[]
+[O] cs_circle_01 | tipo: MESH | data: cs_circle_01 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.030, -0.053, -0.087) | rot: (0.000, 0.000, -1.571) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=32 polys=0 uvs=[]
+[O] cs_circle_02 | tipo: MESH | data: cs_circle_02 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.330, -0.053, -0.078) | rot: (0.000, 0.000, -1.571) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=32 polys=0 uvs=[]
+[O] cs_circle_head | tipo: MESH | data: cs_circle_head.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-5.032, -0.381, 0.810) | rot: (1.571, -0.000, -0.000) | esc: (0.074, 0.074, 0.074)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=32 polys=0 uvs=[]
+[O] cs_circle_ik | tipo: MESH | data: cs_circle_ik | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.267, -0.053, -0.113) | rot: (1.571, 0.000, -1.571) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=47 polys=11 uvs=[]
+[O] cs_circle_squashed | tipo: MESH | data: cs_circle_squashed.008 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.531, -0.053, -0.061) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 12
+    mesh: verts=32 polys=0 uvs=[]
+[O] cs_ctrl_ik_solid_blue | tipo: MESH | data: cs_ctrl_ik_solid_blue.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (5.160, -0.053, -0.508) | rot: (0.000, 0.000, -1.571) | esc: (0.055, 0.055, 0.055)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=28 polys=24 uvs=[]
+[O] cs_ctrl_ik_solid_red | tipo: MESH | data: cs_ctrl_ik_solid_red.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (4.963, -0.053, -0.508) | rot: (0.000, 0.000, -1.571) | esc: (0.055, 0.055, 0.055)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=28 polys=24 uvs=[]
+[O] cs_cube | tipo: MESH | data: cs_cube | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-2.803, -0.515, 0.863) | rot: (1.571, -0.000, -0.000) | esc: (0.192, 0.192, 0.192)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_cube_02 | tipo: MESH | data: cs_cube_02 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-3.443, -0.381, 0.873) | rot: (1.571, -0.000, -0.000) | esc: (0.074, 0.074, 0.074)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_cube_03 | tipo: MESH | data: cs_cube_03 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-4.468, -0.381, 0.673) | rot: (1.571, -0.000, -0.000) | esc: (0.074, 0.074, 0.074)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_curve | tipo: MESH | data: cs_curve.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.422, -0.053, 0.515) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 3
+    mesh: verts=16 polys=0 uvs=[]
+[O] cs_eye_aim | tipo: MESH | data: cs_eye_aim.002 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.554, -0.053, -0.087) | rot: (0.000, 0.000, -1.571) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 3
+    mesh: verts=36 polys=0 uvs=[]
+[O] cs_eye_aim_global | tipo: MESH | data: cs_eye_aim_global.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.715, -0.053, -0.087) | rot: (0.000, 0.000, -1.571) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=44 polys=0 uvs=[]
+[O] cs_eyelid | tipo: MESH | data: cs_eyelid | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.785, -0.053, 0.071) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=32 polys=0 uvs=[]
+[O] cs_eyelid2 | tipo: MESH | data: cs_eyelid2.003 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.788, 0.165, -0.029) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 5
+    mesh: verts=20 polys=0 uvs=[]
+[O] cs_fist | tipo: MESH | data: cs_fist | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (7.973, 0.000, 0.000) | rot: (0.000, -0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=96 polys=0 uvs=[]
+[O] cs_fk | tipo: MESH | data: cs_fk | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.602, -0.053, 0.822) | rot: (1.571, 0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=25 polys=17 uvs=[]
+[O] cs_foot.l | tipo: MESH | data: cs_foot.l.002 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (1.967, -0.053, 0.472) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 5
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_foot.r | tipo: MESH | data: cs_foot.r.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (2.067, -0.053, 0.472) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 5
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_foot_fk | tipo: MESH | data: cs_foot_fk | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.083, -0.053, 0.285) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_foot_roll | tipo: MESH | data: cs_foot_roll.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.409, -0.053, -0.157) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 5
+    mesh: verts=56 polys=0 uvs=[]
+[O] cs_grp | tipo: EMPTY | data: - | cols: character1_cs
+    parent: - | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=True | hide_viewport=True | users: 1
+[O] cs_half_circle | tipo: MESH | data: cs_half_circle.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.030, -0.053, -0.087) | rot: (0.000, 0.000, -1.571) | esc: (0.069, 0.069, 0.069)
+    hide_render=False | hide_viewport=True | users: 5
+    mesh: verts=17 polys=0 uvs=[]
+[O] cs_hand | tipo: MESH | data: cs_hand.003 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (2.476, 0.051, 0.479) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 5
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_jaw | tipo: MESH | data: cs_arrow_02.002 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (2.449, -0.044, 0.461) | rot: (0.000, -0.000, -1.571) | esc: (0.283, 0.283, 0.283)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=30 polys=0 uvs=[]
+[O] cs_jaw_square | tipo: MESH | data: cs_jaw_square | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (2.907, -0.044, 0.461) | rot: (0.000, -0.000, -1.571) | esc: (0.283, 0.283, 0.283)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=24 polys=0 uvs=[]
+[O] cs_plane_1 | tipo: MESH | data: cs_plane_1 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.422, -0.053, 0.285) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_plane_2 | tipo: MESH | data: cs_plane_2 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.064, -0.053, 0.822) | rot: (1.571, 0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=4 polys=0 uvs=[]
+[O] cs_plane_3 | tipo: MESH | data: cs_plane_3.010 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.643, -0.053, 0.001) | rot: (0.000, 0.000, -1.571) | esc: (0.055, 0.055, 0.055)
+    hide_render=False | hide_viewport=True | users: 9
+    mesh: verts=4 polys=0 uvs=[]
+[O] cs_plane_4 | tipo: MESH | data: cs_plane_4 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.846, -0.053, 0.501) | rot: (1.571, 0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=4 polys=0 uvs=[]
+[O] cs_plane_4_fill | tipo: MESH | data: cs_plane_4_fill.003 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (1.338, -0.053, 0.506) | rot: (1.571, 0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=4 polys=1 uvs=[]
+[O] cs_plane_5 | tipo: MESH | data: cs_plane_5 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.803, -0.053, 0.001) | rot: (0.000, 0.000, -1.571) | esc: (0.055, 0.055, 0.055)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=4 polys=0 uvs=[]
+[O] cs_pos | tipo: MESH | data: cs_pos | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-2.074, -0.053, 0.822) | rot: (1.571, 0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=32 polys=0 uvs=[]
+[O] cs_pos_solid | tipo: MESH | data: cs_pos_solid.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-2.074, -0.053, -1.292) | rot: (1.571, 0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=128 polys=64 uvs=[]
+[O] cs_pos_solid_eye_offset_blue | tipo: MESH | data: cs_pos_solid_eye_offset_blue | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-2.583, -0.053, -1.292) | rot: (1.571, 0.000, 0.000) | esc: (0.245, 0.245, 0.245)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=128 polys=64 uvs=[]
+[O] cs_pos_solid_eye_offset_red | tipo: MESH | data: cs_pos_solid_eye_offset_red | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-3.083, -0.053, -1.292) | rot: (1.571, 0.000, 0.000) | esc: (0.245, 0.245, 0.245)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=128 polys=64 uvs=[]
+[O] cs_semi_sphere | tipo: MESH | data: cs_semi_sphere.003 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.648, -0.053, 0.472) | rot: (1.571, -0.000, 0.000) | esc: (0.085, 0.085, 0.085)
+    hide_render=False | hide_viewport=True | users: 5
+    mesh: verts=34 polys=0 uvs=[]
+[O] cs_semi_sphere_inv | tipo: MESH | data: cs_semi_sphere_inv.004 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.615, -0.053, 0.472) | rot: (1.571, -0.000, 0.000) | esc: (0.085, 0.085, 0.085)
+    hide_render=False | hide_viewport=True | users: 5
+    mesh: verts=34 polys=0 uvs=[]
+[O] cs_shoulder.l | tipo: MESH | data: cs_sphere_dir1.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.532, -0.053, 0.672) | rot: (0.000, -0.000, 1.571) | esc: (0.085, 0.085, 0.085)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=4 polys=0 uvs=[]
+[O] cs_shoulder.r | tipo: MESH | data: cs_sphere_dir1.002 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.708, -0.053, 0.672) | rot: (0.000, -0.000, 1.571) | esc: (0.085, 0.085, 0.085)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=4 polys=0 uvs=[]
+[O] cs_solid_arrow_twist_blue | tipo: MESH | data: cs_solid_arrow_twist_blue | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (2.266, -0.046, -0.460) | rot: (0.000, -0.000, 0.000) | esc: (0.250, 0.250, 0.250)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=24 polys=22 uvs=[]
+[O] cs_solid_arrow_twist_red | tipo: MESH | data: cs_solid_arrow_twist_red.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (1.859, -0.046, -0.460) | rot: (0.000, -0.000, 0.000) | esc: (0.250, 0.250, 0.250)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=24 polys=22 uvs=[]
+[O] cs_solid_bar_01 | tipo: MESH | data: cs_solid_bar_01.009 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.916, -0.053, -0.498) | rot: (1.571, 0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=2 uvs=[]
+[O] cs_solid_bar_blue | tipo: MESH | data: cs_solid_bar_blue.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-6.034, -0.231, -0.422) | rot: (1.571, 0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=2 uvs=[]
+[O] cs_solid_bar_red | tipo: MESH | data: cs_solid_bar_red.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-4.874, -0.053, -0.498) | rot: (1.571, 0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=2 uvs=[]
+[O] cs_solid_circle_01 | tipo: MESH | data: cs_solid_circle_01.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.030, -0.053, -0.515) | rot: (0.000, 0.000, -1.571) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=33 polys=32 uvs=[]
+[O] cs_solid_circle_02 | tipo: MESH | data: cs_solid_circle_02.003 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.524, -0.053, -0.515) | rot: (0.000, 0.000, -1.571) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=33 polys=32 uvs=[]
+[O] cs_solid_circle_02_blue | tipo: MESH | data: cs_solid_circle_02_blue.014 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.876, -0.053, -0.515) | rot: (0.000, 0.000, -1.571) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=66 polys=64 uvs=[]
+[O] cs_solid_circle_02_green | tipo: MESH | data: cs_solid_circle_02_green.012 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.326, -0.053, -0.515) | rot: (0.000, 0.000, -1.571) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=66 polys=64 uvs=[]
+[O] cs_solid_circle_02_red | tipo: MESH | data: cs_solid_circle_02_red.014 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.700, -0.053, -0.515) | rot: (0.000, 0.000, -1.571) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=66 polys=64 uvs=[]
+[O] cs_solid_circle_ik_blue | tipo: MESH | data: cs_solid_circle_ik_blue.003 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-4.072, -0.053, -0.482) | rot: (-1.571, -0.000, 1.571) | esc: (0.133, 0.133, 0.133)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=127 polys=58 uvs=[]
+[O] cs_solid_circle_ik_red | tipo: MESH | data: cs_solid_circle_ik_red.003 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-3.226, -0.053, -0.482) | rot: (-1.571, -0.000, 1.571) | esc: (0.133, 0.133, 0.133)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=127 polys=58 uvs=[]
+[O] cs_solid_circle_squashed_blue | tipo: MESH | data: cs_solid_circle_squashed_blue.003 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.102, -0.598, -1.152) | rot: (0.000, -0.000, 0.000) | esc: (0.374, 0.374, 0.374)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=64 polys=60 uvs=[]
+[O] cs_solid_circle_squashed_green | tipo: MESH | data: cs_solid_circle_squashed_green | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.429, -0.598, -1.152) | rot: (0.000, -0.000, 0.000) | esc: (0.374, 0.374, 0.374)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=64 polys=60 uvs=[]
+[O] cs_solid_circle_squashed_red | tipo: MESH | data: cs_solid_circle_squashed_red.003 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.650, -0.598, -1.152) | rot: (0.000, -0.000, 0.000) | esc: (0.374, 0.374, 0.374)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=64 polys=60 uvs=[]
+[O] cs_solid_eye_aim_blue | tipo: MESH | data: cs_solid_eye_aim_blue | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.964, -0.053, -0.042) | rot: (0.000, 0.000, -1.571) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=144 polys=68 uvs=[]
+[O] cs_solid_eye_aim_global | tipo: MESH | data: cs_solid_eye_aim_global.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.845, -0.053, -0.087) | rot: (0.000, 0.000, -1.571) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=128 polys=64 uvs=[]
+[O] cs_solid_eye_aim_red | tipo: MESH | data: cs_solid_eye_aim_red | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-2.082, -0.053, -0.042) | rot: (0.000, 0.000, -1.571) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=144 polys=68 uvs=[]
+[O] cs_solid_eye_blue | tipo: MESH | data: cs_solid_eye_blue | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (4.156, -0.053, -0.515) | rot: (0.000, 0.000, -3.142) | esc: (0.208, 0.208, 0.208)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=128 polys=64 uvs=[]
+[O] cs_solid_eye_red | tipo: MESH | data: cs_solid_eye_red | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (3.917, -0.053, -0.515) | rot: (0.000, 0.000, -3.142) | esc: (0.215, 0.215, 0.215)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=128 polys=64 uvs=[]
+[O] cs_solid_eyebrow_blue | tipo: MESH | data: cs_solid_eyebrow_blue | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (2.679, -0.046, -0.460) | rot: (0.000, -0.000, 0.000) | esc: (0.250, 0.250, 0.250)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=18 polys=16 uvs=[]
+[O] cs_solid_eyebrow_red | tipo: MESH | data: cs_solid_eyebrow_red | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (3.081, -0.046, -0.460) | rot: (0.000, -0.000, 0.000) | esc: (0.250, 0.250, 0.250)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=18 polys=16 uvs=[]
+[O] cs_solid_fk_blue | tipo: MESH | data: cs_solid_fk_blue.002 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-3.712, -0.053, -0.483) | rot: (-1.571, -0.000, 3.142) | esc: (0.062, 0.062, 0.062)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=54 polys=45 uvs=[]
+[O] cs_solid_fk_red | tipo: MESH | data: cs_solid_fk_red.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-2.867, -0.053, -0.483) | rot: (-1.571, -0.000, 3.142) | esc: (0.062, 0.062, 0.062)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=54 polys=45 uvs=[]
+[O] cs_solid_plane_2 | tipo: MESH | data: cs_solid_plane_2.011 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.176, -0.053, -0.498) | rot: (1.571, 0.000, 0.000) | esc: (0.054, 0.054, 0.054)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=2 uvs=[]
+[O] cs_solid_plane_2_blue | tipo: MESH | data: cs_solid_plane_2_blue.003 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.633, -0.053, -0.498) | rot: (1.571, 0.000, 0.000) | esc: (0.054, 0.054, 0.054)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=2 uvs=[]
+[O] cs_solid_plane_2_red | tipo: MESH | data: cs_solid_plane_2_red.003 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.891, -0.053, -0.498) | rot: (1.571, 0.000, 0.000) | esc: (0.054, 0.054, 0.054)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=2 uvs=[]
+[O] cs_solid_plane_3 | tipo: MESH | data: cs_solid_plane_3.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.977, -0.053, -0.508) | rot: (0.000, 0.000, -1.571) | esc: (0.055, 0.055, 0.055)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=4 polys=1 uvs=[]
+[O] cs_solid_plane_3_blue | tipo: MESH | data: cs_solid_plane_3_blue.034 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (1.362, -0.053, -0.508) | rot: (0.000, 0.000, -1.571) | esc: (0.055, 0.055, 0.055)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=2 uvs=[]
+[O] cs_solid_plane_3_red | tipo: MESH | data: cs_solid_plane_3_red.033 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (1.153, -0.053, -0.508) | rot: (0.000, 0.000, -1.571) | esc: (0.055, 0.055, 0.055)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=2 uvs=[]
+[O] cs_solid_plane_5_blue | tipo: MESH | data: cs_solid_plane_5_blue.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (1.609, -0.053, -0.508) | rot: (0.000, 0.000, -1.571) | esc: (0.055, 0.055, 0.055)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=2 uvs=[]
+[O] cs_solid_plane_5_red | tipo: MESH | data: cs_solid_plane_5_red.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (1.523, -0.053, -0.508) | rot: (0.000, 0.000, -1.571) | esc: (0.055, 0.055, 0.055)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=2 uvs=[]
+[O] cs_solid_pupil_blue | tipo: MESH | data: cs_solid_pupil_blue | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (4.722, -0.053, -0.515) | rot: (0.000, 0.000, -3.142) | esc: (0.208, 0.208, 0.208)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=66 polys=64 uvs=[]
+[O] cs_solid_pupil_red | tipo: MESH | data: cs_solid_pupil_red | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (4.483, -0.053, -0.515) | rot: (0.000, 0.000, -3.142) | esc: (0.215, 0.215, 0.215)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=66 polys=64 uvs=[]
+[O] cs_solid_torus_04_blue | tipo: MESH | data: cs_torus_04.003 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-2.533, -0.053, -0.478) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=48 polys=46 uvs=[]
+    materiales: -
+[O] cs_solid_torus_04_red | tipo: MESH | data: cs_solid_torus_04_red | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-2.606, -0.053, -0.478) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=48 polys=46 uvs=[]
+    materiales: -
+[O] cs_solid_torus_blue | tipo: MESH | data: cs_solid_torus_blue.011 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-3.844, -0.053, -1.279) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=True | hide_viewport=True | users: 1
+    mesh: verts=98 polys=96 uvs=[]
+[O] cs_solid_torus_green | tipo: MESH | data: cs_solid_torus_green.003 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-4.087, -0.053, -1.279) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=True | hide_viewport=True | users: 1
+    mesh: verts=98 polys=96 uvs=[]
+[O] cs_solid_torus_red | tipo: MESH | data: cs_solid_torus_red.011 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-3.602, -0.053, -1.279) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=True | hide_viewport=True | users: 1
+    mesh: verts=98 polys=96 uvs=[]
+[O] cs_solid_triangle | tipo: MESH | data: cs_solid_triangle | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.277, -0.053, -0.474) | rot: (1.571, 0.000, -1.571) | esc: (0.225, 0.225, 0.225)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=3 polys=1 uvs=[]
+    materiales: -
+[O] cs_sphere | tipo: MESH | data: cs_sphere.019 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.848, -0.053, 0.472) | rot: (1.571, -0.000, 0.000) | esc: (0.085, 0.085, 0.085)
+    hide_render=False | hide_viewport=True | users: 21
+    mesh: verts=48 polys=0 uvs=[]
+[O] cs_sphere_dir1 | tipo: MESH | data: cs_sphere_dir1.004 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.548, -0.053, 0.477) | rot: (0.000, -0.000, 0.000) | esc: (0.085, 0.085, 0.085)
+    hide_render=False | hide_viewport=True | users: 3
+    mesh: verts=96 polys=0 uvs=[]
+[O] cs_sphere_dir2 | tipo: MESH | data: cs_sphere_dir2 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.746, -0.053, 0.473) | rot: (0.000, -0.000, 0.000) | esc: (0.094, 0.094, 0.094)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=96 polys=0 uvs=[]
+[O] cs_spine | tipo: MESH | data: cs_spine.002 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.000, -0.006, 1.075) | rot: (1.571, -0.000, -0.007) | esc: (0.050, 0.050, 0.050)
+    hide_render=False | hide_viewport=True | users: 6
+    mesh: verts=16 polys=0 uvs=[]
+[O] cs_square | tipo: MESH | data: cs_square | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-5.737, -0.053, 0.822) | rot: (1.571, 0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=4 polys=0 uvs=[]
+[O] cs_torus_01 | tipo: MESH | data: cs_torus_01.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.250, -0.053, 0.174) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] cs_torus_02 | tipo: MESH | data: cs_torus_02.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.840, -0.053, 0.164) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=48 polys=0 uvs=[]
+[O] cs_torus_03 | tipo: MESH | data: cs_torus_03.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.259, -0.053, 0.156) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=True | hide_viewport=True | users: 14
+    mesh: verts=48 polys=0 uvs=[]
+[O] cs_torus_04 | tipo: MESH | data: cs_torus_04.106 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.265, -0.053, -0.157) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 78
+    mesh: verts=48 polys=0 uvs=[]
+[O] cs_torus_04_rot | tipo: MESH | data: cs_torus_04_rot | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.772, -0.053, -0.150) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=48 polys=0 uvs=[]
+[O] cs_torus_04_rot2 | tipo: MESH | data: cs_torus_04_rot2 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.689, -0.053, -0.160) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=48 polys=0 uvs=[]
+[O] cs_torus_05 | tipo: MESH | data: cs_torus_05 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.943, -0.053, -0.160) | rot: (0.000, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=48 polys=0 uvs=[]
+[O] cs_triangle | tipo: MESH | data: cs_triangle | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.166, -0.053, 0.935) | rot: (1.571, 0.000, -1.571) | esc: (0.225, 0.225, 0.225)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=3 polys=0 uvs=[]
+[O] cs_triangle_02 | tipo: MESH | data: cs_triangle_02 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.213, -0.053, 0.948) | rot: (0.000, -0.000, 1.743) | esc: (0.172, 0.172, 0.172)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=3 polys=0 uvs=[]
+[O] cs_user_Bone | tipo: MESH | data: cs_user_Bone | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (1.114, -0.000, 0.957) | rot: (1.571, -0.000, 0.000) | esc: (0.220, 0.220, 0.220)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_user_Stick | tipo: MESH | data: cs_user_Stick | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (1.723, -0.017, 0.957) | rot: (1.571, -0.000, 0.000) | esc: (0.220, 0.220, 0.220)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_user_Stick.002 | tipo: MESH | data: cs_user_Stick.002 | cols: character1_cs
+    parent: - | loc: (1.530, -0.039, 1.728) | rot: (-1.535, -0.064, -3.048) | esc: (0.388, 0.388, 0.388)
+    hide_render=False | hide_viewport=False | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] cs_user_Stick.005 | tipo: MESH | data: cs_user_Stick.005 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (1.633, -0.015, 1.806) | rot: (1.725, -2.214, 0.039) | esc: (0.132, 0.132, 0.132)
+    hide_render=False | hide_viewport=True | users: 5
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_user_c_arm_fk.l | tipo: MESH | data: cs_user_c_arm_fk.l | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_user_c_arm_fk.r | tipo: MESH | data: cs_user_c_arm_fk.r | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_user_c_arm_ik.r | tipo: MESH | data: cs_user_c_arm_ik.r | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_user_c_leg_fk.l | tipo: MESH | data: cs_user_c_leg_fk.l.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.169, -0.015, 0.528) | rot: (-1.410, 0.030, -1.368) | esc: (0.475, 0.475, 0.475)
+    hide_render=False | hide_viewport=True | users: 3
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_user_c_leg_fk.r | tipo: MESH | data: cs_user_c_leg_fk.r.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (2.476, 0.051, 0.479) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=True | users: 3
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_user_c_root.x | tipo: MESH | data: cs_user_c_root.x | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.000, 0.436, 0.968) | rot: (-1.571, -0.000, 0.000) | esc: (0.184, 0.184, 0.184)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=48 polys=0 uvs=[]
+[O] cs_user_c_root.x.001 | tipo: MESH | data: cs_user_c_root.x.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.000, 0.436, 0.968) | rot: (-1.571, -0.000, 0.000) | esc: (0.184, 0.184, 0.184)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=48 polys=0 uvs=[]
+[O] cs_user_c_root_master.x | tipo: MESH | data: cs_user_c_root_master.x | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.000, 0.522, 0.980) | rot: (-1.571, -0.000, 0.000) | esc: (0.078, 0.078, 0.078)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=16 polys=0 uvs=[]
+[O] cs_user_c_shoulder.l | tipo: MESH | data: cs_user_c_shoulder.l | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=16 polys=1 uvs=[]
+[O] cs_user_c_shoulder.r | tipo: MESH | data: cs_user_c_shoulder.r | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=16 polys=1 uvs=[]
+[O] cs_user_c_skull_01.x | tipo: MESH | data: cs_user_c_skull_01.x | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=17 polys=0 uvs=[]
+[O] cs_user_c_skull_02.x | tipo: MESH | data: cs_user_c_skull_02.x | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=17 polys=0 uvs=[]
+[O] cs_user_c_skull_03.x | tipo: MESH | data: cs_user_c_skull_03.x | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.000, 0.000, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=17 polys=0 uvs=[]
+[O] cs_user_c_spine_01.x | tipo: MESH | data: cs_user_c_spine_01.x | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.000, 0.350, 0.957) | rot: (-1.571, -0.000, 0.007) | esc: (0.079, 0.079, 0.079)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=16 polys=0 uvs=[]
+[O] cs_user_c_spine_01.x.001 | tipo: MESH | data: cs_user_c_spine_01.x.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.000, 0.350, 0.957) | rot: (-1.571, -0.000, 0.007) | esc: (0.079, 0.079, 0.079)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=16 polys=0 uvs=[]
+[O] cs_user_c_spine_02.x | tipo: MESH | data: cs_user_c_spine_02.x | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.000, 0.175, 0.935) | rot: (-1.571, -0.000, -0.000) | esc: (0.075, 0.075, 0.075)
+    hide_render=False | hide_viewport=True | users: 2
+    mesh: verts=16 polys=0 uvs=[]
+[O] cs_user_c_thigh_fk.l | tipo: MESH | data: cs_user_c_thigh_fk.l.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (0.126, -0.001, 0.772) | rot: (-1.630, -0.175, -0.000) | esc: (0.415, 0.415, 0.415)
+    hide_render=False | hide_viewport=True | users: 3
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_user_c_thigh_fk.r | tipo: MESH | data: cs_user_c_thigh_fk.r.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (4.963, -0.067, -0.508) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=True | users: 3
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_user_hair | tipo: MESH | data: cs_user_hair | cols: character1_cs
+    parent: - | loc: (0.000, -0.041, 1.679) | rot: (-1.385, 0.000, -0.000) | esc: (0.115, 0.115, 0.115)
+    hide_render=False | hide_viewport=False | users: 5
+    mesh: verts=32 polys=0 uvs=[]
+[O] cs_user_hair.r | tipo: MESH | data: cs_user_hair.r | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.092, -0.119, 1.578) | rot: (-1.933, -0.054, 0.020) | esc: (0.075, 0.075, 0.075)
+    hide_render=False | hide_viewport=True | users: 3
+    mesh: verts=48 polys=0 uvs=[]
+[O] cs_user_hair.r.001 | tipo: MESH | data: cs_user_hair.r.001 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.088, -0.146, 1.507) | rot: (-2.291, -0.176, 0.152) | esc: (0.096, 0.096, 0.096)
+    hide_render=False | hide_viewport=True | users: 7
+    mesh: verts=32 polys=0 uvs=[]
+[O] cs_user_hairFrontRight | tipo: MESH | data: cs_user_hairFrontRight | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-0.076, -0.181, 1.697) | rot: (-1.405, 0.173, 0.029) | esc: (0.044, 0.044, 0.044)
+    hide_render=False | hide_viewport=True | users: 7
+    mesh: verts=8 polys=0 uvs=[]
+[O] cs_wire_eyebrow | tipo: MESH | data: cs_wire_eyebrow.002 | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (3.566, -0.046, -0.460) | rot: (0.000, -0.000, 0.000) | esc: (0.250, 0.250, 0.250)
+    hide_render=False | hide_viewport=True | users: 3
+    mesh: verts=18 polys=0 uvs=[]
+[O] cs_yeux | tipo: MESH | data: cs_yeux | cols: character1_cs
+    parent: cs_grp (OBJECT) | loc: (-1.039, -0.053, 0.462) | rot: (-1.571, -0.000, 0.000) | esc: (0.098, 0.098, 0.098)
+    hide_render=False | hide_viewport=True | users: 1
+    mesh: verts=44 polys=0 uvs=[]
+[O] heartfull | tipo: MESH | data: heartfull | cols: Escena
+    parent: heartfull_M (OBJECT) | loc: (-0.189, 6.892, 0.000) | rot: (0.000, -0.000, 0.086) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    mesh: verts=103 polys=80 uvs=['UVMap']
+    materiales: heartfull_M
+    anim: action='heartfullAction' fcurves=13 keys=60 rango=(266.0, 312.0)
+[O] heartfull_M | tipo: EMPTY | data: - | cols: Escena
+    parent: - | loc: (-0.005, -0.125, 1.678) | rot: (1.467, -0.167, 0.493) | esc: (0.018, 0.018, 0.018)
+    hide_render=False | hide_viewport=False | users: 1
+[O] hiikaiti | tipo: MESH | data: hiikaiti | cols: Escena
+    parent: - | loc: (0.138, -0.371, 1.042) | rot: (1.787, 0.598, 0.411) | esc: (1.375, 1.375, 1.375)
+    hide_render=True | hide_viewport=False | users: 1
+    mesh: verts=4 polys=1 uvs=['MapaUV']
+    materiales: hiikaiti
+[O] hiikaiti.001 | tipo: MESH | data: hiikaiti | cols: Escena
+    parent: - | loc: (1.892, 0.397, 1.877) | rot: (1.787, 0.598, 0.411) | esc: (1.375, 1.375, 1.375)
+    hide_render=True | hide_viewport=False | users: 1
+    mesh: verts=4 polys=1 uvs=['MapaUV']
+    materiales: hiikaiti
+[O] rig | tipo: ARMATURE | data: rig | cols: Lillia
+    parent: char_grp (OBJECT) | loc: (0.000, 0.231, 0.000) | rot: (0.000, 0.000, 0.000) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    armadura: huesos=704
+    anim: action='rigAction' fcurves=262 keys=3276 rango=(0.0, 4037.0)
+[O] this | tipo: MESH | data: mesh_27.003 | cols: Lillia
+    parent: rig (OBJECT) | loc: (-0.417, -0.350, 0.035) | rot: (1.409, -3.103, -1.342) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    mesh: verts=950 polys=1908 uvs=['uv_1', 'uv_2', 'uv_3', 'uv_4', 'uv_5']
+    mod: Armature [ARMATURE] viewport=True render=True target=rig
+    materiales: mat_16, mat_25
+    anim: action='thisAction' fcurves=6 keys=91 rango=(-271.0, 989.0)
+[O] this Low | tipo: MESH | data: mesh_27.008 | cols: Lillia Low
+    parent: rig (OBJECT) | loc: (-0.417, -0.350, 0.035) | rot: (1.377, -3.093, -1.334) | esc: (1.000, 1.000, 1.000)
+    hide_render=True | hide_viewport=False | users: 1
+    mesh: verts=61 polys=130 uvs=['uv_1', 'uv_2', 'uv_3', 'uv_4', 'uv_5']
+    mod: Armature [ARMATURE] viewport=True render=True target=rig
+    materiales: mat_16, mat_25
+    anim: action='thisAction.001' fcurves=3 keys=18 rango=(0.0, 159.0)
+[O] this.001 | tipo: MESH | data: mesh_27.002 | cols: Lillia
+    parent: - | loc: (-0.417, -0.350, 0.035) | rot: (1.396, -3.102, -1.325) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    mesh: verts=1093 polys=2102 uvs=['uv_1', 'uv_2', 'uv_3', 'uv_4', 'uv_5']
+    mod: Armature [ARMATURE] viewport=True render=True target=rig
+    mod: Esqueleto [ARMATURE] viewport=True render=True target=-
+    materiales: mat_16, mat_25
+    anim: action='this.001Action' fcurves=3 keys=12 rango=(0.0, 123.0)
+[O] this.001 Low | tipo: MESH | data: mesh_27.013 | cols: Lillia Low
+    parent: - | loc: (-0.417, -0.350, 0.035) | rot: (1.377, -3.093, -1.334) | esc: (1.000, 1.000, 1.000)
+    hide_render=True | hide_viewport=False | users: 1
+    mesh: verts=85 polys=145 uvs=['uv_1', 'uv_2', 'uv_3', 'uv_4', 'uv_5']
+    mod: Armature [ARMATURE] viewport=True render=True target=rig
+    mod: Esqueleto [ARMATURE] viewport=True render=True target=-
+    materiales: mat_16, mat_25
+    anim: action='this.001Action.001' fcurves=3 keys=15 rango=(0.0, 135.0)
+[O] videoplayback | tipo: MESH | data: videoplayback | cols: Escena
+    parent: - | loc: (-0.807, -0.634, 1.188) | rot: (1.571, 0.000, 3.142) | esc: (0.859, 0.859, 0.859)
+    hide_render=False | hide_viewport=False | users: 1
+    mesh: verts=4 polys=1 uvs=['MapaUV']
+    materiales: videoplayback
+[O] Área | tipo: LIGHT | data: Área | cols: Luces
+    parent: - | loc: (-0.797, 0.208, 2.042) | rot: (-0.362, -0.921, 0.073) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    luz: AREA energy=5.0 color=(1.0, 1.0, 1.0)
+[O] Área.002 | tipo: LIGHT | data: Área.002 | cols: Luces
+    parent: - | loc: (0.145, 1.341, 1.047) | rot: (-1.420, 0.006, -0.005) | esc: (1.000, 1.000, 1.000)
+    hide_render=False | hide_viewport=False | users: 1
+    luz: AREA energy=7.8539814949035645 color=(1.0, 1.0, 1.0)
+[O] Área.003 | tipo: LIGHT | data: Área.003 | cols: Luces
+    parent: - | loc: (3.326, 0.324, 4.441) | rot: (0.886, 0.242, 2.085) | esc: (2.662, 2.662, 2.662)
+    hide_render=False | hide_viewport=False | users: 1
+    luz: AREA energy=392.6990966796875 color=(0.25, 0.0, 1.0)
+
+==============================================================================
+  4. MALLAS
+==============================================================================
+[ME] 20240804_185842 | users=1 | verts=4 edges=4 polys=1 | uvs=1 | mats=1 | shape_keys=no
+[ME] cs_arrow.008 | users=1 | verts=8 edges=8 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_arrow_02 | users=1 | verts=8 edges=8 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_arrow_02.002 | users=1 | verts=30 edges=30 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_arrow_03 | users=1 | verts=8 edges=8 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_arrow_cross.001 | users=1 | verts=44 edges=41 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_arrow_cross_solid.001 | users=1 | verts=98 edges=184 polys=88 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_arrow_twist.002 | users=1 | verts=24 edges=24 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_base_finger.007 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_base_finger_end.001 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_box.005 | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_box_head | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_c_eye.003 | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_c_eye_offset.001 | users=1 | verts=40 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_c_eyelid_micro.016 | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_cheek_inflate.001 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_circle_01 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_circle_02 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_circle_head.001 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_circle_ik | users=1 | verts=47 edges=56 polys=11 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_circle_squashed.008 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_ctrl_ik_solid_blue.001 | users=1 | verts=28 edges=50 polys=24 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_ctrl_ik_solid_red.001 | users=1 | verts=28 edges=50 polys=24 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_cube | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_cube_02 | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_cube_03 | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_curve.001 | users=1 | verts=16 edges=16 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_eye_aim.002 | users=1 | verts=36 edges=34 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_eye_aim_global.001 | users=1 | verts=44 edges=44 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_eyelid | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_eyelid2.003 | users=1 | verts=20 edges=20 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_fist | users=1 | verts=96 edges=96 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_fk | users=1 | verts=25 edges=40 polys=17 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_foot.l.002 | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_foot.r.001 | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_foot_fk | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_foot_roll.001 | users=1 | verts=56 edges=56 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_half_circle.001 | users=1 | verts=17 edges=16 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_hand.003 | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_jaw_square | users=1 | verts=24 edges=24 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_plane_1 | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_plane_2 | users=1 | verts=4 edges=4 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_plane_3.010 | users=1 | verts=4 edges=4 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_plane_4 | users=1 | verts=4 edges=4 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_plane_4_fill.003 | users=1 | verts=4 edges=4 polys=1 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_plane_5 | users=1 | verts=4 edges=4 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_pos | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_pos_solid.001 | users=1 | verts=128 edges=192 polys=64 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_pos_solid_eye_offset_blue | users=1 | verts=128 edges=192 polys=64 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_pos_solid_eye_offset_red | users=1 | verts=128 edges=192 polys=64 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_semi_sphere.003 | users=1 | verts=34 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_semi_sphere_inv.004 | users=1 | verts=34 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_arrow_twist_blue | users=1 | verts=24 edges=45 polys=22 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_arrow_twist_red.001 | users=1 | verts=24 edges=45 polys=22 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_bar_01.009 | users=1 | verts=8 edges=8 polys=2 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_bar_blue.001 | users=1 | verts=8 edges=8 polys=2 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_bar_red.001 | users=1 | verts=8 edges=8 polys=2 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_circle_01.001 | users=1 | verts=33 edges=64 polys=32 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_circle_02.003 | users=1 | verts=33 edges=64 polys=32 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_circle_02_blue.014 | users=1 | verts=66 edges=128 polys=64 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_circle_02_green.012 | users=1 | verts=66 edges=128 polys=64 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_circle_02_red.014 | users=1 | verts=66 edges=128 polys=64 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_circle_ik_blue.003 | users=1 | verts=127 edges=186 polys=58 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_circle_ik_red.003 | users=1 | verts=127 edges=186 polys=58 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_circle_squashed_blue.003 | users=1 | verts=64 edges=122 polys=60 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_circle_squashed_green | users=1 | verts=64 edges=122 polys=60 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_circle_squashed_red.003 | users=1 | verts=64 edges=122 polys=60 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_eye_aim_blue | users=1 | verts=144 edges=208 polys=68 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_eye_aim_global.001 | users=1 | verts=128 edges=192 polys=64 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_eye_aim_red | users=1 | verts=144 edges=208 polys=68 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_eye_blue | users=1 | verts=128 edges=192 polys=64 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_eye_red | users=1 | verts=128 edges=192 polys=64 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_eyebrow_blue | users=1 | verts=18 edges=33 polys=16 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_eyebrow_red | users=1 | verts=18 edges=33 polys=16 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_fk_blue.002 | users=1 | verts=54 edges=100 polys=45 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_fk_red.001 | users=1 | verts=54 edges=100 polys=45 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_plane_2.011 | users=1 | verts=8 edges=8 polys=2 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_plane_2_blue.003 | users=1 | verts=8 edges=8 polys=2 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_plane_2_red.003 | users=1 | verts=8 edges=8 polys=2 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_plane_3.001 | users=1 | verts=4 edges=4 polys=1 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_plane_3_blue.034 | users=1 | verts=8 edges=8 polys=2 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_plane_3_red.033 | users=1 | verts=8 edges=8 polys=2 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_plane_5_blue.001 | users=1 | verts=8 edges=8 polys=2 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_plane_5_red.001 | users=1 | verts=8 edges=8 polys=2 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_pupil_blue | users=1 | verts=66 edges=128 polys=64 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_pupil_red | users=1 | verts=66 edges=128 polys=64 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_torus_04_red | users=1 | verts=48 edges=93 polys=46 | uvs=0 | mats=1 | shape_keys=no
+[ME] cs_solid_torus_blue.011 | users=1 | verts=98 edges=192 polys=96 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_torus_green.003 | users=1 | verts=98 edges=192 polys=96 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_torus_red.011 | users=1 | verts=98 edges=192 polys=96 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_solid_triangle | users=1 | verts=3 edges=3 polys=1 | uvs=0 | mats=1 | shape_keys=no
+[ME] cs_sphere.019 | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_sphere_dir1.001 | users=1 | verts=4 edges=4 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_sphere_dir1.002 | users=1 | verts=4 edges=4 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_sphere_dir1.004 | users=1 | verts=96 edges=96 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_sphere_dir2 | users=1 | verts=96 edges=96 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_spine.002 | users=1 | verts=16 edges=16 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_square | users=1 | verts=4 edges=4 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_torus_01.001 | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_torus_02.001 | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_torus_03.001 | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_torus_04.003 | users=1 | verts=48 edges=93 polys=46 | uvs=0 | mats=1 | shape_keys=no
+[ME] cs_torus_04.106 | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_torus_04_rot | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_torus_04_rot2 | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_torus_05 | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_triangle | users=1 | verts=3 edges=3 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_triangle_02 | users=1 | verts=3 edges=3 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_Bone | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_arm_fk.l | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_arm_fk.r | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_arm_ik.r | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_leg_fk.l.001 | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_leg_fk.r.001 | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_root.x | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_root.x.001 | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_root_master.x | users=1 | verts=16 edges=16 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_shoulder.l | users=1 | verts=16 edges=16 polys=1 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_shoulder.r | users=1 | verts=16 edges=16 polys=1 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_skull_01.x | users=1 | verts=17 edges=16 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_skull_02.x | users=1 | verts=17 edges=16 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_skull_03.x | users=1 | verts=17 edges=16 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_spine_01.x | users=1 | verts=16 edges=16 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_spine_01.x.001 | users=1 | verts=16 edges=16 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_spine_02.x | users=1 | verts=16 edges=16 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_thigh_fk.l.001 | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_c_thigh_fk.r.001 | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_hair | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_hair.r | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_hair.r.001 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_hairFrontRight | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_Stick | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_Stick.002 | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_user_Stick.005 | users=1 | verts=8 edges=12 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_wire_eyebrow.002 | users=1 | verts=18 edges=18 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] cs_yeux | users=1 | verts=44 edges=44 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] geometry-2.001 | users=1 | verts=92 edges=187 polys=99 | uvs=1 | mats=2 | shape_keys=no
+[ME] geometry-2.003 | users=1 | verts=348 edges=688 polys=344 | uvs=1 | mats=2 | shape_keys=sí
+[ME] heartfull | users=1 | verts=103 edges=182 polys=80 | uvs=1 | mats=1 | shape_keys=no
+[ME] hiikaiti | users=2 | verts=4 edges=4 polys=1 | uvs=1 | mats=1 | shape_keys=no
+[ME] HorsecockMesh | users=1 | verts=3669 edges=7358 polys=3691 | uvs=1 | mats=1 | shape_keys=sí
+[ME] HorsecockMesh.001 | users=1 | verts=216 edges=622 polys=408 | uvs=1 | mats=1 | shape_keys=no
+[ME] ignacio-ramirez-5 | users=1 | verts=26 edges=37 polys=12 | uvs=1 | mats=1 | shape_keys=no
+[ME] ignacio-ramirez-5.001 | users=1 | verts=26 edges=37 polys=12 | uvs=1 | mats=1 | shape_keys=no
+[ME] Imagen de publicación de Patreon-4 | users=1 | verts=4 edges=4 polys=1 | uvs=1 | mats=1 | shape_keys=no
+[ME] mesh_23 | users=1 | verts=5239 edges=10360 polys=5236 | uvs=6 | mats=2 | shape_keys=no
+[ME] mesh_23.001 | users=1 | verts=877 edges=1965 polys=1203 | uvs=6 | mats=2 | shape_keys=no
+[ME] mesh_25.002 | users=1 | verts=225 edges=408 polys=186 | uvs=7 | mats=1 | shape_keys=no
+[ME] mesh_25.003 | users=1 | verts=286 edges=596 polys=314 | uvs=7 | mats=1 | shape_keys=no
+[ME] mesh_25.004 | users=1 | verts=32 edges=61 polys=31 | uvs=7 | mats=1 | shape_keys=no
+[ME] mesh_25.005 | users=1 | verts=55 edges=151 polys=101 | uvs=7 | mats=1 | shape_keys=no
+[ME] mesh_25.006 | users=1 | verts=5 edges=9 polys=6 | uvs=7 | mats=1 | shape_keys=no
+[ME] mesh_25.007 | users=1 | verts=107 edges=254 polys=150 | uvs=7 | mats=1 | shape_keys=no
+[ME] mesh_27.002 | users=1 | verts=1093 edges=3195 polys=2102 | uvs=5 | mats=2 | shape_keys=no
+[ME] mesh_27.003 | users=1 | verts=950 edges=2862 polys=1908 | uvs=5 | mats=2 | shape_keys=no
+[ME] mesh_27.004 | users=1 | verts=9760 edges=20073 polys=10315 | uvs=7 | mats=1 | shape_keys=sí
+[ME] mesh_27.008 | users=1 | verts=61 edges=195 polys=130 | uvs=5 | mats=2 | shape_keys=no
+[ME] mesh_27.012 | users=1 | verts=1914 edges=5204 polys=3292 | uvs=7 | mats=1 | shape_keys=no
+[ME] mesh_27.013 | users=1 | verts=85 edges=230 polys=145 | uvs=5 | mats=2 | shape_keys=no
+[ME] PhyscageMesh | users=1 | verts=48 edges=92 polys=46 | uvs=1 | mats=0 | shape_keys=no
+[ME] Plano | users=1 | verts=4 edges=4 polys=1 | uvs=1 | mats=1 | shape_keys=no
+[ME] Plano.004 | users=1 | verts=1182 edges=2352 polys=1176 | uvs=0 | mats=1 | shape_keys=sí
+[ME] videoplayback | users=1 | verts=4 edges=4 polys=1 | uvs=1 | mats=1 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_AdjustBackLower | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_AdjustBackMiddle | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_AdjustBackTop | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_AdjustFrontTop | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_AdjustMiddle | users=2 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_AdjustUpper | users=2 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Penis_Main | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Ring | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_root | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Shaft_01 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Shaft_02 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Shaft_03 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Shaft_04 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Shaft_05 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Shaft_06 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Shaft_07 | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Shaft_end | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Shaft_end-twist | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Shaft_end01 | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Shaft_master | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Shaft_mid01 | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Shaft_start | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Shaft_start01 | users=1 | verts=48 edges=48 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Sheath | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Testicle | users=2 | verts=34 edges=33 polys=0 | uvs=0 | mats=0 | shape_keys=no
+[ME] WGT-JawsHorseCock_Armature_Testicles_Root | users=1 | verts=32 edges=32 polys=0 | uvs=0 | mats=0 | shape_keys=no
+
+==============================================================================
+  5. ARMADURAS (RIGS)
+==============================================================================
+[AR] rig | users=1 | huesos=704
+    c_pos, c_traj, c_root_master.x, c_root.x, c_p_root.x, c_root_bend.x, root.x, c_tail_00.x, c_tail_01.x, c_tail_02.x, c_tail_03.x, c_thigh_b_dupli_001.r, thigh_ik_dupli_001.r, leg_ik_dupli_001.r, thigh_ik_nostr_dupli_001.r, leg_ik_nostr_dupli_001.r, c_thigh_fk_dupli_001.r, thigh_fk_dupli_001.r, c_leg_fk_dupli_001.r, leg_fk_dupli_001.r, foot_dupli_001.r, toes_01_dupli_001.r, foot_pole_dupli_001.r, c_foot_fk_scale_fix_dupli_001.r, c_foot_fk_dupli_001.r, foot_fk_dupli_001.r, c_toes_fk_dupli_001.r, c_p_foot_fk_dupli_001.r, leg_fk_pre_pole_dupli_001.r, leg_fk_pole_dupli_001.r, thigh_dupli_001.r, c_stretch_leg_dupli_001.r, leg_dupli_001.r, thigh_twist_dupli_001.r, c_thigh_ik_dupli_001.r, c_thigh_b_dupli_001.l, thigh_ik_dupli_001.l, leg_ik_dupli_001.l, c_thigh_fk_dupli_001.l, thigh_fk_dupli_001.l, c_leg_fk_dupli_001.l, leg_fk_dupli_001.l, foot_dupli_001.l, toes_01_dupli_001.l, foot_pole_dupli_001.l, c_foot_fk_scale_fix_dupli_001.l, c_foot_fk_dupli_001.l, foot_fk_dupli_001.l, c_toes_fk_dupli_001.l, c_p_foot_fk_dupli_001.l, leg_fk_pre_pole_dupli_001.l, leg_fk_pole_dupli_001.l, thigh_dupli_001.l, c_stretch_leg_dupli_001.l, leg_dupli_001.l, thigh_twist_dupli_001.l, thigh_ik_nostr_dupli_001.l, leg_ik_nostr_dupli_001.l, c_thigh_ik_dupli_001.l, c_tail_master.x, c_p_root_master.x, c_spine_01.x, spine_01.x, c_p_spine_01.x, c_spine_02.x, spine_02.x, c_p_spine_02.x, c_spine_03.x, spine_03.x, c_spine_04.x, spine_04.x, c_spine_05.x, spine_05.x, c_spine_06.x, spine_06.x, c_spine_07.x, spine_07.x, c_shoulder.l, arm_ik.l, forearm_ik.l, arm.l, c_stretch_arm.l, shoulder.l, shoulder_track_pole.l, shoulder_pole.l, arm_twist_twk.l, arm_ik_nostr_scale_fix.l, arm_ik_nostr.l, forearm_ik_nostr.l, arm_twist.l, c_arm_twist_offset.l, c_arm_ik.l, c_arm_fk.l, arm_fk.l, c_forearm_fk.l, forearm_fk.l, c_hand_fk_scale_fix.l, c_hand_fk.l, arm_fk_pre_pole.l, arm_fk_pole.l, c_shoulder.r, arm_ik.r, forearm_ik.r, shoulder.r, shoulder_track_pole.r, shoulder_pole.r, arm_twist_twk.r, arm.r, c_stretch_arm.r, arm_ik_nostr_scale_fix.r, arm_ik_nostr.r, forearm_ik_nostr.r, arm_twist.r, c_arm_twist_offset.r, c_arm_ik.r, c_arm_fk.r, c_forearm_fk.r, forearm_fk.r, c_hand_fk_scale_fix.r, c_hand_fk.r, arm_fk.r, arm_fk_pre_pole.r, arm_fk_pole.r, c_neck.x, c_p_neck.x, neck.x, neck_twist.x, thigh_b_ik01.l, c_thigh_b.l, thigh_ik.l, leg_ik.l, c_thigh_fk.l, thigh_fk.l, c_leg_fk.l, leg_fk.l, foot.l, toes_01.l, foot_pole.l, c_foot_fk_scale_fix.l, c_foot_fk.l, foot_fk.l, c_toes_fk.l, c_p_foot_fk.l, leg_fk_pre_pole.l, leg_fk_pole.l, thigh.l, c_stretch_leg.l, leg.l, thigh_twist.l, thigh_ik_nostr.l, leg_ik_nostr.l, c_thigh_ik.l, thigh_b_ik02.l, thigh_b_ik03.l, thigh_b_ik01.r, c_thigh_b.r, thigh_ik.r, leg_ik.r, thigh_ik_nostr.r, leg_ik_nostr.r, c_thigh_fk.r, thigh_fk.r, c_leg_fk.r, leg_fk.r, foot.r, toes_01.r, foot_pole.r, c_foot_fk_scale_fix.r, c_foot_fk.r, foot_fk.r, c_toes_fk.r, c_p_foot_fk.r, leg_fk_pre_pole.r, leg_fk_pole.r, thigh.r, c_stretch_leg.r, leg.r, thigh_twist.r, c_thigh_ik.r, thigh_b_ik02.r, thigh_b_ik03.r, leg_stretch.r, leg_twist.r, thigh_stretch.r, leg_stretch.l, leg_twist.l, thigh_stretch.l, leg_stretch_dupli_001.r, leg_twist_dupli_001.r, thigh_stretch_dupli_001.r, leg_stretch_dupli_001.l, leg_twist_dupli_001.l, thigh_stretch_dupli_001.l, arm_stretch.l, forearm_stretch.l, forearm_twist.l, forearm.l, hand.l, c_pinky1_base.l, pinky_bend_all.l, c_pinky1_rot.l, c_pinky1.l, pinky1.l, c_pinky2_rot.l, c_pinky2.l, c_pinky3_rot.l, c_pinky3.l, c_ring1_base.l, ring_bend_all.l, c_ring1_rot.l, c_ring1.l, ring1.l, c_ring2_rot.l, c_ring2.l, c_ring3_rot.l, c_ring3.l, c_middle1_base.l, middle_bend_all.l, c_middle1_rot.l, c_middle1.l, middle1.l, c_middle2_rot.l, c_middle2.l, c_middle3_rot.l, c_middle3.l, c_index1_base.l, index_bend_all.l, c_index1_rot.l, c_index1.l, index1.l, c_index2_rot.l, c_index2.l, c_index3_rot.l, c_index3.l, c_thumb1_base.l, thumb_bend_all.l, c_thumb1_rot.l, c_thumb1.l, thumb1.l, c_thumb2_rot.l, c_thumb2.l, c_thumb3_rot.l, c_thumb3.l, hand_rot_twist.l, arm_stretch.r, forearm_stretch.r, forearm_twist.r, forearm.r, hand.r, c_pinky1_base.r, pinky_bend_all.r, c_pinky1_rot.r, c_pinky1.r, pinky1.r, c_pinky2_rot.r, c_pinky2.r, c_pinky3_rot.r, c_pinky3.r, c_ring1_base.r, ring_bend_all.r, c_ring1_rot.r, c_ring1.r, ring1.r, c_ring2_rot.r, c_ring2.r, c_ring3_rot.r, c_ring3.r, c_middle1_base.r, middle_bend_all.r, c_middle1_rot.r, c_middle1.r, middle1.r, c_middle2_rot.r, c_middle2.r, c_middle3_rot.r, c_middle3.r, c_index1_base.r, c_index1_rot.r, c_index1.r, index1.r, c_index2_rot.r, c_index2.r, c_index3_rot.r, c_index3.r, index_bend_all.r, c_thumb1_base.r, thumb_bend_all.r, c_thumb1_rot.r, c_thumb1.r, thumb1.r, c_thumb2_rot.r, c_thumb2.r, c_thumb3_rot.r, c_thumb3.r, hand_rot_twist.r, head_scale_fix.x, c_head.x, head.x, c_eye_ref_track.l, c_eye_ref_track.r, c_jawbone.x, jawbone.x, c_tong_01.x, c_tong_02.x, c_tong_03.x, tong_03.x, tong_02.x, tong_01.x, c_chin_01.x, c_chin_02.x, c_teeth_bot_master.x, c_teeth_bot.x, c_teeth_bot.l, c_teeth_bot.r, c_lips_bot_01_offset.l, c_lips_bot_01.l, lips_bot_01_follow.l, c_lips_bot_01_offset.r, c_lips_bot_01.r, lips_bot_01_follow.r, c_lips_bot_offset.l, c_lips_bot.l, lips_bot_follow.l, c_lips_bot_offset.r, c_lips_bot.r, lips_bot_follow.r, c_lips_bot_offset.x, c_lips_bot.x, c_lips_roll_bot.x, c_lips_roll_top.x, c_teeth_top_master.x, c_teeth_top.x, c_teeth_top.l, c_teeth_top.r, jaw_ret_bone.x, c_lips_top_retain.x, c_lips_top_retain.l, c_lips_top_retain.r, c_lips_top_01_retain.l, c_lips_top_01_retain.r, c_lips_smile_retain.l, c_lips_smile_retain.r, c_lips_bot_01_retain.l, c_lips_bot_01_retain.r, c_lips_bot_retain.l, c_lips_bot_retain.r, c_lips_bot_retain.x, c_lips_top_offset.x, c_lips_top.x, c_lips_top_offset.l, c_lips_top.l, lips_top_follow.l, c_lips_top_offset.r, c_lips_top.r, lips_top_follow.r, c_lips_top_01_offset.l, c_lips_top_01.l, lips_top_01_follow.l, c_lips_top_01_offset.r, c_lips_top_01.r, lips_top_01_follow.r, c_lips_smile_offset.l, c_lips_smile.l, c_lips_corner_mini.l, c_lips_smile_offset.r, c_lips_smile.r, c_lips_corner_mini.r, c_eye_offset.l, c_eyelid_base.l, eyelid_top.l, c_eyelid_top_01.l, c_eyelid_top_02.l, c_eyelid_top_03.l, eyelid_bot.l, c_eyelid_bot_01.l, c_eyelid_bot_02.l, c_eyelid_bot_03.l, c_eye.l, c_eye_ref.l, c_eyelid_corner_01.l, c_eyelid_corner_02.l, c_eyelid_top.l, c_eyelid_bot.l, c_cheek_smile.l, c_eye_offset.r, c_eyelid_corner_01.r, c_eyelid_corner_02.r, c_eyelid_base.r, eyelid_top.r, c_eyelid_top_01.r, c_eyelid_top_02.r, c_eyelid_top_03.r, eyelid_bot.r, c_eyelid_bot_01.r, c_eyelid_bot_02.r, c_eyelid_bot_03.r, c_eye.r, c_eye_ref.r, c_eyelid_top.r, c_eyelid_bot.r, c_cheek_smile.r, c_nose_03.x, c_nose_01.x, c_nose_02.x, c_cheek_inflate.l, c_cheek_inflate.r, c_eyebrow_full.r, c_eyebrow_03.r, c_eyebrow_02.r, c_eyebrow_01.r, c_eyebrow_01_end.r, c_eyebrow_full.l, c_eyebrow_03.l, c_eyebrow_02.l, c_eyebrow_01.l, c_eyebrow_01_end.l, c_ear_01.l, c_ear_02.l, c_ear_03.l, c_ear_04.l, c_ear_01.r, c_ear_02.r, c_ear_03.r, c_ear_04.r, hair, hair.003, hair.002, hair.001, hair.r, hair.r.001, hair.r.002, hair.r.003, hair.l, hair.l.001, hair.l.002, hair.l.003, hairFrontRight, hairFrontRight.002, hairFrontRight.001, hairFrontLeft, hairFrontLeft.002, hairFrontLeft.001, c_p_head.x, c_stretch_leg_pin.r, c_stretch_leg_pin.l, c_stretch_leg_pin_dupli_001.r, c_stretch_leg_pin_dupli_001.l, c_stretch_arm_pin.l, c_stretch_arm_pin.r, root_ref.x, spine_01_ref.x, spine_02_ref.x, spine_03_ref.x, spine_04_ref.x, spine_05_ref.x, spine_06_ref.x, spine_07_ref.x, shoulder_ref.l, arm_ref.l, forearm_ref.l, hand_ref.l, pinky1_base_ref.l, pinky1_ref.l, pinky2_ref.l, pinky3_ref.l, ring1_base_ref.l, ring1_ref.l, ring2_ref.l, ring3_ref.l, middle1_base_ref.l, middle1_ref.l, middle2_ref.l, middle3_ref.l, index1_base_ref.l, index1_ref.l, index2_ref.l, index3_ref.l, thumb1_ref.l, thumb2_ref.l, thumb3_ref.l, shoulder_ref.r, arm_ref.r, forearm_ref.r, hand_ref.r, pinky1_base_ref.r, pinky1_ref.r, pinky2_ref.r, pinky3_ref.r, ring1_base_ref.r, ring1_ref.r, ring2_ref.r, ring3_ref.r, middle1_base_ref.r, middle1_ref.r, middle2_ref.r, middle3_ref.r, index1_base_ref.r, index1_ref.r, index2_ref.r, index3_ref.r, thumb1_ref.r, thumb2_ref.r, thumb3_ref.r, neck_ref.x, head_ref.x, jaw_ref.x, ear_01_ref.l, ear_02_ref.l, ear_03_ref.l, ear_04_ref.l, ear_01_ref.r, ear_02_ref.r, ear_03_ref.r, ear_04_ref.r, thigh_b_ref.l, thigh_ref.l, leg_ref.l, foot_bank_01_ref.l, foot_bank_02_ref.l, foot_heel_ref.l, foot_ref.l, toes_ref.l, thigh_b_ref.r, thigh_ref.r, leg_ref.r, foot_bank_01_ref.r, foot_bank_02_ref.r, foot_heel_ref.r, foot_ref.r, toes_ref.r, thigh_ref_dupli_001.r, leg_ref_dupli_001.r, foot_bank_01_ref_dupli_001.r, foot_bank_02_ref_dupli_001.r, foot_heel_ref_dupli_001.r, foot_ref_dupli_001.r, toes_ref_dupli_001.r, thigh_ref_dupli_001.l, leg_ref_dupli_001.l, foot_bank_01_ref_dupli_001.l, foot_bank_02_ref_dupli_001.l, foot_heel_ref_dupli_001.l, foot_ref_dupli_001.l, toes_ref_dupli_001.l, tail_00_ref.x, tail_01_ref.x, tail_02_ref.x, tail_03_ref.x, c_foot_ik.r, c_p_foot_ik.r, foot_ik.r, c_toes_track.r, toes_01_ik.r, toes_02.r, foot_snap_fk.r, c_foot_bank_01.r, c_foot_bank_02.r, c_foot_heel.r, c_toes_end.r, c_toes_ik.r, c_foot_01.r, foot_ik_target.r, foot_01_pole.r, c_toes_end_01.r, c_foot_roll.r, c_foot_roll_cursor.r, c_leg_pole.r, c_foot_ik.l, c_p_foot_ik.l, foot_ik.l, c_toes_track.l, toes_01_ik.l, toes_02.l, foot_snap_fk.l, c_foot_bank_01.l, c_foot_bank_02.l, c_foot_heel.l, c_toes_end.l, c_toes_ik.l, c_foot_01.l, foot_01_pole.l, foot_ik_target.l, c_toes_end_01.l, c_foot_roll.l, c_foot_roll_cursor.l, c_leg_pole.l, c_foot_ik_dupli_001.r, c_p_foot_ik_dupli_001.r, foot_ik_dupli_001.r, c_toes_track_dupli_001.r, toes_01_ik_dupli_001.r, toes_02_dupli_001.r, foot_snap_fk_dupli_001.r, c_foot_bank_01_dupli_001.r, c_foot_bank_02_dupli_001.r, c_foot_heel_dupli_001.r, c_toes_end_dupli_001.r, c_toes_ik_dupli_001.r, c_foot_01_dupli_001.r, foot_ik_target_dupli_001.r, foot_01_pole_dupli_001.r, c_toes_end_01_dupli_001.r, c_foot_roll_dupli_001.r, c_foot_roll_cursor_dupli_001.r, c_leg_pole_dupli_001.r, c_foot_ik_dupli_001.l, c_p_foot_ik_dupli_001.l, foot_ik_dupli_001.l, c_toes_track_dupli_001.l, toes_01_ik_dupli_001.l, toes_02_dupli_001.l, foot_snap_fk_dupli_001.l, c_foot_bank_01_dupli_001.l, c_foot_bank_02_dupli_001.l, c_foot_heel_dupli_001.l, c_toes_end_dupli_001.l, c_toes_ik_dupli_001.l, c_foot_01_dupli_001.l, foot_01_pole_dupli_001.l, foot_ik_target_dupli_001.l, c_toes_end_01_dupli_001.l, c_foot_roll_dupli_001.l, c_foot_roll_cursor_dupli_001.l, c_leg_pole_dupli_001.l, c_arms_pole.l, c_hand_ik.l, c_arms_pole.r, c_hand_ik.r, c_p_neck_01.x, c_eye_target.x, c_eye_target.l, c_eye_target.r, eyebrow_full_ref.r, eyebrow_03_ref.r, eyebrow_02_ref.r, eyebrow_01_ref.r, eyebrow_01_end_ref.r, eyebrow_full_ref.l, eyebrow_03_ref.l, eyebrow_02_ref.l, eyebrow_01_ref.l, eyebrow_01_end_ref.l, lips_top_ref.x, lips_top_ref.l, lips_top_01_ref.l, lips_smile_ref.l, lips_corner_mini_ref.l, lips_top_ref.r, lips_top_01_ref.r, lips_smile_ref.r, lips_corner_mini_ref.r, lips_bot_ref.x, lips_bot_ref.l, lips_bot_01_ref.l, lips_bot_ref.r, lips_bot_01_ref.r, lips_roll_top_ref.x, lips_roll_bot_ref.x, tong_01_ref.x, tong_02_ref.x, tong_03_ref.x, teeth_bot_ref.x, teeth_bot_ref.l, teeth_bot_ref.r, chin_02_ref.x, chin_01_ref.x, teeth_top_ref.x, teeth_top_ref.l, teeth_top_ref.r, eye_offset_ref.l, eyelid_top_ref.l, eyelid_bot_ref.l, eyelid_top_01_ref.l, eyelid_top_02_ref.l, eyelid_top_03_ref.l, eyelid_bot_01_ref.l, eyelid_bot_02_ref.l, eyelid_bot_03_ref.l, eyelid_corner_01_ref.l, eyelid_corner_02_ref.l, eye_offset_ref.r, eyelid_top_ref.r, eyelid_bot_ref.r, eyelid_top_01_ref.r, eyelid_top_02_ref.r, eyelid_top_03_ref.r, eyelid_bot_01_ref.r, eyelid_bot_02_ref.r, eyelid_bot_03_ref.r, eyelid_corner_01_ref.r, eyelid_corner_02_ref.r, cheek_smile_ref.l, cheek_inflate_ref.l, cheek_smile_ref.r, cheek_inflate_ref.r, nose_01_ref.x, nose_02_ref.x, nose_03_ref.x, Stick, Stick.001, Stick.005, Stick.002, Stick.003, Stick.004
+[AR] rig.001 | users=1 | huesos=86
+    root, ORG-Penis_Main, ORG-Testicles_Root, ORG-Testicle.L, DEF-Testicle.L, ORG-Testicle.R, DEF-Testicle.R, Testicle.L, Testicle.R, DEF-Testicles_Root, ORG-Sheath, ORG-AdjustFrontTop, DEF-AdjustFrontTop, AdjustFrontTop, DEF-Shaft_01, DEF-Shaft_02, DEF-Shaft_03, DEF-Shaft_04, DEF-Shaft_05, DEF-Shaft_06, DEF-Shaft_07, Shaft_master, ORG-Shaft_01, ORG-Shaft_02, ORG-Shaft_03, ORG-Shaft_04, ORG-Shaft_05, ORG-Shaft_06, ORG-Shaft_07, ORG-Ring, DEF-Ring, Ring, Shaft_01, Shaft_02, Shaft_03, Shaft_04, Shaft_05, Shaft_06, Shaft_07, Shaft_end-twist, Shaft_start, MCH-Shaft_01.ik, MCH-Shaft_02.ik, MCH-Shaft_03.ik, MCH-Shaft_04.ik, MCH-Shaft_05.ik, MCH-Shaft_06.ik, MCH-Shaft_07.ik, MCH-Shaft_start.psocket, MCH-Shaft_start01.hook, MCH-Shaft_end.psocket, MCH-Shaft_end01.hook, DEF-Sheath, ORG-AdjustBackMiddle, DEF-AdjustBackMiddle, ORG-AdjustBackLower, DEF-AdjustBackLower, ORG-AdjustBackTop, DEF-AdjustBackTop, ORG-AdjustUpper.R, DEF-AdjustUpper.R, ORG-AdjustMiddle.R, DEF-AdjustMiddle.R, ORG-AdjustUpper.L, DEF-AdjustUpper.L, ORG-AdjustMiddle.L, DEF-AdjustMiddle.L, AdjustBackLower, AdjustBackMiddle, AdjustBackTop, AdjustMiddle.L, AdjustMiddle.R, AdjustUpper.L, AdjustUpper.R, Sheath, Testicles_Root, DEF-Penis_Main, Penis_Main, MCH-Shaft_start01.parent, Shaft_start01, MCH-Shaft_mid01.parent, Shaft_mid01, MCH-Shaft_end01.parent, Shaft_end01, MCH-Shaft_end.parent, Shaft_end
+
+==============================================================================
+  6. ACCIONES (ANIMACIÓN)
+==============================================================================
+[AC] Camara con modificacionesAction | users=1 | fcurves=6 | keys=6 | rango=(90.0, 90.0)
+!! Error con action Camara con modificacionesAction: AttributeError: 'ActionSlot' object has no attribute 'name'
+[AC] heartfullAction | users=1 | fcurves=13 | keys=60 | rango=(266.0, 312.0)
+!! Error con action heartfullAction: AttributeError: 'ActionSlot' object has no attribute 'name'
+[AC] JawsHorseCock_ArmatureAction | users=1 | fcurves=21 | keys=575 | rango=(90.0, 940.0)
+!! Error con action JawsHorseCock_ArmatureAction: AttributeError: 'ActionSlot' object has no attribute 'name'
+[AC] Key.001Action | users=1 | fcurves=8 | keys=24 | rango=(802.0, 894.0)
+!! Error con action Key.001Action: AttributeError: 'ActionSlot' object has no attribute 'name'
+[AC] KeyAction | users=1 | fcurves=13 | keys=157 | rango=(0.0, 1200.0)
+!! Error con action KeyAction: AttributeError: 'ActionSlot' object has no attribute 'name'
+[AC] rigAction | users=2 | fcurves=262 | keys=3276 | rango=(0.0, 4037.0)
+!! Error con action rigAction: AttributeError: 'ActionSlot' object has no attribute 'name'
+[AC] Shader NodetreeAction | users=1 | fcurves=1 | keys=2 | rango=(847.0, 894.0)
+!! Error con action Shader NodetreeAction: AttributeError: 'ActionSlot' object has no attribute 'name'
+[AC] Shader NodetreeAction.001 | users=1 | fcurves=2 | keys=11 | rango=(100.0, 569.0)
+!! Error con action Shader NodetreeAction.001: AttributeError: 'ActionSlot' object has no attribute 'name'
+[AC] slimeAction | users=1 | fcurves=1 | keys=2 | rango=(847.0, 894.0)
+!! Error con action slimeAction: AttributeError: 'ActionSlot' object has no attribute 'name'
+[AC] this.001Action | users=1 | fcurves=3 | keys=12 | rango=(0.0, 123.0)
+!! Error con action this.001Action: AttributeError: 'ActionSlot' object has no attribute 'name'
+[AC] this.001Action.001 | users=1 | fcurves=3 | keys=15 | rango=(0.0, 135.0)
+!! Error con action this.001Action.001: AttributeError: 'ActionSlot' object has no attribute 'name'
+[AC] thisAction | users=1 | fcurves=6 | keys=91 | rango=(-271.0, 989.0)
+!! Error con action thisAction: AttributeError: 'ActionSlot' object has no attribute 'name'
+[AC] thisAction.001 | users=1 | fcurves=3 | keys=18 | rango=(0.0, 159.0)
+!! Error con action thisAction.001: AttributeError: 'ActionSlot' object has no attribute 'name'
+
+==============================================================================
+  7. SHAPE KEYS
+==============================================================================
+[SK] Key | users=1 | bloques: Base, FixV, Anus, Push HARD, In, Push Out, Push, Annie Edit, Annie Press, Annie In, Annie InX, Annie InX 269, Annie Push Out, Annie Prolapse, Frame 321, Frame 323, Frame 392, Frame 421, Frame 804, Respiro, Face, O, Parpado
+[SK] Key.001 | users=1 | bloques: Base, Clave 1, Clave 2, Clave 3, Clave 4, Clave 5, Clave 6, Clave 7, Clave 8
+[SK] Key.005 | users=1 | bloques: Basis, Balls_Bigger, Balls_Smaller, Balls_Shape_1, Balls_Shape_2, Balls_Shape_3, Balls_Shape_Spherical, Balls_GapRemover, Balls_Sag, Balls_Lift_L, Balls_Lift_R, Balls_Retract, Balls_Empty, Baslls_Cumming_HHHNNNNNGH, Sheath_Push&Pull, Cockring_Indent, Medial_Ring_FW&BW, Shaft_Retract_Inside, Shaft_Longer, Shaft_Thick&Thin, Shaft_Push&Pull, Shaft_Stroke_FW&BW, Shaft_Cumming_1, Shaft_Cumming_2, Shaft_Cumming_3, Shaft_Tip_Flare_1, Shaft_Tip_Flare_2, Shaft_Tip_Flare_3, Shaft_Tip_Size, Shaft_Tip_Push, Shaft_Angry_Veins, Urethra_Forward, Urethra_Pulse, HorseFit
+[SK] Key.006 | users=1 | bloques: Basis, Shaft_start01, Shaft_mid01, Shaft_end01, Shaft_end
+[SK] Key.046 | users=1 | bloques: Basis, Shape, Pupil, Iris, Cat Iris, Key 5
+
+==============================================================================
+  8. MATERIALES
+==============================================================================
+[MA] 20240804_185842 | users=1 | nodos=3
+    nodos: ShaderNodeBsdfPrincipled x1, ShaderNodeOutputMaterial x1, ShaderNodeTexImage x1
+    imágenes: 20240804_185842.jpg
+[MA] Cum | users=1 | nodos=14
+    nodos: ShaderNodeBsdfGlass x1, ShaderNodeBsdfTransparent x2, ShaderNodeMapping x1, ShaderNodeMix x1, ShaderNodeMixShader x2, ShaderNodeNewGeometry x1, ShaderNodeOutputMaterial x1, ShaderNodeTexCoord x1, ShaderNodeTexGradient x1, ShaderNodeTexNoise x1, ShaderNodeValToRGB x1, ShaderNodeVolumeScatter x1
+[MA] Dots Stroke | users=2 | nodos=5
+    nodos: NodeFrame x1, ShaderNodeBsdfDiffuse x1, ShaderNodeBsdfPrincipled x1, ShaderNodeOutputMaterial x2
+[MA] Eyeballs Reflection | users=2 | nodos=8
+    nodos: ShaderNodeBsdfDiffuse x1, ShaderNodeBsdfPrincipled x1, ShaderNodeMapping x1, ShaderNodeMixShader x1, ShaderNodeOutputMaterial x1, ShaderNodeTexCoord x1, ShaderNodeTexEnvironment x1, ShaderNodeValue x1
+[MA] Eyes.001 | users=2 | nodos=11
+    nodos: ShaderNodeBsdfPrincipled x1, ShaderNodeBump x1, ShaderNodeMix x2, ShaderNodeNormalMap x1, ShaderNodeOutputMaterial x1, ShaderNodeTexImage x4, ShaderNodeVectorMath x1
+    imágenes: 13413.png, AlyxEyesN_1007.jpg, Eye Emission.png, G8FBaseEyesB_1007.001
+[MA] heartfull_M | users=1 | nodos=5
+    nodos: ShaderNodeBsdfTransparent x1, ShaderNodeEmission x1, ShaderNodeMixShader x1, ShaderNodeObjectInfo x1, ShaderNodeOutputMaterial x1
+[MA] hiikaiti | users=1 | nodos=4
+    nodos: ShaderNodeBsdfPrincipled x1, ShaderNodeOutputMaterial x1, ShaderNodeTexImage x2
+    imágenes: hiikaiti.mp4
+[MA] HorseCockMat | users=2 | nodos=59
+    nodos: ShaderNodeBrightContrast x1, ShaderNodeBsdfAnisotropic x2, ShaderNodeBsdfPrincipled x1, ShaderNodeBsdfTranslucent x2, ShaderNodeBump x3, ShaderNodeGroup x1, ShaderNodeHueSaturation x5, ShaderNodeInvert x4, ShaderNodeMapping x4, ShaderNodeMath x1, ShaderNodeMix x7, ShaderNodeMixShader x3, ShaderNodeNormalMap x1, ShaderNodeOutputMaterial x1, ShaderNodeRGBToBW x2, ShaderNodeSeparateColor x1, ShaderNodeTexCoord x4, ShaderNodeTexImage x8, ShaderNodeTexNoise x1, ShaderNodeTexVoronoi x1, ShaderNodeValToRGB x6
+    imágenes: Cumsito, HorseCock_Diffuse_1.png, HorseCock_Mask.png, HorseCock_Normals.png, HorseCock_Roughness.png, HorseCock_SSS.png, HorseCock_Veins.png
+[MA] ignacio-ramirez-5 | users=2 | nodos=3
+    nodos: ShaderNodeBsdfPrincipled x1, ShaderNodeOutputMaterial x1, ShaderNodeTexImage x1
+    imágenes: ignacio-ramirez-5.jpg
+[MA] Imagen de publicación de Patreon-4 | users=1 | nodos=3
+    nodos: ShaderNodeBsdfPrincipled x1, ShaderNodeOutputMaterial x1, ShaderNodeTexImage x1
+    imágenes: Imagen de publicación de Patreon-4.png
+[MA] Lillia | users=2 | nodos=16
+    nodos: ShaderNodeBsdfPrincipled x1, ShaderNodeInvert x1, ShaderNodeMix x3, ShaderNodeNormalMap x1, ShaderNodeOutputMaterial x1, ShaderNodeSeparateColor x1, ShaderNodeTexImage x6, ShaderNodeValToRGB x2
+    imágenes: Cejas, ColorLilliaUpdated.png, EmissionLillia.png, Especularidad, MetalicSpcLillia.png, NormalMapAssets.png
+[MA] Lillia.001 | users=1 | nodos=14
+    nodos: ShaderNodeBsdfPrincipled x1, ShaderNodeInvert x1, ShaderNodeMix x2, ShaderNodeNormalMap x2, ShaderNodeOutputMaterial x1, ShaderNodeSeparateColor x1, ShaderNodeTexImage x5, ShaderNodeValToRGB x1
+    imágenes: ColorLillia.png, EmissionLillia.png, Especularidad, MetalicSpcLillia.png, NormalMapAssets.png
+[MA] mat_13 | users=2 | nodos=5
+    nodos: ShaderNodeBsdfPrincipled x1, ShaderNodeNormalMap x1, ShaderNodeOutputMaterial x1, ShaderNodeTexImage x2
+    imágenes: 00000000563512B8.png, 0000000056356178.png
+[MA] mat_16 | users=12 | nodos=10
+    nodos: ShaderNodeBsdfPrincipled x1, ShaderNodeMix x1, ShaderNodeNormalMap x1, ShaderNodeOutputMaterial x1, ShaderNodeSeparateColor x1, ShaderNodeTexImage x4, ShaderNodeValToRGB x1
+    imágenes: ColorAssets.png, EmissionAssets.png, MetalicSpc.png, NormalMapAssets.png
+[MA] mat_25 | users=4 | nodos=5
+    nodos: ShaderNodeBsdfPrincipled x1, ShaderNodeNormalMap x1, ShaderNodeOutputMaterial x1, ShaderNodeTexImage x2
+    imágenes: 00000001892E3738.png, 00000001892E3738.png.001
+[MA] Suelo | users=1 | nodos=7
+    nodos: ShaderNodeBsdfPrincipled x1, ShaderNodeMapping x1, ShaderNodeOutputMaterial x1, ShaderNodeTexCoord x1, ShaderNodeTexImage x2, ShaderNodeValToRGB x1
+    imágenes: RAYAJOS RUGOSOS.jpg, rock_ground_02_disp_2k.png
+[MA] videoplayback | users=1 | nodos=3
+    nodos: ShaderNodeBsdfPrincipled x1, ShaderNodeOutputMaterial x1, ShaderNodeTexImage x1
+
+==============================================================================
+  9. IMÁGENES Y CLIPS
+==============================================================================
+[IM] 00000000563512B8.png | source=FILE | 3000x3000 | colorspace=Non-Color | packed=sí | users=1
+    ruta: C:\Users\alesp\Downloads\Base_Lillia\base_lillia\New Folder\00000000563512B8.png
+[IM] 0000000056356178.png | source=FILE | 2048x2048 | colorspace=sRGB | packed=sí | users=1
+    ruta: C:\Users\alesp\Downloads\Base_Lillia\base_lillia\New Folder\0000000056356178.png
+[IM] 00000001892E3738.png | source=FILE | 128x128 | colorspace=sRGB | packed=sí | users=1
+    ruta: C:\Users\alesp\Downloads\Base_Lillia\base_lillia\00000001892E3738.png
+[IM] 00000001892E3738.png.001 | source=FILE | 128x128 | colorspace=Non-Color | packed=sí | users=1
+    ruta: C:\Users\alesp\Downloads\Base_Lillia\base_lillia\00000001892E3738.png
+[IM] 13413.png | source=FILE | 2048x2048 | colorspace=sRGB | packed=sí | users=1
+    ruta: E:\Memz\Memz Models\Models\Ashley\13413.png
+[IM] 20240804_185842.jpg | source=FILE | 2000x3000 | colorspace=sRGB | packed=sí | users=1
+    ruta: //..\..\..\..\..\..\..\Downloads\20240804_185842.jpg
+[IM] AlyxEyesN_1007.jpg | source=FILE | 4096x4096 | colorspace=Non-Color | packed=sí | users=1
+    ruta: E:\DAZ 3D\Studio\My Library\Runtime\Textures\DeviousDolls\Characters\Alyx\AlyxEyesN_1007.jpg
+[IM] Cejas | source=FILE | 2048x2048 | colorspace=sRGB | packed=sí | users=1
+    ruta: 
+[IM] ColorAssets.png | source=FILE | 2048x2048 | colorspace=sRGB | packed=sí | users=1
+    ruta: C:\Users\alesp\Downloads\Base_Lillia\base_lillia\New Folder\00000000563524F8.png
+[IM] ColorLillia.png | source=FILE | 2048x2048 | colorspace=sRGB | packed=sí | users=1
+    ruta: C:\Users\alesp\Downloads\Base_Lillia\base_lillia\New Folder\00000000563524F8.png
+[IM] ColorLilliaUpdated.png | source=FILE | 2048x2048 | colorspace=sRGB | packed=sí | users=1
+    ruta: //..\textures\ColorLilliaUpdated.png
+[IM] Cumsito | source=FILE | 2048x2048 | colorspace=Non-Color | packed=sí | users=1
+    ruta: //..\Horse\HorseCockTextures\HorseCock_Veins.png
+[IM] EmissionAssets.png | source=FILE | 1024x1024 | colorspace=sRGB | packed=sí | users=1
+    ruta: C:\Users\alesp\Downloads\Base_Lillia\base_lillia\New Folder\0000000056357BB8.png
+[IM] EmissionLillia.png | source=FILE | 1024x1024 | colorspace=sRGB | packed=sí | users=2
+    ruta: C:\Users\alesp\Downloads\Base_Lillia\base_lillia\New Folder\0000000056357BB8.png
+[IM] Especularidad | source=FILE | 2048x2048 | colorspace=Non-Color | packed=sí | users=2
+    ruta: 
+[IM] Eye Emission.png | source=FILE | 2048x2048 | colorspace=sRGB | packed=sí | users=1
+    ruta: E:\Memz\Memz Models\Models\Ashley\Eye Emission.png
+[IM] Eyes HighLights.png.002 | source=FILE | 2048x1024 | colorspace=sRGB | packed=sí | users=1
+    ruta: E:\Memz\Memz Models\Models\Tracer OW2\Tracer\textures\Eyes HighLights.png
+[IM] G8FBaseEyesB_1007.001 | source=FILE | 2048x2048 | colorspace=Non-Color | packed=sí | users=1
+    ruta: C:\Users\Public\Documents\My DAZ 3D Library\Runtime\Textures\DAZ\Characters\Genesis8\FemaleBase\G8FBaseEyesB_1007.jpg
+[IM] hiikaiti.mp4 | source=MOVIE | 0x0 | colorspace=sRGB | packed=no | users=2
+[IM] HorseCock_Diffuse_1.png | source=FILE | 4096x4096 | colorspace=sRGB | packed=sí | users=1
+    ruta: //..\Horse\HorseCockTextures\HorseCock_Diffuse_1.png
+[IM] HorseCock_Mask.png | source=FILE | 1024x1024 | colorspace=Non-Color | packed=sí | users=1
+    ruta: //..\Horse\HorseCockTextures\HorseCock_Mask.png
+[IM] HorseCock_Normals.png | source=FILE | 4096x4096 | colorspace=Non-Color | packed=sí | users=2
+    ruta: //..\Horse\HorseCockTextures\HorseCock_Normals.png
+[IM] HorseCock_Roughness.png | source=FILE | 4096x4096 | colorspace=Non-Color | packed=sí | users=1
+    ruta: //..\Horse\HorseCockTextures\HorseCock_Roughness.png
+[IM] HorseCock_SSS.png | source=FILE | 2048x2048 | colorspace=Non-Color | packed=sí | users=1
+    ruta: //..\Horse\HorseCockTextures\HorseCock_SSS.png
+[IM] HorseCock_Veins.png | source=FILE | 2048x2048 | colorspace=Non-Color | packed=sí | users=1
+    ruta: //..\Horse\HorseCockTextures\HorseCock_Veins.png
+[IM] HorseCock_WetMapGradient.png | source=FILE | 2048x2048 | colorspace=Non-Color | packed=sí | users=1
+    ruta: //..\Horse\HorseCockTextures\HorseCock_WetMapGradient.png
+[IM] ignacio-ramirez-5.jpg | source=FILE | 1920x1127 | colorspace=sRGB | packed=sí | users=1
+    ruta: //..\..\..\..\Downloads\ignacio-ramirez-5.jpg
+[IM] Imagen de publicación de Patreon-4.png | source=FILE | 6500x4500 | colorspace=sRGB | packed=sí | users=1
+    ruta: //..\..\..\..\..\..\..\Downloads\Imagen de publicación de Patreon-4.png
+[IM] MetalicSpc.png | source=FILE | 2048x2048 | colorspace=sRGB | packed=sí | users=1
+    ruta: C:\Users\alesp\Downloads\Base_Lillia\base_lillia\New Folder\0000000056353F38.png
+[IM] MetalicSpcLillia.png | source=FILE | 2048x2048 | colorspace=sRGB | packed=sí | users=2
+    ruta: C:\Users\alesp\Downloads\Base_Lillia\base_lillia\New Folder\0000000056353F38.png
+[IM] NormalMapAssets.png | source=FILE | 3000x3000 | colorspace=Non-Color | packed=sí | users=3
+    ruta: C:\Users\alesp\Downloads\Base_Lillia\base_lillia\New Folder\0000000056355EB8.png
+[IM] RAYAJOS RUGOSOS.jpg | source=FILE | 4000x4000 | colorspace=Non-Color | packed=sí | users=1
+    ruta: //..\..\Recursos\Texturas\Baja calidad\RAYAJOS RUGOSOS.jpg
+[IM] rock_ground_02_disp_2k.png | source=FILE | 2048x2048 | colorspace=sRGB | packed=sí | users=1
+    ruta: //..\..\Recursos\Texturas\Rock_ground\rock_ground_02_disp_2k.png
+
+==============================================================================
+  10. GRUPOS DE NODOS
+==============================================================================
+[NG] Compositing Nodetree | tipo=CompositorNodeTree | nodos=4 | users=1
+    interface: Imagen(OUTPUT), Imagen(INPUT)
+[NG] ShaftWetness | tipo=ShaderNodeTree | nodos=13 | users=1
+    interface: Roughness Map & Wetness(OUTPUT), Roughness Map(INPUT)
+
+==============================================================================
+  11. MUNDOS
+==============================================================================
+[WO] World | users=1 | nodos=3
+
+==============================================================================
+  12. TEXTOS INTERNOS
+==============================================================================
+[TX] Datos | lineas=54 | users=2
+    | Inicio: 368
+    | Final: 795 (794)
+    | FPS: 30
+    | 
+    | Wig gle Bones: 
+    |     Calidad: 10
+    |     Preroll: 700
+    | 
+    | Trabajando:
+    |     Frames 368 - 795 (794)
+    |     
+    |     Expresiones
+    |     Animacion secundaria: Manos
+    |     
+    |     
+    | Valores de pose
+    |     Parpado s.: -0.00695
+    |     Parpado i.: -0.001667
+    |     
+    |     Dientes
+    |     Rotacion: Z -17 
+    |     
+    |     Rotacion de cabeza
+    |     X: 11.7744d
+    |     Y:-63.5486d
+    |     Z: 3.40745d
+    |     
+    |     
+    |     -0.009261 m
+    |     0.000525 m
+    ... (24 líneas más)
+[TX] Script | lineas=259 | users=2
+    | import bpy, os
+    | from datetime import datetime
+    | 
+    | # ============ CONFIGURACIÓN ============
+    | RUTA_REPORTE = ""           # vacía => se guarda junto al .blend
+    | LISTAR_HUESOS = True        # nombres de huesos por armadura
+    | INCLUIR_BODY_TEXTOS = True  # volcar contenido de textos internos
+    | MAX_LINEAS_TEXTO = 30       # límite de líneas por texto
+    | # =======================================
+    | 
+    | L = []
+    | def w(txt=""): L.append(txt)
+    | def ind(txt, n): L.append("    " * n + txt)
+    | def titulo(t):
+    |     w(); w("=" * 78); w("  " + t.upper()); w("=" * 78)
+    | def sub(t):
+    |     w(); w("-" * 78); w("  " + t); w("-" * 78)
+    | def g(ob, attr, default="-"):
+    |     v = getattr(ob, attr, None)
+    |     return default if v is None else v
+    | def vec(v, dec=3):
+    |     return "(" + ", ".join(f"{x:.{dec}f}" for x in v) + ")"
+    | def fcurves_de_action(a):
+    |     """Devuelve las F-curves de una action en Blender 4.x y 5.x."""
+    |     legacy = getattr(a, "fcurves", None)
+    |     if legacy is not None:
+    |         return list(legacy)
+    |     out = []
+    |     for layer in getattr(a, "layers", []):
+    |         for strip in layer.strips:
+    ... (229 líneas más)
+[TX] space_outliner.py | lineas=528 | users=1
+    | # SPDX-License-Identifier: GPL-2.0-or-later
+    | import bpy
+    | from bpy.types import Header, Menu, Panel
+    | 
+    | from bpy.app.translations import (
+    |     contexts as i18n_contexts,
+    |     pgettext_iface as iface_,
+    | )
+    | 
+    | 
+    | class OUTLINER_HT_header(Header):
+    |     bl_space_type = 'OUTLINER'
+    | 
+    |     def draw(self, context):
+    |         layout = self.layout
+    | 
+    |         space = context.space_data
+    |         display_mode = space.display_mode
+    |         scene = context.scene
+    |         ks = context.scene.keying_sets.active
+    | 
+    |         layout.template_header()
+    | 
+    |         layout.prop(space, "display_mode", icon_only=True)
+    | 
+    |         if display_mode == 'DATA_API':
+    |             OUTLINER_MT_editor_menus.draw_collapsible(context, layout)
+    |         if display_mode == 'LIBRARY_OVERRIDES':
+    |             layout.prop(space, "lib_override_view_mode", text="")
+    | 
+    ... (498 líneas más)
+
+==============================================================================
+  13. LIBRERÍAS, FUENTES, EMPAQUETADOS Y FALTANTES
+==============================================================================
+[LIB] C:\Program Files\Blender Foundation\Blender 5.2\5.2\datafiles\assets\brushes\essentials_brushes-mesh_texture.blend | users=1
+Empaquetados: 00000000563512B8.png, 0000000056356178.png, 00000001892E3738.png, 00000001892E3738.png.001, 13413.png, 20240804_185842.jpg, AlyxEyesN_1007.jpg, Cejas, ColorAssets.png, ColorLillia.png, ColorLilliaUpdated.png, Cumsito, EmissionAssets.png, EmissionLillia.png, Especularidad, Eye Emission.png, Eyes HighLights.png.002, G8FBaseEyesB_1007.001, HorseCock_Diffuse_1.png, HorseCock_Mask.png, HorseCock_Normals.png, HorseCock_Roughness.png, HorseCock_SSS.png, HorseCock_Veins.png, HorseCock_WetMapGradient.png, ignacio-ramirez-5.jpg, Imagen de publicación de Patreon-4.png, MetalicSpc.png, MetalicSpcLillia.png, NormalMapAssets.png, RAYAJOS RUGOSOS.jpg, rock_ground_02_disp_2k.png
+Faltantes (missing): ninguno
+
+==============================================================================
+  14. RESTO DE DATABLOCKS
+==============================================================================
+-- all_ids (612): essentials_brushes-mesh_texture.blend(u1), Camara con modificacionesAction(u1), heartfullAction(u1), JawsHorseCock_ArmatureAction(u1), Key.001Action(u1), KeyAction(u1), rigAction(u2), Shader NodetreeAction(u1), Shader NodetreeAction.001(u1), slimeAction(u1), this.001Action(u1), this.001Action.001(u1), thisAction(u1), thisAction.001(u1), Compositing Nodetree(u1), ShaftWetness(u1), Datos(u2), Script(u2), space_outliner.py(u1), 00000000563512B8.png(u1), 0000000056356178.png(u1), 00000001892E3738.png(u1), 00000001892E3738.png.001(u1), 13413.png(u1), 20240804_185842.jpg(u1), AlyxEyesN_1007.jpg(u1), Cejas(u1), ColorAssets.png(u1), ColorLillia.png(u1), ColorLilliaUpdated.png(u1), Cumsito(u1), EmissionAssets.png(u1), EmissionLillia.png(u2), Especularidad(u2), Eye Emission.png(u1), Eyes HighLights.png.002(u1), G8FBaseEyesB_1007.001(u1), hiikaiti.mp4(u2), HorseCock_Diffuse_1.png(u1), HorseCock_Mask.png(u1), HorseCock_Normals.png(u2), HorseCock_Roughness.png(u1), HorseCock_SSS.png(u1), HorseCock_Veins.png(u1), HorseCock_WetMapGradient.png(u1), ignacio-ramirez-5.jpg(u1), Imagen de publicación de Patreon-4.png(u1), MetalicSpc.png(u1), MetalicSpcLillia.png(u2), NormalMapAssets.png(u3), RAYAJOS RUGOSOS.jpg(u1), rock_ground_02_disp_2k.png(u1), Textura.002(u2), 20240804_185842(u1), Cum(u1), Dots Stroke(u2), Eyeballs Reflection(u2), Eyes.001(u2), heartfull_M(u1), hiikaiti(u1), HorseCockMat(u2), ignacio-ramirez-5(u2), Imagen de publicación de Patreon-4(u1), Lillia(u2), Lillia.001(u1), mat_13(u2), mat_16(u12), mat_25(u4), Suelo(u1), videoplayback(u1), LineStyle(u1), World(u1), Key(u1), Key.001(u1), Key.005(u1), Key.006(u1), Key.046(u1), rig(u1), rig.001(u1), 20240804_185842(u1), cs_arrow.008(u1), cs_arrow_02(u1), cs_arrow_02.002(u1), cs_arrow_03(u1), cs_arrow_cross.001(u1), cs_arrow_cross_solid.001(u1), cs_arrow_twist.002(u1), cs_base_finger.007(u1), cs_base_finger_end.001(u1), cs_box.005(u1), cs_box_head(u1), cs_c_eye.003(u1), cs_c_eye_offset.001(u1), cs_c_eyelid_micro.016(u1), cs_cheek_inflate.001(u1), cs_circle_01(u1), cs_circle_02(u1), cs_circle_head.001(u1), cs_circle_ik(u1), cs_circle_squashed.008(u1), cs_ctrl_ik_solid_blue.001(u1), cs_ctrl_ik_solid_red.001(u1), cs_cube(u1), cs_cube_02(u1), cs_cube_03(u1), cs_curve.001(u1), cs_eye_aim.002(u1), cs_eye_aim_global.001(u1), cs_eyelid(u1), cs_eyelid2.003(u1), cs_fist(u1), cs_fk(u1), cs_foot.l.002(u1), cs_foot.r.001(u1), cs_foot_fk(u1), cs_foot_roll.001(u1), cs_half_circle.001(u1), cs_hand.003(u1), cs_jaw_square(u1), cs_plane_1(u1), cs_plane_2(u1), cs_plane_3.010(u1), cs_plane_4(u1), cs_plane_4_fill.003(u1), cs_plane_5(u1), cs_pos(u1), cs_pos_solid.001(u1), cs_pos_solid_eye_offset_blue(u1), cs_pos_solid_eye_offset_red(u1), cs_semi_sphere.003(u1), cs_semi_sphere_inv.004(u1), cs_solid_arrow_twist_blue(u1), cs_solid_arrow_twist_red.001(u1), cs_solid_bar_01.009(u1), cs_solid_bar_blue.001(u1), cs_solid_bar_red.001(u1), cs_solid_circle_01.001(u1), cs_solid_circle_02.003(u1), cs_solid_circle_02_blue.014(u1), cs_solid_circle_02_green.012(u1), cs_solid_circle_02_red.014(u1), cs_solid_circle_ik_blue.003(u1), cs_solid_circle_ik_red.003(u1), cs_solid_circle_squashed_blue.003(u1), cs_solid_circle_squashed_green(u1), cs_solid_circle_squashed_red.003(u1), cs_solid_eye_aim_blue(u1), cs_solid_eye_aim_global.001(u1), cs_solid_eye_aim_red(u1), cs_solid_eye_blue(u1), cs_solid_eye_red(u1), cs_solid_eyebrow_blue(u1), cs_solid_eyebrow_red(u1), cs_solid_fk_blue.002(u1), cs_solid_fk_red.001(u1), cs_solid_plane_2.011(u1), cs_solid_plane_2_blue.003(u1), cs_solid_plane_2_red.003(u1), cs_solid_plane_3.001(u1), cs_solid_plane_3_blue.034(u1), cs_solid_plane_3_red.033(u1), cs_solid_plane_5_blue.001(u1), cs_solid_plane_5_red.001(u1), cs_solid_pupil_blue(u1), cs_solid_pupil_red(u1), cs_solid_torus_04_red(u1), cs_solid_torus_blue.011(u1), cs_solid_torus_green.003(u1), cs_solid_torus_red.011(u1), cs_solid_triangle(u1), cs_sphere.019(u1), cs_sphere_dir1.001(u1), cs_sphere_dir1.002(u1), cs_sphere_dir1.004(u1), cs_sphere_dir2(u1), cs_spine.002(u1), cs_square(u1), cs_torus_01.001(u1), cs_torus_02.001(u1), cs_torus_03.001(u1), cs_torus_04.003(u1), cs_torus_04.106(u1), cs_torus_04_rot(u1), cs_torus_04_rot2(u1), cs_torus_05(u1), cs_triangle(u1), cs_triangle_02(u1), cs_user_Bone(u1), cs_user_c_arm_fk.l(u1), cs_user_c_arm_fk.r(u1), cs_user_c_arm_ik.r(u1), cs_user_c_leg_fk.l.001(u1), cs_user_c_leg_fk.r.001(u1), cs_user_c_root.x(u1), cs_user_c_root.x.001(u1), cs_user_c_root_master.x(u1), cs_user_c_shoulder.l(u1), cs_user_c_shoulder.r(u1), cs_user_c_skull_01.x(u1), cs_user_c_skull_02.x(u1), cs_user_c_skull_03.x(u1), cs_user_c_spine_01.x(u1), cs_user_c_spine_01.x.001(u1), cs_user_c_spine_02.x(u1), cs_user_c_thigh_fk.l.001(u1), cs_user_c_thigh_fk.r.001(u1), cs_user_hair(u1), cs_user_hair.r(u1), cs_user_hair.r.001(u1), cs_user_hairFrontRight(u1), cs_user_Stick(u1), cs_user_Stick.002(u1), cs_user_Stick.005(u1), cs_wire_eyebrow.002(u1), cs_yeux(u1), geometry-2.001(u1), geometry-2.003(u1), heartfull(u1), hiikaiti(u2), HorsecockMesh(u1), HorsecockMesh.001(u1), ignacio-ramirez-5(u1), ignacio-ramirez-5.001(u1), Imagen de publicación de Patreon-4(u1), mesh_23(u1), mesh_23.001(u1), mesh_25.002(u1), mesh_25.003(u1), mesh_25.004(u1), mesh_25.005(u1), mesh_25.006(u1), mesh_25.007(u1), mesh_27.002(u1), mesh_27.003(u1), mesh_27.004(u1), mesh_27.008(u1), mesh_27.012(u1), mesh_27.013(u1), PhyscageMesh(u1), Plano(u1), Plano.004(u1), videoplayback(u1), WGT-JawsHorseCock_Armature_AdjustBackLower(u1), WGT-JawsHorseCock_Armature_AdjustBackMiddle(u1), WGT-JawsHorseCock_Armature_AdjustBackTop(u1), WGT-JawsHorseCock_Armature_AdjustFrontTop(u1), WGT-JawsHorseCock_Armature_AdjustMiddle(u2), WGT-JawsHorseCock_Armature_AdjustUpper(u2), WGT-JawsHorseCock_Armature_Penis_Main(u1), WGT-JawsHorseCock_Armature_Ring(u1), WGT-JawsHorseCock_Armature_root(u1), WGT-JawsHorseCock_Armature_Shaft_01(u1), WGT-JawsHorseCock_Armature_Shaft_02(u1), WGT-JawsHorseCock_Armature_Shaft_03(u1), WGT-JawsHorseCock_Armature_Shaft_04(u1), WGT-JawsHorseCock_Armature_Shaft_05(u1), WGT-JawsHorseCock_Armature_Shaft_06(u1), WGT-JawsHorseCock_Armature_Shaft_07(u1), WGT-JawsHorseCock_Armature_Shaft_end(u1), WGT-JawsHorseCock_Armature_Shaft_end-twist(u1), WGT-JawsHorseCock_Armature_Shaft_end01(u1), WGT-JawsHorseCock_Armature_Shaft_master(u1), WGT-JawsHorseCock_Armature_Shaft_mid01(u1), WGT-JawsHorseCock_Armature_Shaft_start(u1), WGT-JawsHorseCock_Armature_Shaft_start01(u1), WGT-JawsHorseCock_Armature_Sheath(u1), WGT-JawsHorseCock_Armature_Testicle(u2), WGT-JawsHorseCock_Armature_Testicles_Root(u1), JawsHorseCock_Armature-MCH-Shaft_spline(u1), Punto(u1), Área(u1), Área.002(u1), Área.003(u1), Camera.001(u1), Camera.002(u1), Camera.003(u1), 20240804_185842(u1), _MCH-Shaft_spline(u1), Camara con modificaciones(u1), Camera.001(u1), char_grp(u1), cs_arrow(u5), cs_arrow_02(u1), cs_arrow_03(u1), cs_arrow_cross(u2), cs_arrow_cross_solid(u1), cs_arrow_twist(u3), cs_base_finger(u9), cs_base_finger_end(u3), cs_box(u10), cs_box_head(u1), cs_c_eye(u3), cs_c_eye_offset(u3), cs_c_eyelid_micro(u17), cs_cheek_inflate(u3), cs_circle_01(u1), cs_circle_02(u1), cs_circle_head(u2), cs_circle_ik(u1), cs_circle_squashed(u12), cs_ctrl_ik_solid_blue(u1), cs_ctrl_ik_solid_red(u1), cs_cube(u1), cs_cube_02(u1), cs_cube_03(u1), cs_curve(u3), cs_eye_aim(u3), cs_eye_aim_global(u2), cs_eyelid(u1), cs_eyelid2(u5), cs_fist(u1), cs_fk(u1), cs_foot.l(u5), cs_foot.r(u5), cs_foot_fk(u1), cs_foot_roll(u5), cs_grp(u1), cs_half_circle(u5), cs_hand(u5), cs_jaw(u1), cs_jaw_square(u2), cs_plane_1(u1), cs_plane_2(u1), cs_plane_3(u9), cs_plane_4(u1), cs_plane_4_fill(u1), cs_plane_5(u1), cs_pos(u2), cs_pos_solid(u1), cs_pos_solid_eye_offset_blue(u1), cs_pos_solid_eye_offset_red(u1), cs_semi_sphere(u5), cs_semi_sphere_inv(u5), cs_shoulder.l(u1), cs_shoulder.r(u1), cs_solid_arrow_twist_blue(u1), cs_solid_arrow_twist_red(u1), cs_solid_bar_01(u1), cs_solid_bar_blue(u1), cs_solid_bar_red(u1), cs_solid_circle_01(u1), cs_solid_circle_02(u1), cs_solid_circle_02_blue(u1), cs_solid_circle_02_green(u1), cs_solid_circle_02_red(u1), cs_solid_circle_ik_blue(u1), cs_solid_circle_ik_red(u1), cs_solid_circle_squashed_blue(u1), cs_solid_circle_squashed_green(u1), cs_solid_circle_squashed_red(u1), cs_solid_eye_aim_blue(u1), cs_solid_eye_aim_global(u1), cs_solid_eye_aim_red(u1), cs_solid_eye_blue(u1), cs_solid_eye_red(u1), cs_solid_eyebrow_blue(u1), cs_solid_eyebrow_red(u1), cs_solid_fk_blue(u1), cs_solid_fk_red(u1), cs_solid_plane_2(u1), cs_solid_plane_2_blue(u1), cs_solid_plane_2_red(u1), cs_solid_plane_3(u1), cs_solid_plane_3_blue(u1), cs_solid_plane_3_red(u1), cs_solid_plane_5_blue(u1), cs_solid_plane_5_red(u1), cs_solid_pupil_blue(u1), cs_solid_pupil_red(u1), cs_solid_torus_04_blue(u1), cs_solid_torus_04_red(u1), cs_solid_torus_blue(u1), cs_solid_torus_green(u1), cs_solid_torus_red(u1), cs_solid_triangle(u1), cs_sphere(u21), cs_sphere_dir1(u3), cs_sphere_dir2(u1), cs_spine(u6), cs_square(u2), cs_torus_01(u2), cs_torus_02(u1), cs_torus_03(u14), cs_torus_04(u78), cs_torus_04_rot(u1), cs_torus_04_rot2(u1), cs_torus_05(u1), cs_triangle(u1), cs_triangle_02(u1), cs_user_Bone(u1), cs_user_c_arm_fk.l(u2), cs_user_c_arm_fk.r(u2), cs_user_c_arm_ik.r(u2), cs_user_c_leg_fk.l(u3), cs_user_c_leg_fk.r(u3), cs_user_c_root.x.001(u1), cs_user_c_root_master.x(u2), cs_user_c_shoulder.l(u2), cs_user_c_shoulder.r(u2), cs_user_c_skull_01.x(u1), cs_user_c_skull_02.x(u1), cs_user_c_skull_03.x(u1), cs_user_c_spine_01.x.001(u1), cs_user_c_spine_02.x(u2), cs_user_c_thigh_fk.l(u3), cs_user_c_thigh_fk.r(u3), cs_user_hair(u5), cs_user_hair.r(u3), cs_user_hair.r.001(u7), cs_user_hairFrontRight(u7), cs_user_Stick(u2), cs_user_Stick.002(u2), cs_user_Stick.005(u5), cs_wire_eyebrow(u3), cs_yeux(u1), Cum(u1), Eyebrows(u1), Eyebrows Low(u1), Eyelashes(u1), Eyelashes Low(u1), Eyes (u1), Eyes Low(u1), Fondo.001(u1), Hair(u1), Hair Low(u1), heartfull(u1), heartfull_M(u1), hiikaiti(u1), hiikaiti.001(u1), Horse_Cock_Jaws(u1), Horse_Cock_Jaws Low(u1), Horse_Cock_Physcage(u1), Fondo(u1), Imagen de publicación de Patreon-4(u1), JawsHorseCock_Armature(u1), Lilia(u9), cs_user_c_spine_01.x(u2), cs_user_c_root.x(u2), Lilia Low(u1), Piso(u1), POV(u1), Punto(u1), rig(u1), Teeth(u1), Teeth Low(u1), this(u1), this Low(u1), this.001(u1), this.001 Low(u1), videoplayback(u1), WGT-JawsHorseCock_Armature_AdjustBackLower(u2), WGT-JawsHorseCock_Armature_AdjustBackMiddle(u2), WGT-JawsHorseCock_Armature_AdjustBackTop(u2), WGT-JawsHorseCock_Armature_AdjustFrontTop(u2), WGT-JawsHorseCock_Armature_AdjustMiddle.L(u2), WGT-JawsHorseCock_Armature_AdjustMiddle.R(u2), WGT-JawsHorseCock_Armature_AdjustUpper.L(u2), WGT-JawsHorseCock_Armature_AdjustUpper.R(u2), WGT-JawsHorseCock_Armature_Penis_Main(u2), WGT-JawsHorseCock_Armature_Ring(u2), WGT-JawsHorseCock_Armature_root(u2), WGT-JawsHorseCock_Armature_Shaft_01(u2), WGT-JawsHorseCock_Armature_Shaft_02(u2), WGT-JawsHorseCock_Armature_Shaft_03(u2), WGT-JawsHorseCock_Armature_Shaft_04(u2), WGT-JawsHorseCock_Armature_Shaft_05(u2), WGT-JawsHorseCock_Armature_Shaft_06(u2), WGT-JawsHorseCock_Armature_Shaft_07(u2), WGT-JawsHorseCock_Armature_Shaft_end(u2), WGT-JawsHorseCock_Armature_Shaft_end-twist(u2), WGT-JawsHorseCock_Armature_Shaft_end01(u2), WGT-JawsHorseCock_Armature_Shaft_master(u2), WGT-JawsHorseCock_Armature_Shaft_mid01(u2), WGT-JawsHorseCock_Armature_Shaft_start(u2), WGT-JawsHorseCock_Armature_Shaft_start01(u2), WGT-JawsHorseCock_Armature_Sheath(u2), WGT-JawsHorseCock_Armature_Testicle.L(u2), WGT-JawsHorseCock_Armature_Testicle.R(u2), WGT-JawsHorseCock_Armature_Testicles_Root(u2), Área(u1), Área.002(u1), Área.003(u1), character1_cs(u1), Collection(u1), Escena(u1), Horse(u1), Lillia(u1), Lillia Low(u1), Luces(u1), RigidBodyWorld(u1), WGTS_JawsHorseCock_Armature(u1), Palette(u3), Add(u1), Airbrush(u1), Average(u1), Blob(u1), Blur(u1), Boundary(u1), Clay(u1), Clay Strips(u1), Clay Thumb(u1), Clone(u1), Clone Stroke(u1), Cloth(u1), Crease(u1), Darken(u1), Draw(u1), Draw Face Sets(u1), Draw Sharp(u1), Elastic Deform(u1), Eraser Hard(u1), Eraser Point(u1), Eraser Soft(u1), Eraser Stroke(u1), Fill(u1), Fill Area(u1), Fill/Deepen(u1), Flatten/Contrast(u1), Grab(u1), Grab Stroke(u1), Inflate/Deflate(u1), Ink Pen(u1), Ink Pen Rough(u1), Layer(u1), Lighten(u1), Marker Bold(u1), Marker Chisel(u1), Mask(u1), Mix(u1), Multi-plane Scrape(u1), Multiply(u1), Multires Displacement Eraser(u1), Multires Displacement Smear(u1), Nudge(u1), Paint(u1), Pen(u1), Pencil(u1), Pencil Soft(u1), Pinch Stroke(u1), Pinch/Magnify(u1), Pose(u1), Push Stroke(u1), Randomize Stroke(u1), Rotate(u1), Scrape/Peaks(u1), SculptDraw(u1), Simplify(u1), Slide Relax(u1), Smear(u1), Smear.001(u1), Smear.002(u1), Smooth(u1), Smooth Stroke(u1), Snake Hook(u1), Soften(u1), Strength Stroke(u1), Subtract(u1), TexDraw(u1), TexDraw.001(u1), Thickness Stroke(u1), Thumb(u1), Tint(u1), Twist Stroke(u1), Vertex Average(u1), Vertex Blur(u1), Vertex Draw(u1), Vertex Replace(u1), Vertex Smear(u1), Weight Draw(u1), Paint Hard(u0), Scene(u1), Animation(u1), Compositing(u1), Default(u1), Default.001(u1), Default.002(u1), Geometry Nodes(u1), Layout(u1), Layout.001(u1), Layout.002(u1), Layout.003(u1), Layout.004(u1), Modeling(u1), Rendering(u1), Scripting(u1), Sculpting(u1), Shading(u1), temp(u1), temp.001(u1), temp.002(u1), temp.003(u1), temp.004(u1), Texture Paint(u1), UV Editing(u1), Animacion 2(u1), Animation(u1), Compositing(u1), Geometry Nodes(u1), Layout(u1), Modeling(u1), Organizar(u1), Pintar(u1), Preview(u1), Rendering(u1), Scripting(u1), Sculpting(u1), Shading(u1), Texture Paint(u1), UV Editing(u1), Visualizer(u1), Visualizer 2(u1), WinMan(u1)
+-- brushes (78): Add(u1), Airbrush(u1), Average(u1), Blob(u1), Blur(u1), Boundary(u1), Clay(u1), Clay Strips(u1), Clay Thumb(u1), Clone(u1), Clone Stroke(u1), Cloth(u1), Crease(u1), Darken(u1), Draw(u1), Draw Face Sets(u1), Draw Sharp(u1), Elastic Deform(u1), Eraser Hard(u1), Eraser Point(u1), Eraser Soft(u1), Eraser Stroke(u1), Fill(u1), Fill Area(u1), Fill/Deepen(u1), Flatten/Contrast(u1), Grab(u1), Grab Stroke(u1), Inflate/Deflate(u1), Ink Pen(u1), Ink Pen Rough(u1), Layer(u1), Lighten(u1), Marker Bold(u1), Marker Chisel(u1), Mask(u1), Mix(u1), Multi-plane Scrape(u1), Multiply(u1), Multires Displacement Eraser(u1), Multires Displacement Smear(u1), Nudge(u1), Paint(u1), Pen(u1), Pencil(u1), Pencil Soft(u1), Pinch Stroke(u1), Pinch/Magnify(u1), Pose(u1), Push Stroke(u1), Randomize Stroke(u1), Rotate(u1), Scrape/Peaks(u1), SculptDraw(u1), Simplify(u1), Slide Relax(u1), Smear(u1), Smear.001(u1), Smear.002(u1), Smooth(u1), Smooth Stroke(u1), Snake Hook(u1), Soften(u1), Strength Stroke(u1), Subtract(u1), TexDraw(u1), TexDraw.001(u1), Thickness Stroke(u1), Thumb(u1), Tint(u1), Twist Stroke(u1), Vertex Average(u1), Vertex Blur(u1), Vertex Draw(u1), Vertex Replace(u1), Vertex Smear(u1), Weight Draw(u1), Paint Hard(u0)
+-- cameras (3): Camera.001(u1), Camera.002(u1), Camera.003(u1)
+-- collections (9): character1_cs(u1), Collection(u1), Escena(u1), Horse(u1), Lillia(u1), Lillia Low(u1), Luces(u1), RigidBodyWorld(u1), WGTS_JawsHorseCock_Armature(u1)
+-- curves (1): JawsHorseCock_Armature-MCH-Shaft_spline(u1)
+-- lights (4): Punto(u1), Área(u1), Área.002(u1), Área.003(u1)
+-- linestyles (1): LineStyle(u1)
+-- palettes (1): Palette(u3)
+-- screens (23): Animation(u1), Compositing(u1), Default(u1), Default.001(u1), Default.002(u1), Geometry Nodes(u1), Layout(u1), Layout.001(u1), Layout.002(u1), Layout.003(u1), Layout.004(u1), Modeling(u1), Rendering(u1), Scripting(u1), Sculpting(u1), Shading(u1), temp(u1), temp.001(u1), temp.002(u1), temp.003(u1), temp.004(u1), Texture Paint(u1), UV Editing(u1)
+-- textures (1): Textura.002(u2)
+-- window_managers (1): WinMan(u1)
+-- workspaces (17): Animacion 2(u1), Animation(u1), Compositing(u1), Geometry Nodes(u1), Layout(u1), Modeling(u1), Organizar(u1), Pintar(u1), Preview(u1), Rendering(u1), Scripting(u1), Sculpting(u1), Shading(u1), Texture Paint(u1), UV Editing(u1), Visualizer(u1), Visualizer 2(u1)
+
+==============================================================================
+  15. RESUMEN Y HUÉRFANOS
+==============================================================================
+Total datablocks: 1224 | huérfanos: 2 | con fake user: 168
+Huérfanos: all_ids:Paint Hard, brushes:Paint Hard
