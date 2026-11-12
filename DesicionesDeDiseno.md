@@ -229,10 +229,12 @@ LA0206 - Buttfuck - 5.2.0_reporte_archivo_original.txt
 LA0206 - Buttfuck - 5.2.0_reporte_host_instante.txt
 
 Despues en otra instancia de Blender y en una copia del archivo, el cliente se conectó, este es el reporte del cliente despues de conectarse:
-
+https://github.com/Devangel-gonzalez/blender-sync/commit/731f3a4f788ff855100199ab06382b104e6f19fd#diff-f1f287361171acc4126dfb6d5256ffce7f4af88d3d41e3b2108c4b5097242269
 LA0206 - Buttfuck - 5.2.0 - copia_reporte_cliente_conectado.txt
 
 Y por ultimo este es el reporte del Host despues de que el cliente se conectase:
+
+LA0206 - Buttfuck - 5.2.0_reporte_host_cliente_conectado.txt
 
 `Caso 3B` `Nivel de prioridad 4`  
 El cliente
