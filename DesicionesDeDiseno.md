@@ -5,17 +5,23 @@ Diario de desarrollo 07/11/2026
 
 Surgieron 2 escenarios sobre los qué tomar una decisión:
 
+#### Diccionario
+
+- Keyframe temporal (overlay): el que el cliente escribe en su Action mientras el host arrastra/selecciona.
+- Keyframe fantasma: el keyframe temporal que sobrevive después de cambiar de hueso.
+- Keyframe real: el que existe en el Dope Sheet del host y viaja por porcelain.
+
 ### `Escenario 1:`
 
 Este es un "bug" que me encontré pero lo quiero convertir en feature porque si sabes que existe y entiendes lo que haces, es algo muy poderoso y util en animacion:
 El host y el cliente están conectados correctamente.
 El host está posicionado en cualquier frame_current (frame 30 por ejemplo)
-El host selecciona un hueso, se genera el keyframe temporal en el cliente, el host transforma el hueso, la transformación se transmite al cliente (hasta aquí todo correcto y esperado), el comportamiento no contemplado y que no se si tratarlo como bug o feature surge apartir de aqui:  
+El host selecciona un hueso, se genera el keyframe temporal en el cliente, el host transforma el hueso, la transformación se transmite al cliente (hasta aquí todo correcto y esperado), el comportamiento no contemplado y que no se si tratarlo como bug o feature surge a partir de aqui:  
 Con la transformación transmitida, el keyframe temporal correctamente colocado en el cliente, existen múltiples casos de uso que el usuario puede tomar a partir de ahí;
 
-1. `Caso 1 (Flujo original / Esperado)`: El usuario sigue en el mismo hueso (hueso.001, importante tener en cuenta que el usuario puede seleccionar multiples huesos a la vez [hueso.001, hueso.004, hueso.032, etc] pero para efectos practicos solo usare el hueso.001 en esta explicacion del caso 1) decide que ahora quiere pasar del frame 30 a cualquier otro frame, en este caso, el addon funciona como lo esperado, el keyframe temporal en el cliente sigue al frame_curre del host así que el keyframe en el frame 30 del cliente se limpia o vuelve a su estado original según si existía un keyframe o no (esperado), hasta aquí todo correcto, el usuario puede volver a transformar ese hueso (hueso.001) en otro frame y volver a repetir, cambiar frame_current y transformar el mismo hueso.001 e insertar o confirmar transformaciones. Este es el flujo que se tenía en mente originalmente al idear este addon.
+1. `Flujo 1.1 (Flujo original / Esperado)`: El usuario sigue en el mismo hueso (hueso.001, importante tener en cuenta que el usuario puede seleccionar multiples huesos a la vez [hueso.001, hueso.004, hueso.032, etc] pero para efectos practicos solo usare el hueso.001 en esta explicacion del caso 1) decide que ahora quiere pasar del frame 30 a cualquier otro frame, en este caso, el addon funciona como lo esperado, el keyframe temporal en el cliente sigue al frame_current del host así que el keyframe en el frame 30 del cliente se limpia o vuelve a su estado original según si existía un keyframe o no (esperado), hasta aquí todo correcto, el usuario puede volver a transformar ese hueso (hueso.001) en otro frame y volver a repetir, cambiar frame_current y transformar el mismo hueso.001 e insertar o confirmar transformaciones. Este es el flujo que se tenía en mente originalmente al idear este addon.
 
-2. `Caso 2 (Caso de uso no contemplado, convertir bug en feature)`: El cliente tiene el keyframe temporal correctamente de la transformación, ahora, el host selecciona otro hueso (hueso.002 o varios huesos) (y aquí es donde surge el comportamiento no contemplado originalmente y que podría ser tanto un bug como una feature, si no sabes que ese comportamiento existe pareciera un bug, pero alguien que sabe lo que hace y conoce este comportamiento anómalo, lo podría ver como algo muy útil, como me pasó a mi, primero lo ví como bug pero luego de ver cómo funciona lo ví útil), al seleccionar el otro hueso (hueso.002), en el primer hueso (hueso.001), en el cliente, el keyframe temporal del hueso.001 no desaparece, queda como keyframe fantasma (este es el bug/feature), pero a veces al seleccionar otro hueso si desaparece ese keyframe fantasma, para que el bug sea consistente y que el keyframe temporal no desaparezca, el usuario, al cambiar de hueso, hueso.001 a hueso.002, tiene que primero, que transformar el hueso.001, los keyframes fantasmas se quedan si la transformacion es confirmada, si cancelas la transformacion (ESC o click derecho) los keyframes fantasmas no aparecen, entonces el flujo es:  
+2. `Flujo 1.2 (Caso de uso no contemplado, convertir bug en feature)`: El cliente tiene el keyframe temporal correctamente de la transformación, ahora, el host selecciona otro hueso (hueso.002 o varios huesos) (y aquí es donde surge el comportamiento no contemplado originalmente y que podría ser tanto un bug como una feature, si no sabes que ese comportamiento existe pareciera un bug, pero alguien que sabe lo que hace y conoce este comportamiento anómalo, lo podría ver como algo muy útil, como me pasó a mi, primero lo ví como bug pero luego de ver cómo funciona lo ví útil), al seleccionar el otro hueso (hueso.002), en el primer hueso (hueso.001), en el cliente, el keyframe temporal del hueso.001 no desaparece, queda como keyframe fantasma (este es el bug/feature), pero a veces al seleccionar otro hueso si desaparece ese keyframe fantasma, para que el bug sea consistente y que el keyframe temporal no desaparezca, el usuario, al cambiar de hueso, hueso.001 a hueso.002, tiene que primero, que transformar el hueso.001, los keyframes fantasmas se quedan si la transformacion es confirmada, si cancelas la transformacion (ESC o click derecho) los keyframes fantasmas no aparecen, entonces el flujo es:  
    `transformar -> confirmar transformacion -> seleccionar otro hueso -> volver al hueso -> ver la aparicion del keyframe fantasma`.
    Esto se puede concatenar multiples veces acumulando multiples frames fantasma.
    Los keyframes fantasma desaparecen si el host simplemente inserta un keyframe en donde sea.
@@ -36,6 +42,9 @@ Aqui me encontré con un fallo importante al testear en diferentes .blends, y ha
 
 #### Set up
 
+Host y cliente corren en la misma máquina y es posible que compartan el mismo `cache_directory`, desconozco si es asi o no.
+El addon original Multi-User dice que si puede funcionar a traves de internet, esta modificacion debería tener en cuenta que se deberia poder usar en la misma maquina y tambien a traves de distintas redes y maquinas.
+
 `Cliente: copia.blend:` El cliente usa la copia directa del .blend original, desde ese .blend, el cliente se conecta.  
 `Cliente: .blend vacio:` El cliente abre Blender y borra manualmente todos los objetos, luego se conecta.
 
@@ -45,11 +54,11 @@ Aqui me encontré con un fallo importante al testear en diferentes .blends, y ha
 
 #### Casos
 
-En esta seccion describiré detalladamente el comportamiento segun cada caso, y señalaré el nivel de prioridad de 0 a 4, donde 4 es máxima prioridad y atención.
+En esta seccion describiré detalladamente el comportamiento segun cada caso, y señalaré el nivel de prioridad de 0 a 5, donde 5 es máxima prioridad y atención.
 
 `Caso 1A` `Nivel de prioridad 0`  
 El cliente se abre en la copia del .blend original [Host huesos.blend, Cliente huesos - copia.blend] cuando se conecta el cliente, al ser copias exactas, provoca ciertos fallos minimos, no interfieren con el funcionamiento correcto del addon (por lo menos a simple vista). Por ejemplo:
-Mientras que Host tiene una coleccion llamada `Collection`, al conectarse el cliente, la coleccion del cliente en vez de heredar el mismo nombre `Collection` hereda el nombre `Collection.001`, solo pasa con ciertos objetos y datos dentro de los objetos, la mejor manera de ilustrarlo es a travez de una tabla.
+Mientras que Host tiene una coleccion llamada `Collection`, al conectarse el cliente, la coleccion del cliente en vez de heredar el mismo nombre `Collection` hereda el nombre `Collection.001`, solo pasa con ciertos objetos y datos dentro de los objetos, la mejor manera de ilustrarlo es a través de una tabla.
 
 | Host             | Cliente              | Detalles |
 | ---------------- | -------------------- | -------- |
@@ -191,11 +200,28 @@ Logs relacionados con el freeze del Host y la creacion de `Sin_nombre.001` y el 
 05:27:41 CLIENT DEBUG found dependencies: []  
 05:27:41 CLIENT DEBUG Nothing to push
 
-`Caso 2B` `Nivel de prioridad `  
-El cliente
+`Caso 2B` `Nivel de prioridad 2`  
+Para este test al entrar al .blend del cliente presione A y X para eliminar los objetos del viewport, pero hay que tener en cuenta que pueden quedar datos en el .blend, como el `Material` que crea blender automaticamente al abrir blender, al igual que el `Cubo`, `luz`, `camara` etc.
+
+El Host inicia la sesion, incluye las armaduras y la textura imagen de los cubos, y al parecer todo funciona perfectamente, pero el problema de que se freezea el Host y su `textura` `Sin_nombre` es reemplazada por `Sin_nombre.001` persiste, aparecio cuando quite la imagen de la textura y la volvi a poner, este es el log, incluso en el log se puede ver que se freezeo
+
+03:08:36 CLIENT INFO Live Sync: depsgraph batch Material:Material, Mesh:Cube, Mesh:Cube.001, Object:Camera, Object:Cube, Object:Cube.001, Object:Esqueleto, Object:Esqueleto.001, Object:Light, Scene:Scene, ShaderNodeTree:Shader Nodetree  
+03:08:47 CLIENT INFO Live Sync: committed Material 38253d2e-639d-4549-bfd8-ad0d99f8feb4 (state 4 -> 1)  
+03:09:11 CLIENT WARNING Can stamp uuid on <class 'pathlib.\_local.WindowsPath'>  
+03:09:11 CLIENT INFO Extracting file metadata  
+03:09:11 CLIENT INFO Reading Sin_nombre.png content: 250106 bytes  
+03:09:11 CLIENT INFO Live Sync: committed Material 38253d2e-639d-4549-bfd8-ad0d99f8feb4 (state 4 -> 1)  
+03:09:11 CLIENT INFO Live Sync: depsgraph batch Image:Sin_nombre.002, Material:Material, Mesh:Cube, Mesh:Cube.001, Object:Cube, Object:Cube.001, ShaderNodeTree:Shader Nodetree  
+03:09:22 CLIENT INFO Live Sync: committed Material 38253d2e-639d-4549-bfd8-ad0d99f8feb4 (state 4 -> 1)
+
+Si lo quito y lo vuelvo a poner, se incrementa el indice Sin_nombre.001 Sin_nombre.002 Sin_nombre.003
+
+Descubrimiento: La causa de que en el cliente se creaba `Material.001` con los datos de Host mientras que `Material` tambien existe, es porque `Material` es el que crea el .blend cuando se abre. Entonces si en un .blend real no existe un material que se llame `Material`, no deberia haber fallos de nombres, ademas, aunque entre el Host y Cliente los nombres son distintos, siguen compartiendo los mismos datos, asi que no hay problemas.
 
 `Caso 3A` `Nivel de prioridad 4`  
 El cliente
 
 `Caso 3B` `Nivel de prioridad 4`  
 El cliente
+
+### Desiciones de diseño
