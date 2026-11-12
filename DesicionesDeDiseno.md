@@ -220,8 +220,19 @@ Descubrimiento: La causa de que en el cliente se creaba `Material.001` con los d
 
 `Caso 3A` `Nivel de prioridad 4`  
 Utilice un script para extraer los datos del `Archivo de Blender` en un .txt.  
-Primero reporte el archivo original, sin intervencion del addon . Luego reporte en otro .txt el archivo instantes despues de darle al boton de hostear para ver que cambiaba, el siguiente link es el commit que delata los cambios.
-https://github.com/Devangel-gonzalez/blender-sync/commit/e9121508dbdb3e77158043c36424d7cdd8466e28
+LA0206 - Buttfuck - 5.2.0_reporte_archivo_original.txt
+LA0206 - Buttfuck - 5.2.0_reporte_host_instante.txt
+LA0206 - Buttfuck - 5.2.0 - copia_reporte_cliente_conectado.txt
+Primero reporte el archivo original, sin intervencion del addon . Luego reporte en otro .txt el archivo instantes despues de darle al boton de hostear para ver que cambiaba, el siguiente link es el commit que delata los cambios:  
+https://github.com/Devangel-gonzalez/blender-sync/commit/e9121508dbdb3e77158043c36424d7cdd8466e28  
+LA0206 - Buttfuck - 5.2.0_reporte_archivo_original.txt
+LA0206 - Buttfuck - 5.2.0_reporte_host_instante.txt
+
+Despues en otra instancia de Blender y en una copia del archivo, el cliente se conectó, este es el reporte del cliente despues de conectarse:
+
+LA0206 - Buttfuck - 5.2.0 - copia_reporte_cliente_conectado.txt
+
+Y por ultimo este es el reporte del Host despues de que el cliente se conectase:
 
 `Caso 3B` `Nivel de prioridad 4`  
 El cliente
