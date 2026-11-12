@@ -11,7 +11,7 @@ Surgieron 2 escenarios sobre los qué tomar una decisión:
 - Keyframe fantasma: el keyframe temporal que sobrevive después de cambiar de hueso.
 - Keyframe real: el que existe en el Dope Sheet del host y viaja por porcelain.
 
-### `Escenario 1:`
+### `Escenario 1:` d
 
 Este es un "bug" que me encontré pero lo quiero convertir en feature porque si sabes que existe y entiendes lo que haces, es algo muy poderoso y util en animacion:
 El host y el cliente están conectados correctamente.
@@ -219,7 +219,9 @@ Si lo quito y lo vuelvo a poner, se incrementa el indice Sin_nombre.001 Sin_nomb
 Descubrimiento: La causa de que en el cliente se creaba `Material.001` con los datos de Host mientras que `Material` tambien existe, es porque `Material` es el que crea el .blend cuando se abre. Entonces si en un .blend real no existe un material que se llame `Material`, no deberia haber fallos de nombres, ademas, aunque entre el Host y Cliente los nombres son distintos, siguen compartiendo los mismos datos, asi que no hay problemas.
 
 `Caso 3A` `Nivel de prioridad 4`  
-El cliente
+Utilice un script para extraer los datos del `Archivo de Blender` en un .txt.  
+Primero reporte el archivo original, sin intervencion del addon . Luego reporte en otro .txt el archivo instantes despues de darle al boton de hostear para ver que cambiaba, el siguiente link es el commit que delata los cambios.
+https://github.com/Devangel-gonzalez/blender-sync/commit/e9121508dbdb3e77158043c36424d7cdd8466e28
 
 `Caso 3B` `Nivel de prioridad 4`  
 El cliente
