@@ -233,7 +233,7 @@ https://github.com/Devangel-gonzalez/blender-sync/commit/731f3a4f788ff855100199a
 LA0206 - Buttfuck - 5.2.0 - copia_reporte_cliente_conectado.txt
 
 Y por ultimo este es el reporte del Host despues de que el cliente se conectase:
-
+https://github.com/Devangel-gonzalez/blender-sync/commit/0d71c8a5ad6a06756fd69a34b75718eefc67fd7e#diff-4fef385022cbc728a57a3d70b315b5c36319cda1a82fb1ef8ba3094a8f5796ee
 LA0206 - Buttfuck - 5.2.0_reporte_host_cliente_conectado.txt
 
 `Caso 3B` `Nivel de prioridad 4`  
