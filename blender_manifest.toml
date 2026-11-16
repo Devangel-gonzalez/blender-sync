@@ -1,17 +1,13 @@
 schema_version = "1.0.0"
-# Change the values according to your extension
-id = "multi_user"
-version = "0.8.2"
-name = "Multiuser"
+id = "true_level_playblast"
+name = "True Level: Playblast"
+version = "1.0.0"
+tagline = "Zero-render live playblast. Animate while it plays."
+maintainer = "Soilent"
 blender_version_min = "4.5.0"
-tagline = "Enable real-time collaborative workflow inside blender"
-maintainer = "Swann Martinez <swann.martinez@protonmail.com>"
-license = [
-  "SPDX:GPL-3.0-or-later",
-]
+license = ["SPDX:GPL-3.0-or-later"]
 type = "add-on"
 platforms = ["windows-x64", "macos-x64", "macos-arm64", "linux-x64"]
-website = "https://slumber.gitlab.io/multi-user/index.html"
 wheels = [
    "./wheels/orderly_set-5.2.3-py3-none-any.whl",
    "./wheels/deepdiff-8.1.1-py3-none-any.whl",
@@ -28,5 +24,11 @@ paths_exclude_pattern = [
   "*.zip",
   "cache/",
   "venv/",
-  "tests/"
+  "tests/",
+  "replication/",
+  "deepdiff/",
+  "orderly_set/",
+  "*.md",
+  "*.MD",
+  "*.txt",
 ]
