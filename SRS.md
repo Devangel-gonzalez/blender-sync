@@ -1,4 +1,4 @@
-# SRS: True Level: Playback
+# SRS: True Level: Playblast
 
 Documento de Diseño Técnico y Arquitectura
 
@@ -6,7 +6,7 @@ Documento de Diseño Técnico y Arquitectura
 
 ## Sistema de Live Sync para Animación con Visor en Bucle
 
-## True Level: Playback
+## True Level: Playblast
 
 ### 1. INFORMACIÓN GENERAL DEL PROYECTO
 
@@ -629,7 +629,7 @@ _Documento generado como referencia completa para la implementación. Incluye to
 ```md
 True Level Roadmap
 │
-├── True Level: Playback ──┬── `Phantom Keyframe Update`
+├── True Level: Playblast ──┬── `Phantom Keyframe Update`
 │ └── `[REDACTED] Update`
 │
 ├── True Level: [REDACTED] ────── `[REDACTED]`
@@ -640,7 +640,7 @@ True Level Roadmap
 <pre>
 True Level Roadmap
 │
-├── True Level: Playback ──┬── <code>Phantom Keyframe Update</code>
+├── True Level: Playblast ──┬── <code>Phantom Keyframe Update</code>
 │                            └── <code>[REDACTED] Update</code>
 │
 ├── True Level: [REDACTED] ────── <code>[REDACTED] Update</code>
