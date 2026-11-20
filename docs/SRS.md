@@ -2,18 +2,18 @@
 
 **Especificación de requisitos de software**
 
-| Campo                        | Valor                                                                                                           |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Documento                    | SRS-PLAYBLAST-001                                                                                               |
-| Versión                      | **2.0** — línea base estable                                                                                    |
-| Fecha                        | 16 de noviembre de 2026                                                                                         |
-| Estado                       | 21 decisiones aplicadas y aprobadas por el mantenedor. En revisión final por él. Sustituye íntegramente a la v1 |
-| Producto                     | True Level: Playblast · versión 1.0.0                                                                           |
-| Mantenedor                   | Soilent                                                                                                         |
-| Release especificada         | **R1 = 1.0.0**                                                                                                  |
-| Documento de diseño asociado | `TDD-PLAYBLAST-001.md`                                                                                          |
-| Registro de decisiones       | `Decisiones_SRS-v2.md` (DEC-01…DEC-21) · `Contradicciones_decisiones.md` (CT-01…CT-10)                          |
-| Código de referencia         | `f00d655`                                                                                                       |
+| Campo                        | Valor                                                                                                                                                                    |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Documento                    | SRS-PLAYBLAST-001                                                                                                                                                        |
+| Versión                      | **2.1** — línea base estable                                                                                                                                             |
+| Fecha                        | 20 de noviembre de 2026                                                                                                                                                  |
+| Estado                       | **Revisado y cerrado por el mantenedor.** 21 decisiones aplicadas y aprobadas, más 5 aclaraciones de su revisión final (changelog 36–40). Sustituye íntegramente a la v1 |
+| Producto                     | True Level: Playblast · versión 1.0.0                                                                                                                                    |
+| Mantenedor                   | Soilent                                                                                                                                                                  |
+| Release especificada         | **R1 = 1.0.0**                                                                                                                                                           |
+| Documento de diseño asociado | `TDD-PLAYBLAST-001.md`                                                                                                                                                   |
+| Registro de decisiones       | `Decisiones_SRS-v2.md` (DEC-01…DEC-21) · `Contradicciones_decisiones.md` (CT-01…CT-10)                                                                                   |
+| Código de referencia         | `f00d655`                                                                                                                                                                |
 
 ---
 
@@ -1059,7 +1059,9 @@ true_level_playblast/
 
 ### 13. TRAZABILIDAD Y CONTROL DE CAMBIOS
 
-#### 13.1 Changelog v1 → v2.0
+#### 13.1 Changelog v1 → v2.1
+
+Las filas **1–35** corresponden a la v2.0 (16 nov 2026). Las filas **36–40** son la v2.1: aclaraciones de la revisión final del mantenedor, sin cambio de comportamiento ni decisiones nuevas.
 
 | #   | Cambio                                                                                                                                                                                                                                                                                    | Decisión                                     |
 | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -1165,4 +1167,4 @@ Se verificaron en el código y se conservan **intactas**. La limpieza no las ha 
 
 ---
 
-_Fin del SRS v2.0. Documento aprobado por el mantenedor tras las 21 decisiones de `Decisiones_SRS-v2.md` y las 10 contradicciones resueltas en `Contradicciones_decisiones.md`. El apéndice no normativo de la v1 se ha trasladado a `ROADMAP.md`._
+_Fin del SRS v2.1. Documento aprobado por el mantenedor tras las 21 decisiones de `Decisiones_SRS-v2.md` y las 10 contradicciones resueltas en `Contradicciones_decisiones.md`. El apéndice no normativo de la v1 se ha trasladado a `ROADMAP.md`._
