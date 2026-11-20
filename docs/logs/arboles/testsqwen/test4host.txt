@@ -1,0 +1,308 @@
+{
+  "curva": {
+    "matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "eval_time": 0.0,
+    "path_duration": 100,
+    "use_path": true,
+    "twist_mode": "MINIMUM",
+    "res_u": 12,
+    "splines": [
+      {
+        "type": "BEZIER",
+        "n_bezier": 5,
+        "res_u": 12,
+        "cyclic": false,
+        "bezier": [
+          {
+            "co": [
+              0.0,
+              -0.21724,
+              -0.0
+            ],
+            "hl": [
+              0.0,
+              -0.21714,
+              -0.0
+            ],
+            "hr": [
+              0.0,
+              -0.21733,
+              -0.0
+            ],
+            "radius": 1.0,
+            "tilt": 0.0,
+            "hlt": "AUTO",
+            "hrt": "AUTO"
+          },
+          {
+            "co": [
+              0.0,
+              -0.21748,
+              -0.0
+            ],
+            "hl": [
+              0.0,
+              -0.21739,
+              -0.0
+            ],
+            "hr": [
+              0.0,
+              -0.21795,
+              -0.0
+            ],
+            "radius": 10.0,
+            "tilt": 0.0,
+            "hlt": "AUTO",
+            "hrt": "AUTO"
+          },
+          {
+            "co": [
+              0.0,
+              -0.458,
+              -0.0
+            ],
+            "hl": [
+              0.0,
+              -0.3641,
+              -0.0
+            ],
+            "hr": [
+              0.0,
+              -0.5519,
+              -0.0
+            ],
+            "radius": 10.0,
+            "tilt": 0.0,
+            "hlt": "AUTO",
+            "hrt": "AUTO"
+          },
+          {
+            "co": [
+              0.0,
+              -0.69851,
+              -0.0
+            ],
+            "hl": [
+              0.0,
+              -0.69804,
+              -0.0
+            ],
+            "hr": [
+              0.0,
+              -0.69861,
+              -0.0
+            ],
+            "radius": 10.0,
+            "tilt": 0.0,
+            "hlt": "AUTO",
+            "hrt": "AUTO"
+          },
+          {
+            "co": [
+              0.0,
+              -0.69876,
+              -0.0
+            ],
+            "hl": [
+              0.0,
+              -0.69866,
+              -0.0
+            ],
+            "hr": [
+              0.0,
+              -0.69885,
+              -0.0
+            ],
+            "radius": 10.0,
+            "tilt": 0.0,
+            "hlt": "AUTO",
+            "hrt": "AUTO"
+          }
+        ]
+      }
+    ],
+    "mods": [
+      {
+        "name": "Shaft_start",
+        "type": "HOOK",
+        "target": "JawsHorseCock_Armature",
+        "sub": "Shaft_start",
+        "indices": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "name": "Shaft_start01",
+        "type": "HOOK",
+        "target": "JawsHorseCock_Armature",
+        "sub": "MCH-Shaft_start01.hook",
+        "indices": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "name": "Shaft_mid01",
+        "type": "HOOK",
+        "target": "JawsHorseCock_Armature",
+        "sub": "Shaft_mid01",
+        "indices": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "name": "Shaft_end01",
+        "type": "HOOK",
+        "target": "JawsHorseCock_Armature",
+        "sub": "MCH-Shaft_end01.hook",
+        "indices": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "name": "Shaft_end",
+        "type": "HOOK",
+        "target": "JawsHorseCock_Armature",
+        "sub": "Shaft_end",
+        "indices": [
+          12,
+          13,
+          14
+        ]
+      }
+    ]
+  },
+  "constraints_detalle": {
+    "MCH-Shaft_07.ik/Spline IK": {
+      "use_curve_radius": true,
+      "chain_count": 7,
+      "use_even_divisions": false,
+      "use_chain_offset": false,
+      "y_scale_mode": "FIT_CURVE",
+      "xz_scale_mode": "VOLUME_PRESERVE",
+      "influence": 1.0,
+      "mute": false
+    }
+  },
+  "rest_hash_ordenado": "ac04d181cc2b",
+  "orden_huesos": [
+    "root",
+    "ORG-Penis_Main",
+    "ORG-Testicles_Root",
+    "ORG-Testicle.L",
+    "DEF-Testicle.L",
+    "ORG-Testicle.R",
+    "DEF-Testicle.R",
+    "Testicle.L",
+    "Testicle.R",
+    "DEF-Testicles_Root",
+    "ORG-Sheath",
+    "ORG-AdjustFrontTop",
+    "DEF-AdjustFrontTop",
+    "AdjustFrontTop",
+    "DEF-Shaft_01",
+    "DEF-Shaft_02",
+    "DEF-Shaft_03",
+    "DEF-Shaft_04",
+    "DEF-Shaft_05",
+    "DEF-Shaft_06",
+    "DEF-Shaft_07",
+    "Shaft_master",
+    "ORG-Shaft_01",
+    "ORG-Shaft_02",
+    "ORG-Shaft_03",
+    "ORG-Shaft_04",
+    "ORG-Shaft_05",
+    "ORG-Shaft_06",
+    "ORG-Shaft_07",
+    "ORG-Ring",
+    "DEF-Ring",
+    "Ring",
+    "Shaft_01",
+    "Shaft_02",
+    "Shaft_03",
+    "Shaft_04",
+    "Shaft_05",
+    "Shaft_06",
+    "Shaft_07",
+    "Shaft_end-twist",
+    "Shaft_start",
+    "MCH-Shaft_01.ik",
+    "MCH-Shaft_02.ik",
+    "MCH-Shaft_03.ik",
+    "MCH-Shaft_04.ik",
+    "MCH-Shaft_05.ik",
+    "MCH-Shaft_06.ik",
+    "MCH-Shaft_07.ik",
+    "MCH-Shaft_start.psocket",
+    "MCH-Shaft_start01.hook",
+    "MCH-Shaft_end.psocket",
+    "MCH-Shaft_end01.hook",
+    "DEF-Sheath",
+    "ORG-AdjustBackMiddle",
+    "DEF-AdjustBackMiddle",
+    "ORG-AdjustBackLower",
+    "DEF-AdjustBackLower",
+    "ORG-AdjustBackTop",
+    "DEF-AdjustBackTop",
+    "ORG-AdjustUpper.R",
+    "DEF-AdjustUpper.R",
+    "ORG-AdjustMiddle.R",
+    "DEF-AdjustMiddle.R",
+    "ORG-AdjustUpper.L",
+    "DEF-AdjustUpper.L",
+    "ORG-AdjustMiddle.L",
+    "DEF-AdjustMiddle.L",
+    "AdjustBackLower",
+    "AdjustBackMiddle",
+    "AdjustBackTop",
+    "AdjustMiddle.L",
+    "AdjustMiddle.R",
+    "AdjustUpper.L",
+    "AdjustUpper.R",
+    "Sheath",
+    "Testicles_Root",
+    "DEF-Penis_Main",
+    "Penis_Main",
+    "MCH-Shaft_start01.parent",
+    "Shaft_start01",
+    "MCH-Shaft_mid01.parent",
+    "Shaft_mid01",
+    "MCH-Shaft_end01.parent",
+    "Shaft_end01",
+    "MCH-Shaft_end.parent",
+    "Shaft_end"
+  ]
+}

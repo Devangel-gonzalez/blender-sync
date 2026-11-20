@@ -1,0 +1,5338 @@
+{
+  "arm_obj_scale": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "matrix_world": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "huesos": {
+    "DEF-Shaft_01": {
+      "parent": "ORG-Sheath",
+      "head_local": [
+        0.0,
+        -0.21724,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.29353,
+        -0.0
+      ],
+      "length": 0.07629,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": true,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.21724
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -5.5,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.51622
+        ],
+        [
+          -0.0,
+          -0.0,
+          5.5,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 4,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "ORG-Shaft_01",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "DEF-Shaft_02": {
+      "parent": "DEF-Shaft_01",
+      "head_local": [
+        0.0,
+        -0.29353,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.36981,
+        -0.0
+      ],
+      "length": 0.07629,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": true,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.29353
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.00345,
+          0.43993
+        ],
+        [
+          -1e-05,
+          -0.00035,
+          10.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 4,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "ORG-Shaft_02",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "DEF-Shaft_03": {
+      "parent": "DEF-Shaft_02",
+      "head_local": [
+        0.0,
+        -0.36981,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.44207,
+        -0.0
+      ],
+      "length": 0.07225,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": true,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.36981
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.36364
+        ],
+        [
+          -1e-05,
+          -0.0,
+          10.0,
+          1.07066
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 4,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "ORG-Shaft_03",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "DEF-Shaft_04": {
+      "parent": "DEF-Shaft_03",
+      "head_local": [
+        0.0,
+        -0.44207,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.51091,
+        -0.0
+      ],
+      "length": 0.06885,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": true,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.44207
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.29139
+        ],
+        [
+          -1e-05,
+          -0.0,
+          10.0,
+          1.07066
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 4,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "ORG-Shaft_04",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "DEF-Shaft_05": {
+      "parent": "DEF-Shaft_04",
+      "head_local": [
+        0.0,
+        -0.51091,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.57751,
+        -0.0
+      ],
+      "length": 0.0666,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": true,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.51091
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.22254
+        ],
+        [
+          -1e-05,
+          -0.0,
+          10.0,
+          1.07066
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 4,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "ORG-Shaft_05",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "DEF-Shaft_06": {
+      "parent": "DEF-Shaft_05",
+      "head_local": [
+        0.0,
+        -0.57751,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.65748,
+        -0.0
+      ],
+      "length": 0.07997,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": true,
+      "matrix_local": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.57751
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          0.15595
+        ],
+        [
+          -0.0,
+          -0.0,
+          10.0,
+          1.07066
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 4,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "ORG-Shaft_06",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "DEF-Shaft_07": {
+      "parent": "DEF-Shaft_06",
+      "head_local": [
+        0.0,
+        -0.65748,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.69876,
+        -0.0
+      ],
+      "length": 0.04127,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": true,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.65748
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -9.99999,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.07597
+        ],
+        [
+          -1e-05,
+          -0.0,
+          9.99999,
+          1.07066
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 4,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "ORG-Shaft_07",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "MCH-Shaft_01.ik": {
+      "parent": "Shaft_start",
+      "head_local": [
+        0.0,
+        -0.21724,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.29353,
+        -0.0
+      ],
+      "length": 0.07629,
+      "use_connect": false,
+      "inherit_scale": "NONE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.21724
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -5.5,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.21724
+        ],
+        [
+          -0.0,
+          -0.0,
+          5.5,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "XYZ",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_SCALE",
+          "name": "Copy Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_start",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "MCH-Shaft_02.ik": {
+      "parent": "MCH-Shaft_01.ik",
+      "head_local": [
+        0.0,
+        -0.29353,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.36981,
+        -0.0
+      ],
+      "length": 0.07629,
+      "use_connect": true,
+      "inherit_scale": "NONE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.29353
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.00345,
+          -0.29353
+        ],
+        [
+          -1e-05,
+          -0.00035,
+          10.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "XYZ",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_SCALE",
+          "name": "Copy Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_start",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "MCH-Shaft_03.ik": {
+      "parent": "MCH-Shaft_02.ik",
+      "head_local": [
+        0.0,
+        -0.36981,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.44207,
+        -0.0
+      ],
+      "length": 0.07225,
+      "use_connect": true,
+      "inherit_scale": "NONE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.36981
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.36981
+        ],
+        [
+          -1e-05,
+          -0.0,
+          10.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "XYZ",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_SCALE",
+          "name": "Copy Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_start",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "MCH-Shaft_04.ik": {
+      "parent": "MCH-Shaft_03.ik",
+      "head_local": [
+        0.0,
+        -0.44207,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.51091,
+        -0.0
+      ],
+      "length": 0.06885,
+      "use_connect": true,
+      "inherit_scale": "NONE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.44207
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.44207
+        ],
+        [
+          -1e-05,
+          -0.0,
+          10.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "XYZ",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_SCALE",
+          "name": "Copy Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_start",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "MCH-Shaft_05.ik": {
+      "parent": "MCH-Shaft_04.ik",
+      "head_local": [
+        0.0,
+        -0.51091,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.57751,
+        -0.0
+      ],
+      "length": 0.0666,
+      "use_connect": true,
+      "inherit_scale": "NONE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.51091
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.51091
+        ],
+        [
+          -1e-05,
+          -0.0,
+          10.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "XYZ",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_SCALE",
+          "name": "Copy Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_start",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "MCH-Shaft_06.ik": {
+      "parent": "MCH-Shaft_05.ik",
+      "head_local": [
+        0.0,
+        -0.57751,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.65748,
+        -0.0
+      ],
+      "length": 0.07997,
+      "use_connect": true,
+      "inherit_scale": "NONE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.57751
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          -0.57751
+        ],
+        [
+          -0.0,
+          -0.0,
+          10.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "XYZ",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_SCALE",
+          "name": "Copy Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_start",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "MCH-Shaft_07.ik": {
+      "parent": "MCH-Shaft_06.ik",
+      "head_local": [
+        0.0,
+        -0.65748,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.69876,
+        -0.0
+      ],
+      "length": 0.04127,
+      "use_connect": true,
+      "inherit_scale": "NONE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.65748
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -9.99999,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.65748
+        ],
+        [
+          -1e-05,
+          -0.0,
+          9.99999,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "XYZ",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_SCALE",
+          "name": "Copy Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_start",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        },
+        {
+          "type": "SPLINE_IK",
+          "name": "Spline IK",
+          "target": "_MCH-Shaft_spline",
+          "sub": "",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "MCH-Shaft_end.parent": {
+      "parent": null,
+      "head_local": [
+        0.0,
+        -0.69876,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.67353,
+        -0.0
+      ],
+      "length": 0.02522,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.69876
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          0.0347
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "ARMATURE",
+          "name": "SWITCH_PARENT",
+          "target": null,
+          "sub": "",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "MCH-Shaft_end.psocket": {
+      "parent": "Shaft_master",
+      "head_local": [
+        0.0,
+        -0.69876,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.72627,
+        -0.0
+      ],
+      "length": 0.02752,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.69876
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          0.0347
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.03633
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_LOCATION",
+          "name": "Copy Location",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_end",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        },
+        {
+          "type": "COPY_ROTATION",
+          "name": "Copy Rotation",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_end",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "MCH-Shaft_end01.hook": {
+      "parent": "MCH-Shaft_end.psocket",
+      "head_local": [
+        0.0,
+        -0.69851,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.71915,
+        -0.0
+      ],
+      "length": 0.02064,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.69851
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -0.0632,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0632,
+          0.0,
+          0.03494
+        ],
+        [
+          -0.0,
+          0.0,
+          0.0632,
+          1.03633
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_LOCATION",
+          "name": "Copy Location",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_end01",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": true
+        },
+        {
+          "type": "COPY_SCALE",
+          "name": "Copy Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_end01",
+          "mix": null,
+          "own": "LOCAL",
+          "tgt": "LOCAL",
+          "infl": 1.0,
+          "mute": true
+        },
+        {
+          "type": "COPY_SCALE",
+          "name": "Copy Scale.001",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_end",
+          "mix": null,
+          "own": "LOCAL",
+          "tgt": "LOCAL",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "MCH-Shaft_end01.parent": {
+      "parent": null,
+      "head_local": [
+        0.0,
+        -0.69851,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.67788,
+        -0.0
+      ],
+      "length": 0.02064,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.69851
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0,
+          0.03494
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          1.03633
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "ARMATURE",
+          "name": "SWITCH_PARENT",
+          "target": null,
+          "sub": "",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "MCH-Shaft_mid01.parent": {
+      "parent": null,
+      "head_local": [
+        0.0,
+        -0.458,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.43277,
+        -0.0
+      ],
+      "length": 0.02522,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.458
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          0.27546
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "ARMATURE",
+          "name": "SWITCH_PARENT",
+          "target": null,
+          "sub": "",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "MCH-Shaft_start.psocket": {
+      "parent": "Shaft_master",
+      "head_local": [
+        0.0,
+        -0.21724,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.24475,
+        -0.0
+      ],
+      "length": 0.02752,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.21724
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.51622
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_LOCATION",
+          "name": "Copy Location",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_start",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        },
+        {
+          "type": "COPY_ROTATION",
+          "name": "Copy Rotation",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_start",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "MCH-Shaft_start01.hook": {
+      "parent": "MCH-Shaft_start.psocket",
+      "head_local": [
+        0.0,
+        -0.21748,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.23812,
+        -0.0
+      ],
+      "length": 0.02064,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.21748
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.51598
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_LOCATION",
+          "name": "Copy Location",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_start01",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": true
+        },
+        {
+          "type": "COPY_SCALE",
+          "name": "Copy Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_start01",
+          "mix": null,
+          "own": "LOCAL",
+          "tgt": "LOCAL",
+          "infl": 1.0,
+          "mute": true
+        }
+      ]
+    },
+    "MCH-Shaft_start01.parent": {
+      "parent": null,
+      "head_local": [
+        0.0,
+        -0.21748,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.19684,
+        -0.0
+      ],
+      "length": 0.02064,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.21748
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          0.51598
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "ARMATURE",
+          "name": "SWITCH_PARENT",
+          "target": null,
+          "sub": "",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "ORG-Penis_Main": {
+      "parent": "root",
+      "head_local": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.08,
+        0.0
+      ],
+      "length": 0.08,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.73346
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 3,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Penis_Main",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "ORG-Shaft_01": {
+      "parent": "Shaft_master",
+      "head_local": [
+        0.0,
+        -0.21724,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.29353,
+        -0.0
+      ],
+      "length": 0.07629,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.21724
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -5.5,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.21724
+        ],
+        [
+          -0.0,
+          -0.0,
+          5.5,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 4,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "MCH-Shaft_01.ik",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        },
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms.001",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_01",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 0.0,
+          "mute": false
+        }
+      ]
+    },
+    "ORG-Shaft_02": {
+      "parent": "ORG-Shaft_01",
+      "head_local": [
+        0.0,
+        -0.29353,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.36981,
+        -0.0
+      ],
+      "length": 0.07629,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.29353
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.00345,
+          -0.29353
+        ],
+        [
+          -1e-05,
+          -0.00035,
+          10.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 4,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "MCH-Shaft_02.ik",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        },
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms.001",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_02",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 0.0,
+          "mute": false
+        }
+      ]
+    },
+    "ORG-Shaft_03": {
+      "parent": "ORG-Shaft_02",
+      "head_local": [
+        0.0,
+        -0.36981,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.44207,
+        -0.0
+      ],
+      "length": 0.07225,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.36981
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.36981
+        ],
+        [
+          -1e-05,
+          -0.0,
+          10.0,
+          -3e-05
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 4,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "MCH-Shaft_03.ik",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        },
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms.001",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_03",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 0.0,
+          "mute": false
+        }
+      ]
+    },
+    "ORG-Shaft_04": {
+      "parent": "ORG-Shaft_03",
+      "head_local": [
+        0.0,
+        -0.44207,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.51091,
+        -0.0
+      ],
+      "length": 0.06885,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.44207
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.44207
+        ],
+        [
+          -1e-05,
+          -0.0,
+          10.0,
+          -3e-05
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 4,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "MCH-Shaft_04.ik",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        },
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms.001",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_04",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 0.0,
+          "mute": false
+        }
+      ]
+    },
+    "ORG-Shaft_05": {
+      "parent": "ORG-Shaft_04",
+      "head_local": [
+        0.0,
+        -0.51091,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.57751,
+        -0.0
+      ],
+      "length": 0.0666,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.51091
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.51091
+        ],
+        [
+          -1e-05,
+          -0.0,
+          10.0,
+          -3e-05
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 4,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "MCH-Shaft_05.ik",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        },
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms.001",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_05",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 0.0,
+          "mute": false
+        }
+      ]
+    },
+    "ORG-Shaft_06": {
+      "parent": "ORG-Shaft_05",
+      "head_local": [
+        0.0,
+        -0.57751,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.65748,
+        -0.0
+      ],
+      "length": 0.07997,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.57751
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -10.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          -0.57751
+        ],
+        [
+          -0.0,
+          -0.0,
+          10.0,
+          -3e-05
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 4,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "MCH-Shaft_06.ik",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        },
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms.001",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_06",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 0.0,
+          "mute": false
+        }
+      ]
+    },
+    "ORG-Shaft_07": {
+      "parent": "ORG-Shaft_06",
+      "head_local": [
+        0.0,
+        -0.65748,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.69876,
+        -0.0
+      ],
+      "length": 0.04127,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.65748
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -9.99999,
+          0.0,
+          -1e-05,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.65748
+        ],
+        [
+          -1e-05,
+          -0.0,
+          9.99999,
+          -3e-05
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 4,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "MCH-Shaft_07.ik",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        },
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms.001",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_07",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 0.0,
+          "mute": false
+        }
+      ]
+    },
+    "ORG-Sheath": {
+      "parent": "ORG-Penis_Main",
+      "head_local": [
+        0.0,
+        -0.08,
+        0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.21724,
+        -0.0
+      ],
+      "length": 0.13724,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.08
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.65346
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 5,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_TRANSFORMS",
+          "name": "Copy Transforms",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Sheath",
+          "mix": "REPLACE",
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "Penis_Main": {
+      "parent": "root",
+      "head_local": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.08,
+        0.0
+      ],
+      "length": 0.08,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.73346
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "XYZ",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": []
+    },
+    "Shaft_01": {
+      "parent": "Shaft_master",
+      "head_local": [
+        0.0,
+        -0.21724,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.29353,
+        -0.0
+      ],
+      "length": 0.07629,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.21724
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.51622
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": []
+    },
+    "Shaft_02": {
+      "parent": "Shaft_01",
+      "head_local": [
+        0.0,
+        -0.29353,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.36981,
+        -0.0
+      ],
+      "length": 0.07629,
+      "use_connect": true,
+      "inherit_scale": "NONE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.29353
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.43993
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_SCALE",
+          "name": "Parent Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_01",
+          "mix": null,
+          "own": "POSE",
+          "tgt": "POSE",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "Shaft_03": {
+      "parent": "Shaft_02",
+      "head_local": [
+        0.0,
+        -0.36981,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.44207,
+        -0.0
+      ],
+      "length": 0.07225,
+      "use_connect": true,
+      "inherit_scale": "NONE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.36981
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.36364
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_SCALE",
+          "name": "Parent Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_02",
+          "mix": null,
+          "own": "POSE",
+          "tgt": "POSE",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "Shaft_04": {
+      "parent": "Shaft_03",
+      "head_local": [
+        0.0,
+        -0.44207,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.51091,
+        -0.0
+      ],
+      "length": 0.06885,
+      "use_connect": true,
+      "inherit_scale": "NONE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.44207
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.29139
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_SCALE",
+          "name": "Parent Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_03",
+          "mix": null,
+          "own": "POSE",
+          "tgt": "POSE",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "Shaft_05": {
+      "parent": "Shaft_04",
+      "head_local": [
+        0.0,
+        -0.51091,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.57751,
+        -0.0
+      ],
+      "length": 0.0666,
+      "use_connect": true,
+      "inherit_scale": "NONE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.51091
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.22254
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_SCALE",
+          "name": "Parent Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_04",
+          "mix": null,
+          "own": "POSE",
+          "tgt": "POSE",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "Shaft_06": {
+      "parent": "Shaft_05",
+      "head_local": [
+        0.0,
+        -0.57751,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.65748,
+        -0.0
+      ],
+      "length": 0.07997,
+      "use_connect": true,
+      "inherit_scale": "NONE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.57751
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.15595
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_SCALE",
+          "name": "Parent Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_05",
+          "mix": null,
+          "own": "POSE",
+          "tgt": "POSE",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "Shaft_07": {
+      "parent": "Shaft_06",
+      "head_local": [
+        0.0,
+        -0.65748,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.69876,
+        -0.0
+      ],
+      "length": 0.04127,
+      "use_connect": true,
+      "inherit_scale": "NONE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.65748
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.07597
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_SCALE",
+          "name": "Parent Scale",
+          "target": "JawsHorseCock_Armature",
+          "sub": "Shaft_06",
+          "mix": null,
+          "own": "POSE",
+          "tgt": "POSE",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "Shaft_end": {
+      "parent": "MCH-Shaft_end.parent",
+      "head_local": [
+        0.0,
+        -0.69876,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.77442,
+        -0.0
+      ],
+      "length": 0.07567,
+      "use_connect": false,
+      "inherit_scale": "AVERAGE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          -0.69876
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -0.0632,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0632,
+          -0.0,
+          0.0347
+        ],
+        [
+          -0.0,
+          -0.0,
+          0.0632,
+          1.03633
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        0.0632,
+        0.0632,
+        0.0632
+      ],
+      "rot_mode": "XYZ",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": []
+    },
+    "Shaft_end-twist": {
+      "parent": "Shaft_master",
+      "head_local": [
+        0.0,
+        -0.21724,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.29634,
+        -0.0
+      ],
+      "length": 0.07911,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.21724
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.65748
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -3e-05
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "XYZ",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": [
+        {
+          "type": "COPY_LOCATION",
+          "name": "Copy Location",
+          "target": "JawsHorseCock_Armature",
+          "sub": "ORG-Shaft_07",
+          "mix": null,
+          "own": "WORLD",
+          "tgt": "WORLD",
+          "infl": 1.0,
+          "mute": false
+        }
+      ]
+    },
+    "Shaft_end01": {
+      "parent": "MCH-Shaft_end01.parent",
+      "head_local": [
+        0.0,
+        -0.69851,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.76042,
+        -0.0
+      ],
+      "length": 0.06191,
+      "use_connect": false,
+      "inherit_scale": "AVERAGE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          -0.69851
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.03494
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          1.03633
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": []
+    },
+    "Shaft_master": {
+      "parent": "ORG-Sheath",
+      "head_local": [
+        0.0,
+        -0.21724,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.32042,
+        -0.0
+      ],
+      "length": 0.10318,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.21724
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.51622
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "XYZ",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": []
+    },
+    "Shaft_mid01": {
+      "parent": "MCH-Shaft_mid01.parent",
+      "head_local": [
+        0.0,
+        -0.458,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.53366,
+        -0.0
+      ],
+      "length": 0.07567,
+      "use_connect": false,
+      "inherit_scale": "AVERAGE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          -0.458
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -0.91924,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.91924,
+          -0.0,
+          0.27546
+        ],
+        [
+          -0.0,
+          -0.0,
+          0.91924,
+          1.05218
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        0.91924,
+        0.91924,
+        0.91924
+      ],
+      "rot_mode": "XYZ",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": []
+    },
+    "Shaft_start": {
+      "parent": "Shaft_master",
+      "head_local": [
+        0.0,
+        -0.21724,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.29291,
+        -0.0
+      ],
+      "length": 0.07567,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.21724
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.51622
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": []
+    },
+    "Shaft_start01": {
+      "parent": "MCH-Shaft_start01.parent",
+      "head_local": [
+        0.0,
+        -0.21748,
+        -0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.27939,
+        -0.0
+      ],
+      "length": 0.06191,
+      "use_connect": false,
+      "inherit_scale": "AVERAGE",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          -0.21748
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.51598
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "QUATERNION",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": []
+    },
+    "Sheath": {
+      "parent": "ORG-Penis_Main",
+      "head_local": [
+        0.0,
+        -0.08,
+        0.0
+      ],
+      "tail_local": [
+        0.0,
+        -0.21724,
+        -0.0
+      ],
+      "length": 0.13724,
+      "use_connect": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.08
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.65346
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "XYZ",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": []
+    },
+    "root": {
+      "parent": null,
+      "head_local": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tail_local": [
+        0.0,
+        0.2326,
+        0.0
+      ],
+      "length": 0.2326,
+      "use_connect": false,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true,
+      "use_deform": false,
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.34075
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rot_mode": "XYZ",
+      "bbone": {
+        "bbone_segments": 1,
+        "bbone_easein": 1.0,
+        "bbone_easeout": 1.0,
+        "bbone_curveinx": 0.0,
+        "bbone_curveoutx": 0.0,
+        "bbone_rollin": 0.0,
+        "bbone_rollout": 0.0,
+        "bbone_scalein": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_scaleout": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bbone_mapping_mode": "STRAIGHT"
+      },
+      "constraints": []
+    }
+  }
+}

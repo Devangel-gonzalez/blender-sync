@@ -1,0 +1,559 @@
+Resultado del minitest en cliente vacio: 5
+[('Shaft_start', []), ('Shaft_start01', []), ('Shaft_mid01', []), ('Shaft_end01', []), ('Shaft_end', [])]
+
+Resultados del test Spline en cliente vacio:
+{
+  "hooks": [
+    {
+      "name": "Shaft_start",
+      "sub": "Shaft_start",
+      "n_idx": 0,
+      "idx": [],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          -0.21724
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Shaft_start01",
+      "sub": "MCH-Shaft_start01.hook",
+      "n_idx": 0,
+      "idx": [],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          -0.21748
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Shaft_mid01",
+      "sub": "Shaft_mid01",
+      "n_idx": 0,
+      "idx": [],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.458
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Shaft_end01",
+      "sub": "MCH-Shaft_end01.hook",
+      "n_idx": 0,
+      "idx": [],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          -0.69851
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Shaft_end",
+      "sub": "Shaft_end",
+      "n_idx": 0,
+      "idx": [],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.69876
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "curva_evaluada": {
+    "error": "Object.to_curve(): required parameter \"depsgraph\" not specified"
+  }
+}
+
+Resultados del test en host:
+{
+  "hooks": [
+    {
+      "name": "Shaft_start",
+      "sub": "Shaft_start",
+      "n_idx": 3,
+      "idx": [
+        0,
+        1,
+        2
+      ],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          -0.21724
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Shaft_start01",
+      "sub": "MCH-Shaft_start01.hook",
+      "n_idx": 3,
+      "idx": [
+        3,
+        4,
+        5
+      ],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          -0.21748
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Shaft_mid01",
+      "sub": "Shaft_mid01",
+      "n_idx": 3,
+      "idx": [
+        6,
+        7,
+        8
+      ],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.458
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Shaft_end01",
+      "sub": "MCH-Shaft_end01.hook",
+      "n_idx": 3,
+      "idx": [
+        9,
+        10,
+        11
+      ],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          -0.69851
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Shaft_end",
+      "sub": "Shaft_end",
+      "n_idx": 3,
+      "idx": [
+        12,
+        13,
+        14
+      ],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -0.69876
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "curva_evaluada": {
+    "error": "Object.to_curve(): required parameter \"depsgraph\" not specified"
+  }
+}
+
+Resultados del test en cliente copia:
+{
+  "hooks": [
+    {
+      "name": "Shaft_start",
+      "sub": "Shaft_start",
+      "n_idx": 0,
+      "idx": [],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          0.51622
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Shaft_start01",
+      "sub": "MCH-Shaft_start01.hook",
+      "n_idx": 0,
+      "idx": [],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          0.51598
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0,
+          -1.07068
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Shaft_mid01",
+      "sub": "Shaft_mid01",
+      "n_idx": 0,
+      "idx": [],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -1.08786,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.08786,
+          -0.0,
+          0.29966
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.08786,
+          -1.14462
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Shaft_end01",
+      "sub": "MCH-Shaft_end01.hook",
+      "n_idx": 0,
+      "idx": [],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -15.82365,
+          0.0,
+          -1e-05,
+          1e-05
+        ],
+        [
+          -0.0,
+          -15.82366,
+          0.0,
+          0.55292
+        ],
+        [
+          -1e-05,
+          0.0,
+          15.82365,
+          -16.39847
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Shaft_end",
+      "sub": "Shaft_end",
+      "n_idx": 0,
+      "idx": [],
+      "strength": 1.0,
+      "falloff": "SMOOTH",
+      "inv": [
+        [
+          -15.82366,
+          0.0,
+          -1e-05,
+          1e-05
+        ],
+        [
+          -0.0,
+          -15.82366,
+          -0.0,
+          0.54911
+        ],
+        [
+          -1e-05,
+          -0.0,
+          15.82366,
+          -16.39848
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "curva_evaluada": {
+    "error": "Object.to_curve(): required parameter \"depsgraph\" not specified"
+  }
+}

@@ -1,0 +1,1664 @@
+libpng error: IDAT: Read error: hit end of file in png reader
+27:03.063  image.read       | ERROR OpenImageIO read failed: Read error: hit end of file in png reader
+                            | PNG read error: IDAT: Read error: hit end of file in png reader
+                            | PNG library error
+27:03.063  image.read       | ERROR IMB_load_image_from_memory: unknown file-format (<packed data>)
+27:03.391  gpu.texture      | ERROR Failed to create GPU texture from Blender image
+13:28:32 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:34 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:34 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:35 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:37 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:37 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:37 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:37 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:38 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:38 CLIENT ERROR    Live Sync: could not export image 'ColorAssets.png.001' to cache (Error: Image 'ColorAssets.png.001' does not have any image data
+); skipping its file dependency
+13:28:38 CLIENT ERROR    Live Sync: could not export image 'NormalMapAssets.png.001' to cache (Error: Image 'NormalMapAssets.png.001' does not have any image data
+); skipping its file dependency
+13:28:38 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:38 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:38 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:39 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:40 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:41 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:42 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:43 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+libpng error: IDAT: Read error: hit end of file in png reader
+28:12.375  image.read       | ERROR OpenImageIO read failed: Read error: hit end of file in png reader
+                            | PNG read error: IDAT: Read error: hit end of file in png reader
+                            | PNG library error
+28:12.375  image.read       | ERROR IMB_load_image_from_memory: unknown file-format (<packed data>)
+13:28:43 CLIENT ERROR    Live Sync: could not export image 'ColorLillia.png.001' to cache (Error: Image 'ColorLillia.png.001' does not have any image data
+); skipping its file dependency
+13:28:43 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:44 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:44 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:48 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:49 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:49 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:50 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:50 CLIENT WARNING  Can stamp uuid on <class 'pathlib._local.WindowsPath'>
+13:28:50 CLIENT WARNING  Live Sync: image 'hiikaiti.mp4.001' points to a missing file: C:\Users\israe\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\.user\user_default\multi_user\cache\hiikaiti.mp4
+13:28:50 CLIENT INFO     Adding remote origin (127.0.0.1:5555)
+13:28:50 CLIENT INFO     Detecting realtime remote origin
+13:28:52 SERVER INFO     Listening on 5555.
+Welcome the replication server shell.
+   Type help or ? to list commands.
+
+>> 13:28:52 SERVER INFO     Host logged in.
+13:28:52 CLIENT INFO     Request server init
+13:28:52 CLIENT INFO     Extracting file metadata
+13:28:52 CLIENT INFO     Reading HorseCock_WetMapGradient.png content: 257772 bytes
+13:28:52 CLIENT INFO     Extracting file metadata
+13:28:52 CLIENT INFO     Reading HorseCock_Normals.png content: 21505905 bytes
+13:28:52 CLIENT INFO     Extracting file metadata
+13:28:52 CLIENT INFO     Reading HorseCock_SSS.png content: 314222 bytes
+13:28:52 CLIENT INFO     Extracting file metadata
+13:28:52 CLIENT INFO     Reading HorseCock_Roughness.png content: 15294976 bytes
+13:28:53 CLIENT INFO     Extracting file metadata
+13:28:53 CLIENT INFO     Reading HorseCock_Diffuse_1.png content: 12652272 bytes
+13:28:53 CLIENT INFO     Extracting file metadata
+13:28:53 CLIENT INFO     Reading HorseCock_Veins.png content: 698085 bytes
+13:28:53 CLIENT INFO     Extracting file metadata
+13:28:53 CLIENT INFO     Reading HorseCock_Mask.png content: 31220 bytes
+13:28:53 CLIENT INFO     Extracting file metadata
+13:28:53 CLIENT INFO     Reading 0000000056357BB8.png content: 137837 bytes
+13:28:53 CLIENT INFO     Extracting file metadata
+13:28:53 CLIENT INFO     Reading 0000000056353F38.png content: 3981430 bytes
+13:28:53 CLIENT ERROR    Live Sync: could not export image 'ColorAssets.png.001' to cache (Error: Image 'ColorAssets.png.001' does not have any image data
+); skipping its file dependency
+13:28:53 CLIENT ERROR    Live Sync: could not export image 'NormalMapAssets.png.001' to cache (Error: Image 'NormalMapAssets.png.001' does not have any image data
+); skipping its file dependency
+13:28:54 CLIENT INFO     Extracting file metadata
+13:28:54 CLIENT INFO     Reading AlyxEyesN_1007.jpg content: 605680 bytes
+13:28:54 CLIENT INFO     Extracting file metadata
+13:28:54 CLIENT INFO     Reading Eye Emission.png content: 676566 bytes
+13:28:54 CLIENT INFO     Extracting file metadata
+13:28:54 CLIENT INFO     Reading G8FBaseEyesB_1007.jpg content: 251226 bytes
+13:28:54 CLIENT INFO     Extracting file metadata
+13:28:54 CLIENT INFO     Reading 13413.png content: 2282481 bytes
+13:28:54 CLIENT INFO     Extracting file metadata
+13:28:54 CLIENT INFO     Reading Eyes HighLights.png content: 89907 bytes
+13:28:54 CLIENT INFO     Extracting file metadata
+13:28:54 CLIENT INFO     Reading 00000000563512B8.png content: 9463574 bytes
+13:28:54 CLIENT INFO     Extracting file metadata
+13:28:54 CLIENT INFO     Reading 0000000056356178.png content: 3716829 bytes
+13:28:54 CLIENT INFO     Extracting file metadata
+13:28:54 CLIENT INFO     Reading Especularidad.png content: 135170 bytes
+13:28:54 CLIENT ERROR    Live Sync: could not export image 'ColorLillia.png.001' to cache (Error: Image 'ColorLillia.png.001' does not have any image data
+); skipping its file dependency
+13:28:54 CLIENT INFO     Extracting file metadata
+13:28:54 CLIENT INFO     Reading 00000001892E3738.png content: 19290 bytes
+13:28:55 CLIENT INFO     Extracting file metadata
+13:28:55 CLIENT INFO     Reading Cejas.png content: 130725 bytes
+13:28:55 CLIENT INFO     Extracting file metadata
+13:28:55 CLIENT INFO     Reading ColorLilliaUpdated.png content: 4488529 bytes
+13:28:57 CLIENT INFO     Extracting file metadata
+13:28:57 CLIENT INFO     Reading Imagen de publicación de Patreon-4.png content: 14026429 bytes
+13:28:57 CLIENT INFO     Extracting file metadata
+13:28:57 CLIENT INFO     Reading 20240804_185842.jpg content: 286966 bytes
+13:28:57 CLIENT INFO     Extracting file metadata
+13:28:57 CLIENT INFO     Reading RAYAJOS RUGOSOS.jpg content: 1799884 bytes
+13:28:57 CLIENT INFO     Extracting file metadata
+13:28:57 CLIENT INFO     Reading rock_ground_02_disp_2k.png content: 12749564 bytes
+13:28:57 CLIENT INFO     Extracting file metadata
+13:28:57 CLIENT INFO     Reading ignacio-ramirez-5.jpg content: 178552 bytes
+13:28:57 CLIENT WARNING  Live Sync: image 'hiikaiti.mp4.001' points to a missing file: C:\Users\israe\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\.user\user_default\multi_user\cache\hiikaiti.mp4
+28:26.422  cycles           | WARNING CUEW initialization failed: Error opening the library
+13:28:57 SERVER INFO     Done
+13:28:57 CLIENT INFO     Registering timers
+13:29:02 CLIENT INFO     Live Sync: session endpoint 127.0.0.1:5556 (role=HOST broadcaster)
+13:29:02 CLIENT INFO     Live Sync: broadcasting on port 5556
+13:31:06 SERVER INFO     Cliente logged in.
+13:31:06 SERVER INFO     Cliente - Snapshot : Pushing nodes catalog
+13:31:22 SERVER INFO     Cliente - Snapshot : done.
+{
+  "constraints_hash": "7adda1562646",
+  "constraints_foco": {
+    "c_neck.x/Copy Scale": {
+      "type": "COPY_SCALE",
+      "target": "rig",
+      "sub": "c_traj",
+      "infl": 1.0,
+      "mute": true,
+      "use_offset": true,
+      "use_make_uniform": false,
+      "power": 1.0,
+      "use_x": true,
+      "use_y": true,
+      "use_z": true
+    },
+    "neck_twist.x/Copy Rotation": {
+      "type": "COPY_ROTATION",
+      "target": "rig",
+      "sub": "head.x",
+      "infl": 1.0,
+      "mute": false,
+      "euler_order": "AUTO",
+      "use_x": true,
+      "use_y": true,
+      "use_z": true,
+      "invert_x": false,
+      "invert_y": false,
+      "invert_z": false,
+      "mix_mode": "REPLACE"
+    },
+    "head_scale_fix.x/Copy Scale": {
+      "type": "COPY_SCALE",
+      "target": "rig",
+      "sub": "c_traj",
+      "infl": 1.0,
+      "mute": true,
+      "use_offset": false,
+      "use_make_uniform": false,
+      "power": 1.0,
+      "use_x": true,
+      "use_y": true,
+      "use_z": true
+    },
+    "head_scale_fix.x/Child Of": {
+      "type": "CHILD_OF",
+      "target": "rig",
+      "sub": "c_neck.x",
+      "infl": 1.0,
+      "mute": false,
+      "inverse_matrix": [
+        [
+          0.99991,
+          0.01335,
+          0.00169,
+          0.00208
+        ],
+        [
+          -0.0,
+          -0.12552,
+          0.99209,
+          -1.47846
+        ],
+        [
+          0.01346,
+          -0.992,
+          -0.1255,
+          -0.15475
+        ],
+        [
+          -0.0,
+          0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "use_location": null,
+      "use_rotation": null,
+      "use_scale": null
+    },
+    "head_scale_fix.x/Child Of_traj": {
+      "type": "CHILD_OF",
+      "target": "rig",
+      "sub": "c_traj",
+      "infl": 0.0,
+      "mute": false,
+      "inverse_matrix": [
+        [
+          -1.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "use_location": null,
+      "use_rotation": null,
+      "use_scale": null
+    },
+    "head_scale_fix.x/Copy Location": {
+      "type": "COPY_LOCATION",
+      "target": "rig",
+      "sub": "c_neck.x",
+      "infl": 1.0,
+      "mute": false,
+      "use_offset": false,
+      "invert_x": false,
+      "invert_y": false,
+      "invert_z": false,
+      "use_x": true,
+      "use_y": true,
+      "use_z": true
+    },
+    "c_eye_ref_track.l/Copy Location": {
+      "type": "COPY_LOCATION",
+      "target": "rig",
+      "sub": "c_eye.l",
+      "infl": 1.0,
+      "mute": false,
+      "use_offset": false,
+      "invert_x": false,
+      "invert_y": false,
+      "invert_z": false,
+      "use_x": true,
+      "use_y": true,
+      "use_z": true
+    },
+    "c_eye_ref_track.l/Copy Scale": {
+      "type": "COPY_SCALE",
+      "target": "rig",
+      "sub": "c_eye.l",
+      "infl": 1.0,
+      "mute": false,
+      "use_offset": false,
+      "use_make_uniform": false,
+      "power": 1.0,
+      "use_x": true,
+      "use_y": true,
+      "use_z": true
+    },
+    "c_eye_ref_track.l/Copy Scale.001": {
+      "type": "COPY_SCALE",
+      "target": "rig",
+      "sub": "c_eye_ref.l",
+      "infl": 1.0,
+      "mute": false,
+      "use_offset": true,
+      "use_make_uniform": false,
+      "power": 1.0,
+      "use_x": true,
+      "use_y": true,
+      "use_z": true
+    },
+    "c_eye_ref_track.l/IK": {
+      "type": "IK",
+      "target": "rig",
+      "sub": "c_eye_ref.l",
+      "infl": 1.0,
+      "mute": false,
+      "iterations": 500,
+      "weight": 1.0,
+      "chain_count": 1,
+      "pole_target": null,
+      "pole_subtarget": "",
+      "pole_angle": 0.0,
+      "use_tail": true,
+      "use_stretch": false
+    },
+    "c_eye_ref_track.r/Copy Location": {
+      "type": "COPY_LOCATION",
+      "target": "rig",
+      "sub": "c_eye.r",
+      "infl": 1.0,
+      "mute": false,
+      "use_offset": false,
+      "invert_x": false,
+      "invert_y": false,
+      "invert_z": false,
+      "use_x": true,
+      "use_y": true,
+      "use_z": true
+    },
+    "c_eye_ref_track.r/Copy Scale": {
+      "type": "COPY_SCALE",
+      "target": "rig",
+      "sub": "c_eye.r",
+      "infl": 1.0,
+      "mute": false,
+      "use_offset": false,
+      "use_make_uniform": false,
+      "power": 1.0,
+      "use_x": true,
+      "use_y": true,
+      "use_z": true
+    },
+    "c_eye_ref_track.r/Copy Scale.001": {
+      "type": "COPY_SCALE",
+      "target": "rig",
+      "sub": "c_eye_ref.r",
+      "infl": 1.0,
+      "mute": false,
+      "use_offset": true,
+      "use_make_uniform": false,
+      "power": 1.0,
+      "use_x": true,
+      "use_y": true,
+      "use_z": true
+    },
+    "c_eye_ref_track.r/IK": {
+      "type": "IK",
+      "target": "rig",
+      "sub": "c_eye_ref.r",
+      "infl": 1.0,
+      "mute": false,
+      "iterations": 500,
+      "weight": 1.0,
+      "chain_count": 1,
+      "pole_target": null,
+      "pole_subtarget": "",
+      "pole_angle": 0.0,
+      "use_tail": true,
+      "use_stretch": false
+    },
+    "jawbone.x/Copy Rotation": {
+      "type": "COPY_ROTATION",
+      "target": "rig",
+      "sub": "c_jawbone.x",
+      "infl": 1.0,
+      "mute": false,
+      "euler_order": "AUTO",
+      "use_x": true,
+      "use_y": true,
+      "use_z": true,
+      "invert_x": false,
+      "invert_y": false,
+      "invert_z": false,
+      "mix_mode": "REPLACE"
+    },
+    "jawbone.x/Damped Track": {
+      "type": "DAMPED_TRACK",
+      "target": "rig",
+      "sub": "c_jawbone.x",
+      "infl": 1.0,
+      "mute": false,
+      "track_axis": "TRACK_Y"
+    },
+    "jaw_ret_bone.x/Copy Transforms": {
+      "type": "COPY_TRANSFORMS",
+      "target": "rig",
+      "sub": "jawbone.x",
+      "infl": 0.5,
+      "mute": false,
+      "mix_mode": "REPLACE"
+    },
+    "jaw_ret_bone.x/CopyRotSticky": {
+      "type": "COPY_ROTATION",
+      "target": "rig",
+      "sub": "jawbone.x",
+      "infl": 0.0,
+      "mute": false,
+      "euler_order": "AUTO",
+      "use_x": true,
+      "use_y": false,
+      "use_z": false,
+      "invert_x": false,
+      "invert_y": false,
+      "invert_z": false,
+      "mix_mode": "ADD"
+    },
+    "c_eyelid_base.l/Copy Rotation": {
+      "type": "COPY_ROTATION",
+      "target": "rig",
+      "sub": "c_eye.l",
+      "infl": 0.1,
+      "mute": false,
+      "euler_order": "AUTO",
+      "use_x": true,
+      "use_y": true,
+      "use_z": true,
+      "invert_x": false,
+      "invert_y": false,
+      "invert_z": false,
+      "mix_mode": "REPLACE"
+    },
+    "c_eyelid_base.l/Limit Rotation": {
+      "type": "LIMIT_ROTATION",
+      "target": null,
+      "sub": "",
+      "infl": 1.0,
+      "mute": false,
+      "use_limit_x": true,
+      "min_x": -0.5235987901687622,
+      "max_x": 0.1745329201221466,
+      "use_limit_y": true,
+      "min_y": 0.0,
+      "max_y": 0.0,
+      "use_limit_z": true,
+      "min_z": -0.3490658402442932,
+      "max_z": 0.3490658402442932,
+      "owner_space": "LOCAL"
+    },
+    "eyelid_top.l/Transformation": {
+      "type": "TRANSFORM",
+      "target": "rig",
+      "sub": "c_eyelid_top.l",
+      "infl": 1.0,
+      "mute": false,
+      "map_from": "LOCATION",
+      "map_to": "ROTATION",
+      "from_min_x": 0.0,
+      "from_max_x": 0.0,
+      "to_min_x": 0.0,
+      "to_max_x": 0.0,
+      "mix_mode": "ADD"
+    },
+    "eyelid_top.l/Copy Rotation": {
+      "type": "COPY_ROTATION",
+      "target": "rig",
+      "sub": "c_eyelid_top.l",
+      "infl": 1.0,
+      "mute": false,
+      "euler_order": "AUTO",
+      "use_x": false,
+      "use_y": true,
+      "use_z": true,
+      "invert_x": false,
+      "invert_y": false,
+      "invert_z": false,
+      "mix_mode": "AFTER"
+    },
+    "eyelid_bot.l/Transformation": {
+      "type": "TRANSFORM",
+      "target": "rig",
+      "sub": "c_eyelid_bot.l",
+      "infl": 1.0,
+      "mute": false,
+      "map_from": "LOCATION",
+      "map_to": "ROTATION",
+      "from_min_x": 0.0,
+      "from_max_x": 0.0,
+      "to_min_x": 0.0,
+      "to_max_x": 0.0,
+      "mix_mode": "ADD"
+    },
+    "eyelid_bot.l/Copy Rotation": {
+      "type": "COPY_ROTATION",
+      "target": "rig",
+      "sub": "c_eyelid_bot.l",
+      "infl": 1.0,
+      "mute": false,
+      "euler_order": "AUTO",
+      "use_x": false,
+      "use_y": true,
+      "use_z": true,
+      "invert_x": false,
+      "invert_y": false,
+      "invert_z": false,
+      "mix_mode": "AFTER"
+    },
+    "c_eye.l/Damped Track": {
+      "type": "DAMPED_TRACK",
+      "target": "rig",
+      "sub": "c_eye_target.l",
+      "infl": 1.0,
+      "mute": false,
+      "track_axis": "TRACK_Y"
+    },
+    "c_eyelid_base.r/Copy Rotation": {
+      "type": "COPY_ROTATION",
+      "target": "rig",
+      "sub": "c_eye.r",
+      "infl": 0.1,
+      "mute": false,
+      "euler_order": "AUTO",
+      "use_x": true,
+      "use_y": true,
+      "use_z": true,
+      "invert_x": false,
+      "invert_y": false,
+      "invert_z": false,
+      "mix_mode": "REPLACE"
+    },
+    "c_eyelid_base.r/Limit Rotation": {
+      "type": "LIMIT_ROTATION",
+      "target": null,
+      "sub": "",
+      "infl": 1.0,
+      "mute": false,
+      "use_limit_x": true,
+      "min_x": -0.5235987901687622,
+      "max_x": 0.1745329201221466,
+      "use_limit_y": true,
+      "min_y": 0.0,
+      "max_y": 0.0,
+      "use_limit_z": true,
+      "min_z": -0.3490658402442932,
+      "max_z": 0.3490658402442932,
+      "owner_space": "LOCAL"
+    },
+    "eyelid_top.r/Transformation": {
+      "type": "TRANSFORM",
+      "target": "rig",
+      "sub": "c_eyelid_top.r",
+      "infl": 1.0,
+      "mute": false,
+      "map_from": "LOCATION",
+      "map_to": "ROTATION",
+      "from_min_x": 0.0,
+      "from_max_x": 0.0,
+      "to_min_x": 0.0,
+      "to_max_x": 0.0,
+      "mix_mode": "ADD"
+    },
+    "eyelid_top.r/Copy Rotation": {
+      "type": "COPY_ROTATION",
+      "target": "rig",
+      "sub": "c_eyelid_top.r",
+      "infl": 1.0,
+      "mute": false,
+      "euler_order": "AUTO",
+      "use_x": false,
+      "use_y": true,
+      "use_z": true,
+      "invert_x": false,
+      "invert_y": false,
+      "invert_z": false,
+      "mix_mode": "AFTER"
+    },
+    "eyelid_bot.r/Transformation": {
+      "type": "TRANSFORM",
+      "target": "rig",
+      "sub": "c_eyelid_bot.r",
+      "infl": 1.0,
+      "mute": false,
+      "map_from": "LOCATION",
+      "map_to": "ROTATION",
+      "from_min_x": 0.0,
+      "from_max_x": 0.0,
+      "to_min_x": 0.0,
+      "to_max_x": 0.0,
+      "mix_mode": "ADD"
+    },
+    "eyelid_bot.r/Copy Rotation": {
+      "type": "COPY_ROTATION",
+      "target": "rig",
+      "sub": "c_eyelid_bot.r",
+      "infl": 1.0,
+      "mute": false,
+      "euler_order": "AUTO",
+      "use_x": false,
+      "use_y": true,
+      "use_z": true,
+      "invert_x": false,
+      "invert_y": false,
+      "invert_z": false,
+      "mix_mode": "AFTER"
+    },
+    "c_eye.r/Damped Track": {
+      "type": "DAMPED_TRACK",
+      "target": "rig",
+      "sub": "c_eye_target.r",
+      "infl": 1.0,
+      "mute": false,
+      "track_axis": "TRACK_Y"
+    },
+    "c_eye_target.x/Child Of": {
+      "type": "CHILD_OF",
+      "target": "rig",
+      "sub": "c_head.x",
+      "infl": 1.0,
+      "mute": false,
+      "inverse_matrix": [
+        [
+          1.0,
+          -7e-05,
+          0.0,
+          -3e-05
+        ],
+        [
+          -0.0,
+          0.0277,
+          0.99962,
+          -1.54296
+        ],
+        [
+          -7e-05,
+          -0.99962,
+          0.0277,
+          -0.3954
+        ],
+        [
+          -0.0,
+          0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "use_location": null,
+      "use_rotation": null,
+      "use_scale": null
+    },
+    "c_eye_target.x/Copiar posici\u00f3n": {
+      "type": "COPY_LOCATION",
+      "target": "Camera.001",
+      "sub": "",
+      "infl": 0.0,
+      "mute": true,
+      "use_offset": false,
+      "invert_x": false,
+      "invert_y": false,
+      "invert_z": false,
+      "use_x": true,
+      "use_y": true,
+      "use_z": true
+    }
+  },
+  "drivers_hash": "059c6e7a0a43",
+  "drivers_n": 384,
+  "drivers_foco": [
+    [
+      "pose.bones[\"c_eye.l\"].constraints[\"Damped Track\"].influence",
+      0,
+      "SCRIPTED",
+      "var",
+      [
+        [
+          "var",
+          "SINGLE_PROP",
+          [
+            [
+              "rig",
+              "pose.bones[\"c_eye_target.x\"][\"eye_target\"]"
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "pose.bones[\"c_eye.r\"].constraints[\"Damped Track\"].influence",
+      0,
+      "SCRIPTED",
+      "var",
+      [
+        [
+          "var",
+          "SINGLE_PROP",
+          [
+            [
+              "rig",
+              "pose.bones[\"c_eye_target.x\"][\"eye_target\"]"
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "pose.bones[\"c_eyelid_base.l\"].constraints[\"Copy Rotation\"].influence",
+      0,
+      "SCRIPTED",
+      "var",
+      [
+        [
+          "var",
+          "SINGLE_PROP",
+          [
+            [
+              "rig",
+              "pose.bones[\"c_eye.l\"][\"auto_eyelid\"]"
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "pose.bones[\"c_eyelid_base.r\"].constraints[\"Copy Rotation\"].influence",
+      0,
+      "SCRIPTED",
+      "var",
+      [
+        [
+          "var",
+          "SINGLE_PROP",
+          [
+            [
+              "rig",
+              "pose.bones[\"c_eye.r\"][\"auto_eyelid\"]"
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "pose.bones[\"c_eyelid_top_02.l\"].location",
+      1,
+      "SCRIPTED",
+      "var*.5",
+      [
+        [
+          "var",
+          "TRANSFORMS",
+          [
+            [
+              "rig",
+              ""
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "pose.bones[\"c_eyelid_top_02.l\"].location",
+      2,
+      "SCRIPTED",
+      "var*-.25",
+      [
+        [
+          "var",
+          "TRANSFORMS",
+          [
+            [
+              "rig",
+              ""
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "pose.bones[\"c_eyelid_top_02.r\"].location",
+      1,
+      "SCRIPTED",
+      "var*.5",
+      [
+        [
+          "var",
+          "TRANSFORMS",
+          [
+            [
+              "rig",
+              ""
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "pose.bones[\"c_eyelid_top_02.r\"].location",
+      2,
+      "SCRIPTED",
+      "var*-.25",
+      [
+        [
+          "var",
+          "TRANSFORMS",
+          [
+            [
+              "rig",
+              ""
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "pose.bones[\"head_scale_fix.x\"].constraints[\"Child Of\"].influence",
+      0,
+      "SCRIPTED",
+      "var",
+      [
+        [
+          "var",
+          "SINGLE_PROP",
+          [
+            [
+              "rig",
+              "pose.bones[\"c_head.x\"][\"head_free\"]"
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "pose.bones[\"head_scale_fix.x\"].constraints[\"Child Of_traj\"].influence",
+      0,
+      "SCRIPTED",
+      "1-var",
+      [
+        [
+          "var",
+          "SINGLE_PROP",
+          [
+            [
+              "rig",
+              "pose.bones[\"c_head.x\"].[\"head_free\"]"
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "pose.bones[\"jaw_ret_bone.x\"].constraints[\"CopyRotSticky\"].influence",
+      0,
+      "SCRIPTED",
+      "0 if var > 0 else 0.5",
+      [
+        [
+          "var",
+          "SINGLE_PROP",
+          [
+            [
+              "rig",
+              "pose.bones[\"c_jawbone.x\"].location[2]"
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "pose.bones[\"jaw_ret_bone.x\"].scale",
+      0,
+      "SCRIPTED",
+      "max(0.05, 1 - (jaw_rot / 0.0773) * stretch_value)",
+      [
+        [
+          "jaw_rot",
+          "SINGLE_PROP",
+          [
+            [
+              "rig",
+              "pose.bones[\"c_jawbone.x\"].location[2]"
+            ]
+          ]
+        ],
+        [
+          "stretch_value",
+          "SINGLE_PROP",
+          [
+            [
+              "rig",
+              "pose.bones[\"c_jawbone.x\"][\"lips_stretch\"]"
+            ]
+          ]
+        ]
+      ]
+    ]
+  ],
+  "props_obj": {
+    "cycles": {},
+    "rig_spine_count": 8,
+    "rig_fingers_rot": 0,
+    "ant_landscape": {},
+    "arp_fingers_shape_style": 1,
+    "animation_retarget": {},
+    "flip_fluid": {},
+    "arp_rig_type": 0,
+    "als": {},
+    "ht_props": {
+      "short_hair_props": {},
+      "hair_nodes": {}
+    },
+    "wiggle_enable": 1,
+    "wiggle_mute": 0
+  },
+  "props_data": {
+    "Quick_Select": "{}",
+    "Quick_Select_Name": "",
+    "rig_id": "",
+    "stitch_settings": {},
+    "arp_rig_type": "free",
+    "arp_updated": "3.61.18",
+    "arp_updated_3.0": 1,
+    "vrm_addon_extension": {
+      "armature_data_name": "rig",
+      "vrm0": {
+        "first_person": {
+          "first_person_bone": "<bpy id prop: owner=\"ARrig\", name=\"first_person_bone\", address=0x000002516BEEBF60>",
+          "look_at_horizontal_inner": [],
+          "look_at_horizontal_outer": [],
+          "look_at_vertical_up": [],
+          "look_at_vertical_down": []
+        },
+        "humanoid": {
+          "last_bone_names": "[<bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F705E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70670>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70700>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70790>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70820>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F708B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70940>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F709D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70A60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70AF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70B80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70C10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70CA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70D30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70DC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70E50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70EE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F70F70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71000>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71090>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71120>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F711B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71240>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F712D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71360>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F713F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71480>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71510>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F715A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71630>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F716C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71750>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F717E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71870>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71900>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71990>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71A20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71AB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71B40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71BD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71C60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71CF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71D80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71E10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71EA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71F30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F71FC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72050>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F720E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72170>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72200>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72290>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72320>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F723B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72440>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F724D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72560>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F725F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72680>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72710>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F727A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72830>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F728C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72950>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F729E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72A70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72B00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72B90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72C20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72CB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72D40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72DD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72E60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72EF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F72F80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73010>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F730A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73130>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F731C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73250>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F732E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73370>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73400>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73490>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73520>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F735B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73640>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F736D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73760>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F737F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73880>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73910>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F739A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73A30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73AC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73B50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73BE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73C70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73D00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73D90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73E20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73EB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73F40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F73FD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74060>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F740F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74180>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74210>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F742A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74330>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F743C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74450>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F744E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74570>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74600>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74690>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74720>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F747B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74840>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F748D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74960>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F749F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74A80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74B10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74BA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74C30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74CC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74D50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74DE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74E70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74F00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F74F90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75020>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F750B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75140>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F751D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75260>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F752F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75380>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75410>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F754A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75530>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F755C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75650>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F756E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75770>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75800>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75890>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75920>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F759B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75A40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75AD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75B60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75BF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75C80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75D10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75DA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75E30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75EC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75F50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F75FE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76070>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76100>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76190>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76220>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F762B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76340>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F763D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76460>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F764F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76580>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76610>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F766A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76730>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F767C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76850>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F768E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76970>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76A00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76A90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76B20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76BB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76C40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76CD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76D60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76DF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76E80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76F10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F76FA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77030>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F770C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77150>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F771E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77270>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77300>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77390>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77420>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F774B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77540>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F775D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77660>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F776F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77780>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77810>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F778A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77930>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F779C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77A50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77AE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77B70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77C00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77C90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77D20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77DB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77E40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77ED0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77F60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F77FF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78080>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78110>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F781A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78230>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F782C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78350>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F783E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78470>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78500>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78590>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78620>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F786B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78740>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F787D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78860>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F788F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78980>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78A10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78AA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78B30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78BC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78C50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78CE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78D70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78E00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78E90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78F20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F78FB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79040>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F790D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79160>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F791F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79280>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79310>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F793A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79430>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F794C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79550>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F795E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79670>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79700>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79790>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79820>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F798B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79940>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F799D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79A60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79AF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79B80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79C10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79CA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79D30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79DC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79E50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79EE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F79F70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A000>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A090>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A120>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A1B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A240>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A2D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A360>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A3F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A480>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A510>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A5A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A630>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A6C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A750>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A7E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A870>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A900>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7A990>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7AA20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7AAB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7AB40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7ABD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7AC60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7ACF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7AD80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7AE10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7AEA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7AF30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7AFC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B050>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B0E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B170>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B200>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B290>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B320>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B3B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B440>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B4D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B560>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B5F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B680>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B710>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B7A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B830>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B8C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B950>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7B9E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7BA70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7BB00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7BB90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7BC20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7BCB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7BD40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7BDD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7BE60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7BEF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7BF80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C010>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C0A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C130>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C1C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C250>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C2E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C370>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C400>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C490>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C520>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C5B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C640>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C6D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C760>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C7F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C880>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C910>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7C9A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7CA30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7CAC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7CB50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7CBE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7CC70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7CD00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7CD90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7CE20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7CEB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7CF40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7CFD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D060>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D0F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D180>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D210>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D2A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D330>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D3C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D450>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D4E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D570>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D600>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D690>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D720>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D7B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D840>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D8D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D960>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7D9F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7DA80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7DB10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7DBA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7DC30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7DCC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7DD50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7DDE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7DE70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7DF00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7DF90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E020>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E0B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E140>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E1D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E260>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E2F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E380>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E410>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E4A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E530>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E5C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E650>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E6E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E770>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E800>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E890>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E920>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7E9B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7EA40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7EAD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7EB60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7EBF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7EC80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7ED10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7EDA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7EE30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7EEC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7EF50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7EFE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F070>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F100>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F190>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F220>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F2B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F340>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F3D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F460>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F4F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F580>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F610>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F6A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F730>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F7C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F850>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F8E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7F970>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7FA00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7FA90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7FB20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7FBB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7FC40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7FCD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7FD60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7FDF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7FE80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7FF10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F7FFA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80030>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F800C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80150>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F801E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80270>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80300>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80390>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80420>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F804B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80540>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F805D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80660>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F806F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80780>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80810>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F808A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80930>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F809C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80A50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80AE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80B70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80C00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80C90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80D20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80DB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80E40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80ED0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80F60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F80FF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81080>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81110>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F811A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81230>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F812C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81350>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F813E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81470>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81500>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81590>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81620>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F816B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81740>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F817D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81860>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F818F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81980>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81A10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81AA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81B30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81BC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81C50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81CE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81D70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81E00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81E90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81F20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F81FB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82040>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F820D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82160>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F821F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82280>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82310>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F823A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82430>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F824C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82550>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F825E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82670>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82700>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82790>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82820>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F828B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82940>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F829D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82A60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82AF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82B80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82C10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82CA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82D30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82DC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82E50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82EE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F82F70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83000>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83090>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83120>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F831B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83240>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F832D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83360>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F833F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83480>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83510>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F835A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83630>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F836C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83750>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F837E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83870>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83900>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83990>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83A20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83AB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83B40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83BD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83C60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83CF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83D80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83E10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83EA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83F30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F83FC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84050>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F840E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84170>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84200>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84290>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84320>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F843B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84440>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F844D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84560>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F845F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84680>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84710>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F847A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84830>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F848C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84950>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F849E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84A70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84B00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84B90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84C20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84CB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84D40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84DD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84E60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84EF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F84F80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85010>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F850A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85130>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F851C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85250>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F852E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85370>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85400>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85490>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85520>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F855B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85640>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F856D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85760>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F857F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85880>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85910>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F859A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85A30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85AC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85B50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85BE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85C70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85D00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85D90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85E20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85EB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85F40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F85FD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86060>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F860F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86180>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86210>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F862A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86330>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F863C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86450>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F864E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86570>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86600>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86690>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86720>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F867B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86840>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F868D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86960>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F869F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86A80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86B10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86BA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86C30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86CC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86D50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86DE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86E70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86F00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F86F90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87020>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F870B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87140>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F871D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87260>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F872F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87380>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87410>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F874A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87530>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F875C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87650>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F876E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87770>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87800>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87890>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87920>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F879B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87A40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87AD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87B60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87BF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87C80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87D10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87DA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87E30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87EC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87F50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F87FE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88070>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88100>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88190>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88220>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F882B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88340>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F883D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88460>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F884F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88580>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88610>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F886A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88730>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F887C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88850>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F888E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88970>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88A00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88A90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88B20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88BB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88C40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88CD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88D60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88DF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88E80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88F10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F88FA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89030>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F890C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89150>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F891E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89270>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89300>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89390>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89420>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F894B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89540>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F895D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89660>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F896F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89780>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89810>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F898A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89930>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F899C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89A50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89AE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89B70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89C00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89C90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89D20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89DB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89E40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89ED0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89F60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F89FF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A080>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A110>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A1A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A230>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A2C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A350>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A3E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A470>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A500>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A590>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A620>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A6B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A740>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A7D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A860>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A8F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8A980>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8AA10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8AAA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8AB30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8ABC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8AC50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8ACE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8AD70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8AE00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8AE90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8AF20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8AFB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B040>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B0D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B160>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B1F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B280>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B310>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B3A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B430>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B4C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B550>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B5E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B670>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B700>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B790>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B820>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B8B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B940>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8B9D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8BA60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8BAF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8BB80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8BC10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8BCA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8BD30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8BDC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8BE50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8BEE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8BF70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C000>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C090>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C120>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C1B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C240>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C2D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C360>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C3F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C480>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C510>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C5A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C630>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C6C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C750>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C7E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C870>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C900>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8C990>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8CA20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8CAB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8CB40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8CBD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8CC60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8CCF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8CD80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8CE10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8CEA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8CF30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8CFC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D050>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D0E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D170>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D200>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D290>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D320>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D3B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D440>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D4D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D560>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D5F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D680>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D710>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D7A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D830>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D8C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D950>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8D9E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8DA70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8DB00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8DB90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8DC20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8DCB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8DD40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8DDD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8DE60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8DEF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8DF80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E010>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E0A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E130>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E1C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E250>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E2E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E370>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E400>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E490>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E520>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E5B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E640>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E6D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E760>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E7F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E880>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E910>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8E9A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8EA30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8EAC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8EB50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8EBE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8EC70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8ED00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8ED90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8EE20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8EEB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8EF40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8EFD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F060>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F0F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F180>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F210>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F2A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F330>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F3C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F450>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F4E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F570>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F600>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F690>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F720>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F7B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F840>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F8D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F960>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8F9F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8FA80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8FB10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8FBA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8FC30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8FCC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8FD50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8FDE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8FE70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8FF00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F8FF90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90020>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F900B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90140>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F901D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90260>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F902F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90380>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90410>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F904A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90530>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F905C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90650>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F906E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90770>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90800>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90890>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90920>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F909B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90A40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90AD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90B60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90BF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90C80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90D10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90DA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90E30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90EC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90F50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F90FE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91070>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91100>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91190>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91220>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F912B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91340>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F913D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91460>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F914F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91580>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91610>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F916A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91730>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F917C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91850>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F918E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91970>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91A00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91A90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91B20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91BB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91C40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91CD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91D60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91DF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91E80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91F10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F91FA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92030>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F920C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92150>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F921E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92270>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92300>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92390>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92420>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F924B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92540>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F925D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92660>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F926F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92780>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92810>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F928A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92930>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F929C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92A50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92AE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92B70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92C00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92C90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92D20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92DB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92E40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92ED0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92F60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F92FF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93080>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93110>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F931A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93230>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F932C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93350>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F933E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93470>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93500>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93590>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93620>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F936B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93740>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F937D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93860>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F938F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93980>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93A10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93AA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93B30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93BC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93C50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93CE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93D70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93E00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93E90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93F20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F93FB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94040>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F940D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94160>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F941F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94280>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94310>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F943A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94430>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F944C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94550>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F945E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94670>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94700>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94790>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94820>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F948B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94940>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F949D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94A60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94AF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94B80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94C10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94CA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94D30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94DC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94E50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94EE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F94F70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95000>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95090>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95120>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F951B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95240>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F952D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95360>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F953F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95480>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95510>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F955A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95630>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F956C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95750>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F957E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95870>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95900>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95990>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95A20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95AB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95B40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95BD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95C60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95CF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95D80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95E10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95EA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95F30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F95FC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96050>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F960E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96170>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96200>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96290>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96320>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F963B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96440>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F964D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96560>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F965F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96680>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96710>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F967A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96830>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F968C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96950>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F969E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96A70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96B00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96B90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96C20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96CB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96D40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96DD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96E60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96EF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F96F80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97010>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F970A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97130>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F971C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97250>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F972E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97370>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97400>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97490>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97520>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F975B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97640>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F976D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97760>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F977F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97880>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97910>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F979A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97A30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97AC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97B50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97BE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97C70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97D00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97D90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97E20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97EB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97F40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F97FD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98060>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F980F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98180>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98210>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F982A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98330>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F983C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98450>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F984E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98570>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98600>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98690>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98720>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F987B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98840>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F988D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98960>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F989F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98A80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98B10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98BA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98C30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98CC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98D50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98DE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98E70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98F00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F98F90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99020>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F990B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99140>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F991D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99260>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F992F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99380>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99410>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F994A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99530>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F995C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99650>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F996E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99770>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99800>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99890>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99920>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F999B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99A40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99AD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99B60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99BF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99C80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99D10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99DA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99E30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99EC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99F50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F99FE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A070>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A100>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A190>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A220>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A2B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A340>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A3D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A460>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A4F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A580>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A610>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A6A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A730>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A7C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A850>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A8E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9A970>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9AA00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9AA90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9AB20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9ABB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9AC40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9ACD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9AD60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9ADF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9AE80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9AF10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9AFA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B030>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B0C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B150>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B1E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B270>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B300>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B390>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B420>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B4B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B540>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B5D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B660>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B6F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B780>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B810>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B8A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B930>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9B9C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9BA50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9BAE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9BB70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9BC00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9BC90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9BD20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9BDB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9BE40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9BED0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9BF60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9BFF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C080>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C110>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C1A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C230>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C2C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C350>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C3E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C470>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C500>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C590>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C620>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C6B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C740>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C7D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C860>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C8F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9C980>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9CA10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9CAA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9CB30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9CBC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9CC50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9CCE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9CD70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9CE00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9CE90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9CF20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9CFB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D040>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D0D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D160>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D1F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D280>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D310>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D3A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D430>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D4C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D550>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D5E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D670>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D700>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D790>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D820>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D8B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D940>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9D9D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9DA60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9DAF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9DB80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9DC10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9DCA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9DD30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9DDC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9DE50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9DEE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9DF70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E000>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E090>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E120>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E1B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E240>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E2D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E360>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E3F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E480>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E510>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E5A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E630>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E6C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E750>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E7E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E870>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E900>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9E990>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9EA20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9EAB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9EB40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9EBD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9EC60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9ECF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9ED80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9EE10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9EEA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9EF30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9EFC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F050>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F0E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F170>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F200>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F290>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F320>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F3B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F440>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F4D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F560>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F5F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F680>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F710>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F7A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F830>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F8C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F950>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9F9E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9FA70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9FB00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9FB90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9FC20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9FCB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9FD40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9FDD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9FE60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9FEF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148F9FF80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0010>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA00A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0130>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA01C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0250>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA02E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0370>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0400>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0490>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0520>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA05B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0640>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA06D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0760>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA07F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0880>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0910>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA09A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0A30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0AC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0B50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0BE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0C70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0D00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0D90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0E20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0EB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0F40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA0FD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1060>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA10F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1180>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1210>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA12A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1330>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA13C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1450>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA14E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1570>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1600>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1690>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1720>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA17B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1840>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA18D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1960>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA19F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1A80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1B10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1BA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1C30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1CC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x0000025148FA1D50>]",
+          "human_bones": "[<bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E060>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E0F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E180>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E210>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E2A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E330>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E3C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E450>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E4E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E570>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E600>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E690>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E720>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E7B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E840>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E8D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E960>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02E9F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02EA80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02EB10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02EBA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02EC30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02ECC0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02ED50>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02EDE0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02EE70>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02EF00>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02EF90>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F020>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F0B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F140>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F1D0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F260>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F2F0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F380>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F410>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F4A0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F530>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F5C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F650>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F6E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F770>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F800>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F890>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F920>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02F9B0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02FA40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02FAD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02FB60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02FBF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02FC80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02FD10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02FDA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02FE30>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516C02FEC0>]",
+          "initial_automatic_bone_assignment": 0,
+          "pose_library": []
+        },
+        "secondary_animation": {},
+        "meta": {
+          "texture": []
+        },
+        "blend_shape_master": {}
+      },
+      "vrm1": {
+        "humanoid": {
+          "human_bones": "<bpy id prop: owner=\"ARrig\", name=\"human_bones\", address=0x000002516E6CAEE0>"
+        },
+        "look_at": {
+          "range_map_horizontal_inner": "<bpy id prop: owner=\"ARrig\", name=\"range_map_horizontal_inner\", address=0x0000025170CCA8E0>",
+          "range_map_horizontal_outer": "<bpy id prop: owner=\"ARrig\", name=\"range_map_horizontal_outer\", address=0x0000025170CCA760>",
+          "range_map_vertical_down": "<bpy id prop: owner=\"ARrig\", name=\"range_map_vertical_down\", address=0x0000025170CCA5E0>",
+          "range_map_vertical_up": "<bpy id prop: owner=\"ARrig\", name=\"range_map_vertical_up\", address=0x0000025170CCA460>",
+          "offset_from_head_bone": [
+            0.0,
+            0.0,
+            -0.0
+          ]
+        },
+        "expressions": {
+          "preset": "<bpy id prop: owner=\"ARrig\", name=\"preset\", address=0x0000025170CCA160>",
+          "expression_ui_list_elements": "[<bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE6B20>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE6BB0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE6C40>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE6CD0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE6D60>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE6DF0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE6E80>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE6F10>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE6FA0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE7030>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE70C0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE7150>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE71E0>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE7270>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE7300>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE7390>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE7420>, <bpy id prop: owner=\"ARrig\", name=\"\", address=0x000002516BEE74B0>]"
+        }
+      },
+      "spring_bone1": {},
+      "addon_version": [
+        2.0,
+        20.0,
+        32.0
+      ]
+    }
+  },
+  "rest_por_hueso": {
+    "c_pos": "8da4df833402",
+    "c_traj": "8da4df833402",
+    "c_root_master.x": "e64802649c3b",
+    "c_root.x": "95b623b6a11c",
+    "c_p_root.x": "7c2083afaf18",
+    "c_root_bend.x": "fe1f1ac4a71e",
+    "root.x": "95b623b6a11c",
+    "c_tail_00.x": "2c28ecbc5e88",
+    "c_tail_01.x": "fd9e0c534333",
+    "c_tail_02.x": "c778f1e9c9d4",
+    "c_tail_03.x": "3df88a5cee12",
+    "c_thigh_b_dupli_001.r": "6d1fb1bd4d5e",
+    "thigh_ik_dupli_001.r": "2e89012ee192",
+    "leg_ik_dupli_001.r": "7fbb5267f5db",
+    "thigh_ik_nostr_dupli_001.r": "2e89012ee192",
+    "leg_ik_nostr_dupli_001.r": "7fbb5267f5db",
+    "c_thigh_fk_dupli_001.r": "2e89012ee192",
+    "thigh_fk_dupli_001.r": "6fefd3f7c059",
+    "c_leg_fk_dupli_001.r": "7fbb5267f5db",
+    "leg_fk_dupli_001.r": "7fbb5267f5db",
+    "foot_dupli_001.r": "183d1d03126d",
+    "toes_01_dupli_001.r": "b2822686bcd6",
+    "foot_pole_dupli_001.r": "1452877f5a92",
+    "c_foot_fk_scale_fix_dupli_001.r": "da3970a6d3f7",
+    "c_foot_fk_dupli_001.r": "da3970a6d3f7",
+    "foot_fk_dupli_001.r": "183d1d03126d",
+    "c_toes_fk_dupli_001.r": "e53bd55dd041",
+    "c_p_foot_fk_dupli_001.r": "ce09ad592ff8",
+    "leg_fk_pre_pole_dupli_001.r": "d34f2d82dace",
+    "leg_fk_pole_dupli_001.r": "09aeb9fb29c4",
+    "thigh_dupli_001.r": "2e89012ee192",
+    "c_stretch_leg_dupli_001.r": "18232cda9156",
+    "leg_dupli_001.r": "7fbb5267f5db",
+    "thigh_twist_dupli_001.r": "2e89012ee192",
+    "c_thigh_ik_dupli_001.r": "2e89012ee192",
+    "c_thigh_b_dupli_001.l": "f96b88130c89",
+    "thigh_ik_dupli_001.l": "874c59ec497f",
+    "leg_ik_dupli_001.l": "002bf730d1af",
+    "c_thigh_fk_dupli_001.l": "874c59ec497f",
+    "thigh_fk_dupli_001.l": "b966e625712e",
+    "c_leg_fk_dupli_001.l": "002bf730d1af",
+    "leg_fk_dupli_001.l": "002bf730d1af",
+    "foot_dupli_001.l": "5bfdccd8ee34",
+    "toes_01_dupli_001.l": "9c8e22cb83e2",
+    "foot_pole_dupli_001.l": "6eca23de104b",
+    "c_foot_fk_scale_fix_dupli_001.l": "831047e2fb62",
+    "c_foot_fk_dupli_001.l": "831047e2fb62",
+    "foot_fk_dupli_001.l": "5bfdccd8ee34",
+    "c_toes_fk_dupli_001.l": "fbd51c17c04d",
+    "c_p_foot_fk_dupli_001.l": "428e5cacfe74",
+    "leg_fk_pre_pole_dupli_001.l": "3cc8af49c7e5",
+    "leg_fk_pole_dupli_001.l": "4a435bf1231d",
+    "thigh_dupli_001.l": "874c59ec497f",
+    "c_stretch_leg_dupli_001.l": "426e03d379a0",
+    "leg_dupli_001.l": "002bf730d1af",
+    "thigh_twist_dupli_001.l": "874c59ec497f",
+    "thigh_ik_nostr_dupli_001.l": "874c59ec497f",
+    "leg_ik_nostr_dupli_001.l": "002bf730d1af",
+    "c_thigh_ik_dupli_001.l": "874c59ec497f",
+    "c_tail_master.x": "2c28ecbc5e88",
+    "c_p_root_master.x": "c4fe48248ee0",
+    "c_spine_01.x": "d1b01a5f7592",
+    "spine_01.x": "d1b01a5f7592",
+    "c_p_spine_01.x": "12b15cce27ef",
+    "c_spine_02.x": "dbf5a4f831ca",
+    "spine_02.x": "dbf5a4f831ca",
+    "c_p_spine_02.x": "b0c26ab649ee",
+    "c_spine_03.x": "b56c9adf993c",
+    "spine_03.x": "b56c9adf993c",
+    "c_spine_04.x": "01dab5dc1cce",
+    "spine_04.x": "01dab5dc1cce",
+    "c_spine_05.x": "c530cf7407ca",
+    "spine_05.x": "c530cf7407ca",
+    "c_spine_06.x": "0709fb66bfc8",
+    "spine_06.x": "0709fb66bfc8",
+    "c_spine_07.x": "78170280d782",
+    "spine_07.x": "78170280d782",
+    "c_shoulder.l": "d0c1d8b8aae4",
+    "arm_ik.l": "6c3ad7f39fe1",
+    "forearm_ik.l": "afa9346da793",
+    "arm.l": "6c3ad7f39fe1",
+    "c_stretch_arm.l": "e1b8124e0254",
+    "shoulder.l": "d0c1d8b8aae4",
+    "shoulder_track_pole.l": "82b5032ff906",
+    "shoulder_pole.l": "79e33d5a4b25",
+    "arm_twist_twk.l": "6c3ad7f39fe1",
+    "arm_ik_nostr_scale_fix.l": "6c3ad7f39fe1",
+    "arm_ik_nostr.l": "6c3ad7f39fe1",
+    "forearm_ik_nostr.l": "afa9346da793",
+    "arm_twist.l": "6c3ad7f39fe1",
+    "c_arm_twist_offset.l": "6c3ad7f39fe1",
+    "c_arm_ik.l": "6c3ad7f39fe1",
+    "c_arm_fk.l": "6c3ad7f39fe1",
+    "arm_fk.l": "6c3ad7f39fe1",
+    "c_forearm_fk.l": "afa9346da793",
+    "forearm_fk.l": "afa9346da793",
+    "c_hand_fk_scale_fix.l": "e8a17fb76c5b",
+    "c_hand_fk.l": "e8a17fb76c5b",
+    "arm_fk_pre_pole.l": "c80cddc25757",
+    "arm_fk_pole.l": "e96d2c5fbeb3",
+    "c_shoulder.r": "8de61d5648b3",
+    "arm_ik.r": "c291895812c9",
+    "forearm_ik.r": "cd14f46fe12a",
+    "shoulder.r": "8de61d5648b3",
+    "shoulder_track_pole.r": "ba1ea211186b",
+    "shoulder_pole.r": "8cdd0682603a",
+    "arm_twist_twk.r": "c291895812c9",
+    "arm.r": "c291895812c9",
+    "c_stretch_arm.r": "b1b41406a95d",
+    "arm_ik_nostr_scale_fix.r": "c291895812c9",
+    "arm_ik_nostr.r": "c291895812c9",
+    "forearm_ik_nostr.r": "cd14f46fe12a",
+    "arm_twist.r": "c291895812c9",
+    "c_arm_twist_offset.r": "c291895812c9",
+    "c_arm_ik.r": "c291895812c9",
+    "c_arm_fk.r": "c291895812c9",
+    "c_forearm_fk.r": "cd14f46fe12a",
+    "forearm_fk.r": "cd14f46fe12a",
+    "c_hand_fk_scale_fix.r": "915ed49f42b5",
+    "c_hand_fk.r": "915ed49f42b5",
+    "arm_fk.r": "c291895812c9",
+    "arm_fk_pre_pole.r": "03d132f7b15b",
+    "arm_fk_pole.r": "15c1b7903e30",
+    "c_neck.x": "7c68bf7268e8",
+    "c_p_neck.x": "5009dda6e656",
+    "neck.x": "7c68bf7268e8",
+    "neck_twist.x": "b298b292ebf7",
+    "thigh_b_ik01.l": "24328932a749",
+    "c_thigh_b.l": "24328932a749",
+    "thigh_ik.l": "7abb65b49dfb",
+    "leg_ik.l": "90424494572f",
+    "c_thigh_fk.l": "7abb65b49dfb",
+    "thigh_fk.l": "7abb65b49dfb",
+    "c_leg_fk.l": "90424494572f",
+    "leg_fk.l": "90424494572f",
+    "foot.l": "049afd6d55b1",
+    "toes_01.l": "02f4ffc52f42",
+    "foot_pole.l": "b44251ac5415",
+    "c_foot_fk_scale_fix.l": "0c005e68e1fe",
+    "c_foot_fk.l": "0c005e68e1fe",
+    "foot_fk.l": "049afd6d55b1",
+    "c_toes_fk.l": "c441549d3231",
+    "c_p_foot_fk.l": "3424265e84d3",
+    "leg_fk_pre_pole.l": "659bd61b9be7",
+    "leg_fk_pole.l": "280dc7c57d21",
+    "thigh.l": "7abb65b49dfb",
+    "c_stretch_leg.l": "376d6d3b54a9",
+    "leg.l": "90424494572f",
+    "thigh_twist.l": "7abb65b49dfb",
+    "thigh_ik_nostr.l": "7abb65b49dfb",
+    "leg_ik_nostr.l": "90424494572f",
+    "c_thigh_ik.l": "7abb65b49dfb",
+    "thigh_b_ik02.l": "7abb65b49dfb",
+    "thigh_b_ik03.l": "90424494572f",
+    "thigh_b_ik01.r": "ae7d1b954edf",
+    "c_thigh_b.r": "ae7d1b954edf",
+    "thigh_ik.r": "9d05f3d54dd7",
+    "leg_ik.r": "4df4232fdd0d",
+    "thigh_ik_nostr.r": "9d05f3d54dd7",
+    "leg_ik_nostr.r": "4df4232fdd0d",
+    "c_thigh_fk.r": "9d05f3d54dd7",
+    "thigh_fk.r": "9d05f3d54dd7",
+    "c_leg_fk.r": "4df4232fdd0d",
+    "leg_fk.r": "4df4232fdd0d",
+    "foot.r": "da8b1da0a6ea",
+    "toes_01.r": "da78af358ab8",
+    "foot_pole.r": "ebdd5f089145",
+    "c_foot_fk_scale_fix.r": "0bca6d5327ee",
+    "c_foot_fk.r": "0bca6d5327ee",
+    "foot_fk.r": "da8b1da0a6ea",
+    "c_toes_fk.r": "99ceca01c41c",
+    "c_p_foot_fk.r": "109c6247d638",
+    "leg_fk_pre_pole.r": "15bec53d4c96",
+    "leg_fk_pole.r": "5a545161b08a",
+    "thigh.r": "9d05f3d54dd7",
+    "c_stretch_leg.r": "d12ebd58b047",
+    "leg.r": "4df4232fdd0d",
+    "thigh_twist.r": "9d05f3d54dd7",
+    "c_thigh_ik.r": "9d05f3d54dd7",
+    "thigh_b_ik02.r": "9d05f3d54dd7",
+    "thigh_b_ik03.r": "4df4232fdd0d",
+    "leg_stretch.r": "ff5e87f14b7c",
+    "leg_twist.r": "c8f9b0039af8",
+    "thigh_stretch.r": "dbe9eed622cd",
+    "leg_stretch.l": "90424494572f",
+    "leg_twist.l": "76893576b04b",
+    "thigh_stretch.l": "1aebfee2b2be",
+    "leg_stretch_dupli_001.r": "7fbb5267f5db",
+    "leg_twist_dupli_001.r": "5d5b77a26aef",
+    "thigh_stretch_dupli_001.r": "12a98cde8980",
+    "leg_stretch_dupli_001.l": "002bf730d1af",
+    "leg_twist_dupli_001.l": "8bc8f09008c4",
+    "thigh_stretch_dupli_001.l": "3be0b5bd86f4",
+    "arm_stretch.l": "ec17b953f670",
+    "forearm_stretch.l": "afa9346da793",
+    "forearm_twist.l": "66cca2e2c86b",
+    "forearm.l": "afa9346da793",
+    "hand.l": "e8a17fb76c5b",
+    "c_pinky1_base.l": "a0a5998d75e8",
+    "pinky_bend_all.l": "46844bd3fc98",
+    "c_pinky1_rot.l": "46844bd3fc98",
+    "c_pinky1.l": "46844bd3fc98",
+    "pinky1.l": "46844bd3fc98",
+    "c_pinky2_rot.l": "6f889052447a",
+    "c_pinky2.l": "6f889052447a",
+    "c_pinky3_rot.l": "c1c705c5dc64",
+    "c_pinky3.l": "c1c705c5dc64",
+    "c_ring1_base.l": "ff07ff5c6108",
+    "ring_bend_all.l": "36316b3a27dd",
+    "c_ring1_rot.l": "36316b3a27dd",
+    "c_ring1.l": "36316b3a27dd",
+    "ring1.l": "36316b3a27dd",
+    "c_ring2_rot.l": "136f5dc9635e",
+    "c_ring2.l": "136f5dc9635e",
+    "c_ring3_rot.l": "2a0e439d60d4",
+    "c_ring3.l": "2a0e439d60d4",
+    "c_middle1_base.l": "35dba9751332",
+    "middle_bend_all.l": "cc56bfc55e5d",
+    "c_middle1_rot.l": "cc56bfc55e5d",
+    "c_middle1.l": "cc56bfc55e5d",
+    "middle1.l": "cc56bfc55e5d",
+    "c_middle2_rot.l": "e68abeac4dbd",
+    "c_middle2.l": "e68abeac4dbd",
+    "c_middle3_rot.l": "98823ec58843",
+    "c_middle3.l": "98823ec58843",
+    "c_index1_base.l": "a42f57e81305",
+    "index_bend_all.l": "552142784232",
+    "c_index1_rot.l": "552142784232",
+    "c_index1.l": "552142784232",
+    "index1.l": "552142784232",
+    "c_index2_rot.l": "82eff48b2918",
+    "c_index2.l": "82eff48b2918",
+    "c_index3_rot.l": "cf022d9a0af8",
+    "c_index3.l": "cf022d9a0af8",
+    "c_thumb1_base.l": "03ef87867b59",
+    "thumb_bend_all.l": "03ef87867b59",
+    "c_thumb1_rot.l": "03ef87867b59",
+    "c_thumb1.l": "03ef87867b59",
+    "thumb1.l": "03ef87867b59",
+    "c_thumb2_rot.l": "2772dd7b45c6",
+    "c_thumb2.l": "2772dd7b45c6",
+    "c_thumb3_rot.l": "15be1963919f",
+    "c_thumb3.l": "15be1963919f",
+    "hand_rot_twist.l": "02d16f49b33e",
+    "arm_stretch.r": "6559c3145f5f",
+    "forearm_stretch.r": "cd14f46fe12a",
+    "forearm_twist.r": "ef2c7d0bee2b",
+    "forearm.r": "cd14f46fe12a",
+    "hand.r": "915ed49f42b5",
+    "c_pinky1_base.r": "5c1b7a8d3c22",
+    "pinky_bend_all.r": "b6aeafd6c1c1",
+    "c_pinky1_rot.r": "b6aeafd6c1c1",
+    "c_pinky1.r": "b6aeafd6c1c1",
+    "pinky1.r": "b6aeafd6c1c1",
+    "c_pinky2_rot.r": "e0f776cf1a99",
+    "c_pinky2.r": "e0f776cf1a99",
+    "c_pinky3_rot.r": "608cfb2123f5",
+    "c_pinky3.r": "608cfb2123f5",
+    "c_ring1_base.r": "38df601a4709",
+    "ring_bend_all.r": "edfe0177c394",
+    "c_ring1_rot.r": "edfe0177c394",
+    "c_ring1.r": "edfe0177c394",
+    "ring1.r": "edfe0177c394",
+    "c_ring2_rot.r": "09bfc105f046",
+    "c_ring2.r": "09bfc105f046",
+    "c_ring3_rot.r": "ad25e7c01e8c",
+    "c_ring3.r": "ad25e7c01e8c",
+    "c_middle1_base.r": "1feaf65bcbad",
+    "middle_bend_all.r": "44176ea43cc9",
+    "c_middle1_rot.r": "44176ea43cc9",
+    "c_middle1.r": "44176ea43cc9",
+    "middle1.r": "44176ea43cc9",
+    "c_middle2_rot.r": "ccce864d4e75",
+    "c_middle2.r": "ccce864d4e75",
+    "c_middle3_rot.r": "bfba3b913e6a",
+    "c_middle3.r": "bfba3b913e6a",
+    "c_index1_base.r": "aabde2503d7c",
+    "c_index1_rot.r": "7ffb81d89eea",
+    "c_index1.r": "7ffb81d89eea",
+    "index1.r": "7ffb81d89eea",
+    "c_index2_rot.r": "2ec6a9cec9d6",
+    "c_index2.r": "2ec6a9cec9d6",
+    "c_index3_rot.r": "b336ef1fac76",
+    "c_index3.r": "b336ef1fac76",
+    "index_bend_all.r": "7ffb81d89eea",
+    "c_thumb1_base.r": "cf1d3505626a",
+    "thumb_bend_all.r": "cf1d3505626a",
+    "c_thumb1_rot.r": "cf1d3505626a",
+    "c_thumb1.r": "cf1d3505626a",
+    "thumb1.r": "cf1d3505626a",
+    "c_thumb2_rot.r": "49b7dff51ba2",
+    "c_thumb2.r": "e22105745b62",
+    "c_thumb3_rot.r": "f8561afbe179",
+    "c_thumb3.r": "f8561afbe179",
+    "hand_rot_twist.r": "9a69ea702370",
+    "head_scale_fix.x": "b298b292ebf7",
+    "c_head.x": "b298b292ebf7",
+    "head.x": "b298b292ebf7",
+    "c_eye_ref_track.l": "07443d6f711f",
+    "c_eye_ref_track.r": "e29ba0350dae",
+    "c_jawbone.x": "f85607f1000b",
+    "jawbone.x": "4d4eea9c4320",
+    "c_tong_01.x": "15f6b705b99c",
+    "c_tong_02.x": "cd08fc25ddf5",
+    "c_tong_03.x": "b8e900ad45e6",
+    "tong_03.x": "b8e900ad45e6",
+    "tong_02.x": "cd08fc25ddf5",
+    "tong_01.x": "15f6b705b99c",
+    "c_chin_01.x": "5aa098501b1c",
+    "c_chin_02.x": "8c099cbe0620",
+    "c_teeth_bot_master.x": "f98b34964c37",
+    "c_teeth_bot.x": "888ee5a9a06b",
+    "c_teeth_bot.l": "6098a8d83aa4",
+    "c_teeth_bot.r": "3d1cd666db3d",
+    "c_lips_bot_01_offset.l": "f5b28a19966b",
+    "c_lips_bot_01.l": "9c42b6f2cb8e",
+    "lips_bot_01_follow.l": "32be23b630f6",
+    "c_lips_bot_01_offset.r": "29dda60426ee",
+    "c_lips_bot_01.r": "1d6d52ed98fd",
+    "lips_bot_01_follow.r": "99ed85741734",
+    "c_lips_bot_offset.l": "b20ff66c32cd",
+    "c_lips_bot.l": "b20ff66c32cd",
+    "lips_bot_follow.l": "b20ff66c32cd",
+    "c_lips_bot_offset.r": "9ff885ab538d",
+    "c_lips_bot.r": "f03af055d0a0",
+    "lips_bot_follow.r": "f03af055d0a0",
+    "c_lips_bot_offset.x": "c3e8fa660bfc",
+    "c_lips_bot.x": "f732b3259e60",
+    "c_lips_roll_bot.x": "42fac1f3e7db",
+    "c_lips_roll_top.x": "fef10e37cd78",
+    "c_teeth_top_master.x": "81226671aa92",
+    "c_teeth_top.x": "d8573ccdc579",
+    "c_teeth_top.l": "0cbd1dde9f4b",
+    "c_teeth_top.r": "7b67fefcdb18",
+    "jaw_ret_bone.x": "4d4eea9c4320",
+    "c_lips_top_retain.x": "6217687b6f89",
+    "c_lips_top_retain.l": "2050e8b2e0d2",
+    "c_lips_top_retain.r": "c4d6630f2f89",
+    "c_lips_top_01_retain.l": "e6fa7be262ce",
+    "c_lips_top_01_retain.r": "1608089a5a1f",
+    "c_lips_smile_retain.l": "78fce9cfaafa",
+    "c_lips_smile_retain.r": "6babf2f5f5f3",
+    "c_lips_bot_01_retain.l": "72a3451ab8a9",
+    "c_lips_bot_01_retain.r": "ee0ecbdde6e0",
+    "c_lips_bot_retain.l": "0f3c07d35290",
+    "c_lips_bot_retain.r": "6f59ebb55f71",
+    "c_lips_bot_retain.x": "0d644c3020ff",
+    "c_lips_top_offset.x": "dcc125ce19dc",
+    "c_lips_top.x": "f3e62d3a5d3d",
+    "c_lips_top_offset.l": "54936b67cfb7",
+    "c_lips_top.l": "5114e05fe79c",
+    "lips_top_follow.l": "6ab0838c270c",
+    "c_lips_top_offset.r": "7ce0c0fc8537",
+    "c_lips_top.r": "7ce0c0fc8537",
+    "lips_top_follow.r": "5381dfcfecae",
+    "c_lips_top_01_offset.l": "e6fa7be262ce",
+    "c_lips_top_01.l": "2d349c9f20b2",
+    "lips_top_01_follow.l": "922a2b4d2194",
+    "c_lips_top_01_offset.r": "2356e18b5b57",
+    "c_lips_top_01.r": "0c855f8f9483",
+    "lips_top_01_follow.r": "dff022ceb577",
+    "c_lips_smile_offset.l": "78fce9cfaafa",
+    "c_lips_smile.l": "31cd35346a72",
+    "c_lips_corner_mini.l": "9b12d0e3526f",
+    "c_lips_smile_offset.r": "a6a6761b9554",
+    "c_lips_smile.r": "3704ad4ebdc9",
+    "c_lips_corner_mini.r": "f958f42097b9",
+    "c_eye_offset.l": "07443d6f711f",
+    "c_eyelid_base.l": "07443d6f711f",
+    "eyelid_top.l": "c15794a11583",
+    "c_eyelid_top_01.l": "5e390fa6f3d4",
+    "c_eyelid_top_02.l": "9652049c1b3b",
+    "c_eyelid_top_03.l": "20ca58b002b5",
+    "eyelid_bot.l": "98ed073df4d3",
+    "c_eyelid_bot_01.l": "cd66373e4b1a",
+    "c_eyelid_bot_02.l": "d6b5c2f89336",
+    "c_eyelid_bot_03.l": "3bc92710dc7e",
+    "c_eye.l": "07443d6f711f",
+    "c_eye_ref.l": "d3b5c1f54e9b",
+    "c_eyelid_corner_01.l": "9c286922efb7",
+    "c_eyelid_corner_02.l": "4c55f0a4d84e",
+    "c_eyelid_top.l": "eeccb2503c0f",
+    "c_eyelid_bot.l": "311fa5b32e8c",
+    "c_cheek_smile.l": "8d9ce4397bbe",
+    "c_eye_offset.r": "4807dd5c929a",
+    "c_eyelid_corner_01.r": "88aab5d49c20",
+    "c_eyelid_corner_02.r": "e1591fb89aa6",
+    "c_eyelid_base.r": "85fc3a53e4fa",
+    "eyelid_top.r": "30c01a022fac",
+    "c_eyelid_top_01.r": "44a791f1a2e0",
+    "c_eyelid_top_02.r": "d5d85f15dd77",
+    "c_eyelid_top_03.r": "7aeb9a1f34aa",
+    "eyelid_bot.r": "7d52776288ee",
+    "c_eyelid_bot_01.r": "501ff85e90fe",
+    "c_eyelid_bot_02.r": "c6327dd2ae93",
+    "c_eyelid_bot_03.r": "9654a273c28d",
+    "c_eye.r": "85fc3a53e4fa",
+    "c_eye_ref.r": "0fd2cc33ddfe",
+    "c_eyelid_top.r": "7db444821669",
+    "c_eyelid_bot.r": "ada0c69aaeb3",
+    "c_cheek_smile.r": "e1e51c5f9a6f",
+    "c_nose_03.x": "bbcac14a1f33",
+    "c_nose_01.x": "87aa660e4ace",
+    "c_nose_02.x": "de3162e799bb",
+    "c_cheek_inflate.l": "5ce996580875",
+    "c_cheek_inflate.r": "669d476a92b3",
+    "c_eyebrow_full.r": "755a0fcc3a37",
+    "c_eyebrow_03.r": "5850b7508042",
+    "c_eyebrow_02.r": "5b150423e28d",
+    "c_eyebrow_01.r": "1b6117a1aaf5",
+    "c_eyebrow_01_end.r": "5d0ecd9d1587",
+    "c_eyebrow_full.l": "1f680c8eb585",
+    "c_eyebrow_03.l": "b14f691d6860",
+    "c_eyebrow_02.l": "b4a671df6829",
+    "c_eyebrow_01.l": "aaa4b858eef9",
+    "c_eyebrow_01_end.l": "94a4cba45128",
+    "c_ear_01.l": "809e51e04839",
+    "c_ear_02.l": "f2a06b218f0f",
+    "c_ear_03.l": "6d85faea44b4",
+    "c_ear_04.l": "af75c3547a31",
+    "c_ear_01.r": "e10e22ea9442",
+    "c_ear_02.r": "7276ec68470d",
+    "c_ear_03.r": "89122dda18cd",
+    "c_ear_04.r": "1d4619d0444b",
+    "hair": "3e7641dc42e4",
+    "hair.003": "70ca754e4e4c",
+    "hair.002": "407927224759",
+    "hair.001": "999c9fac5f77",
+    "hair.r": "80610953695f",
+    "hair.r.001": "4355bc949828",
+    "hair.r.002": "980ae4b234e6",
+    "hair.r.003": "deff2ec8c2f5",
+    "hair.l": "b2c341ce7785",
+    "hair.l.001": "d3a1ad420258",
+    "hair.l.002": "110522871935",
+    "hair.l.003": "54ee17937b2f",
+    "hairFrontRight": "7d7abfc6eea0",
+    "hairFrontRight.002": "0deee58a07c2",
+    "hairFrontRight.001": "f08e4db08511",
+    "hairFrontLeft": "7949b905b628",
+    "hairFrontLeft.002": "ef8e4607bbc8",
+    "hairFrontLeft.001": "8ef2bc921faf",
+    "c_p_head.x": "94caa1b8eaaf",
+    "c_stretch_leg_pin.r": "e1844b60df85",
+    "c_stretch_leg_pin.l": "51aba62616c0",
+    "c_stretch_leg_pin_dupli_001.r": "4ab6e84ae67e",
+    "c_stretch_leg_pin_dupli_001.l": "902f4e9bdc47",
+    "c_stretch_arm_pin.l": "10994937e031",
+    "c_stretch_arm_pin.r": "4980d0afab27",
+    "root_ref.x": "e64802649c3b",
+    "spine_01_ref.x": "d1b01a5f7592",
+    "spine_02_ref.x": "dbf5a4f831ca",
+    "spine_03_ref.x": "b56c9adf993c",
+    "spine_04_ref.x": "01dab5dc1cce",
+    "spine_05_ref.x": "c530cf7407ca",
+    "spine_06_ref.x": "0709fb66bfc8",
+    "spine_07_ref.x": "78170280d782",
+    "shoulder_ref.l": "d0c1d8b8aae4",
+    "arm_ref.l": "6c3ad7f39fe1",
+    "forearm_ref.l": "afa9346da793",
+    "hand_ref.l": "e8a17fb76c5b",
+    "pinky1_base_ref.l": "a0a5998d75e8",
+    "pinky1_ref.l": "46844bd3fc98",
+    "pinky2_ref.l": "6f889052447a",
+    "pinky3_ref.l": "c1c705c5dc64",
+    "ring1_base_ref.l": "ff07ff5c6108",
+    "ring1_ref.l": "36316b3a27dd",
+    "ring2_ref.l": "136f5dc9635e",
+    "ring3_ref.l": "2a0e439d60d4",
+    "middle1_base_ref.l": "35dba9751332",
+    "middle1_ref.l": "cc56bfc55e5d",
+    "middle2_ref.l": "e68abeac4dbd",
+    "middle3_ref.l": "98823ec58843",
+    "index1_base_ref.l": "a42f57e81305",
+    "index1_ref.l": "552142784232",
+    "index2_ref.l": "82eff48b2918",
+    "index3_ref.l": "cf022d9a0af8",
+    "thumb1_ref.l": "03ef87867b59",
+    "thumb2_ref.l": "2772dd7b45c6",
+    "thumb3_ref.l": "15be1963919f",
+    "shoulder_ref.r": "8de61d5648b3",
+    "arm_ref.r": "c291895812c9",
+    "forearm_ref.r": "cd14f46fe12a",
+    "hand_ref.r": "915ed49f42b5",
+    "pinky1_base_ref.r": "5c1b7a8d3c22",
+    "pinky1_ref.r": "b6aeafd6c1c1",
+    "pinky2_ref.r": "e0f776cf1a99",
+    "pinky3_ref.r": "608cfb2123f5",
+    "ring1_base_ref.r": "84e2c93fec20",
+    "ring1_ref.r": "edfe0177c394",
+    "ring2_ref.r": "09bfc105f046",
+    "ring3_ref.r": "ad25e7c01e8c",
+    "middle1_base_ref.r": "1feaf65bcbad",
+    "middle1_ref.r": "1883aa6ebbd0",
+    "middle2_ref.r": "ccce864d4e75",
+    "middle3_ref.r": "bfba3b913e6a",
+    "index1_base_ref.r": "aabde2503d7c",
+    "index1_ref.r": "c54060b195a4",
+    "index2_ref.r": "2ec6a9cec9d6",
+    "index3_ref.r": "b336ef1fac76",
+    "thumb1_ref.r": "cf1d3505626a",
+    "thumb2_ref.r": "e22105745b62",
+    "thumb3_ref.r": "f8561afbe179",
+    "neck_ref.x": "7c68bf7268e8",
+    "head_ref.x": "b298b292ebf7",
+    "jaw_ref.x": "4d4eea9c4320",
+    "ear_01_ref.l": "809e51e04839",
+    "ear_02_ref.l": "f2a06b218f0f",
+    "ear_03_ref.l": "6d85faea44b4",
+    "ear_04_ref.l": "af75c3547a31",
+    "ear_01_ref.r": "e10e22ea9442",
+    "ear_02_ref.r": "e7fb773b5f02",
+    "ear_03_ref.r": "89122dda18cd",
+    "ear_04_ref.r": "1d4619d0444b",
+    "thigh_b_ref.l": "24328932a749",
+    "thigh_ref.l": "7abb65b49dfb",
+    "leg_ref.l": "5cac771094ce",
+    "foot_bank_01_ref.l": "436420451bbb",
+    "foot_bank_02_ref.l": "fd418148f506",
+    "foot_heel_ref.l": "66ec7b5d617f",
+    "foot_ref.l": "049afd6d55b1",
+    "toes_ref.l": "905cf4ab49dd",
+    "thigh_b_ref.r": "ae7d1b954edf",
+    "thigh_ref.r": "9d05f3d54dd7",
+    "leg_ref.r": "4df4232fdd0d",
+    "foot_bank_01_ref.r": "b9b8ca9a7991",
+    "foot_bank_02_ref.r": "f08dcfe5d55c",
+    "foot_heel_ref.r": "7a1ee0b7fd6e",
+    "foot_ref.r": "da8b1da0a6ea",
+    "toes_ref.r": "5261c3be92c0",
+    "thigh_ref_dupli_001.r": "2e89012ee192",
+    "leg_ref_dupli_001.r": "7fbb5267f5db",
+    "foot_bank_01_ref_dupli_001.r": "0d338d458f24",
+    "foot_bank_02_ref_dupli_001.r": "a6b45cf0820a",
+    "foot_heel_ref_dupli_001.r": "9e02ab6c55ac",
+    "foot_ref_dupli_001.r": "183d1d03126d",
+    "toes_ref_dupli_001.r": "34bd3521e792",
+    "thigh_ref_dupli_001.l": "874c59ec497f",
+    "leg_ref_dupli_001.l": "002bf730d1af",
+    "foot_bank_01_ref_dupli_001.l": "41072fe01caf",
+    "foot_bank_02_ref_dupli_001.l": "878f1d61b935",
+    "foot_heel_ref_dupli_001.l": "e2c330f0bf18",
+    "foot_ref_dupli_001.l": "5bfdccd8ee34",
+    "toes_ref_dupli_001.l": "77b26f188d4c",
+    "tail_00_ref.x": "2c28ecbc5e88",
+    "tail_01_ref.x": "fd9e0c534333",
+    "tail_02_ref.x": "c778f1e9c9d4",
+    "tail_03_ref.x": "3df88a5cee12",
+    "c_foot_ik.r": "d543ecbcb1ec",
+    "c_p_foot_ik.r": "109c6247d638",
+    "foot_ik.r": "da8b1da0a6ea",
+    "c_toes_track.r": "021effb7f2cc",
+    "toes_01_ik.r": "55a1d5303432",
+    "toes_02.r": "f8103d1853b4",
+    "foot_snap_fk.r": "0bca6d5327ee",
+    "c_foot_bank_01.r": "c3ea4f2a2f54",
+    "c_foot_bank_02.r": "89d591613fb6",
+    "c_foot_heel.r": "7a1ee0b7fd6e",
+    "c_toes_end.r": "b943145b2fcc",
+    "c_toes_ik.r": "99ceca01c41c",
+    "c_foot_01.r": "2bd82235e4b0",
+    "foot_ik_target.r": "1fde35d7684e",
+    "foot_01_pole.r": "4cf1787ca1a3",
+    "c_toes_end_01.r": "c27038209ab1",
+    "c_foot_roll.r": "005b918eea14",
+    "c_foot_roll_cursor.r": "4145bdf4edb8",
+    "c_leg_pole.r": "07311ffbb937",
+    "c_foot_ik.l": "cfe238d6f992",
+    "c_p_foot_ik.l": "3424265e84d3",
+    "foot_ik.l": "ed67490c7464",
+    "c_toes_track.l": "85b3fe31441a",
+    "toes_01_ik.l": "6ceae58b4102",
+    "toes_02.l": "167a91d66f16",
+    "foot_snap_fk.l": "3a743cbd0fbd",
+    "c_foot_bank_01.l": "436420451bbb",
+    "c_foot_bank_02.l": "fd418148f506",
+    "c_foot_heel.l": "66ec7b5d617f",
+    "c_toes_end.l": "997a85c46e53",
+    "c_toes_ik.l": "c441549d3231",
+    "c_foot_01.l": "319233c351e4",
+    "foot_01_pole.l": "e5c6ca64c274",
+    "foot_ik_target.l": "b6c19bd304f6",
+    "c_toes_end_01.l": "4e0c4be4f665",
+    "c_foot_roll.l": "171e027114a1",
+    "c_foot_roll_cursor.l": "ccdccdbebc09",
+    "c_leg_pole.l": "0e237ed05ad9",
+    "c_foot_ik_dupli_001.r": "dec6d9d499a7",
+    "c_p_foot_ik_dupli_001.r": "ce09ad592ff8",
+    "foot_ik_dupli_001.r": "183d1d03126d",
+    "c_toes_track_dupli_001.r": "67c4611b8827",
+    "toes_01_ik_dupli_001.r": "27bf88f24d42",
+    "toes_02_dupli_001.r": "b1b89d5f553e",
+    "foot_snap_fk_dupli_001.r": "da3970a6d3f7",
+    "c_foot_bank_01_dupli_001.r": "93398dcacfc3",
+    "c_foot_bank_02_dupli_001.r": "a6b45cf0820a",
+    "c_foot_heel_dupli_001.r": "9e02ab6c55ac",
+    "c_toes_end_dupli_001.r": "732b6bb4a659",
+    "c_toes_ik_dupli_001.r": "e53bd55dd041",
+    "c_foot_01_dupli_001.r": "910e211153bd",
+    "foot_ik_target_dupli_001.r": "736a18f17d7c",
+    "foot_01_pole_dupli_001.r": "7d2f2e3a1bdb",
+    "c_toes_end_01_dupli_001.r": "6e87786e00b0",
+    "c_foot_roll_dupli_001.r": "3125c8563422",
+    "c_foot_roll_cursor_dupli_001.r": "9d426c73aa38",
+    "c_leg_pole_dupli_001.r": "cefde1584a82",
+    "c_foot_ik_dupli_001.l": "116e199aa716",
+    "c_p_foot_ik_dupli_001.l": "428e5cacfe74",
+    "foot_ik_dupli_001.l": "5bfdccd8ee34",
+    "c_toes_track_dupli_001.l": "d42d5d76bf33",
+    "toes_01_ik_dupli_001.l": "adc8d8be7fdb",
+    "toes_02_dupli_001.l": "a215386e9343",
+    "foot_snap_fk_dupli_001.l": "ae9abd32d01f",
+    "c_foot_bank_01_dupli_001.l": "41072fe01caf",
+    "c_foot_bank_02_dupli_001.l": "878f1d61b935",
+    "c_foot_heel_dupli_001.l": "e2c330f0bf18",
+    "c_toes_end_dupli_001.l": "c740bb6b6e6a",
+    "c_toes_ik_dupli_001.l": "fbd51c17c04d",
+    "c_foot_01_dupli_001.l": "0db621943c2c",
+    "foot_01_pole_dupli_001.l": "3f8a67a04a1f",
+    "foot_ik_target_dupli_001.l": "d92392bab708",
+    "c_toes_end_01_dupli_001.l": "e9f8b5c915ef",
+    "c_foot_roll_dupli_001.l": "55f18a01790e",
+    "c_foot_roll_cursor_dupli_001.l": "1ba4f1477c64",
+    "c_leg_pole_dupli_001.l": "c21a8d53145b",
+    "c_arms_pole.l": "1028d7f52d8f",
+    "c_hand_ik.l": "e8a17fb76c5b",
+    "c_arms_pole.r": "f0db8c304ccb",
+    "c_hand_ik.r": "915ed49f42b5",
+    "c_p_neck_01.x": "591d6c50250c",
+    "c_eye_target.x": "221a61317e8e",
+    "c_eye_target.l": "299fae0b9d8d",
+    "c_eye_target.r": "caa5247120e3",
+    "eyebrow_full_ref.r": "f3cdce05fbd4",
+    "eyebrow_03_ref.r": "30e922361ba9",
+    "eyebrow_02_ref.r": "90a10193c483",
+    "eyebrow_01_ref.r": "716e467f3a05",
+    "eyebrow_01_end_ref.r": "a151f04ff88e",
+    "eyebrow_full_ref.l": "ee90f5a87a51",
+    "eyebrow_03_ref.l": "175f49502592",
+    "eyebrow_02_ref.l": "b4a671df6829",
+    "eyebrow_01_ref.l": "2bb91ca084f2",
+    "eyebrow_01_end_ref.l": "0ad2f9bdf148",
+    "lips_top_ref.x": "80faf7c38972",
+    "lips_top_ref.l": "6ab0838c270c",
+    "lips_top_01_ref.l": "a8f022932118",
+    "lips_smile_ref.l": "e770b9d44774",
+    "lips_corner_mini_ref.l": "77ee0833e8b5",
+    "lips_top_ref.r": "257a1bdf8de6",
+    "lips_top_01_ref.r": "fad50623705b",
+    "lips_smile_ref.r": "fbbf0e3045fc",
+    "lips_corner_mini_ref.r": "5e727c20eef6",
+    "lips_bot_ref.x": "c3e8fa660bfc",
+    "lips_bot_ref.l": "2ca57d6dad6d",
+    "lips_bot_01_ref.l": "22dd911f42b6",
+    "lips_bot_ref.r": "e11485849091",
+    "lips_bot_01_ref.r": "b8e6d96859a7",
+    "lips_roll_top_ref.x": "42c6ee73f747",
+    "lips_roll_bot_ref.x": "04a474370289",
+    "tong_01_ref.x": "15f6b705b99c",
+    "tong_02_ref.x": "cd08fc25ddf5",
+    "tong_03_ref.x": "b8e900ad45e6",
+    "teeth_bot_ref.x": "c1ba04ec8e07",
+    "teeth_bot_ref.l": "56d9a3ae3107",
+    "teeth_bot_ref.r": "8551d7105ff3",
+    "chin_02_ref.x": "09724a7f6b2f",
+    "chin_01_ref.x": "b267aad95b2f",
+    "teeth_top_ref.x": "c5ea57b3a598",
+    "teeth_top_ref.l": "b4ffffbd110c",
+    "teeth_top_ref.r": "51a0a1d8d2cb",
+    "eye_offset_ref.l": "e1527085ef13",
+    "eyelid_top_ref.l": "b08e9a8269d3",
+    "eyelid_bot_ref.l": "98ed073df4d3",
+    "eyelid_top_01_ref.l": "5e390fa6f3d4",
+    "eyelid_top_02_ref.l": "9652049c1b3b",
+    "eyelid_top_03_ref.l": "f21b592044f4",
+    "eyelid_bot_01_ref.l": "f8c3b40e0aa6",
+    "eyelid_bot_02_ref.l": "902ac4edde28",
+    "eyelid_bot_03_ref.l": "edeacaa0d86a",
+    "eyelid_corner_01_ref.l": "6cd6c6d1138c",
+    "eyelid_corner_02_ref.l": "6ed40be25cd3",
+    "eye_offset_ref.r": "022986008980",
+    "eyelid_top_ref.r": "ee2a1d410964",
+    "eyelid_bot_ref.r": "7d52776288ee",
+    "eyelid_top_01_ref.r": "44a791f1a2e0",
+    "eyelid_top_02_ref.r": "d5d85f15dd77",
+    "eyelid_top_03_ref.r": "88fac11ccc2a",
+    "eyelid_bot_01_ref.r": "5567af175a60",
+    "eyelid_bot_02_ref.r": "03bd33eb944a",
+    "eyelid_bot_03_ref.r": "930b2996a789",
+    "eyelid_corner_01_ref.r": "9729ffdfcb65",
+    "eyelid_corner_02_ref.r": "def415f3cdc9",
+    "cheek_smile_ref.l": "801a56f439bc",
+    "cheek_inflate_ref.l": "5a3e4ae881cb",
+    "cheek_smile_ref.r": "97f8157570ce",
+    "cheek_inflate_ref.r": "3f32b1216ed5",
+    "nose_01_ref.x": "9bf8f58a5455",
+    "nose_02_ref.x": "f00f61380bcb",
+    "nose_03_ref.x": "af0929fb6541",
+    "Stick": "7386c8c100c7",
+    "Stick.001": "42c5cc84c2fb",
+    "Stick.005": "135dcd0d868d",
+    "Stick.002": "8e25c7af6983",
+    "Stick.003": "146f37c7affd",
+    "Stick.004": "109f377f1933"
+  },
+  "addons_sim": [
+    "bl_ext.user_default.wiggle_bones"
+  ]
+}
