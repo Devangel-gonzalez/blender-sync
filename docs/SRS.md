@@ -11,7 +11,7 @@
 | Producto                     | True Level: Playblast · versión 1.0.0                                                                           |
 | Mantenedor                   | Soilent                                                                                                         |
 | Release especificada         | **R1 = 1.0.0**                                                                                                  |
-| Documento de diseño asociado | `TDD-PLAYBLAST-001_v4.1.md`                                                                                     |
+| Documento de diseño asociado | `TDD-PLAYBLAST-001.md`                                                                                          |
 | Registro de decisiones       | `Decisiones_SRS-v2.md` (DEC-01…DEC-21) · `Contradicciones_decisiones.md` (CT-01…CT-10)                          |
 | Código de referencia         | `f00d655`                                                                                                       |
 
@@ -37,7 +37,7 @@ Esta separación es deliberada y es la corrección estructural más importante d
 | **Porcelain** (commit/push/apply del repositorio)                 | **En alcance y fundamental.** No debe confundirse con F1: F1 es el armado continuo por datablock; porcelain es el transporte de datos confirmados y es imprescindible                                                                                                                         |
 | **Phantom Keyframe Update (PKU)**                                 | **Posterior a R1.** En R1 no sobrevive ningún keyframe temporal. Las cláusulas condicionales sobre `Phantom Keyframe Mode` que aparecen en §3.5, §6.2 y §7.9 están **reservadas para esa versión** y no alteran el comportamiento de R1, que es incondicional                                 |
 | **Auto-keying**                                                   | **Fuera de alcance de R1**, exclusión deliberada. Se corrige como bugfix dentro de la PKU                                                                                                                                                                                                     |
-| **Red**                                                           | **LAN y misma máquina únicamente.** Internet y Tailscale quedan descartados para R1 (§2.4)                                                                                                                                                                                                    |
+| **Red**                                                           | **LAN y misma máquina únicamente**, con un Host y N Clientes. Internet descartado para R1; las VPN de terceros no se usarán tampoco después (§2.4)                                                                                                                                            |
 | **Multi-hueso**                                                   | **En alcance**, caso normal de trabajo (§5.3, §9.4)                                                                                                                                                                                                                                           |
 | **Multi-armadura simultánea**                                     | **En alcance en R1** (§5.11). Promovida desde trabajo diferido por decisión del mantenedor                                                                                                                                                                                                    |
 | **Rigs complejos**                                                | El sistema debe admitir rigs de mayor complejidad por **ampliación declarativa**, no por reescritura                                                                                                                                                                                          |
@@ -46,7 +46,7 @@ Esta separación es deliberada y es la corrección estructural más importante d
 
 | Documento                       | Contenido                                                                             |
 | ------------------------------- | ------------------------------------------------------------------------------------- |
-| `TDD-PLAYBLAST-001_v4.1.md`     | Diseño técnico, invariantes, defectos, decisiones D-xx/DD-xx, criterios de aceptación |
+| `TDD-PLAYBLAST-001.md`          | Diseño técnico, invariantes, defectos, decisiones D-xx/DD-xx, criterios de aceptación |
 | `ROADMAP.md`                    | Fases posteriores a R1 y rationale de naming                                          |
 | `MAPA-ARQUITECTURA_v1.0.md`     | Mapa del código real, con rutas y líneas                                              |
 | `Decisiones_SRS-v2.md`          | Las 21 decisiones que produjeron esta v2                                              |
@@ -89,10 +89,13 @@ Modificar el addon Multi-User para habilitar un flujo de trabajo de animación e
 - El Cliente actúa como un visor/reviewer que reproduce la animación en bucle.
 - El Host puede editar poses interactivamente (R, G, S en Modo Pose) y el Cliente ve esos cambios en vivo, integrados dentro de su reproducción en bucle como un keyframe temporal en el frame específico de edición.
 - El timeline del Cliente nunca se detiene, pausa ni altera.
+- **Host y Cliente pueden ser la misma persona**: dos instancias de Blender en el mismo equipo, típicamente en dos monitores. «Cliente» nombra un rol de la sesión, no a una segunda persona (§1.3).
 
 #### 1.3 Motivación
 
-El caso de uso principal es la `revisión de animación`. El animador (Host) trabaja en una pose específica mientras el revisor (Cliente) observa la animación completa corriendo en bucle y ve, en contexto, cómo se ve la edición del Host en el frame específico que está siendo trabajado. Esto permite evaluar las transiciones de entrada y salida de la pose editada dentro del flujo completo de la animación.
+El valor principal es la **autorrevisión en vivo del propio animador**. Una segunda instancia de Blender —en el mismo equipo, por `127.0.0.1`, y normalmente en un segundo monitor— reproduce la animación en bucle mientras el animador edita en la primera. Desaparece el ciclo detener la reproducción → editar → volver a reproducir → hacer scrub → editar: la edición se ve en contexto, con sus transiciones de entrada y salida, **sin interrumpir el flujo de trabajo**. No hace falta otra persona, ni otro equipo, ni transferir el `.blend`.
+
+Que **otras personas** puedan conectarse como revisores es una característica adicional, no el propósito del producto. El mismo mecanismo sirve para que un segundo animador, un director o un cliente observe la animación en bucle desde otro equipo de la LAN y vea la edición del Host en el frame trabajado, evaluando las transiciones de entrada y salida dentro del flujo completo. Es un caso de uso real y soportado —**un Host y N Clientes**, §2.6—, pero **secundario**: el addon se justifica con una sola persona y un solo equipo.
 
 #### 1.4 Sistema de Permisos: herencia y añadidura
 
@@ -126,23 +129,23 @@ De Multi-User se heredan, sin cambio de titularidad conceptual: el repositorio y
 
 #### 2.1 Configuración de Archivos
 
-| Rol             | Archivo                                        | Comportamiento del Timeline                                                                                                 |
-| --------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Host (Editor)   | Abre el .blend original                        | Libre. Puede pausar, hacer scrub, ir a cualquier frame, editar donde quiera. No está en bucle.                              |
-| Cliente (Visor) | Abre una copia del .blend hecha por el usuario | Se usará como reproductor, reproduciendo en bucle constantemente. No se pausa, no se detiene, no es controlado por el Host. |
+| Rol             | Archivo                                                                                                             | Comportamiento del Timeline                                                                                                 |
+| --------------- | ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Host (Editor)   | Abre el .blend original                                                                                             | Libre. Puede pausar, hacer scrub, ir a cualquier frame, editar donde quiera. No está en bucle.                              |
+| Cliente (Visor) | Abre el archivo que prefiera: copia del .blend, escena propia o archivo recién abierto (§2.3). La copia es opcional | Se usará como reproductor, reproduciendo en bucle constantemente. No se pausa, no se detiene, no es controlado por el Host. |
 
 - Son 2 instancias separadas de Blender, cada una con su propio archivo y su propio timeline independiente.
 - El Host tiene control libre de su timeline.
 - El Cliente SÍ está en bucle (controlado por el usuario dentro de Blender, el addon no lo controla). El Cliente es el que reproduce la animación continuamente.
 - El addon sincroniza la memoria (`bpy.data`), no el archivo en disco. Cuando el Cliente se conecta, el addon descarga los data blocks del servidor y los construye en su escena local mediante porcelain.construct() y porcelain.apply().
 - No se debe abrir el mismo archivo físico desde una carpeta compartida de red. Blender bloquea archivos .blend abiertos y puede causar corrupción.
-- La copia del .blend es **uno** de los tres modos de incorporación admitidos, no el único. Ver §2.3.
+- La copia del .blend es **una** de las tres situaciones de partida admitidas (§2.3, eje 1), no un requisito. Conectarse desde una instancia recién abierta está soportado: el addon descarga y construye la escena del Host. Ningún flujo exige transferirse el archivo.
 - **El cache no se comparte entre Host y Cliente**, tampoco en LAN. Cada peer escribe en su propia subcarpeta. Un visor nunca debe leer ni escribir el cache del Host.
 
 #### 2.2 Flujo de Conexión
 
 1. Host: Abre su .blend original. Inicia el servidor Multi-User desde el panel del addon.
-2. Cliente: Abre la copia del .blend. En el panel Multi-User, introduce la IP del Host y se conecta.
+2. Cliente: Abre su archivo de partida —copia del .blend, escena propia o archivo recién abierto; **la copia no es obligatoria** (§2.3)—. En el panel Multi-User, introduce la IP del Host y se conecta; en el mismo equipo, la dirección local `127.0.0.1`.
 3. Al conectarse: El addon en el Cliente descarga todos los data blocks del servidor, construye la escena local, y asigna **los mismos UUIDs que en el Host** para mantener la coherencia de rastreo.
 
 > **Requisito firme, no aspiracional.** La identidad de los datablocks debe ser la misma en ambos peers y debe **sobrevivir a guardar y reabrir el .blend**. Hoy no se cumple: el UUID se registra sin persistencia, de modo que al reabrir el archivo la correlación cae en emparejado por nombre. Ese es el origen de los duplicados `.001` y de la armadura que pierde el enlace con su Action. **Se corrige el código; no se relaja el requisito** (DEC-07). Relajarlo a «identidad por nombre o UUID» legitimaría el defecto y dejaría la jerarquía de colecciones sin criterio de aceptación.
@@ -195,8 +198,9 @@ Junto a las tres opciones, una casilla **«Recordar mi elección»**.
 
 #### 2.4 Alcance de Red de R1
 
-- **R1 funciona en LAN y entre dos instancias de la misma máquina.** Nada más.
-- **Internet y Tailscale quedan descartados para R1.** No son requisitos de esta release.
+- **R1 funciona en LAN y entre instancias de la misma máquina.** En ambos casos la topología es **un Host y N Clientes** (§2.6): en un solo equipo pueden convivir el Host y **uno o varios** Clientes, no solo dos instancias. Nada más.
+- **Internet queda descartado para R1.** No es un requisito de esta release.
+- **Las VPN de terceros no se usarán tampoco después.** Tailscale y ZeroTier quedan descartados **como requisito del producto**, no solo para R1: obligan a crear una cuenta y a instalar y configurar un cliente aparte, que es exactamente la fricción que la filosofía de abajo prohíbe (TDD **D-38** y **DD-10**). La dirección ya registrada para esa actualización es un **relay propio sin cuentas**, condicionado a que haya infraestructura (DD-11, D-15, `ROADMAP.md` §4.1); nombrar Tailscale en este documento no lo adopta como solución.
 - El transporte por internet se retoma en una actualización **posterior a la PKU** (§0.2 y `ROADMAP.md`).
 - **Filosofía de producto, normativa**: el addon es para animadores 3D y **no debe añadir fricción**. Sin cuentas de usuario, sin configurar el router, sin pasar el .blend por Discord o Drive. Hostear → conectarse → editar.
 - **Consecuencia operativa que hay que declarar**: al usar un canal separado para la pose (§5.2), la operación remota requiere **dos puertos abiertos**, el base y el base+1, no uno solo.
@@ -1094,6 +1098,11 @@ true_level_playblast/
 | 33  | §1.4: la puerta por rol se extiende a ✖ y 🔓 con aviso al usuario y **sin cambios de UI**. Verificado que ninguno de los dos depende de `Live Sync` y que ✖ corta la replicación del nodo y su subárbol para todos los peers                                                              | **D-49b**                                    |
 | 34  | §2.5: el rango de fotogramas **se hereda al conectar**, no se impone de forma continua. Después el Cliente lo cambia con Blender vanilla y su cambio persiste; solo se sobrescribe si el Host modifica un campo que viaja en el volcado de escena                                         | Corrección del mantenedor, verificada        |
 | 35  | §5.4: del keyframe fantasma **sobreviven el keyframe y la curva que lo contiene**, no solo la curva. El punto superviviente es lo que impide que la curva se considere vacía. Es una llave visible en el Dope Sheet del Cliente                                                           | Corrección del mantenedor, verificada        |
+| 36  | §1.3 reescrita: el valor principal es la **autorrevisión en vivo del propio animador**; los revisores externos pasan a característica secundaria                                                                                                                                          | Feedback del mantenedor                      |
+| 37  | §1.2: Host y Cliente pueden ser la misma persona en dos instancias del mismo equipo; «Cliente» es un rol, no una segunda persona                                                                                                                                                          | Feedback del mantenedor                      |
+| 38  | §2.1 y §2.2: la copia del .blend es **opcional**, no un requisito. Alineado con §2.3 eje 1 (copia, escena propia, archivo recién abierto)                                                                                                                                                 | Feedback del mantenedor                      |
+| 39  | §2.4: en la misma máquina caben el Host y **uno o varios** Clientes (1 Host + N Clientes), no solo dos instancias                                                                                                                                                                         | Feedback del mantenedor                      |
+| 40  | §2.4 y §0.2: las VPN de terceros se descartan **como requisito del producto**, no solo para R1; el transporte por internet queda sin decidir                                                                                                                                              | D-38, DD-10                                  |
 
 #### 13.2 Correcciones factuales aplicadas
 
