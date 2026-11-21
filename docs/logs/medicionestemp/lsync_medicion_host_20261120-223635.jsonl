@@ -1,0 +1,17 @@
+{"t": 0, "n": {"ticks": 49, "broadcasts": 10, "outbound_max": 1, "update_ms": 6.74740006797947, "update_calls": 49, "tick_ms": 16.8343000987079, "tick_gap_ms_max": 70.46210000407882}, "marks": []}
+{"t": 1, "n": {"tick_gap_ms_max": 22.55000002332963, "ticks": 56, "update_ms": 5.519999889656901, "update_calls": 56, "tick_ms": 17.587600130354986, "broadcasts": 9, "outbound_max": 1}, "marks": []}
+{"t": 2, "n": {"tick_gap_ms_max": 22.063800017349422, "ticks": 54, "update_ms": 5.989299999782816, "update_calls": 54, "tick_ms": 17.902000050526112, "broadcasts": 9, "outbound_max": 1}, "marks": []}
+{"t": 3, "n": {"tick_gap_ms_max": 22.574000002350658, "ticks": 55, "update_ms": 5.400200025178492, "update_calls": 55, "tick_ms": 16.937000065809116, "broadcasts": 9, "outbound_max": 1}, "marks": []}
+{"t": 4, "n": {"tick_gap_ms_max": 23.639599996386096, "ticks": 54, "update_ms": 5.530100024770945, "update_calls": 54, "tick_ms": 16.954699967755005, "broadcasts": 9, "outbound_max": 1}, "marks": ["reposo"]}
+{"t": 5, "n": {"tick_gap_ms_max": 23.916899983305484, "ticks": 53, "broadcasts": 9, "outbound_max": 1, "update_ms": 11.732100101653486, "update_calls": 53, "tick_ms": 22.87450002040714}, "marks": []}
+{"t": 6, "n": {"tick_gap_ms_max": 22.545199986780062, "ticks": 53, "broadcasts": 9, "outbound_max": 1, "update_ms": 5.863599944859743, "update_calls": 53, "tick_ms": 17.700300260912627}, "marks": []}
+{"t": 7, "n": {"tick_gap_ms_max": 22.162799985380843, "ticks": 52, "update_ms": 5.270199995720759, "update_calls": 52, "tick_ms": 16.18680002866313, "broadcasts": 9, "outbound_max": 1}, "marks": []}
+{"t": 8, "n": {"tick_gap_ms_max": 50.90550001477823, "ticks": 51, "update_ms": 4.923099972074851, "update_calls": 51, "tick_ms": 14.45020001847297, "broadcasts": 9, "outbound_max": 1}, "marks": []}
+{"t": 9, "n": {"tick_gap_ms_max": 22.04449998680502, "ticks": 53, "update_ms": 5.432799982372671, "update_calls": 53, "tick_ms": 16.61350010544993, "broadcasts": 8, "outbound_max": 1}, "marks": []}
+{"t": 10, "n": {"tick_gap_ms_max": 22.47880000504665, "ticks": 55, "broadcasts": 10, "outbound_max": 1, "update_ms": 5.292900023050606, "update_calls": 55, "tick_ms": 15.821599983610213}, "marks": []}
+{"t": 11, "n": {"tick_gap_ms_max": 22.566600004211068, "ticks": 53, "update_ms": 4.803900053957477, "update_calls": 53, "tick_ms": 14.670400036266074, "broadcasts": 9, "outbound_max": 1}, "marks": []}
+{"t": 12, "n": {"tick_gap_ms_max": 22.575699986191466, "ticks": 54, "update_ms": 5.129499942995608, "update_calls": 54, "tick_ms": 16.100300097605214, "broadcasts": 9, "outbound_max": 1}, "marks": []}
+{"t": 13, "n": {"tick_gap_ms_max": 22.893400018801913, "ticks": 55, "update_ms": 4.871500044828281, "update_calls": 55, "tick_ms": 15.349999943282455, "broadcasts": 9, "outbound_max": 1}, "marks": []}
+{"t": 14, "n": {"tick_gap_ms_max": 22.537100012414157, "ticks": 50, "update_ms": 3.8761000032536685, "update_calls": 50, "tick_ms": 11.49139998597093, "broadcasts": 9, "outbound_max": 1}, "marks": []}
+{"t": 15, "n": {"tick_gap_ms_max": 22.61810001800768, "ticks": 10, "broadcasts": 2, "outbound_max": 1, "update_ms": 0.9062999743036926, "update_calls": 10, "tick_ms": 2.95580000965856}, "marks": []}
+{"kind": "summary", "role": "host", "module": "bl_ext.user_default.multi_user.live_sync", "seconds": 16, "marks": [{"t": 4.601, "label": "reposo"}], "t0_wall": 1795239395.2427356, "t0_iso": "2026-11-20 22:36:35", "blender": "5.2.0 LTS"}
