@@ -249,7 +249,7 @@ class AnnotationUpdates(Timer):
             # if an annotation exist and is tracked
             if annotation_gp and annotation_gp.uuid:
                 registered_gp = session.repository.graph.get(annotation_gp.uuid)
-                if is_annotating(bpy.context):
+                if is_annotating(bpy.context) and live_sync.is_host():
                     # try to get the right on it
                     if registered_gp.owner == RP_COMMON:
                         self._annotating = True
