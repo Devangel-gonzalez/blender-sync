@@ -39,7 +39,7 @@ from replication.interface import session
 from replication.repository import Repository
 
 from . import bl_types, live_sync, shared_data, timers, utils
-from .handlers import on_scene_update
+from .handlers import can_publish, on_scene_update
 from .presence import (SessionStatusWidget, bbox_from_obj,
                        refresh_sidebar_view, presence_viewer, view3d_find)
 from .timers import timers_registry
@@ -554,6 +554,28 @@ class SessionKickOperator(bpy.types.Operator):
         row.label(text=f" Do you really want to kick {self.user} ? ")
 
 
+def _host_may_publish(operator, node_uuid) -> bool:
+    """D-49 / D-49b: only the Host may publish, on every explicit route.
+
+    Wraps the existing can_publish predicate; no new permission logic.
+    The buttons are drawn exactly as before and are never greyed out.
+    """
+    node = session.repository.graph.get(node_uuid)
+    if node is None:
+        operator.report(
+            {'WARNING'},
+            "Only the Host publishes changes; this session is a viewer.")
+        return False
+    check_common = session.repository.rdp.get_implementation(node.instance).bl_check_common
+    if can_publish(node, session.repository.username,
+                   check_common, live_sync.is_host()):
+        return True
+    operator.report(
+        {'WARNING'},
+        "Only the Host publishes changes; this session is a viewer.")
+    return False
+
+
 class SessionPropertyRemoveOperator(bpy.types.Operator):
     bl_idname = "wm.session_datablock_ignore"
     bl_label = "Delete cache"
@@ -568,6 +590,8 @@ class SessionPropertyRemoveOperator(bpy.types.Operator):
         return True
 
     def execute(self, context):
+        if not _host_may_publish(self, self.property_path):
+            return {"CANCELLED"}
         try:
             porcelain.rm(session.repository, self.property_path)
 
@@ -593,6 +617,8 @@ class SessionPropertyRightOperator(bpy.types.Operator):
         return True
 
     def invoke(self, context, event):
+        if not _host_may_publish(self, self.key):
+            return {"CANCELLED"}
         wm = context.window_manager
         return wm.invoke_props_dialog(self)
 
@@ -608,6 +634,8 @@ class SessionPropertyRightOperator(bpy.types.Operator):
         row.prop(self, "recursive", text="")
 
     def execute(self, context):
+        if not _host_may_publish(self, self.key):
+            return {"CANCELLED"}
         runtime_settings = context.window_manager.session
 
         if session:
@@ -810,6 +838,8 @@ class SessionCommit(bpy.types.Operator):
         return True
 
     def execute(self, context):
+        if not _host_may_publish(self, self.target):
+            return {"CANCELLED"}
         try:
             porcelain.commit(session.repository, self.target)
             porcelain.push(session.repository, 'origin', self.target, force=True)
@@ -839,6 +869,11 @@ class SessionToggleLiveSync(bpy.types.Operator):
             live_sync_nodes.pop(self.target, None)
             logging.info(f"Live Sync: disarmed {self.target}")
             return {"FINISHED"}
+
+        # D-11: arming promises an immediate push, so it is Host-only.
+        # Disarming above only touches a local dict and stays available.
+        if not _host_may_publish(self, self.target):
+            return {"CANCELLED"}
 
         # Arm the node, but only once the immediate push it promises succeeds.
         try:
