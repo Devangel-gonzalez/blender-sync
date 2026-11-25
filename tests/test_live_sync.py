@@ -1150,6 +1150,303 @@ def test_can_publish_common_nodes(multi_user):
     )
 
 
+def test_host_publish_guards(bpy, multi_user, live_sync):
+    """Phase 1 / AC-F1-1..6: explicit publish routes are Host-only.
+
+    The buttons are not hidden or greyed out. On a Client they must warn and
+    cancel before any porcelain call, and the rights dialog must not open.
+    """
+    section("Host-only explicit publish guards (AC-F1-1..6)")
+
+    import types
+    from contextlib import ExitStack
+
+    from multi_user import handlers, operators, shared_data, ui
+
+    common = handlers.RP_COMMON
+    username = "Host"
+    node_uuid = "guarded-uuid"
+
+    class GuardNode:
+        def __init__(self, uuid, owner):
+            self.uuid = uuid
+            self.owner = owner
+            self.instance = object()
+
+    class GuardRdp:
+        def get_implementation(self, instance):
+            return types.SimpleNamespace(bl_check_common=False)
+
+    class GuardGraph:
+        def __init__(self, nodes):
+            self._nodes = nodes
+
+        def get(self, uuid):
+            return self._nodes.get(uuid)
+
+    class GuardRepository:
+        def __init__(self, graph, username):
+            self.graph = graph
+            self.username = username
+            self.rdp = GuardRdp()
+
+    class RecordingPorcelain:
+        def __init__(self):
+            self.calls = []
+
+        def commit(self, repository, uuid):
+            self.calls.append(("commit", uuid))
+
+        def push(self, repository, remote, uuid, force=False):
+            self.calls.append(("push", uuid, force))
+
+        def rm(self, repository, uuid, **kwargs):
+            self.calls.append(("rm", uuid))
+
+        def lock(self, repository, keys, owner, **kwargs):
+            self.calls.append(("lock", keys[0], owner))
+
+        def unlock(self, repository, keys, **kwargs):
+            self.calls.append(("unlock", keys[0]))
+
+    node = GuardNode(node_uuid, username)
+    repository = GuardRepository(GuardGraph({node_uuid: node}), username)
+    fake_session = types.SimpleNamespace(repository=repository)
+    fake_porcelain = RecordingPorcelain()
+    live_nodes = {}
+    fake_shared_session = types.SimpleNamespace(live_sync_nodes=live_nodes)
+
+    host_flag = {"value": True}
+
+    def fake_is_host():
+        return host_flag["value"]
+
+    dialog_calls = []
+
+    def invoke_props_dialog(operator):
+        dialog_calls.append(operator)
+        return {"RUNNING_MODAL"}
+
+    runtime = types.SimpleNamespace(clients=common)
+    window_manager = types.SimpleNamespace(
+        session=runtime,
+        invoke_props_dialog=invoke_props_dialog,
+    )
+    context = types.SimpleNamespace(window_manager=window_manager)
+
+    def make_caller(**properties):
+        reports = []
+        caller = types.SimpleNamespace(**properties)
+        caller.report = lambda level, message: reports.append((level, message))
+        return caller, reports
+
+    with ExitStack() as stack:
+        def patch(obj, name, value):
+            original = getattr(obj, name)
+            setattr(obj, name, value)
+            stack.callback(setattr, obj, name, original)
+
+        patch(operators, "session", fake_session)
+        patch(operators, "porcelain", fake_porcelain)
+        patch(live_sync, "is_host", fake_is_host)
+        patch(shared_data, "session", fake_shared_session)
+
+        # AC-F1-1: the helper wraps can_publish and warns on denial.
+        host_flag["value"] = True
+        caller, reports = make_caller()
+        check(
+            operators._host_may_publish(caller, node_uuid) is True,
+            "AC-F1-1: Host may publish an owned node",
+        )
+        check(reports == [], "AC-F1-1: allowed Host publish emits no warning")
+
+        host_flag["value"] = False
+        caller, reports = make_caller()
+        check(
+            operators._host_may_publish(caller, node_uuid) is False,
+            "AC-F1-1: Client may not publish",
+        )
+        check(
+            len(reports) == 1 and reports[0][0] == {'WARNING'},
+            "AC-F1-1: denied Client publish emits a WARNING",
+        )
+
+        caller, reports = make_caller()
+        check(
+            operators._host_may_publish(caller, "missing-uuid") is False,
+            "AC-F1-1: missing node is not publishable",
+        )
+        check(
+            len(reports) == 1 and reports[0][0] == {'WARNING'},
+            "AC-F1-1: missing node emits a WARNING",
+        )
+
+        # AC-F1-2: Client explicit routes cancel before porcelain/dialog.
+        host_flag["value"] = False
+        fake_porcelain.calls.clear()
+        dialog_calls.clear()
+        live_nodes.clear()
+
+        client_cases = [
+            ("commit", operators.SessionCommit, "execute", "target"),
+            ("remove", operators.SessionPropertyRemoveOperator, "execute", "property_path"),
+            ("rights invoke", operators.SessionPropertyRightOperator, "invoke", "key"),
+            ("rights execute", operators.SessionPropertyRightOperator, "execute", "key"),
+            ("toggle arm", operators.SessionToggleLiveSync, "execute", "target"),
+        ]
+        for label, op_class, method_name, prop_name in client_cases:
+            properties = {prop_name: node_uuid, "recursive": True}
+            caller, reports = make_caller(**properties)
+            method = getattr(op_class, method_name)
+            if method_name == "invoke":
+                result = method(caller, context, None)
+            else:
+                result = method(caller, context)
+            check(
+                result == {"CANCELLED"},
+                f"AC-F1-2: Client {label} returns CANCELLED",
+            )
+            check(
+                len(reports) == 1 and reports[0][0] == {'WARNING'},
+                f"AC-F1-2: Client {label} emits a WARNING",
+            )
+
+        check(
+            fake_porcelain.calls == [],
+            "AC-F1-2: Client explicit routes emit zero porcelain calls",
+        )
+        check(
+            dialog_calls == [],
+            "AC-F1-2: Client rights dialog does not open",
+        )
+
+        # AC-F1-3: Host routes keep the same outgoing calls.
+        host_flag["value"] = True
+
+        fake_porcelain.calls.clear()
+        caller, _ = make_caller(target=node_uuid)
+        result = operators.SessionCommit.execute(caller, context)
+        check(
+            result == {"FINISHED"}
+            and fake_porcelain.calls == [
+                ("commit", node_uuid),
+                ("push", node_uuid, True),
+            ],
+            "AC-F1-3: Host commit still commits and force-pushes",
+        )
+
+        fake_porcelain.calls.clear()
+        caller, _ = make_caller(property_path=node_uuid)
+        result = operators.SessionPropertyRemoveOperator.execute(caller, context)
+        check(
+            result == {"FINISHED"} and fake_porcelain.calls == [("rm", node_uuid)],
+            "AC-F1-3: Host remove still calls porcelain.rm",
+        )
+
+        dialog_calls.clear()
+        caller, _ = make_caller(key=node_uuid, recursive=True)
+        result = operators.SessionPropertyRightOperator.invoke(caller, context, None)
+        check(
+            result == {"RUNNING_MODAL"} and len(dialog_calls) == 1,
+            "AC-F1-3: Host rights invoke still opens the dialog",
+        )
+
+        runtime.clients = common
+        fake_porcelain.calls.clear()
+        caller, _ = make_caller(key=node_uuid, recursive=True)
+        result = operators.SessionPropertyRightOperator.execute(caller, context)
+        check(
+            result == {"FINISHED"} and fake_porcelain.calls == [("unlock", node_uuid)],
+            "AC-F1-3: Host rights execute still unlocks for COMMON",
+        )
+
+        runtime.clients = "Cliente"
+        fake_porcelain.calls.clear()
+        caller, _ = make_caller(key=node_uuid, recursive=True)
+        result = operators.SessionPropertyRightOperator.execute(caller, context)
+        check(
+            result == {"FINISHED"}
+            and fake_porcelain.calls == [("lock", node_uuid, "Cliente")],
+            "AC-F1-3: Host rights execute still locks for a named client",
+        )
+        runtime.clients = common
+
+        live_nodes.clear()
+        fake_porcelain.calls.clear()
+        caller, _ = make_caller(target=node_uuid)
+        result = operators.SessionToggleLiveSync.execute(caller, context)
+        check(
+            result == {"FINISHED"},
+            "AC-F1-3: Host toggle arm still finishes",
+        )
+        check(
+            fake_porcelain.calls == [
+                ("commit", node_uuid),
+                ("push", node_uuid, True),
+            ],
+            "AC-F1-3: Host toggle arm still commits and force-pushes",
+        )
+        check(
+            live_nodes.get(node_uuid) is True,
+            "AC-F1-3: Host toggle arm still marks the node armed",
+        )
+
+        # AC-F1-4: no poll gating was introduced.
+        for op_class in (
+            operators.SessionCommit,
+            operators.SessionPropertyRemoveOperator,
+            operators.SessionPropertyRightOperator,
+            operators.SessionToggleLiveSync,
+        ):
+            check(
+                bool(op_class.poll(context)) is True,
+                f"AC-F1-4: {op_class.__name__}.poll stays True",
+            )
+
+        # AC-F1-6: a Client can still disarm a locally armed toggle.
+        host_flag["value"] = False
+        live_nodes[node_uuid] = True
+        fake_porcelain.calls.clear()
+        caller, reports = make_caller(target=node_uuid)
+        result = operators.SessionToggleLiveSync.execute(caller, context)
+        check(
+            result == {"FINISHED"},
+            "AC-F1-6: Client can disarm an armed toggle",
+        )
+        check(
+            node_uuid not in live_nodes,
+            "AC-F1-6: disarming removes the local armed marker",
+        )
+        check(
+            fake_porcelain.calls == [] and reports == [],
+            "AC-F1-6: Client disarming publishes nothing and warns nothing",
+        )
+
+    # AC-F1-5: the panel draws the same operator for Host and Client.
+    runtime_settings = bpy.context.window_manager.session
+    original_is_host = runtime_settings.is_host
+    original_global = runtime_settings.global_live_sync
+    try:
+        drawn = {}
+        for is_host in (True, False):
+            for global_live_sync in (True, False):
+                idname, _ = _drawn_commit_operator(
+                    bpy, ui, is_host, global_live_sync
+                )
+                drawn[(is_host, global_live_sync)] = idname
+        check(
+            drawn[(True, True)] == drawn[(False, True)],
+            "AC-F1-5: Live Sync on draws the same operator for Host and Client",
+        )
+        check(
+            drawn[(True, False)] == drawn[(False, False)],
+            "AC-F1-5: Live Sync off draws the same operator for Host and Client",
+        )
+    finally:
+        runtime_settings.is_host = original_is_host
+        runtime_settings.global_live_sync = original_global
+
+
 def test_multi_turn_rotation_is_preserved(bpy, live_sync):
     """A Host euler past 180 degrees must be keyed as-is on the viewer.
 
@@ -1592,6 +1889,7 @@ def main():
         test_action_delta_chain_roundtrip(bpy, multi_user)
         test_action_delta_roundtrip_move_and_delete(bpy, multi_user)
         test_can_publish_common_nodes(multi_user)
+        test_host_publish_guards(bpy, multi_user, live_sync)
         test_action_reload_reuses_slots_and_prunes(bpy, multi_user)
         test_modifier_object_refs_survive_reload(bpy, multi_user)
         test_multi_turn_rotation_is_preserved(bpy, live_sync)
