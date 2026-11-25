@@ -1,0 +1,239 @@
+﻿blender.exe : C:\Users\israe\AppData\Local\Temp\mu_livesync_lcusilp0\multi_user\preferences.py:34: SyntaxWarning: invalid escape sequence '\.'
+En línea: 2 Carácter: 1
++ & "C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" --fac ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\israe\...e sequence '\.':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  IP_REGEX = re.compile("^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$")
+C:\Users\israe\AppData\Local\Temp\mu_livesync_lcusilp0\multi_user\preferences.py:35: SyntaxWarning: invalid escape sequence '\-'
+  HOSTNAME_REGEX = re.compile("^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$")
+ERROR:root:Failed to create default cache directory ({e})
+C:\Users\israe\AppData\Local\Temp\mu_livesync_lcusilp0\multi_user\bl_types\bl_material.py:43: SyntaxWarning: invalid escape sequence '\['
+  NODE_SOCKET_INDEX = re.compile("\[(\d*)\]")
+WARNING:root:Animation dep stranded-action is stranded in state 3; forcing it back to UP
+Staged package at C:\Users\israe\AppData\Local\Temp\mu_livesync_lcusilp0
+
+=== Addon registration ===
+  ok   - WindowManager.session exists
+  ok   - global_live_sync property registered
+  ok   - pose_live_sync property registered
+  ok   - clients property still registered (not clobbered)
+  ok   - wm.session_toggle_live_sync operator registered
+  ok   - wm.session_datablock_commit operator still registered
+  ok   - global_live_sync defaults to off
+  ok   - pose_live_sync defaults to on
+  ok   - shared_data.session.live_sync_nodes exists
+  ok   - live_sync_nodes is a dict
+  ok   - LiveSyncTimer defined
+
+=== Wire format ===
+  ok   - single message round-trips
+  ok   - batched messages decode
+  ok   - partial header yields nothing
+  ok   - split delivery reassembles
+
+=== Matrix serialization ===
+  ok   - serializes to 4 rows
+  ok   - each row has 4 components
+  ok   - matrix survives the round-trip
+  ok   - decompose recovers the translation
+
+=== TCP transport ===
+  ok   - viewer connects to the broadcaster
+  ok   - message is delivered intact
+  ok   - receiver reports disconnected after stop
+
+=== Temporary keyframe overlay ===
+  ok   - state moves to INTERACTING on start
+  ok   - temp keyframe written at frame 30
+  ok   - Y channel written
+  ok   - one temp keyframe added to the curve
+  ok   - pre-existing keyframe at frame 1 untouched
+  ok   - pre-existing keyframe at frame 50 untouched
+  ok   - second update rewrites the same keyframe
+  ok   - no duplicate keyframe created
+  ok   - old frame cleared
+  ok   - overlay relocated to the new frame
+  ok   - cancel removes the keyframe
+  ok   - curve back to its original 2 keyframes
+  ok   - state returns to IDLE after end
+  ok   - no orphaned edit tracking left behind
+  ok   - missing rotation/scale curves created
+  FAIL - curves we created are removed on confirm
+  FAIL - confirm leaves no orphan keyframe
+
+=== Overwriting an existing keyframe (Case A) ===
+  ok   - existing keyframe overwritten with the edit
+  ok   - overwrite did not add a point
+  ok   - cancel restores the original keyframe value
+  ok   - cancel restores the original handle
+
+=== Edge cases ===
+  ok   - unknown armature ignored without tracking
+  ok   - unknown bone ignored without tracking
+  ok   - an update after end does not resurrect the overlay
+  ok   - no overlay tracked after a rejected revival
+  ok   - no-Action armature driven directly
+  ok   - no-Action armature restored exactly
+
+=== Update without a start ===
+  ok   - an update with no start still opens the overlay
+  ok   - temp keyframe written from the revived overlay
+
+=== Heartbeat re-sends an unchanged pose ===
+  ok   - the first update is broadcast
+  ok   - an unchanged pose is not re-broadcast
+  ok   - a heartbeat re-broadcasts the unchanged pose
+  ok   - a heartbeat does not count as motion
+
+=== Client timeline is never altered ===
+  ok   - viewer frame_current untouched by an overlay
+  ok   - overlay is written at the Host's frame, not the viewer's
+  ok   - viewer frame_current untouched by a Host scrub
+  ok   - overlay followed the Host's scrub
+  ok   - no frame-follow helper exists on the applier
+
+=== Host streamer ===
+  ok   - streamer starts IDLE
+  ok   - no traffic while no transform is running
+  ok   - streamer stays IDLE
+  ok   - reset returns to IDLE
+
+=== Live Sync toggles follow the master toggle ===
+  ok   - is_host() is False by default
+  ok   - no interactive transform detected while idle
+  ok   - streamer uses the shared transform predicate
+  ok   - a selected-but-not-dragged bone does not suppress porcelain
+  ok   - pose_stream_active() is True only during a real drag
+  ok   - toggle operator stays pollable with the master toggle off
+  ok   - toggle operator stays pollable with the master toggle on
+  ok   - Host with Live Sync on draws the armed toggle
+  ok   - Host armed toggle carries a depress state
+  ok   - Host with Live Sync off draws the vanilla commit button
+  ok   - Host vanilla button is not a toggle
+  ok   - viewer with Live Sync on draws the armed toggle
+  ok   - viewer armed toggle carries a depress state
+  ok   - viewer with Live Sync off draws the vanilla commit button
+  ok   - viewer vanilla button is not a toggle
+
+=== Failed apply leaves no stale marker ===
+  ok   - a failed apply leaves no marker behind
+  ok   - retrying a failed apply does not accumulate markers
+
+=== Armed push reaches the Action dependency ===
+  ok   - owned Action dependency committed
+  ok   - owned Action dependency published
+  ok   - common-owned Action dependency published
+  ok   - Action owned by another user is left alone
+  ok   - non-Action dependencies are left alone
+  ok   - the node itself is not re-published by the helper
+  ok   - only a genuinely stranded Action is force-pushed
+  ok   - committable Actions push as deltas, not full payloads
+
+=== Action delta detects a moved keyframe ===
+  ok   - test scene exposes a location curve
+  ok   - moving a keyframe produces a non-empty delta
+
+=== Action delta chain round-trip ===
+  ok   - test scene exposes a location curve
+  ok   - inserting a keyframe at frame 75 produces a delta
+  ok   - sender node.data matches a fresh dump after the patch at 75
+  ok   - receiver matches a fresh dump after the insert at 75
+  ok   - inserting a keyframe at frame 90 produces a delta
+  ok   - sender node.data matches a fresh dump after the patch at 90
+  ok   - receiver matches a fresh dump after the insert at 90
+
+=== Action delta round-trip: move and delete ===
+  ok   - test scene exposes a location curve
+  ok   - move a keyframe: produces a non-empty delta
+  ok   - move a keyframe: sender node.data matches a fresh dump after patch
+  ok   - move a keyframe: receiver matches a fresh dump after patch
+  ok   - delete a keyframe: produces a non-empty delta
+  ok   - delete a keyframe: sender node.data matches a fresh dump after patch
+  ok   - delete a keyframe: receiver matches a fresh dump after patch
+
+=== Publish rights on COMMON nodes ===
+  ok   - the Host may publish a node it owns
+  ok   - a viewer may not publish, not even a node it owns
+  ok   - the Host may publish a COMMON node
+  ok   - a viewer may not publish a COMMON node
+  ok   - another peer's node is not publishable, not even by the Host
+  ok   - bl_check_common types are publishable by the Host
+  ok   - bl_check_common types are not publishable by a viewer
+  ok   - a missing node is never publishable
+
+=== Host-only explicit publish guards (AC-F1-1..6) ===
+  ok   - AC-F1-1: Host may publish an owned node
+  ok   - AC-F1-1: allowed Host publish emits no warning
+  ok   - AC-F1-1: Client may not publish
+  ok   - AC-F1-1: denied Client publish emits a WARNING
+  ok   - AC-F1-1: missing node is not publishable
+  ok   - AC-F1-1: missing node emits a WARNING
+  ok   - AC-F1-2: Client commit returns CANCELLED
+  ok   - AC-F1-2: Client commit emits a WARNING
+  ok   - AC-F1-2: Client remove returns CANCELLED
+  ok   - AC-F1-2: Client remove emits a WARNING
+  ok   - AC-F1-2: Client rights invoke returns CANCELLED
+  ok   - AC-F1-2: Client rights invoke emits a WARNING
+  ok   - AC-F1-2: Client rights execute returns CANCELLED
+  ok   - AC-F1-2: Client rights execute emits a WARNING
+  ok   - AC-F1-2: Client toggle arm returns CANCELLED
+  ok   - AC-F1-2: Client toggle arm emits a WARNING
+  ok   - AC-F1-2: Client explicit routes emit zero porcelain calls
+  ok   - AC-F1-2: Client rights dialog does not open
+  ok   - AC-F1-3: Host commit still commits and force-pushes
+  ok   - AC-F1-3: Host remove still calls porcelain.rm
+  ok   - AC-F1-3: Host rights invoke still opens the dialog
+  ok   - AC-F1-3: Host rights execute still unlocks for COMMON
+  ok   - AC-F1-3: Host rights execute still locks for a named client
+  ok   - AC-F1-3: Host toggle arm still finishes
+  ok   - AC-F1-3: Host toggle arm still commits and force-pushes
+  ok   - AC-F1-3: Host toggle arm still marks the node armed
+  ok   - AC-F1-4: SessionCommit.poll stays True
+  ok   - AC-F1-4: SessionPropertyRemoveOperator.poll stays True
+  ok   - AC-F1-4: SessionPropertyRightOperator.poll stays True
+  ok   - AC-F1-4: SessionToggleLiveSync.poll stays True
+  ok   - AC-F1-6: Client can disarm an armed toggle
+  ok   - AC-F1-6: disarming removes the local armed marker
+  ok   - AC-F1-6: Client disarming publishes nothing and warns nothing
+  ok   - AC-F1-5: Live Sync on draws the same operator for Host and Client
+  ok   - AC-F1-5: Live Sync off draws the same operator for Host and Client
+
+=== Action reload reuses slots and prunes ===
+  ok   - the reload keeps exactly one slot
+  ok   - the slot was reused rather than recreated (identifier survives)
+  ok   - a curve the dump does not carry is pruned
+  ok   - the reload preserved the dumped keyframes exactly
+  ok   - a dumped curve is still present after reload
+  ok   - the curve keeps the FCurveGroup the dump recorded
+
+=== Modifier object refs survive a reload ===
+  ok   - the Armature modifier was dumped
+  ok   - the modifier exists after the reload
+  ok   - the Armature modifier kept its target object
+  ok   - a non-Armature object reference is resolved too
+
+=== Multi-turn rotation is preserved ===
+  ok   - rotation_euler channel was keyed
+  ok   - 270 degrees is keyed as 270, not normalised to -90
+  ok   - the keyed value is not the matrix-decomposed one
+  ok   - a matrix-only payload still keys the overlay
+
+=== Invalidate overlays without restoring ===
+  ok   - the overlay wrote its temporary keyframe
+  ok   - invalidate drops the overlay bookkeeping
+  ok   - invalidate returns the applier to idle
+  ok   - invalidate leaves the applied curves untouched instead of restoring
+
+=== Unregister ===
+  ok   - addon unregistered cleanly
+
+164/166 checks passed
+Failed checks:
+  - curves we created are removed on confirm
+  - confirm leaves no orphan keyframe
+RESULT: FAIL
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit
