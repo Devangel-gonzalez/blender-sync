@@ -1,16 +1,16 @@
 # Propuesta de enmiendas normativas · ADR-ARQUITECTURA-OBJETIVO-001
 
-| Campo                 | Valor                                                                                                                                                                                                                       |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Versión del documento | **v1.2 · borrador alineado con ADR v1.2 aprobado**                                                                                                                                                                          |
-| Estado                | **BORRADOR · pendiente de lectura y aprobación del mantenedor**                                                                                                                                                             |
-| Documento origen      | `docs/ADR-ARQUITECTURA-OBJETIVO-001.md` v1.2 · APROBADO                                                                                                                                                                     |
-| Fecha                 | 2026-11-28                                                                                                                                                                                                                  |
-| Historial             | v1.0 borrador commiteado por el mantenedor para generar historial; v1.1 incorpora decisiones aprobadas: fases separadas, retiro de `Reemplazar`, `Combinar` oculto en General settings y casilla única de ajustes de tiempo |
-| SRS afectado          | v2.1.1 · propuesta de enmienda a v2.2 si se aprueba                                                                                                                                                                         |
-| TDD afectado          | v4.7 · propuesta de enmienda a v4.8 si se aprueba                                                                                                                                                                           |
-| Checklist afectado    | v1.7 · propuesta de actualización derivada                                                                                                                                                                                  |
-| Código afectado       | Ninguno en este documento                                                                                                                                                                                                   |
+| Campo                 | Valor                                                                                                                                                                                                                                                                                                                               |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Versión del documento | **v1.3 · APROBADA · consolidada**                                                                                                                                                                                                                                                                                                   |
+| Estado                | **APROBADA por el mantenedor · enmiendas aplicadas a SRS v2.2, TDD v4.8, checklist v1.8 y diario 006**                                                                                                                                                                                                                              |
+| Documento origen      | `docs/ADR-ARQUITECTURA-OBJETIVO-001.md` v1.2 · APROBADO                                                                                                                                                                                                                                                                             |
+| Fecha                 | 2026-11-28                                                                                                                                                                                                                                                                                                                          |
+| Historial             | v1.0 borrador commiteado por el mantenedor para generar historial; v1.1 incorpora decisiones aprobadas: fases separadas, retiro de `Reemplazar`, `Combinar` oculto en General settings y casilla única de ajustes de tiempo; v1.2 borrador alineado con ADR v1.2 aprobado; v1.3 aprobación del mantenedor y consolidación normativa |
+| SRS afectado          | v2.1.1 → **v2.2 consolidado**                                                                                                                                                                                                                                                                                                       |
+| TDD afectado          | v4.7 → **v4.8 consolidado**                                                                                                                                                                                                                                                                                                         |
+| Checklist afectado    | v1.7 → **v1.8 consolidado**                                                                                                                                                                                                                                                                                                         |
+| Código afectado       | Ninguno en este documento                                                                                                                                                                                                                                                                                                           |
 
 ---
 
@@ -22,7 +22,7 @@ El ADR ya está aprobado:
 ADR-ARQUITECTURA-OBJETIVO-001.md v1.2 · APROBADO
 ```
 
-Esta propuesta de enmiendas **no está aprobada todavía**. El mantenedor indicó que no la leerá hasta que el ADR quedara aprobado completamente. Ahora que el ADR está aprobado, este documento queda listo para revisión, pero no consolida SRS/TDD/checklist por sí mismo.
+Esta propuesta de enmiendas **está aprobada por el mantenedor** y consolidada. El ADR v1.2 fue aprobado primero; después el mantenedor aprobó esta propuesta y autorizó aplicar las enmiendas al SRS, TDD, checklist y diario. La consolidación no modifica código ni abre fases 1b/1c.
 
 Decisiones ya tomadas por el mantenedor y reflejadas aquí:
 
@@ -261,8 +261,8 @@ D-56 excluye adapters live de shaders/sliders/otros continuos de R1.
 Añadir:
 
 ```markdown
-| S-04 | Viewer autenticado intenta mutar grafo compartido mediante Commit/Node/Delete/Right forjado o ruta no cubierta por guardas UI | D-53: servidor rechaza antes de aplicar/reenviar |
-| S-05 | Presence metadata se usa para forzar timeline remoto o colar datos de escena | D-58: presence no ejecuta frame_set/frame_current automático; schema de metadata permitido |
+| S-05 | Viewer autenticado intenta mutar grafo compartido mediante Commit/Node/Delete/Right forjado o ruta no cubierta por guardas UI | D-53: servidor rechaza antes de aplicar/reenviar |
+| S-06 | Presence metadata se usa para forzar timeline remoto o colar datos de escena | D-58: presence no ejecuta frame_set/frame_current automático; schema de metadata permitido |
 ```
 
 ### 4.8 Nuevas verificaciones propuestas
@@ -370,15 +370,16 @@ aprueba PKU
 
 ---
 
-## 6. Orden de aprobación sugerido
+## 6. Orden de aprobación ejecutado
 
-1. ADR v1.2 ya aprobado.
-2. Mantenedor lee esta propuesta v1.1.
-3. Mantenedor aprueba o pide cambios.
-4. Si se aprueba, se consolidan SRS/TDD/checklist/diario.
-5. Se ejecuta `verificar_docs.py`.
-6. Se preparan órdenes de fase separadas `1b` y `1c`.
-7. Solo entonces se crean tags de inicio y se preparan parches.
+1. ADR v1.2 aprobado por el mantenedor.
+2. Propuesta v1.2 leída y aprobada por el mantenedor.
+3. Enmiendas consolidadas en SRS v2.2, TDD v4.8, checklist v1.8 y diario 006.
+4. `verificar_docs.py` ejecutado como comprobación mecánica.
+5. Quedan pendientes de autorización separada las órdenes de fase `1b` y `1c`.
+6. No se crean tags de inicio ni parches hasta que el mantenedor autorice cada fase.
+
+**Nota de consolidación.** Las amenazas nuevas se consolidan como `S-05` y `S-06` porque `S-04` ya existía en el TDD (traversal de NAT). Los criterios de aceptación añadidos se mantienen en dos series documentales: `SRS AC-15…AC-19` son criterios de requisito; `TDD AC-15…AC-20` son criterios técnicos de diseño/verificación. Las referencias cruzadas deben usar el prefijo del documento para evitar ambigüedad.
 
 ---
 
