@@ -5,9 +5,10 @@
 | Campo                        | Valor                                                                                                                                                                                                                                                                                                                     |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Documento                    | SRS-PLAYBLAST-001                                                                                                                                                                                                                                                                                                         |
-| Versión                      | **2.1.1** — línea base estable                                                                                                                                                                                                                                                                                            |
-| Fecha                        | 20 de noviembre de 2026                                                                                                                                                                                                                                                                                                   |
+| Versión                      | **2.2** — línea base estable + enmiendas ADR-001                                                                                                                                                                                                                                                                          |
+| Fecha                        | 28 de noviembre de 2026                                                                                                                                                                                                                                                                                                   |
 | Estado                       | **Revisado y cerrado por el mantenedor.** 21 decisiones aplicadas y aprobadas, más 5 aclaraciones de su revisión final (changelog 36–40). **v2.1.1: dos correcciones factuales posteriores al cierre (changelog 41–42), sin cambio de requisitos ni de decisiones; el SRS sigue cerrado.** Sustituye íntegramente a la v1 |
+| Enmiendas ADR-001            | **v2.2**: Live Sync de `object_transform`, incorporación no destructiva, presencia/playhead no invasivo y criterios SRS AC-15…AC-19                                                                                                                                                                                       |
 | Producto                     | True Level: Playblast · versión 1.0.0                                                                                                                                                                                                                                                                                     |
 | Mantenedor                   | Soilent                                                                                                                                                                                                                                                                                                                   |
 | Release especificada         | **R1 = 1.0.0**                                                                                                                                                                                                                                                                                                            |
@@ -30,17 +31,18 @@ Esta separación es deliberada y es la corrección estructural más importante d
 
 #### 0.2 Alcance de la Release 1.0.0
 
-| Área                                                              | Disposición en R1                                                                                                                                                                                                                                                                             |
-| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Funcionalidad 2** — Live Sync de Modo Pose (§5)                 | **En alcance.** Es el núcleo de la release                                                                                                                                                                                                                                                    |
-| **Funcionalidad 1** — Toggle global de commit/push constante (§4) | **Implementada, pero FUERA DE SOPORTE.** Se conserva intacta, sigue siendo utilizable y no se retira del producto. No es un requisito de R1: no se garantiza, no se mantiene y no se corrigen sus defectos. Su documentación se conserva completa por si se recupera en una versión posterior |
-| **Porcelain** (commit/push/apply del repositorio)                 | **En alcance y fundamental.** No debe confundirse con F1: F1 es el armado continuo por datablock; porcelain es el transporte de datos confirmados y es imprescindible                                                                                                                         |
-| **Phantom Keyframe Update (PKU)**                                 | **Posterior a R1.** En R1 no sobrevive ningún keyframe temporal. Las cláusulas condicionales sobre `Phantom Keyframe Mode` que aparecen en §3.5, §6.2 y §7.9 están **reservadas para esa versión** y no alteran el comportamiento de R1, que es incondicional                                 |
-| **Auto-keying**                                                   | **Fuera de alcance de R1**, exclusión deliberada. Se corrige como bugfix dentro de la PKU                                                                                                                                                                                                     |
-| **Red**                                                           | **LAN y misma máquina únicamente**, con un Host y N Clientes. Internet descartado para R1; las VPN de terceros no se usarán tampoco después (§2.4)                                                                                                                                            |
-| **Multi-hueso**                                                   | **En alcance**, caso normal de trabajo (§5.3, §9.4)                                                                                                                                                                                                                                           |
-| **Multi-armadura simultánea**                                     | **En alcance en R1** (§5.11). Promovida desde trabajo diferido por decisión del mantenedor                                                                                                                                                                                                    |
-| **Rigs complejos**                                                | El sistema debe admitir rigs de mayor complejidad por **ampliación declarativa**, no por reescritura                                                                                                                                                                                          |
+| Área                                                                     | Disposición en R1                                                                                                                                                                                                                                                                             |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Funcionalidad 2** — Live Sync de pose y transformación de objetos (§5) | **En alcance.** Es el núcleo de la release                                                                                                                                                                                                                                                    |
+| **Live Sync de transformación de objetos**                               | **En alcance en R1.** G/R/S de objetos seleccionados se previsualiza en vivo sin commits continuos. Los datos definitivos llegan por porcelain                                                                                                                                                |
+| **Funcionalidad 1** — Toggle global de commit/push constante (§4)        | **Implementada, pero FUERA DE SOPORTE.** Se conserva intacta, sigue siendo utilizable y no se retira del producto. No es un requisito de R1: no se garantiza, no se mantiene y no se corrigen sus defectos. Su documentación se conserva completa por si se recupera en una versión posterior |
+| **Porcelain** (commit/push/apply del repositorio)                        | **En alcance y fundamental.** No debe confundirse con F1: F1 es el armado continuo por datablock; porcelain es el transporte de datos confirmados y es imprescindible                                                                                                                         |
+| **Phantom Keyframe Update (PKU)**                                        | **Posterior a R1.** En R1 no sobrevive ningún keyframe temporal. Las cláusulas condicionales sobre `Phantom Keyframe Mode` que aparecen en §3.5, §6.2 y §7.9 están **reservadas para esa versión** y no alteran el comportamiento de R1, que es incondicional                                 |
+| **Auto-keying**                                                          | **Fuera de alcance de R1**, exclusión deliberada. Se corrige como bugfix dentro de la PKU                                                                                                                                                                                                     |
+| **Red**                                                                  | **LAN y misma máquina únicamente**, con un Host y N Clientes. Internet descartado para R1; las VPN de terceros no se usarán tampoco después (§2.4)                                                                                                                                            |
+| **Multi-hueso**                                                          | **En alcance**, caso normal de trabajo (§5.3, §9.4)                                                                                                                                                                                                                                           |
+| **Multi-armadura simultánea**                                            | **En alcance en R1** (§5.11). Promovida desde trabajo diferido por decisión del mantenedor                                                                                                                                                                                                    |
+| **Rigs complejos**                                                       | El sistema debe admitir rigs de mayor complejidad por **ampliación declarativa**, no por reescritura                                                                                                                                                                                          |
 
 #### 0.3 Documentos relacionados
 
@@ -162,31 +164,37 @@ Hay **dos ejes distintos** que no deben confundirse: desde qué archivo se conec
 | **Escena poblada** (un paisaje, otros personajes con sus rigs) | Contenido local que el usuario puede querer conservar                          |
 | **Archivo recién abierto**                                     | El cubo, la luz y la cámara por defecto                                        |
 
-**Eje 2 — el diálogo de incorporación.** Es la opción real del usuario, y es la misma en los tres casos anteriores:
+**Eje 2 — la incorporación de escena.** Es la opción real del usuario, y es la misma en los tres casos anteriores:
 
-| Opción                       | Qué hace                                                                                                                                                                   |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Combinar** _(por defecto)_ | Conserva **todo** lo local y añade el contenido del Host con su jerarquía de colecciones                                                                                   |
-| **Reemplazar**               | Purga la escena **activa** y los datos huérfanos, **con confirmación explícita**                                                                                           |
-| **Nueva escena**             | Crea una escena dedicada y deja la local intacta. La adopción **excluye los objetos ya usados por las escenas locales**, para no robarle un objeto a la escena del usuario |
+| Opción                                      | Qué hace                                                                                                                                                                                                                                          |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Nueva escena** _(por defecto)_            | Crea una escena dedicada para el contenido remoto y deja la escena local intacta. La adopción excluye objetos ya usados por escenas locales. Es el flujo recomendado para el usuario novato.                                                      |
+| **Combinar** _(oculto en General settings)_ | Conserva lo local y añade contenido del Host en la misma escena. Es un opt-in avanzado explícito, con advertencia visible. Ofrece una casilla única para sincronizar ajustes de tiempo necesarios para que la animación coincida, como FPS/rango. |
 
-Junto a las tres opciones, una casilla **«Recordar mi elección»**.
+No existe la opción **Reemplazar**. Queda retirada porque implicaba una operación destructiva de purga/reemplazo de escena.
+
+Junto a la opción visible, una casilla **«Recordar mi elección»**. La opción recordada jamás dispara una acción destructiva.
 
 **Cuándo aparece el diálogo, y cuándo no.**
 
 - Aparece **solo en el primer connect del par (archivo, sesión)**.
 - **Reconexión automática** (caída de red, misma sesión e instancia, escena ya poblada): **no** se reejecuta incorporación, adopción ni purga; solo resincronización.
 - **Reconexión manual** (el usuario salió de la sesión o cerró el archivo): se detecta el contenido ya adoptado por UUID y se **reanuda**, no se re-adopta.
-- **La opción recordada jamás dispara una acción destructiva.** La purga requiere confirmación explícita en todo caso.
+- **La opción recordada jamás dispara una acción destructiva.** No existe purga de conexión: ninguna opción, ni recordada ni manual, borra contenido local.
 
 **Restricciones normativas de la incorporación.**
 
 1. **No se crea una «colección de sesión».** El contenido replicado no se agrupa en un contenedor inventado por el addon.
 2. **No se altera la jerarquía de colecciones.** La estructura de colecciones del Host se reproduce tal cual, con sus anidamientos.
-3. Cuando el usuario elige **«Reemplazar»**, el alcance es **exclusivamente la escena activa del Cliente**. Si el Cliente tiene varias escenas, las demás no se tocan. «Una sola escena» no debe leerse literalmente.
-4. **El sistema no purga contenido por su cuenta, por ningún motivo.** Ninguna ruta de conexión puede vaciar la escena del Cliente sin que el usuario lo haya elegido y confirmado. Esto incluye rutas heredadas del addon base que hoy purgan según una condición ajena a esta elección (§13.4).
+3. **El addon no ofrece una opción de incorporación que borre o purgue contenido local.** `Reemplazar` queda retirado porque implicaba una operación destructiva.
+4. **El sistema no purga contenido por su cuenta, por ningún motivo.** Ninguna ruta de conexión puede vaciar la escena del Cliente. Esto incluye rutas heredadas del addon base que hoy purgan según una condición ajena a esta elección (§13.4).
 
-**Política de identidad y adopción al conectar.** Aplica a los tres modos y es lo que permite conectarse desde un archivo propio sin necesidad de transferirse el `.blend`:
+**Restricciones adicionales de incorporación (ADR-001).**
+
+- El flujo principal recomendado no exige copiar el `.blend` del Host. Conectar desde una copia se soporta como caso límite y ayuda de reconexión, no como recomendación principal.
+- La opción `Combinar` vive oculta en General settings para usuarios que saben lo que hacen. Si se activa, debe mostrar advertencia de que puede mezclar contenido local y remoto. La sincronización de FPS/rango u otros ajustes de tiempo se ofrece como una casilla única explícita, no como sobrescritura silenciosa.
+
+**Política de identidad y adopción al conectar.** Aplica a los modos de incorporación y es lo que permite conectarse desde un archivo propio sin necesidad de transferirse el `.blend`:
 
 5. **La identidad entre peers es el UUID, nunca el nombre.** El nombre no decide identidad en régimen normal.
 6. **Pase de adopción único al conectar**, con **informe visible para el usuario** del tipo «X adoptados, Y creados, Z renombrados». Empareja por `(tipo, nombre)` **solo sobre datablocks que aún no han sido reclamados** por otro UUID, estampa el UUID del Host y **actualiza el datablock existente en lugar de recrearlo**. El Cliente no estampa UUIDs propios antes de la adopción. Cubre **Objetos, sus datos, Colecciones y Actions** por la misma ruta. Es una heurística **única y visible de onboarding**, no una regla de identidad permanente.
@@ -249,6 +257,8 @@ El addon base trae controles que no fueron diseñados para este producto. Se doc
 - No se debe ejecutar bpy.context.scene.frame_set() en el Cliente para forzar un frame específico como parte del flujo de Live Sync.
 - **La prohibición cubre cualquier mecanismo equivalente**, no solo la llamada literal: asignar `scene.frame_current` desde un temporizador u operador modal tiene el mismo efecto que `frame_set()`.
 - **Alcance exacto de la prohibición: el comportamiento automático del addon.** Lo que nunca puede ocurrir es que el sistema altere el timeline del Cliente **por su cuenta**, como parte del flujo de sincronización. **No** se prohíbe ofrecer al usuario un control **explícito, voluntario y reversible** para seguir el tiempo del Host: eso es el usuario manejando su propio timeline, no el addon imponiéndoselo. El control «snap to user time» (§2.6) es de esa clase y **se conserva**.
+
+**Presencia/playhead (ADR-001).** El playhead de cada peer se transmite como metadato de presencia. Mostrar el frame de otro peer en la UI no autoriza mover automáticamente el timeline local. Ningún receptor ejecuta `frame_set()` ni asigna `frame_current` automáticamente por presencia. «Snap to user time» sigue siendo acción explícita del usuario.
 
 #### 3.2 NO SILENCIAR EL HUESO
 
@@ -512,7 +522,7 @@ La Funcionalidad 1 NO detecta cambios en curso que aún no han sido confirmados.
 
 Estos cambios en curso son responsabilidad exclusiva de la Funcionalidad 2 (Live Sync de Modo Pose), descrita en la Sección 5.
 
-### 5. FUNCIONALIDAD 2: LIVE SYNC DE MODO POSE (Transformaciones Interactivas)
+### 5. FUNCIONALIDAD 2: LIVE SYNC DE POSE Y TRANSFORMACIÓN DE OBJETOS (Transformaciones Interactivas)
 
 #### 5.1 El Problema
 
@@ -809,6 +819,32 @@ matrix = evaluated_bone.matrix_basis
 
 _Verificaciones previas registradas en el TDD_: que la propiedad de identidad del hueso apunte al **objeto** dueño de la pose (VP-06), y que la selección de huesos del contexto abarque varias armaduras en Modo Pose multi-objeto (VP-07). Si la segunda no se cumpliera, el agrupamiento se haría recorriendo los objetos en Modo Pose.
 
+#### 5.12 LIVE SYNC DE TRANSFORMACIÓN DE OBJETOS
+
+R1 soporta previsualización live de transformaciones interactivas de objetos:
+
+- G/R/S sobre objeto(s) seleccionados.
+- Multi-objeto.
+- Preview reversible en el Cliente.
+- Sin porcelain.commit/push continuo durante el arrastre real.
+- Keyframes reales y datos definitivos por porcelain.
+- El timeline del Cliente no se pausa ni se altera automáticamente.
+
+La entidad live es `object_uuid`.
+
+Reglas observables:
+
+1. Seleccionar objeto(s) transformable(s) abre o actualiza la previsualización en el frame del Host.
+2. Arrastrar G/R/S actualiza la previsualización en vivo.
+3. Cancelar restaura el estado original.
+4. Confirmar sin insertar keyframe no deja transformación fantasma al cerrar/deseleccionar.
+5. Insertar un keyframe real produce dato durable por porcelain.
+6. Scrub con objeto seleccionado sigue al frame del Host sin mover el playhead del Cliente.
+7. Desconexión limpia/restaura previews.
+8. Un apply durable durante preview vivo invalida el preview obsoleto sin restaurar valores viejos.
+9. La transformación de objeto respeta padres, constraints y animación existente; no hace action swapping ni mute de curvas.
+10. Si no hay animación gobernante, el preview es reversible y no crea Actions/keyframes permanentes por accidente.
+
 ### 6. INTERACCIÓN ENTRE FUNCIONALIDAD 1 Y FUNCIONALIDAD 2
 
 #### 6.1 Principio General
@@ -915,6 +951,8 @@ _Auto-keying sigue fuera del alcance de R1 (§0.2); este requisito no lo incorpo
 12. **El Cliente NO publica nada, por ninguna vía** (§1.4, INV-1). Esto incluye las rutas auxiliares: dependencias externas de imagen y rutas de fichero, la rama de escena, los temporizadores de anotación y los botones manuales de commit/push. Un visor que daña el trabajo del animador es el fallo de mayor gravedad del producto.
 13. **NO compartir el cache entre Host y Cliente**, tampoco en LAN (§2.1). Cada peer tiene su propia subcarpeta y purga únicamente lo que él escribió.
 14. **NO crear una colección de sesión ni alterar la jerarquía de colecciones** (§2.3).
+15. Las restricciones de no pausar el Cliente, no silenciar curvas, no action swapping, no keyframes masivos y no dejar overlays fantasma aplican también a `object_transform`.
+16. Durante G/R/S real de objeto no se usa `porcelain.commit`/`push` como canal continuo.
 
 ### 8. CONSIDERACIONES DE RENDIMIENTO
 
@@ -1057,11 +1095,23 @@ true_level_playblast/
 
 ---
 
+#### 12.1 Criterios de aceptación añadidos por ADR-001
+
+Serie documental del SRS. No confundir con los criterios técnicos `TDD AC-15…AC-20` del TDD §16; las referencias cruzadas deben prefijarse con `SRS` o `TDD`.
+
+| ID    | Criterio                                                                                                                                     |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| AC-15 | G/R/S de objeto en Host produce preview live en Cliente sin commits continuos                                                                |
+| AC-16 | Cancelar/deseleccionar/desconectar no deja transformación de objeto fantasma                                                                 |
+| AC-17 | Keyframes reales de objeto llegan por porcelain                                                                                              |
+| AC-18 | Playheads/presencia no fuerzan timeline remoto                                                                                               |
+| AC-19 | Default de conexión es Nueva escena; Combinar está oculto en General settings y es opt-in avanzado; no existe Reemplazar ni purga automática |
+
 ### 13. TRAZABILIDAD Y CONTROL DE CAMBIOS
 
-#### 13.1 Changelog v1 → v2.1.1
+#### 13.1 Changelog v1 → v2.2
 
-Las filas **1–35** corresponden a la v2.0 (16 nov 2026). Las filas **36–40** son la v2.1: aclaraciones de la revisión final del mantenedor, sin cambio de comportamiento ni decisiones nuevas. Las filas **41–42** son la **v2.1.1**: correcciones factuales, no requisitos.
+Las filas **1–35** corresponden a la v2.0 (16 nov 2026). Las filas **36–40** son la v2.1: aclaraciones de la revisión final del mantenedor, sin cambio de comportamiento ni decisiones nuevas. Las filas **41–42** son la **v2.1.1**: correcciones factuales, no requisitos. Las filas **43–47** son la **v2.2**: enmiendas aprobadas del ADR-ARQUITECTURA-OBJETIVO-001.
 
 | #   | Cambio                                                                                                                                                                                                                                                                                                                                                                                                                                  | Decisión                                     |
 | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -1107,6 +1157,12 @@ Las filas **1–35** corresponden a la v2.0 (16 nov 2026). Las filas **36–40**
 | 40  | §2.4 y §0.2: las VPN de terceros se descartan **como requisito del producto**, no solo para R1. El transporte por internet se retoma **después de la PKU** con relay propio sin cuentas (§2.4, `ROADMAP.md` §4.1)                                                                                                                                                                                                                       | D-38, DD-10, DD-11, D-15                     |
 | 41  | **Corrección factual.** Plataformas probadas: **5.2.0 LTS** (actual) y **5.2.2** (anterior). El mantenedor confirmó el 20 nov que probó primero en 5.2.2 —su mensaje 15 de la auditoría— y después en 5.2.0 LTS, que es la versión que reportó `bpy.app.version_string` durante VP-13. La fila no sustituye a la anterior: **las dos quedan declaradas**. El mínimo sigue en 4.5.0 y las verificaciones nuevas se hacen sobre 5.2.0 LTS | Mantenedor · VP-13                           |
 | 42  | **Corrección de redacción propia.** La fila 40 decía «el transporte por internet queda sin decidir», en contradicción con §2.4 y §0.2, que sí lo deciden: relay propio sin cuentas, posterior a la PKU. Redacción retractada y corregida                                                                                                                                                                                                | Error del redactor                           |
+
+| 43 | §0.2 y §5.12: **Live Sync de transformación de objetos** entra en R1 como adapter live (`object_transform`), con preview reversible y durable por porcelain | ADR-001, D-57 |
+| 44 | §2.3: incorporación no destructiva. Default **Nueva escena**; **Combinar** oculto en General settings con advertencia y casilla única de ajustes de tiempo; **Reemplazar** retirado; sin purga automática | ADR-001, D-59, D-40a, D-41, D-50 |
+| 45 | §3.1: presencia/playhead como metadata no invasiva; mostrar frame remoto no autoriza mover el timeline local | ADR-001, D-58 |
+| 46 | §12.1: criterios de aceptación SRS AC-15…AC-19 | ADR-001 |
+| 47 | §7: restricciones extendidas a `object_transform`; porcelain no es canal de arrastre continuo | ADR-001, D-52/D-56/D-57 |
 
 #### 13.2 Correcciones factuales aplicadas
 
@@ -1169,4 +1225,4 @@ Se verificaron en el código y se conservan **intactas**. La limpieza no las ha 
 
 ---
 
-_Fin del SRS v2.1.1. Documento aprobado por el mantenedor tras las 21 decisiones de `Decisiones_SRS-v2.md` y las 10 contradicciones resueltas en `Contradicciones_decisiones.md`. El apéndice no normativo de la v1 se ha trasladado a `ROADMAP.md`._
+_Fin del SRS v2.2. Documento aprobado por el mantenedor tras las 21 decisiones de `Decisiones_SRS-v2.md` y las 10 contradicciones resueltas en `Contradicciones_decisiones.md`. El apéndice no normativo de la v1 se ha trasladado a `ROADMAP.md`._
