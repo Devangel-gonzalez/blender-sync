@@ -1,25 +1,35 @@
-# ADR-001 · Arquitectura objetivo mantenible para True Level: Playblast
+# ADR-ARQUITECTURA-OBJETIVO-001 · Arquitectura objetivo mantenible para True Level: Playblast
 
-| Campo                     | Valor                                                                                        |
-| ------------------------- | -------------------------------------------------------------------------------------------- |
-| Estado                    | **PROPUESTO · pendiente de aprobación del mantenedor**                                       |
-| Fecha                     | 2026-11-28                                                                                   |
-| Decisión de alcance       | **Opción A** aprobada por el mantenedor: R1 no amplía su alcance funcional                   |
-| Código de referencia      | `blender-sync` `d62755a` · tag `r1-fase-01`                                                  |
-| SRS de referencia         | `workspace-3/consolidated/SRS.md` v2.1.1                                                     |
-| TDD de referencia         | `workspace-3/consolidated/TDD-PLAYBLAST-001.md` v4.7                                         |
-| Fase 1                    | Cerrada y verificada; sus guardas se conservan como red de seguridad inicial                 |
-| Modificaciones realizadas | Ninguna sobre código, SRS ni TDD. Este ADR y la propuesta de enmiendas son documentos nuevos |
+| Campo                           | Valor                                                                                                                                                       |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Versión del documento           | **v1.1 · propuesta revisada**                                                                                                                               |
+| Estado                          | **PROPUESTO · pendiente de aprobación del mantenedor**                                                                                                      |
+| Fecha                           | 2026-11-28                                                                                                                                                  |
+| Historial                       | v1.0 publicada como propuesta inicial; v1.1 incorpora aclaraciones del mantenedor sobre `object_transform`, playheads, incorporación de escena y versionado |
+| Decisión de alcance             | **Opción A revisada**: R1 = Live Sync de pose + Live Sync de transformación de objetos + porcelain para datos definitivos                                   |
+| Código funcional de referencia  | `blender-sync` `d62755a` · tag `r1-fase-01`                                                                                                                 |
+| Commit documental de referencia | `3f1e9ef` · ADR v1.0 subido por el mantenedor                                                                                                               |
+| SRS de referencia               | `workspace-3/consolidated/SRS.md` v2.1.1                                                                                                                    |
+| TDD de referencia               | `workspace-3/consolidated/TDD-PLAYBLAST-001.md` v4.7                                                                                                        |
+| Fase 1                          | Cerrada y verificada; sus guardas se conservan como red de seguridad inicial                                                                                |
+| Modificaciones realizadas       | Solo documentos ADR/propuesta. No se modifica código, SRS ni TDD                                                                                            |
 
 ---
 
 ## 1. Resumen ejecutivo
 
-R1 sigue siendo:
+R1 queda definido como:
 
-> **Live Sync de pose + porcelain para datos definitivos.**
+> **Live Sync de pose + Live Sync de transformación de objetos + porcelain para datos definitivos.**
 
-Pose sigue siendo el **único adapter live soportado en R1**. No se añaden adapters live para objetos, shaders, sliders ni otros continuos.
+Los adapters live soportados en R1 son:
+
+```text
+pose
+object_transform
+```
+
+No se añaden adapters live para shaders, sliders, luces, modificadores, sculpt, edit mode ni otros continuos. Esos quedan para R2 o posteriores.
 
 La arquitectura debe quedar preparada para que R2 o posteriores puedan añadir un nuevo continuo mediante:
 
@@ -33,7 +43,9 @@ schema declarativo
 
 con cambios mínimos y localizados en el núcleo y en los handlers existentes.
 
-La migración será **incremental**, no una reescritura. El comportamiento soportado de pose no debe cambiar. Las correcciones de defectos ya exigidas por SRS/TDD, como fidelidad de visibilidad, sí deben implementarse, pero sin ampliar el alcance funcional de R1.
+La migración será **incremental**, no una reescritura. El comportamiento soportado de pose no debe cambiar. `object_transform` se añade como capacidad live de R1 con contrato análogo al de pose: selección, G/R/S, multi-objeto, keyframes definitivos por porcelain y previsualización reversible sin commits continuos durante el arrastre.
+
+Las correcciones de defectos ya exigidas por SRS/TDD, como fidelidad de visibilidad, siguen siendo obligaciones de R1.
 
 ---
 
@@ -50,6 +62,7 @@ Hoy conviven:
 | Fidelidad de datos                 | `bl_types/`                                                               | Serializadores curados, pero incompletos en varias capas                           |
 | Autorización                       | `can_publish`, guardas de fase 1, `Repository.assert_modification_rights` | Política repartida; modelo base simétrico por `RP_COMMON`                          |
 | Transporte definitivo              | `replication/porcelain.py`, `replication/repository.py`, servidor         | Commit/push/apply son fundamentales, pero no deben usarse como canal live continuo |
+| Presencia / playhead               | `handlers.py`, `timers.py`, `porcelain.update_user_metadata`              | Metadatos de usuario; no son mutación de escena compartida                         |
 
 ### 2.2 Porcelain no es el culpable principal de la falta de visibilidad
 
@@ -69,23 +82,54 @@ Esto ya está reconocido normativamente:
 - TDD DD-03 especifica la corrección.
 - TDD AC-06 exige que los flags coincidan con el Host en los tres modos.
 
-### 2.3 El problema de los continuos no está resuelto de forma general
+### 2.3 Transformaciones de objeto: estado actual y decisión R1
 
-`live_sync.py` resolvió el caso de pose mediante un canal TCP dedicado y overlay temporal reversible.
+En Multi-User vanilla, mover un objeto puede llegar al Cliente mediante porcelain/commits cuando el cambio queda confirmado y publicado por el handler.
 
-Pero `handlers.py` todavía puede publicar cambios detectados por depsgraph para nodos rastreados:
+En el código actual existe un gate de arrastre interactivo:
 
 ```python
-if is_live or node.state == UP:
-    porcelain.commit(...)
-    porcelain.push(...)
+dragging = live_sync.interactive_transform_active() is not None
+if dragging:
+    return
 ```
 
-El gate de arrastre actual está orientado a transformaciones interactivas conocidas, no a todos los cambios RNA continuos. Un slider de shader puede producir muchos cambios sin pasar por ese gate.
+Ese gate está pensado para evitar commits pesados durante transformaciones interactivas, pero el streamer live actual solo implementa pose:
 
-Por eso R1 no debe prometer “todo Blender continuo”. Debe mantener pose como único live adapter y dejar la arquitectura preparada para añadir otros después.
+```text
+HostPoseStreamer → huesos seleccionados en Modo Pose
+```
 
-### 2.4 La fase 1 cerró rutas, pero no creó una capacidad central
+Por tanto, R1 no debe conformarse con que el objeto “llegue después por porcelain”. Debe añadir un adapter live de transformación de objetos para que:
+
+```text
+G/R/S de objeto en curso → live preview reversible
+confirmación / keyframe real → porcelain durable
+```
+
+sin convertir porcelain en canal de arrastre continuo.
+
+### 2.4 Playhead y presencia: estado actual
+
+El frame actual de cada peer se publica hoy como metadato de usuario:
+
+```python
+porcelain.update_user_metadata(session.repository, {
+    'frame_current': scene.frame_current
+})
+```
+
+Además, `ClientUpdate` publica metadatos de presencia como escena, modo, vista y color. La UI del Host muestra el frame de los Clientes desde `online_users[...]['metadata']['frame_current']`.
+
+Esto no es una mutación del grafo de escena compartida. Es presencia.
+
+Por tanto:
+
+> **“El Cliente nunca publica” significa “nunca publica datos de escena ni mutaciones del grafo compartido”. No significa “nunca envía metadatos de presencia”.**
+
+R1 conserva los playheads como presencia por porcelain/metadata. No se migran al canal live en R1. Una migración futura a un canal de presencia live es posible, pero no es necesaria para resolver el contrato R1.
+
+### 2.5 La fase 1 cerró rutas, pero no creó una capacidad central
 
 La fase 1 implementó guardas Host-only en operadores, handlers y timers. Eso fue necesario y se conserva.
 
@@ -113,7 +157,7 @@ Se adopta una arquitectura de **tres carriles** y **cuatro contratos**.
 
 | Carril                    | Qué transporta                                    | Durabilidad                                                        | R1                         |
 | ------------------------- | ------------------------------------------------- | ------------------------------------------------------------------ | -------------------------- |
-| **Live preview**          | Cambios efímeros de interacción continua          | No definitivo; debe restaurarse o ser reemplazado por dato durable | Solo pose                  |
+| **Live preview**          | Cambios efímeros de interacción continua          | No definitivo; debe restaurarse o ser reemplazado por dato durable | Pose y `object_transform`  |
 | **Durable transaction**   | Estado confirmado o asentado que debe conservarse | Definitivo; llega por porcelain                                    | Sí, fundamental            |
 | **Local-only / presence** | Estado local del peer y metadatos de presencia    | No muta la escena compartida                                       | Sí, con límites explícitos |
 
@@ -123,12 +167,12 @@ Regla rectora:
 
 ### 3.2 Cuatro contratos
 
-| Contrato                                     | Pregunta que responde                                                        | R1                                                              |
-| -------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| **PublicationPolicy / puerta única**         | ¿Quién puede enviar qué mensaje de replicación?                              | Obligatorio                                                     |
-| **ReplicationSchema / registry declarativo** | ¿Qué propiedades se replican y con qué versión?                              | Obligatorio como contrato mínimo; cobertura completa progresiva |
-| **InteractionRegistry**                      | ¿Qué interacciones existen y cómo se observan?                               | Obligatorio como contrato; solo pose registrado como live       |
-| **Adapter**                                  | ¿Cómo se previsualiza, aplica, restaura y entrega a durable una interacción? | Obligatorio para pose; interfaz preparada para futuros adapters |
+| Contrato                                     | Pregunta que responde                                                        | R1                                                                                     |
+| -------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **PublicationPolicy / puerta única**         | ¿Quién puede enviar qué mensaje de replicación?                              | Obligatorio                                                                            |
+| **ReplicationSchema / registry declarativo** | ¿Qué propiedades se replican y con qué versión?                              | Obligatorio como contrato mínimo; cobertura completa progresiva                        |
+| **InteractionRegistry**                      | ¿Qué interacciones existen y cómo se observan?                               | Obligatorio; R1 registra `pose` y `object_transform`                                   |
+| **Adapter**                                  | ¿Cómo se previsualiza, aplica, restaura y entrega a durable una interacción? | Obligatorio para `pose` y `object_transform`; interfaz preparada para futuros adapters |
 
 ---
 
@@ -141,17 +185,19 @@ Sensores existentes
   ├─ depsgraph_update_post
   ├─ contexto de operador modal cuando exista
   ├─ selección / modo / frame para pose
+  ├─ selección / modo / frame para objetos
   └─ undo/redo
         │
         ▼
 InteractionRegistry + LanePolicy
         │
         ├── LIVE PREVIEW LANE
-        │     ├─ R1: pose adapter únicamente
+        │     ├─ R1: pose adapter
+        │     ├─ R1: object_transform adapter
         │     ├─ start / update / end / cancel
         │     ├─ coalescing por entidad/canal cuando aplique
         │     ├─ sin porcelain.commit/push durante arrastre real
-        │     └─ overlay reversible según SRS/TDD
+        │     └─ overlay/reversible edit según SRS/TDD
         │
         ├── DURABLE TRANSACTION LANE
         │     ├─ cambios confirmados o asentados
@@ -170,7 +216,8 @@ InteractionRegistry + LanePolicy
         ▼
 PublicationPolicy local
   ├─ Host: permitido según reglas existentes de ownership/COMMON
-  └─ Cliente: denegado para mutación de grafo compartido
+  ├─ Cliente: denegado para mutación de grafo compartido
+  └─ Presence: permitido dentro de límites explícitos
         │
         ▼
 replication / porcelain / servidor
@@ -178,16 +225,19 @@ replication / porcelain / servidor
         ▼
 Server Authority Policy
   ├─ conexión autoritativa de Host: puede mutar grafo compartido
-  └─ viewer autenticado: no puede mutar grafo compartido
+  ├─ viewer autenticado: no puede mutar grafo compartido
+  └─ presence metadata: permitido si no muta escena
         │
         ▼
 CLIENTE
 ───────
   ├─ recibe live preview de pose
+  ├─ recibe live preview de object_transform
   ├─ recibe estado durable por porcelain
   ├─ aplica mediante adapters/serializadores
   ├─ puede seleccionar e inspeccionar
   ├─ puede reproducir su propio timeline
+  ├─ publica presencia/playhead como metadata, no como escena
   └─ no publica datos de escena
 ```
 
@@ -249,6 +299,7 @@ navegar su viewport
 reproducir su timeline
 evaluar físicas localmente
 tener estado local de vista
+publicar metadatos de presencia permitidos
 ```
 
 Un Cliente no puede:
@@ -263,6 +314,7 @@ publicar anotaciones
 publicar overlays
 publicar tipos de keyframe
 publicar cambios locales de física/evaluación
+publicar su playhead como dato de escena que fuerce el timeline de otros
 ```
 
 ### 5.4 Regla para Host
@@ -283,7 +335,7 @@ R1 debe tener dos niveles:
 
 | Nivel             | Propósito                                                                                                                                    |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Cliente local** | Evitar que rutas honestas del addon publiquen desde un viewer                                                                                |
+| **Cliente local** | Evitar que rutas honestas del addon publiquen datos de escena desde un viewer                                                                |
 | **Servidor**      | Rechazar mutaciones de grafo compartido aunque un cliente modificado, una ruta futura o un mensaje forjado intente saltarse el cliente local |
 
 El servidor no debe confiar en:
@@ -296,6 +348,29 @@ auth_type == ADMIN por sí solo
 ```
 
 Debe existir una noción de **conexión autoritativa de Host** ligada a la sesión autenticada.
+
+### 5.6 Presence / playhead no es publicación de escena
+
+Los metadatos de presencia permitidos incluyen, como mínimo:
+
+```text
+frame_current del peer
+scene_current
+mode_current
+view_matrix / view_corners
+color / identidad visual de presencia
+```
+
+Reglas:
+
+1. `frame_current` de un peer describe dónde está ese peer; no ordena a otros peers mover su timeline.
+2. El Host puede mostrar el frame de los Clientes en la UI.
+3. El Cliente puede mostrar presencia del Host si la UI lo permite.
+4. Ningún playhead recibido por presencia debe ejecutar `frame_set()` ni asignar `frame_current` automáticamente en el receptor.
+5. “Snap to user time” sigue siendo una acción explícita, voluntaria y reversible del usuario.
+6. La puerta de publicación debe permitir `UpdateUserMetadata` de presencia, pero no debe usarlo como caballo de Troya para datos de escena.
+
+R1 conserva este flujo por porcelain/metadata. Migrarlo a un canal live de presencia queda para R2 o posteriores si se decide.
 
 ---
 
@@ -350,6 +425,7 @@ Internet/WAN
 servicio de retransmisión remoto
 modelo completo de cuentas/roles administrativos
 hardening completo de comandos de administración de sesión no relacionados con mutación de escena
+migración de presence/playhead a canal live dedicado
 ```
 
 `Kick` y otros comandos de administración de sesión deben auditarse, pero no se convierten automáticamente en publicación de escena. Si se quiere cambiar su modelo de permisos, requiere una decisión/enmienda explícita.
@@ -393,7 +469,7 @@ SchemaEntry
   excluded_fields
   dependencies
   view_layer_extensions
-  live_adapter: None | "pose" | futuro adapter
+  live_adapter: None | "pose" | "object_transform" | futuro adapter
   lane: durable | live+durable | local-only
   tests: roundtrip / parity / acceptance
 ```
@@ -402,16 +478,18 @@ SchemaEntry
 
 En R1 debe existir el contrato y un registry mínimo que permita:
 
-1. Registrar el adapter live de pose.
+1. Registrar los adapters live de pose y `object_transform`.
 2. Declarar los campos de fidelidad exigidos por DD-03.
-3. Versionar cambios de schema.
-4. Ejecutar tests de paridad/round-trip.
-5. Mantener los serializadores legacy como adapters envueltos mientras se migran.
+3. Declarar los campos necesarios para transformaciones de objeto y su handoff durable.
+4. Versionar cambios de schema.
+5. Ejecutar tests de paridad/round-trip.
+6. Mantener los serializadores legacy como adapters envueltos mientras se migran.
 
 R1 no tiene que migrar los 23+ tipos de `bl_types/` de golpe. La migración puede ser por tipo, empezando por los necesarios para:
 
 ```text
 pose
+object_transform
 Object
 Collection
 Armature
@@ -454,9 +532,9 @@ handoff a durable
 restricciones SRS/TDD
 ```
 
-### 8.2 R1: solo pose
+### 8.2 R1: pose
 
-El único adapter live registrado en R1 es:
+El adapter live de pose debe preservar:
 
 ```text
 id: pose
@@ -483,7 +561,51 @@ Debe preservar:
 - nombres exactos de hueso;
 - compatibilidad con físicas locales del Cliente.
 
-### 8.3 Contrato de adapter
+### 8.3 R1: object_transform
+
+Se añade como capacidad live de R1:
+
+```text
+id: object_transform
+entidad: object_uuid
+trigger: selección de objeto(s) transformable(s) y transformación interactiva G/R/S
+live: start / update / end
+apply: previsualización reversible de transformación de objeto
+durable: Object / Action / dependencias por porcelain
+cancel: restaurar
+end: limpiar/restaurar según contrato R1
+```
+
+Contrato observable propuesto:
+
+| Acción del Host                          | Qué debe hacer el Cliente                                                                                              |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Selecciona objeto(s) transformable(s)    | Abrir/actualizar preview en el frame del Host, según contrato de selección análogo a pose                              |
+| Arrastra G/R/S sin confirmar             | Actualizar preview en vivo; no crear commits continuos                                                                 |
+| Confirma G/R/S                           | El preview sigue vivo si la selección/interacción sigue activa; el dato durable llega por porcelain cuando corresponda |
+| Cancela con Esc/clic derecho             | Restaurar estado original; no dejar transformación fantasma                                                            |
+| Confirma pero no inserta keyframe        | Al cerrar/deseleccionar, restaurar si no hay dato durable que lo reemplace                                             |
+| Inserta keyframe real                    | El keyframe viaja por porcelain como dato definitivo                                                                   |
+| Scrub con objeto seleccionado            | El preview sigue al frame del Host; el playhead del Cliente no se mueve automáticamente                                |
+| Cambia selección                         | Cerrar previews retirados y abrir los nuevos                                                                           |
+| Desconecta                               | Limpiar/restaurar previews                                                                                             |
+| Llega apply durable durante preview vivo | Invalidar preview obsoleto sin restaurar valores viejos sobre datos recién aplicados                                   |
+
+Reglas técnicas propuestas:
+
+1. Multi-objeto: cada objeto se indexa por `object_uuid`; no colisionan nombres.
+2. La transformación live debe respetar padres, constraints y dependencias; no debe desconectar ni mutear la animación del Cliente.
+3. Si el objeto tiene animación gobernante, el preview debe integrarse en el frame del Host sin action swapping.
+4. Si el objeto no tiene animación gobernante, el preview debe ser reversible y no debe inventar Actions/keyframes permanentes por accidente.
+5. El handoff durable publica `Object`, `Action` y dependencias necesarias por porcelain.
+6. No se hace `porcelain.commit/push` por cada tick del arrastre.
+7. La UI del Cliente no debe perder selección ni capacidad de inspección.
+8. El timeline del Cliente no se pausa ni se seekea automáticamente.
+9. La desambiguación pose/objeto debe ser explícita: transformación de hueso en Modo Pose usa `pose`; transformación de objeto a nivel Object usa `object_transform`.
+
+El mecanismo exacto de overlay para objetos —keyframe temporal, conducción directa reversible o híbrido según exista Action gobernante— se especificará en la enmienda del TDD. Este ADR fija el contrato observable y la prohibición de commits continuos.
+
+### 8.4 Contrato de adapter
 
 Un adapter live futuro debe poder implementar, conceptualmente:
 
@@ -496,14 +618,13 @@ invalidate_preview(client, durable_apply)
 durable_handoff(change) -> schema/porcelain
 ```
 
-En R1, el adapter de pose puede ser una envoltura incremental sobre `HostPoseStreamer` y `ClientPoseApplier`. No se exige reescribir esos componentes si la envoltura preserva comportamiento y pasa paridad.
+En R1, el adapter de pose puede ser una envoltura incremental sobre `HostPoseStreamer` y `ClientPoseApplier`. El adapter `object_transform` puede reutilizar la infraestructura de transporte, coalescing, heartbeat, invalidación y handoff durable, pero debe tener su propio sensor/applier de objeto.
 
-### 8.4 Lo que no entra en R1
+### 8.5 Lo que no entra en R1
 
 No se registran ni soportan como live adapters en R1:
 
 ```text
-object_transform
 shader_slider
 light_energy
 modifier_value
@@ -511,9 +632,15 @@ dope_sheet_drag
 sculpt_continuous
 edit_mode_continuous
 geometry_nodes_slider
+playhead_presence_live_channel
 ```
 
-Algunos de esos cambios pueden seguir llegando por porcelain como datos definitivos si el flujo actual ya los publica. Lo que no se añade es un nuevo canal live continuo para ellos.
+Notas:
+
+- `object_transform` **sí entra en R1**.
+- Los cambios de objetos que no sean transformación interactiva live pueden seguir llegando por porcelain como datos definitivos.
+- Los playheads siguen en presencia/metadata por porcelain en R1. Un canal live de presencia es futuro opcional.
+- `dope_sheet_drag` no se añade como live adapter general en R1, aunque los keyframes reales insertados/borrados sigan llegando por porcelain.
 
 ---
 
@@ -521,11 +648,13 @@ Algunos de esos cambios pueden seguir llegando por porcelain como datos definiti
 
 ### 9.1 R1
 
-R1 conserva dos caminos reales:
+R1 conserva estos caminos:
 
 ```text
 pose live → live_sync TCP
+object_transform live → live_sync TCP
 dato definitivo → porcelain
+presence/playhead → UpdateUserMetadata / porcelain command channel
 ```
 
 No se introduce un scheduler genérico de coalescing para todos los cambios RNA.
@@ -535,6 +664,7 @@ La política R1 debe expresar:
 | Cambio                                          | Lane R1                                                  |
 | ----------------------------------------------- | -------------------------------------------------------- |
 | Pose seleccionada/arrastrada                    | live preview                                             |
+| Objeto seleccionado/transformado con G/R/S      | live preview                                             |
 | Keyframe real insertado/borrado                 | durable                                                  |
 | Visibilidad/restricción DD-03                   | durable, y debe publicarse aunque haya pose seleccionada |
 | Añadir/borrar objeto/colección/material/textura | durable                                                  |
@@ -555,7 +685,7 @@ El contrato no es “una llamada literal a commit”, sino:
 
 > **Una edición lógica no debe producir cientos de publicaciones intermedias.**
 
-En R1 esto se aplica al flujo ya soportado. La generalización a sliders y otros continuos queda para R2.
+En R1 esto se aplica a pose, `object_transform` y al flujo durable ya soportado. La generalización a sliders y otros continuos queda para R2.
 
 ### 9.3 Orden live ↔ durable
 
@@ -574,7 +704,7 @@ conservar procedencia,
 reconstruir desde latido live si la selección sigue activa.
 ```
 
-R2 podrá añadir revisiones/seq más generales, pero R1 no debe cambiar el formato live de pose sin una enmienda explícita.
+R2 podrá añadir revisiones/seq más generales. R1 debe preservar los mensajes de pose actuales y añadir solo lo necesario para `object_transform`, versionado y documentado.
 
 ---
 
@@ -582,42 +712,51 @@ R2 podrá añadir revisiones/seq más generales, pero R1 no debe cambiar el form
 
 ### 10.1 Entra en R1
 
-| Área                        | Obligación R1                                                 |
-| --------------------------- | ------------------------------------------------------------- |
-| Alcance funcional           | Sin cambios: pose live + porcelain definitivo                 |
-| Adapter live                | Pose únicamente                                               |
-| Puerta local de publicación | Política central de salida para replicación compartida        |
-| Guardas fase 1              | Se conservan hasta que la puerta central esté verificada      |
-| Enforcement servidor        | Rechazo de mutaciones de grafo compartido por viewers         |
-| Autoridad Host              | Conexión autoritativa no auto-declarada por el cliente        |
-| Schema/registry             | Contrato mínimo versionado + registry de pose + campos DD-03  |
-| Fidelidad visibilidad       | Cumplir SRS §3.9 / TDD DD-03 / AC-06                          |
-| `hide_select`               | No gobernarse por readonly/propiedad; reconciliar timer       |
-| Paridad pose                | Tests de paridad antes/después de extraer adapter             |
-| Compatibilidad              | No romper Host actual ni Cliente local/selección/reproducción |
-| Documentación               | TDD/checklist/diario actualizados solo tras aprobación        |
+| Área                                | Obligación R1                                                                                |
+| ----------------------------------- | -------------------------------------------------------------------------------------------- |
+| Alcance funcional                   | Pose live + `object_transform` live + porcelain definitivo                                   |
+| Adapters live                       | `pose` y `object_transform` únicamente                                                       |
+| Puerta local de publicación         | Política central de salida para replicación compartida                                       |
+| Guardas fase 1                      | Se conservan hasta que la puerta central esté verificada                                     |
+| Enforcement servidor                | Rechazo de mutaciones de grafo compartido por viewers                                        |
+| Autoridad Host                      | Conexión autoritativa no auto-declarada por el cliente                                       |
+| Presence/playhead                   | Se conserva como metadata; no fuerza timeline remoto                                         |
+| Schema/registry                     | Contrato mínimo versionado + registry de pose/object_transform + campos DD-03                |
+| Fidelidad visibilidad               | Cumplir SRS §3.9 / TDD DD-03 / AC-06                                                         |
+| `hide_select`                       | No gobernarse por readonly/propiedad; reconciliar timer                                      |
+| Paridad pose                        | Tests de paridad antes/después de extraer adapter                                            |
+| Paridad/aceptación object_transform | Sin commits continuos durante arrastre; preview reversible; durable por porcelain            |
+| Incorporación de escena             | Default `Nueva escena`; `Combinar` opt-in con advertencia; copia como caso límite/reconexión |
+| Compatibilidad                      | No romper Host actual ni Cliente local/selección/reproducción                                |
+| Documentación                       | SRS/TDD/checklist/diario actualizados solo tras aprobación de enmiendas                      |
 
 ### 10.2 Queda para R2 o posteriores
 
-| Área                                            | Motivo                                                                 |
-| ----------------------------------------------- | ---------------------------------------------------------------------- |
-| Nuevos adapters live: objetos, shaders, sliders | Ampliación de alcance; requiere nuevos criterios y mediciones          |
-| Sensor RNA/msgbus general                       | No necesario para pose R1; tiene limitaciones y requiere diseño propio |
-| Coalescing/settle genérico para continuos       | Depende de adapters futuros                                            |
-| Schema completo de todos los tipos Blender      | Migración progresiva; no big-bang                                      |
-| Transaction scheduler genérico multi-tipo       | R1 conserva flujo durable actual                                       |
-| Wire format live genérico                       | R1 preserva mensajes de pose actuales                                  |
-| PKU / D-51 / keyframe azul                      | Sigue diferido según TDD                                               |
-| Internet/TLS/relay                              | Fuera de R1                                                            |
-| Reescritura de `bl_types/` o `replication/`     | Contrario a migración incremental                                      |
+| Área                                                                            | Motivo                                                                                  |
+| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Nuevos adapters live: shaders, sliders, luces, modificadores, sculpt, edit mode | Ampliación de alcance; requiere nuevos criterios y mediciones                           |
+| Sensor RNA/msgbus general                                                       | No necesario para pose/object_transform R1; tiene limitaciones y requiere diseño propio |
+| Coalescing/settle genérico para continuos RNA                                   | Depende de adapters futuros                                                             |
+| Schema completo de todos los tipos Blender                                      | Migración progresiva; no big-bang                                                       |
+| Transaction scheduler genérico multi-tipo                                       | R1 conserva flujo durable actual                                                        |
+| Wire format live universal para todos los continuos                             | R1 solo añade lo necesario para `object_transform`                                      |
+| Canal live dedicado para presence/playheads                                     | R1 conserva metadata por porcelain; migración futura opcional                           |
+| PKU / D-51 / keyframe azul                                                      | Sigue diferido según TDD                                                                |
+| Internet/TLS/relay                                                              | Fuera de R1                                                                             |
+| Reescritura de `bl_types/` o `replication/`                                     | Contrario a migración incremental                                                       |
 
 ### 10.3 R1 no promete “todo Blender continuo”
 
-R1 puede publicar muchos cambios por porcelain, pero solo promete previsualización live continua para pose.
+R1 puede publicar muchos cambios por porcelain, pero solo promete previsualización live continua para:
+
+```text
+pose
+object_transform
+```
 
 Esta frase debe aparecer en cualquier documento derivado:
 
-> **R1 no es un sistema universal de live editing. Es un sistema de live pose review con transporte durable fiel y una arquitectura preparada para futuros adapters.**
+> **R1 no es un sistema universal de live editing. Es un sistema de live pose/object review con transporte durable fiel y una arquitectura preparada para futuros adapters.**
 
 ---
 
@@ -630,7 +769,7 @@ No se ejecuta todavía. Es el plan que requerirá aprobación y órdenes de fase
 Antes de tocar código:
 
 ```text
-aprobar ADR-001
+aprobar ADR-ARQUITECTURA-OBJETIVO-001 v1.1 o posterior
 aprobar propuesta de enmiendas SRS/TDD
 consolidar TDD/checklist/diario
 crear tag de inicio de la fase arquitectónica
@@ -672,6 +811,7 @@ Criterio:
 ```text
 viewer forjado no puede mutar grafo aunque salte el cliente local.
 Host autoritativo sí puede.
+Presence metadata sigue permitida.
 No se rompe localhost ni LAN.
 ```
 
@@ -682,7 +822,7 @@ Introducir contrato declarativo sin migrar todo de golpe.
 Criterio:
 
 ```text
-pose registrado como único live adapter.
+pose y object_transform registrados como live adapters R1.
 DD-03 tiene schema/entries versionadas.
 Serializadores legacy siguen funcionando.
 Round-trip/parity tests pasan.
@@ -695,7 +835,7 @@ Extraer/registrar pose como adapter sin cambiar semántica.
 Criterio:
 
 ```text
-mismos mensajes live.
+mismos mensajes live de pose.
 mismo overlay.
 misma restauración.
 misma invalidación.
@@ -703,11 +843,29 @@ mismos keyframes definitivos por porcelain.
 sin regresión de latencia/cadencia.
 ```
 
-### Paso 6 · Continuar fases R1 existentes
+### Paso 6 · Adapter object_transform
 
-Las fases 2–13 no se aprueban automáticamente por este ADR. Se decides una a una, usando los nuevos contratos.
+Añadir `object_transform` como adapter live R1.
+
+Criterio:
+
+```text
+G/R/S de objeto no produce porcelain.commit/push continuo.
+Cliente ve preview reversible.
+Multi-objeto funciona por object_uuid.
+Confirmación/keyframe real llega por porcelain.
+Cancelación/deselección/desconexión limpian.
+No se pausa ni seekea el timeline del Cliente.
+No se rompe pose.
+```
+
+### Paso 7 · Continuar fases R1 existentes
+
+Las fases 2–13 no se aprueban automáticamente por este ADR. Se deciden una a una, usando los nuevos contratos.
 
 DD-03 debe implementarse en su fase correspondiente o en la fase que el mantenedor autorice, pero sigue siendo obligación de R1.
+
+La incorporación de escena con default `Nueva escena` y `Combinar` opt-in debe implementarse en la fase de onboarding que corresponda, o en la fase que el mantenedor autorice, pero es objetivo R1.
 
 ---
 
@@ -717,90 +875,137 @@ Estos criterios se proponen para la fase arquitectónica. No sustituyen los AC d
 
 ### 12.1 Alcance
 
-| ID        | Criterio                                                           |
-| --------- | ------------------------------------------------------------------ |
-| ADR-AC-01 | El registry live de R1 contiene únicamente pose                    |
-| ADR-AC-02 | No se añade ningún mensaje live para objetos/shaders/sliders       |
-| ADR-AC-03 | El formato live de pose no cambia sin enmienda explícita           |
-| ADR-AC-04 | F1 sigue fuera de soporte; no se convierte en live adapter general |
+| ID        | Criterio                                                                                  |
+| --------- | ----------------------------------------------------------------------------------------- |
+| ADR-AC-01 | El registry live de R1 contiene únicamente `pose` y `object_transform`                    |
+| ADR-AC-02 | No se añade ningún mensaje live para shaders/sliders/luces/modificadores/sculpt/edit mode |
+| ADR-AC-03 | Los mensajes live de pose no cambian sin enmienda explícita                               |
+| ADR-AC-04 | F1 sigue fuera de soporte; no se convierte en live adapter general                        |
+| ADR-AC-05 | Playheads/presencia siguen como metadata; no fuerzan timeline remoto                      |
 
 ### 12.2 Publicación
 
 | ID        | Criterio                                                                         |
 | --------- | -------------------------------------------------------------------------------- |
-| ADR-AC-05 | Toda salida de mutación compartida pasa por política local                       |
-| ADR-AC-06 | Cliente no puede enviar Node/Commit/Delete/Right por rutas honestas              |
-| ADR-AC-07 | Servidor rechaza mutaciones compartidas de viewer aunque el mensaje esté forjado |
-| ADR-AC-08 | Host conserva llamadas y semántica de publicación existentes                     |
-| ADR-AC-09 | Presence/Auth/TTL/snapshot/apply/fetch no se bloquean por error                  |
-| ADR-AC-10 | Las guardas de fase 1 siguen pasando hasta ser sustituidas formalmente           |
+| ADR-AC-06 | Toda salida de mutación compartida pasa por política local                       |
+| ADR-AC-07 | Cliente no puede enviar Node/Commit/Delete/Right por rutas honestas              |
+| ADR-AC-08 | Servidor rechaza mutaciones compartidas de viewer aunque el mensaje esté forjado |
+| ADR-AC-09 | Host conserva llamadas y semántica de publicación existentes                     |
+| ADR-AC-10 | Presence/Auth/TTL/snapshot/apply/fetch no se bloquean por error                  |
+| ADR-AC-11 | Las guardas de fase 1 siguen pasando hasta ser sustituidas formalmente           |
 
 ### 12.3 Schema y fidelidad
 
 | ID        | Criterio                                                                                                 |
 | --------- | -------------------------------------------------------------------------------------------------------- |
-| ADR-AC-11 | Existe schema/registry versionado mínimo                                                                 |
-| ADR-AC-12 | DD-03 se expresa declarativamente o mediante entries trazables                                           |
-| ADR-AC-13 | Object/Collection/Armature/ViewLayer restauran flags exigidos por SRS §3.9                               |
-| ADR-AC-14 | `hide_select` no se fuerza desde readonly/propiedad                                                      |
-| ADR-AC-15 | Cambios DD-03 llegan al Cliente incluso si hay hueso seleccionado, sin retirar protección de rendimiento |
+| ADR-AC-12 | Existe schema/registry versionado mínimo                                                                 |
+| ADR-AC-13 | DD-03 se expresa declarativamente o mediante entries trazables                                           |
+| ADR-AC-14 | Object/Collection/Armature/ViewLayer restauran flags exigidos por SRS §3.9                               |
+| ADR-AC-15 | `hide_select` no se fuerza desde readonly/propiedad                                                      |
+| ADR-AC-16 | Cambios DD-03 llegan al Cliente incluso si hay hueso seleccionado, sin retirar protección de rendimiento |
 
 ### 12.4 Paridad de pose
 
 | ID        | Criterio                                                                                    |
 | --------- | ------------------------------------------------------------------------------------------- |
-| ADR-AC-16 | Selección sin mover → deseleccionar no deja rastro                                          |
-| ADR-AC-17 | Transformar sin keyear → deseleccionar restaura                                             |
-| ADR-AC-18 | Keyframe real llega por porcelain y no queda fantasma                                       |
-| ADR-AC-19 | Scrub con hueso seleccionado mueve overlay al frame del Host sin mover playhead del Cliente |
-| ADR-AC-20 | Desconexión/reconexión limpia y reconstruye solo lo activo                                  |
-| ADR-AC-21 | Apply durable durante overlay vivo no restaura valores obsoletos                            |
-| ADR-AC-22 | Multi-hueso/multi-armadura no colisiona                                                     |
-| ADR-AC-23 | Cadencia/latencia no empeora respecto a la línea de paridad                                 |
+| ADR-AC-17 | Selección sin mover → deseleccionar no deja rastro                                          |
+| ADR-AC-18 | Transformar sin keyear → deseleccionar restaura                                             |
+| ADR-AC-19 | Keyframe real llega por porcelain y no queda fantasma                                       |
+| ADR-AC-20 | Scrub con hueso seleccionado mueve overlay al frame del Host sin mover playhead del Cliente |
+| ADR-AC-21 | Desconexión/reconexión limpia y reconstruye solo lo activo                                  |
+| ADR-AC-22 | Apply durable durante overlay vivo no restaura valores obsoletos                            |
+| ADR-AC-23 | Multi-hueso/multi-armadura no colisiona                                                     |
+| ADR-AC-24 | Cadencia/latencia no empeora respecto a la línea de paridad                                 |
+
+### 12.5 object_transform
+
+| ID        | Criterio                                                                             |
+| --------- | ------------------------------------------------------------------------------------ |
+| ADR-AC-25 | G/R/S de objeto en Host produce preview live en Cliente sin commits continuos        |
+| ADR-AC-26 | Multi-objeto seleccionado produce previews independientes por `object_uuid`          |
+| ADR-AC-27 | Cancelar G/R/S restaura el estado original del Cliente                               |
+| ADR-AC-28 | Confirmar sin keyframe no deja transformación fantasma al cerrar/deseleccionar       |
+| ADR-AC-29 | Keyframe real de objeto llega por porcelain como dato definitivo                     |
+| ADR-AC-30 | Scrub con objeto seleccionado sigue al frame del Host sin mover playhead del Cliente |
+| ADR-AC-31 | Apply durable durante preview vivo no restaura valores obsoletos                     |
+| ADR-AC-32 | Desconexión limpia/restaura previews de objeto                                       |
+| ADR-AC-33 | object_transform no rompe pose ni la cadencia del canal live                         |
+
+### 12.6 Incorporación de escena
+
+| ID        | Criterio                                                                                                                                                        |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ADR-AC-34 | El comportamiento por defecto al conectar es `Nueva escena`                                                                                                     |
+| ADR-AC-35 | `Combinar` en la misma escena es opt-in explícito, con advertencia de que puede mezclar contenido local y remoto                                                |
+| ADR-AC-36 | La opción de combinar puede ofrecer transferir ajustes de tiempo necesarios para que la animación coincida, como FPS/rango, bajo elección explícita del usuario |
+| ADR-AC-37 | Conectar desde una copia del `.blend` se trata como caso límite soportado/reconexión, no como flujo principal recomendado                                       |
+| ADR-AC-38 | Ninguna ruta purga contenido local sin elección explícita y confirmada                                                                                          |
 
 ---
 
 ## 13. Riesgos y mitigaciones
 
-| Riesgo                                                | Mitigación                                                                 |
-| ----------------------------------------------------- | -------------------------------------------------------------------------- |
-| Sobre-ingeniería: convertir R1 en framework universal | R1 solo registra pose; registry mínimo; sin sensores RNA generales         |
-| Romper pose al extraer adapter                        | Paridad antes/después; envoltura incremental; feature flag si hace falta   |
-| Puerta local rompe presencia o snapshot               | Clasificación explícita de mensajes permitidos; tests de control positivo  |
-| Autoridad servidor basada en `admin` o `owner`        | Requisito explícito: autoridad ligada a conexión, no auto-declarada        |
-| Schema automático serializa datos peligrosos          | Listas blancas curadas, no dump total de RNA                               |
-| `bl_types/` y wheel divergen                          | Cambios en `replication/` deben actualizar fuente runtime y wheel juntos   |
-| Nuevos continuos se cuelan en R1                      | ADR-AC-01/02/03 y revisión de alcance por fase                             |
-| Visibilidad se serializa pero no se publica           | DD-03 incluye publicación durante pose seleccionada                        |
-| Crash preexistente de FCurve se mezcla con refactor   | Mantener OBS-F1-05 separado; no atribuirlo a la arquitectura sin evidencia |
+| Riesgo                                                  | Mitigación                                                                            |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Sobre-ingeniería: convertir R1 en framework universal   | R1 solo registra pose y object_transform; registry mínimo; sin sensores RNA generales |
+| Romper pose al extraer adapter                          | Paridad antes/después; envoltura incremental; feature flag si hace falta              |
+| object_transform introduce conflictos con pose          | Desambiguación explícita por modo/entidad; tests cruzados pose+objeto                 |
+| object_transform reintroduce commits continuos          | Gate de arrastre + lane live + contador de porcelain en tests                         |
+| Puerta local rompe presencia o snapshot                 | Clasificación explícita de mensajes permitidos; tests de control positivo             |
+| Autoridad servidor basada en `admin` o `owner`          | Requisito explícito: autoridad ligada a conexión, no auto-declarada                   |
+| Schema automático serializa datos peligrosos            | Listas blancas curadas, no dump total de RNA                                          |
+| `bl_types/` y wheel divergen                            | Cambios en `replication/` deben actualizar fuente runtime y wheel juntos              |
+| Nuevos continuos se cuelan en R1                        | ADR-AC-01/02 y revisión de alcance por fase                                           |
+| Visibilidad se serializa pero no se publica             | DD-03 incluye publicación durante pose seleccionada                                   |
+| Playhead presence se confunde con publicación de escena | Sección 5.6 y tests de no-frame-set automático                                        |
+| Onboarding destructivo por defecto                      | Default Nueva escena; Combinar opt-in; purga solo confirmada                          |
+| Crash preexistente de FCurve se mezcla con refactor     | Mantener OBS-F1-05 separado; no atribuirlo a la arquitectura sin evidencia            |
 
 ---
 
-## 14. Compatibilidad
+## 14. Compatibilidad e incorporación de escena
 
 ### 14.1 Host/Cliente de la misma versión R1
 
-Debe funcionar el flujo actual:
+Debe funcionar el flujo objetivo:
 
 ```text
 Host localhost/LAN
-Cliente copia / escena nueva / contenido propio según SRS
+Cliente conecta por defecto en Nueva escena
+Combinar en misma escena solo si el usuario lo elige explícitamente
+Cliente copia se soporta como caso límite / ayuda de reconexión
 Pose Live Sync ON
+Object Transform Live Sync ON dentro del contrato R1
 F1 OFF por defecto
 Cliente reproduce en bucle
-Host edita pose
+Host edita pose y transforma objetos
 Keyframes reales via porcelain
+Playheads/presencia via metadata, sin forzar timeline remoto
 ```
 
-### 14.2 Versiones mixtas
+### 14.2 Política de incorporación propuesta
+
+La política objetivo de R1 es:
+
+| Caso                         | Tratamiento                                                                                                                                                                |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Nueva escena**             | Default. Crea una escena dedicada para el contenido remoto y deja la escena local intacta                                                                                  |
+| **Combinar en misma escena** | Opt-in desde General settings o flujo explícito equivalente. Advertencia visible. Puede ofrecer transferir ajustes de tiempo como FPS/rango para que la animación coincida |
+| **Reemplazar**               | Si se conserva, debe ser explícito y confirmado; nunca default ni automático                                                                                               |
+| **Cliente copia**            | Caso límite soportado y ayuda de reconexión; no es el flujo principal recomendado                                                                                          |
+| **Reconexión**               | No re-adopta ni purga automáticamente; resincroniza contenido ya adoptado                                                                                                  |
+
+Esta política requiere enmienda normativa porque el SRS/TDD actuales describen `Combinar` como default en D-40a. No se aplica hasta aprobación.
+
+### 14.3 Versiones mixtas
 
 Este ADR no promete compatibilidad entre versiones mixtas más allá de lo que el handshake actual ya garantice.
 
-Si la autoridad de Host o el schema requieren cambiar payload de Auth/replicación, debe declararse en la enmienda del TDD y tratarse como cambio versionado.
+Si la autoridad de Host, el schema o los mensajes live de `object_transform` requieren cambiar payload de Auth/replicación/live, debe declararse en la enmienda del TDD y tratarse como cambio versionado.
 
-### 14.3 Wire format live de pose
+### 14.4 Wire format live
 
-R1 debe preservar los mensajes actuales:
+R1 debe preservar los mensajes de pose actuales:
 
 ```text
 start
@@ -809,6 +1014,8 @@ end
 ```
 
 con los campos planos documentados en TDD §17.F, salvo enmienda explícita.
+
+`object_transform` puede añadir mensajes/canales live nuevos, pero deben estar versionados y documentados. No se introduce un wire format universal para todos los continuos futuros en R1.
 
 ---
 
@@ -823,10 +1030,10 @@ P-01 adelantado
 H-04 / VP-10
 D-51
 PKU
-nuevos adapters live
-cambio de alcance R1
-reescritura de porcelain
+adapters live de shaders/sliders/luces/modificadores/sculpt/edit mode
+canal live de presence/playheads
 cambio de modelo de administración de sesión
+reescritura de porcelain
 ```
 
 Tampoco modifica por sí mismo SRS ni TDD. Las enmiendas necesarias se presentan en documento separado.
@@ -835,16 +1042,17 @@ Tampoco modifica por sí mismo SRS ni TDD. Las enmiendas necesarias se presentan
 
 ## 16. Resultado esperado tras aprobar este ADR
 
-Si el mantenedor aprueba ADR-001:
+Si el mantenedor aprueba ADR-ARQUITECTURA-OBJETIVO-001 v1.1 o posterior:
 
-1. Se consolidan las enmiendas propuestas al TDD/checklist/diario.
+1. Se consolidan las enmiendas propuestas al SRS/TDD/checklist/diario.
 2. Se decide la ubicación de la fase arquitectónica respecto a las fases existentes.
 3. Se crea el tag de inicio correspondiente.
 4. Se implementa primero la puerta de publicación y el enforcement servidor con criterios de aceptación previos.
 5. Se introduce schema/registry mínimo.
 6. Se envuelve pose como adapter con tests de paridad.
-7. Se continúa con las fases R1 ya definidas, sin ampliar alcance.
+7. Se añade `object_transform` como adapter live R1 con tests propios.
+8. Se continúa con las fases R1 ya definidas, incluyendo fidelidad de visibilidad e incorporación de escena según las enmiendas aprobadas.
 
 La frase de control para todo el trabajo posterior es:
 
-> **R1 mantiene su contrato. La arquitectura cambia para que ese contrato sea enforced por construcción y para que R2 pueda añadir continuos sin arqueología.**
+> **R1 mantiene un alcance acotado: pose + object_transform live, porcelain durable y presencia no invasiva. La arquitectura cambia para que ese contrato sea enforced por construcción y para que R2 pueda añadir continuos sin arqueología.**
