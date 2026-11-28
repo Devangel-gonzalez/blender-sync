@@ -1,18 +1,18 @@
 # ADR-ARQUITECTURA-OBJETIVO-001 · Arquitectura objetivo mantenible para True Level: Playblast
 
-| Campo                           | Valor                                                                                                                                                       |
-| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Versión del documento           | **v1.1 · propuesta revisada**                                                                                                                               |
-| Estado                          | **PROPUESTO · pendiente de aprobación del mantenedor**                                                                                                      |
-| Fecha                           | 2026-11-28                                                                                                                                                  |
-| Historial                       | v1.0 publicada como propuesta inicial; v1.1 incorpora aclaraciones del mantenedor sobre `object_transform`, playheads, incorporación de escena y versionado |
-| Decisión de alcance             | **Opción A revisada**: R1 = Live Sync de pose + Live Sync de transformación de objetos + porcelain para datos definitivos                                   |
-| Código funcional de referencia  | `blender-sync` `d62755a` · tag `r1-fase-01`                                                                                                                 |
-| Commit documental de referencia | `3f1e9ef` · ADR v1.0 subido por el mantenedor                                                                                                               |
-| SRS de referencia               | `workspace-3/consolidated/SRS.md` v2.1.1                                                                                                                    |
-| TDD de referencia               | `workspace-3/consolidated/TDD-PLAYBLAST-001.md` v4.7                                                                                                        |
-| Fase 1                          | Cerrada y verificada; sus guardas se conservan como red de seguridad inicial                                                                                |
-| Modificaciones realizadas       | Solo documentos ADR/propuesta. No se modifica código, SRS ni TDD                                                                                            |
+| Campo                           | Valor                                                                                                                                                                                                                                      |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Versión del documento           | **v1.2 · APROBADO**                                                                                                                                                                                                                        |
+| Estado                          | **APROBADO por el mantenedor · pendiente consolidar enmiendas normativas**                                                                                                                                                                 |
+| Fecha                           | 2026-11-28                                                                                                                                                                                                                                 |
+| Historial                       | v1.0 propuesta inicial; v1.1 aclaraciones sobre `object_transform`, playheads, incorporación y versionado; v1.2 aprobación con fases separadas, retiro de `Reemplazar`, `Combinar` oculto en settings y casilla única de ajustes de tiempo |
+| Decisión de alcance             | **Opción A revisada aprobada**: R1 = Live Sync de pose + Live Sync de transformación de objetos + porcelain para datos definitivos                                                                                                         |
+| Código funcional de referencia  | `blender-sync` `d62755a` · tag `r1-fase-01`                                                                                                                                                                                                |
+| Commit documental de referencia | `3f1e9ef` · ADR v1.0 subido por el mantenedor                                                                                                                                                                                              |
+| SRS de referencia               | `workspace-3/consolidated/SRS.md` v2.1.1                                                                                                                                                                                                   |
+| TDD de referencia               | `workspace-3/consolidated/TDD-PLAYBLAST-001.md` v4.7                                                                                                                                                                                       |
+| Fase 1                          | Cerrada y verificada; sus guardas se conservan como red de seguridad inicial                                                                                                                                                               |
+| Modificaciones realizadas       | ADR aprobado actualizado. Propuesta de enmiendas sigue como borrador pendiente. No se modifica código, SRS ni TDD                                                                                                                          |
 
 ---
 
@@ -82,7 +82,32 @@ Esto ya está reconocido normativamente:
 - TDD DD-03 especifica la corrección.
 - TDD AC-06 exige que los flags coincidan con el Host en los tres modos.
 
-### 2.3 Transformaciones de objeto: estado actual y decisión R1
+### 2.3 El problema de los continuos no está resuelto de forma general
+
+`live_sync.py` resolvió el caso de pose mediante un canal TCP dedicado y overlay temporal reversible.
+
+Pero `handlers.py` todavía puede publicar cambios detectados por depsgraph para nodos rastreados:
+
+```python
+if is_live or node.state == UP:
+    porcelain.commit(...)
+    porcelain.push(...)
+```
+
+El gate de arrastre actual está orientado a transformaciones interactivas conocidas, no a todos los cambios RNA continuos. Un slider de shader puede producir muchos cambios sin pasar por ese gate.
+
+Que F1 esté “fuera de soporte” en el SRS no significa que el código haya dejado de tener rutas de publicación continua. Significa que no se garantiza ni se mantiene como funcionalidad soportada.
+
+Por eso R1 no debe prometer “todo Blender continuo”. R1 queda acotado a dos adapters live:
+
+```text
+pose
+object_transform
+```
+
+y deja la arquitectura preparada para añadir otros continuos después, sin convertir porcelain en canal de arrastre.
+
+### 2.4 Transformaciones de objeto: estado actual y decisión R1
 
 En Multi-User vanilla, mover un objeto puede llegar al Cliente mediante porcelain/commits cuando el cambio queda confirmado y publicado por el handler.
 
@@ -109,7 +134,7 @@ confirmación / keyframe real → porcelain durable
 
 sin convertir porcelain en canal de arrastre continuo.
 
-### 2.4 Playhead y presencia: estado actual
+### 2.5 Playhead y presencia: estado actual
 
 El frame actual de cada peer se publica hoy como metadato de usuario:
 
@@ -129,7 +154,7 @@ Por tanto:
 
 R1 conserva los playheads como presencia por porcelain/metadata. No se migran al canal live en R1. Una migración futura a un canal de presencia live es posible, pero no es necesaria para resolver el contrato R1.
 
-### 2.5 La fase 1 cerró rutas, pero no creó una capacidad central
+### 2.6 La fase 1 cerró rutas, pero no creó una capacidad central
 
 La fase 1 implementó guardas Host-only en operadores, handlers y timers. Eso fue necesario y se conserva.
 
@@ -712,23 +737,23 @@ R2 podrá añadir revisiones/seq más generales. R1 debe preservar los mensajes 
 
 ### 10.1 Entra en R1
 
-| Área                                | Obligación R1                                                                                |
-| ----------------------------------- | -------------------------------------------------------------------------------------------- |
-| Alcance funcional                   | Pose live + `object_transform` live + porcelain definitivo                                   |
-| Adapters live                       | `pose` y `object_transform` únicamente                                                       |
-| Puerta local de publicación         | Política central de salida para replicación compartida                                       |
-| Guardas fase 1                      | Se conservan hasta que la puerta central esté verificada                                     |
-| Enforcement servidor                | Rechazo de mutaciones de grafo compartido por viewers                                        |
-| Autoridad Host                      | Conexión autoritativa no auto-declarada por el cliente                                       |
-| Presence/playhead                   | Se conserva como metadata; no fuerza timeline remoto                                         |
-| Schema/registry                     | Contrato mínimo versionado + registry de pose/object_transform + campos DD-03                |
-| Fidelidad visibilidad               | Cumplir SRS §3.9 / TDD DD-03 / AC-06                                                         |
-| `hide_select`                       | No gobernarse por readonly/propiedad; reconciliar timer                                      |
-| Paridad pose                        | Tests de paridad antes/después de extraer adapter                                            |
-| Paridad/aceptación object_transform | Sin commits continuos durante arrastre; preview reversible; durable por porcelain            |
-| Incorporación de escena             | Default `Nueva escena`; `Combinar` opt-in con advertencia; copia como caso límite/reconexión |
-| Compatibilidad                      | No romper Host actual ni Cliente local/selección/reproducción                                |
-| Documentación                       | SRS/TDD/checklist/diario actualizados solo tras aprobación de enmiendas                      |
+| Área                                | Obligación R1                                                                                                                           |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Alcance funcional                   | Pose live + `object_transform` live + porcelain definitivo                                                                              |
+| Adapters live                       | `pose` y `object_transform` únicamente                                                                                                  |
+| Puerta local de publicación         | Política central de salida para replicación compartida                                                                                  |
+| Guardas fase 1                      | Se conservan hasta que la puerta central esté verificada                                                                                |
+| Enforcement servidor                | Rechazo de mutaciones de grafo compartido por viewers                                                                                   |
+| Autoridad Host                      | Conexión autoritativa no auto-declarada por el cliente                                                                                  |
+| Presence/playhead                   | Se conserva como metadata; no fuerza timeline remoto                                                                                    |
+| Schema/registry                     | Contrato mínimo versionado + registry de pose/object_transform + campos DD-03                                                           |
+| Fidelidad visibilidad               | Cumplir SRS §3.9 / TDD DD-03 / AC-06                                                                                                    |
+| `hide_select`                       | No gobernarse por readonly/propiedad; reconciliar timer                                                                                 |
+| Paridad pose                        | Tests de paridad antes/después de extraer adapter                                                                                       |
+| Paridad/aceptación object_transform | Sin commits continuos durante arrastre; preview reversible; durable por porcelain                                                       |
+| Incorporación de escena             | Default `Nueva escena`; `Combinar` oculto en General settings como opt-in avanzado; sin `Reemplazar`; copia como caso límite/reconexión |
+| Compatibilidad                      | No romper Host actual ni Cliente local/selección/reproducción                                                                           |
+| Documentación                       | SRS/TDD/checklist/diario actualizados solo tras aprobación de enmiendas                                                                 |
 
 ### 10.2 Queda para R2 o posteriores
 
@@ -769,8 +794,8 @@ No se ejecuta todavía. Es el plan que requerirá aprobación y órdenes de fase
 Antes de tocar código:
 
 ```text
-aprobar ADR-ARQUITECTURA-OBJETIVO-001 v1.1 o posterior
-aprobar propuesta de enmiendas SRS/TDD
+ADR-ARQUITECTURA-OBJETIVO-001 v1.2 aprobado
+aprobar propuesta de enmiendas SRS/TDD, todavía pendiente de lectura/aprobación
 consolidar TDD/checklist/diario
 crear tag de inicio de la fase arquitectónica
 ```
@@ -933,33 +958,33 @@ Estos criterios se proponen para la fase arquitectónica. No sustituyen los AC d
 
 ### 12.6 Incorporación de escena
 
-| ID        | Criterio                                                                                                                                                        |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ADR-AC-34 | El comportamiento por defecto al conectar es `Nueva escena`                                                                                                     |
-| ADR-AC-35 | `Combinar` en la misma escena es opt-in explícito, con advertencia de que puede mezclar contenido local y remoto                                                |
-| ADR-AC-36 | La opción de combinar puede ofrecer transferir ajustes de tiempo necesarios para que la animación coincida, como FPS/rango, bajo elección explícita del usuario |
-| ADR-AC-37 | Conectar desde una copia del `.blend` se trata como caso límite soportado/reconexión, no como flujo principal recomendado                                       |
-| ADR-AC-38 | Ninguna ruta purga contenido local sin elección explícita y confirmada                                                                                          |
+| ID        | Criterio                                                                                                                                                                     |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ADR-AC-34 | El comportamiento por defecto al conectar es `Nueva escena`                                                                                                                  |
+| ADR-AC-35 | `Combinar` en la misma escena está oculto en General settings y solo se activa como opt-in avanzado explícito, con advertencia de que puede mezclar contenido local y remoto |
+| ADR-AC-36 | `Combinar` ofrece una casilla única explícita para sincronizar ajustes de tiempo necesarios para que la animación coincida, como FPS/rango                                   |
+| ADR-AC-37 | Conectar desde una copia del `.blend` se trata como caso límite soportado/reconexión, no como flujo principal recomendado                                                    |
+| ADR-AC-38 | El addon no ofrece `Reemplazar` ni purga contenido local como modo de incorporación                                                                                          |
 
 ---
 
 ## 13. Riesgos y mitigaciones
 
-| Riesgo                                                  | Mitigación                                                                            |
-| ------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| Sobre-ingeniería: convertir R1 en framework universal   | R1 solo registra pose y object_transform; registry mínimo; sin sensores RNA generales |
-| Romper pose al extraer adapter                          | Paridad antes/después; envoltura incremental; feature flag si hace falta              |
-| object_transform introduce conflictos con pose          | Desambiguación explícita por modo/entidad; tests cruzados pose+objeto                 |
-| object_transform reintroduce commits continuos          | Gate de arrastre + lane live + contador de porcelain en tests                         |
-| Puerta local rompe presencia o snapshot                 | Clasificación explícita de mensajes permitidos; tests de control positivo             |
-| Autoridad servidor basada en `admin` o `owner`          | Requisito explícito: autoridad ligada a conexión, no auto-declarada                   |
-| Schema automático serializa datos peligrosos            | Listas blancas curadas, no dump total de RNA                                          |
-| `bl_types/` y wheel divergen                            | Cambios en `replication/` deben actualizar fuente runtime y wheel juntos              |
-| Nuevos continuos se cuelan en R1                        | ADR-AC-01/02 y revisión de alcance por fase                                           |
-| Visibilidad se serializa pero no se publica             | DD-03 incluye publicación durante pose seleccionada                                   |
-| Playhead presence se confunde con publicación de escena | Sección 5.6 y tests de no-frame-set automático                                        |
-| Onboarding destructivo por defecto                      | Default Nueva escena; Combinar opt-in; purga solo confirmada                          |
-| Crash preexistente de FCurve se mezcla con refactor     | Mantener OBS-F1-05 separado; no atribuirlo a la arquitectura sin evidencia            |
+| Riesgo                                                  | Mitigación                                                                                                       |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Sobre-ingeniería: convertir R1 en framework universal   | R1 solo registra pose y object_transform; registry mínimo; sin sensores RNA generales                            |
+| Romper pose al extraer adapter                          | Paridad antes/después; envoltura incremental; feature flag si hace falta                                         |
+| object_transform introduce conflictos con pose          | Desambiguación explícita por modo/entidad; tests cruzados pose+objeto                                            |
+| object_transform reintroduce commits continuos          | Gate de arrastre + lane live + contador de porcelain en tests                                                    |
+| Puerta local rompe presencia o snapshot                 | Clasificación explícita de mensajes permitidos; tests de control positivo                                        |
+| Autoridad servidor basada en `admin` o `owner`          | Requisito explícito: autoridad ligada a conexión, no auto-declarada                                              |
+| Schema automático serializa datos peligrosos            | Listas blancas curadas, no dump total de RNA                                                                     |
+| `bl_types/` y wheel divergen                            | Cambios en `replication/` deben actualizar fuente runtime y wheel juntos                                         |
+| Nuevos continuos se cuelan en R1                        | ADR-AC-01/02 y revisión de alcance por fase                                                                      |
+| Visibilidad se serializa pero no se publica             | DD-03 incluye publicación durante pose seleccionada                                                              |
+| Playhead presence se confunde con publicación de escena | Sección 5.6 y tests de no-frame-set automático                                                                   |
+| Onboarding destructivo                                  | Default Nueva escena; Combinar oculto/opt-in; se retira Reemplazar; el addon no purga como modo de incorporación |
+| Crash preexistente de FCurve se mezcla con refactor     | Mantener OBS-F1-05 separado; no atribuirlo a la arquitectura sin evidencia                                       |
 
 ---
 
@@ -983,19 +1008,19 @@ Keyframes reales via porcelain
 Playheads/presencia via metadata, sin forzar timeline remoto
 ```
 
-### 14.2 Política de incorporación propuesta
+### 14.2 Política de incorporación aprobada
 
 La política objetivo de R1 es:
 
-| Caso                         | Tratamiento                                                                                                                                                                |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Nueva escena**             | Default. Crea una escena dedicada para el contenido remoto y deja la escena local intacta                                                                                  |
-| **Combinar en misma escena** | Opt-in desde General settings o flujo explícito equivalente. Advertencia visible. Puede ofrecer transferir ajustes de tiempo como FPS/rango para que la animación coincida |
-| **Reemplazar**               | Si se conserva, debe ser explícito y confirmado; nunca default ni automático                                                                                               |
-| **Cliente copia**            | Caso límite soportado y ayuda de reconexión; no es el flujo principal recomendado                                                                                          |
-| **Reconexión**               | No re-adopta ni purga automáticamente; resincroniza contenido ya adoptado                                                                                                  |
+| Caso                         | Tratamiento                                                                                                                                                                                     |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Nueva escena**             | Default para el usuario novato. Crea una escena dedicada para el contenido remoto y deja la escena local intacta                                                                                |
+| **Combinar en misma escena** | Oculto en General settings para usuarios que saben lo que hacen. Opt-in avanzado explícito, con advertencia visible. Ofrece una casilla única para sincronizar ajustes de tiempo como FPS/rango |
+| **Reemplazar**               | **Retirado**. No se ofrece como opción porque implicaba borrar/purgar contenido local                                                                                                           |
+| **Cliente copia**            | Caso límite soportado y ayuda de reconexión; no es el flujo principal recomendado                                                                                                               |
+| **Reconexión**               | No re-adopta ni purga automáticamente; resincroniza contenido ya adoptado                                                                                                                       |
 
-Esta política requiere enmienda normativa porque el SRS/TDD actuales describen `Combinar` como default en D-40a. No se aplica hasta aprobación.
+Esta política requiere enmienda normativa porque el SRS/TDD actuales describen `Combinar` como default en D-40a e incluyen `Reemplazar`. El ADR está aprobado, pero la enmienda SRS/TDD correspondiente sigue pendiente de aprobación.
 
 ### 14.3 Versiones mixtas
 
@@ -1036,17 +1061,17 @@ cambio de modelo de administración de sesión
 reescritura de porcelain
 ```
 
-Tampoco modifica por sí mismo SRS ni TDD. Las enmiendas necesarias se presentan en documento separado.
+Tampoco modifica por sí mismo SRS ni TDD. Las enmiendas necesarias se presentan en documento separado y siguen pendientes de aprobación explícita.
 
 ---
 
-## 16. Resultado esperado tras aprobar este ADR
+## 16. Resultado esperado con el ADR aprobado
 
-Si el mantenedor aprueba ADR-ARQUITECTURA-OBJETIVO-001 v1.1 o posterior:
+Con ADR-ARQUITECTURA-OBJETIVO-001 v1.2 aprobado:
 
-1. Se consolidan las enmiendas propuestas al SRS/TDD/checklist/diario.
-2. Se decide la ubicación de la fase arquitectónica respecto a las fases existentes.
-3. Se crea el tag de inicio correspondiente.
+1. La propuesta de enmiendas SRS/TDD/checklist/diario queda pendiente de lectura y aprobación explícita; no se consolidan documentos normativos hasta entonces.
+2. Se preparan órdenes de fase separadas: `1b` para cimientos arquitectónicos/pose parity y `1c` para `object_transform`.
+3. Se crea el tag de inicio correspondiente solo cuando se autorice la fase.
 4. Se implementa primero la puerta de publicación y el enforcement servidor con criterios de aceptación previos.
 5. Se introduce schema/registry mínimo.
 6. Se envuelve pose como adapter con tests de paridad.
